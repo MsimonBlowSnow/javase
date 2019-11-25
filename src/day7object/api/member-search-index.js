@@ -1,0 +1,1 @@
+memberSearchIndex = [{"l":"getMax(int[])","h":"","u":""},{"l":"print(int[])","h":"","u":""},{"l":"revArray(int[])","h":"","u":""}]
