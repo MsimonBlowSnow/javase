@@ -5,18 +5,18 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-/*ÎÊÌâ:ÖÆ×÷Ò»¸ö×õÖ­»ú
- 	*1.¶àÌ¬ÊµÏÖ
- 	*2.·´ÉäÊµÏÖ 
+/*é—®é¢˜:åˆ¶ä½œä¸€ä¸ªæŸæ±æœº
+ 	*1.å¤šæ€å®ç°
+ 	*2.åå°„å®ç° 
  * */
 public class Demo03Reflect {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InstantiationException, IllegalAccessException {
-		//¶àÌ¬ÊµÏÖ
+		//å¤šæ€å®ç°
 		/*Juicer juicer1= new Juicer();
 		juicer1.run(new Apple());
 		juicer1.run(new Orange());*/
 		
-		//·´ÉäÊµÏÖ
+		//åå°„å®ç°
 		BufferedReader bReader= new 
 				BufferedReader(new FileReader("src/day29Reflect/config.properties"));
 		String str=bReader.readLine();
@@ -32,7 +32,7 @@ interface Fruit{
 
 class Apple implements  Fruit{
 	public void squeeze() {
-		System.out.println("ĞÂÏÊµÄÆ»¹ûÖ­");
+		System.out.println("æ–°é²œçš„è‹¹æœæ±");
 	}
 }
 
@@ -40,12 +40,12 @@ class Orange implements Fruit{
 
 	@Override
 	public void squeeze() {
-		System.out.println("ĞÂÏÊµÄ³ÈÖ­");
+		System.out.println("æ–°é²œçš„æ©™æ±");
 	}
 }
 
 class Juicer{
-	//¶àëÄ£¬¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó£¬²¢µ÷ÓÃÖØĞ´µÄ·½·¨
+	//å¤šè‚½ï¼Œçˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡ï¼Œå¹¶è°ƒç”¨é‡å†™çš„æ–¹æ³•
 	public void run(Fruit a) {
 		a.squeeze();
 	}

@@ -1,13 +1,13 @@
 package day24thread;
 
 /*
- * ¶àÏß³Ì(»ğ³µÕ¾ÂôÆ±µÄÀı×ÓÓÃÊµÏÖRunnable½Ó¿Ú)(ÕÆÎÕ)
- 	*µ÷ÓÃÏß³Ì±ØĞë´´ÔìDemo17¶ÔÏó£¬²¢´«ÈëThread()ÄäÃû¶ÔÏó
- 	*ËùÒÔsynchronized¿ÉÒÔ´«ÈëÍ¬Ò»¸ö¶ÔÏó¡£ 	
+ * å¤šçº¿ç¨‹(ç«è½¦ç«™å–ç¥¨çš„ä¾‹å­ç”¨å®ç°Runnableæ¥å£)(æŒæ¡)
+ 	*è°ƒç”¨çº¿ç¨‹å¿…é¡»åˆ›é€ Demo17å¯¹è±¡ï¼Œå¹¶ä¼ å…¥Thread()åŒ¿åå¯¹è±¡
+ 	*æ‰€ä»¥synchronizedå¯ä»¥ä¼ å…¥åŒä¸€ä¸ªå¯¹è±¡ã€‚ 	
  * */
 public class Demo17tickticRunable {
 	public static void main(String[] args) {
-		//Ó¦ÎªDemo17ÊÇÊµÏÖRunable½Ó¿ÚµÄ£¬²»ÄÜÖ±½Óµ÷ÓÃstart()·½·¨¡£
+		//åº”ä¸ºDemo17æ˜¯å®ç°Runableæ¥å£çš„ï¼Œä¸èƒ½ç›´æ¥è°ƒç”¨start()æ–¹æ³•ã€‚
 		Demo17 aDemo= new Demo17();		
 		new Thread(aDemo).start();
 		new Thread(aDemo).start();
@@ -22,14 +22,14 @@ class Demo17 implements Runnable {
 	@Override
 	public void run() {
 		while (true) {
-			//¶¼ÊÇaDemo¶ÔÏó£¬¼°Í¬Ò»¸ö¶ÔÏó
+			//éƒ½æ˜¯aDemoå¯¹è±¡ï¼ŒåŠåŒä¸€ä¸ªå¯¹è±¡
 			synchronized (this) {
 				if (tickic == 0)
 					break;
 				tickic--;
-				// ÒòÎª¸ÃÏß³ÌÊÇÊµÏÖRunable½Ó¿Ú£¬²»ÄÜÖ±½Óµ÷ÓÃgetName()·½·¨£¬±ØĞëÍ¨¹ıThreadÀïÃæµÄ
-				// currentThread()·½·¨£¬»ñÈ¡ÔËĞĞÏß³Ì£¬ÔÚµ÷ÓÃgetName()·½·¨
-				System.out.println(Thread.currentThread().getName() + "ÕâÊÇµÚ" + tickic + "ÕÅÆ±!");
+				// å› ä¸ºè¯¥çº¿ç¨‹æ˜¯å®ç°Runableæ¥å£ï¼Œä¸èƒ½ç›´æ¥è°ƒç”¨getName()æ–¹æ³•ï¼Œå¿…é¡»é€šè¿‡Threadé‡Œé¢çš„
+				// currentThread()æ–¹æ³•ï¼Œè·å–è¿è¡Œçº¿ç¨‹ï¼Œåœ¨è°ƒç”¨getName()æ–¹æ³•
+				System.out.println(Thread.currentThread().getName() + "è¿™æ˜¯ç¬¬" + tickic + "å¼ ç¥¨!");
 			}
 		}
 	}

@@ -8,14 +8,14 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-/* ÒÑÖªÒ»¸öÀà£¬¶¨ÒåÈçÏÂ£º 
+/* å·²çŸ¥ä¸€ä¸ªç±»ï¼Œå®šä¹‰å¦‚ä¸‹ï¼š 
  * 		public class DemoClass {
 			public void run() {
 				System.out.println("welcome to heima!");
 			}
 		}
- * (1) Ğ´Ò»¸öProperties¸ñÊ½µÄÅäÖÃÎÄ¼ş£¬ÅäÖÃÀàµÄÍêÕûÃû³Æ¡£ 
- * (2) Ğ´Ò»¸ö³ÌĞò£¬¶ÁÈ¡Õâ¸öPropertiesÅäÖÃÎÄ¼ş£¬»ñµÃÀàµÄÍêÕûÃû³Æ²¢¼ÓÔØÕâ¸öÀà£¬ÓÃ·´ÉäµÄ·½Ê½ÔËĞĞrun·½·¨¡£
+ * (1) å†™ä¸€ä¸ªPropertiesæ ¼å¼çš„é…ç½®æ–‡ä»¶ï¼Œé…ç½®ç±»çš„å®Œæ•´åç§°ã€‚ 
+ * (2) å†™ä¸€ä¸ªç¨‹åºï¼Œè¯»å–è¿™ä¸ªPropertiesé…ç½®æ–‡ä»¶ï¼Œè·å¾—ç±»çš„å®Œæ•´åç§°å¹¶åŠ è½½è¿™ä¸ªç±»ï¼Œç”¨åå°„çš„æ–¹å¼è¿è¡Œrunæ–¹æ³•ã€‚
 */
 public class Demo10test {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
@@ -23,7 +23,7 @@ public class Demo10test {
 				FileReader("src/day29Reflect/config.properties1"));
 		String aString=aReader.readLine();
 		Class aClass=Class.forName(aString);
-		Object aObject=aClass.newInstance();	//ÀûÓÃ¿Õ²Î¹¹Ôì´´½¨¶ÔÏó
+		Object aObject=aClass.newInstance();	//åˆ©ç”¨ç©ºå‚æ„é€ åˆ›å»ºå¯¹è±¡
 		Method aMethod=aClass.getDeclaredMethod("say");	
 		aMethod.invoke(aObject);
 	}

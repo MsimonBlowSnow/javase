@@ -1,33 +1,33 @@
 package day12ClassObject;
 
 public class DemoStringBuffer {
-/*String ºÍStringBufferµÄÇø±ğ
- * StringÒ»µ©´´½¨¶ÔÏó¾Í²»ÄÜÔÚĞŞ¸ÄÍ¨¹ı+ºÍÖØĞÂ¸³ÖµÊÇ¹¹½¨ÁËÁíÒ»¸ö¶ÔÏó
- * StringBufferÏàµ±ÓÚStringµÄ»º³åÇø£¬´´½¨ºó¿ÉÒÔĞŞ¸Ä¡£
+/*String å’ŒStringBufferçš„åŒºåˆ«
+ * Stringä¸€æ—¦åˆ›å»ºå¯¹è±¡å°±ä¸èƒ½åœ¨ä¿®æ”¹é€šè¿‡+å’Œé‡æ–°èµ‹å€¼æ˜¯æ„å»ºäº†å¦ä¸€ä¸ªå¯¹è±¡
+ * StringBufferç›¸å½“äºStringçš„ç¼“å†²åŒºï¼Œåˆ›å»ºåå¯ä»¥ä¿®æ”¹ã€‚
  * */
 	public static void main(String[] args) {
 		String a=new String("abc");
-		a="abc11";//Á½¸ö¶ÔÏó
+		a="abc11";//ä¸¤ä¸ªå¯¹è±¡
 		for (int i=0;i<5;i++) {
 			System.out.println(a.charAt(i));
 		}
 		
-		/*ËÄÖÖ¹¹Ôì·½·¨
-		 * StringBuffer():¹¹ÔìÒ»¸öÆäÖĞ²»´ø×Ö·ûµÄ×Ö·û´®»º³åÇø£¬Æä³õÊ¼ÈİÁ¿Îª 16 ¸ö×Ö·û¡£
+		/*å››ç§æ„é€ æ–¹æ³•
+		 * StringBuffer():æ„é€ ä¸€ä¸ªå…¶ä¸­ä¸å¸¦å­—ç¬¦çš„å­—ç¬¦ä¸²ç¼“å†²åŒºï¼Œå…¶åˆå§‹å®¹é‡ä¸º 16 ä¸ªå­—ç¬¦ã€‚
 		 *
 		 * public java.lang.StringBuilder(CharSequence seq) 
-		 * ¹¹ÔìÒ»¸ö×Ö·û´®»º³åÇø£¬Ëü°üº¬ÓëÖ¸¶¨µÄ CharSequence ÏàÍ¬µÄ×Ö·û¡£
+		 * æ„é€ ä¸€ä¸ªå­—ç¬¦ä¸²ç¼“å†²åŒºï¼Œå®ƒåŒ…å«ä¸æŒ‡å®šçš„ CharSequence ç›¸åŒçš„å­—ç¬¦ã€‚
 		 * StringBuffer(CharSequence seq));
 		 *
-		 *¹¹ÔìÒ»¸ö×Ö·û´®»º³åÇø£¬²¢½«ÆäÄÚÈİ³õÊ¼»¯ÎªÖ¸¶¨µÄ×Ö·û´®ÄÚÈİ¡£
+		 *æ„é€ ä¸€ä¸ªå­—ç¬¦ä¸²ç¼“å†²åŒºï¼Œå¹¶å°†å…¶å†…å®¹åˆå§‹åŒ–ä¸ºæŒ‡å®šçš„å­—ç¬¦ä¸²å†…å®¹ã€‚
 		 * StringBuffer(String str)
 		 * 
-		 * ¹¹ÔìÒ»¸ö²»´ø×Ö·û£¬µ«¾ßÓĞÖ¸¶¨³õÊ¼ÈİÁ¿µÄ×Ö·û´®»º³åÇø¡£
+		 * æ„é€ ä¸€ä¸ªä¸å¸¦å­—ç¬¦ï¼Œä½†å…·æœ‰æŒ‡å®šåˆå§‹å®¹é‡çš„å­—ç¬¦ä¸²ç¼“å†²åŒºã€‚
 		 * StringBuffer(int capacity)
 		 * */
 		StringBuffer b=new StringBuffer();
-		System.out.println(b.length());//·µ»Ø¸Ã»º³åÇøµÄ×Ö·û´®³¤¶È
-		System.out.println(b.capacity());//·µ»Ø¸Ã»º³åÇøµÄ³¤¶È
+		System.out.println(b.length());//è¿”å›è¯¥ç¼“å†²åŒºçš„å­—ç¬¦ä¸²é•¿åº¦
+		System.out.println(b.capacity());//è¿”å›è¯¥ç¼“å†²åŒºçš„é•¿åº¦
 		
 		StringBuffer c=new StringBuffer(10);
 		System.out.println(c.length());//0
@@ -35,6 +35,6 @@ public class DemoStringBuffer {
 		
 		StringBuffer d=new StringBuffer("ljh");
 		System.out.println(d.length());//3
-		System.out.println(d.capacity());//19£¬×Ö·û»º³åÇøµÄ³õÊ¼³¤¶È+length
+		System.out.println(d.capacity());//19ï¼Œå­—ç¬¦ç¼“å†²åŒºçš„åˆå§‹é•¿åº¦+length
 	}
 }

@@ -1,23 +1,23 @@
 package day25thread;
 
-/* 1.Ê²Ã´Ê±ºòÐèÒªÍ¨ÐÅ
-	* ¶à¸öÏß³Ì²¢·¢Ö´ÐÐÊ±, ÔÚÄ¬ÈÏÇé¿öÏÂCPUÊÇËæ»úÇÐ»»Ïß³ÌµÄ
-	* Èç¹ûÎÒÃÇÏ£ÍûËûÃÇÓÐ¹æÂÉµÄÖ´ÐÐ, ¾Í¿ÉÒÔÊ¹ÓÃÍ¨ÐÅ, ÀýÈçÃ¿¸öÏß³ÌÖ´ÐÐÒ»´Î´òÓ¡
-* 2.ÔõÃ´Í¨ÐÅ
-	* Èç¹ûÏ£ÍûÏß³ÌµÈ´ý, ¾Íµ÷ÓÃwait()
-	* Èç¹ûÏ£Íû»½ÐÑµÈ´ýµÄÏß³Ì, ¾Íµ÷ÓÃnotify();
-	* ÕâÁ½¸ö·½·¨±ØÐëÔÚÍ¬²½´úÂëÖÐÖ´ÐÐ, ²¢ÇÒÊ¹ÓÃÍ¬²½Ëø¶ÔÏóÀ´µ÷ÓÃ
-* 3.notify()·½·¨
-	*Ëæ»ú»½ÐÑÒ»¸öÏß³Ì	 
+/* 1.ä»€ä¹ˆæ—¶å€™éœ€è¦é€šä¿¡
+	* å¤šä¸ªçº¿ç¨‹å¹¶å‘æ‰§è¡Œæ—¶, åœ¨é»˜è®¤æƒ…å†µä¸‹CPUæ˜¯éšæœºåˆ‡æ¢çº¿ç¨‹çš„
+	* å¦‚æžœæˆ‘ä»¬å¸Œæœ›ä»–ä»¬æœ‰è§„å¾‹çš„æ‰§è¡Œ, å°±å¯ä»¥ä½¿ç”¨é€šä¿¡, ä¾‹å¦‚æ¯ä¸ªçº¿ç¨‹æ‰§è¡Œä¸€æ¬¡æ‰“å°
+* 2.æ€Žä¹ˆé€šä¿¡
+	* å¦‚æžœå¸Œæœ›çº¿ç¨‹ç­‰å¾…, å°±è°ƒç”¨wait()
+	* å¦‚æžœå¸Œæœ›å”¤é†’ç­‰å¾…çš„çº¿ç¨‹, å°±è°ƒç”¨notify();
+	* è¿™ä¸¤ä¸ªæ–¹æ³•å¿…é¡»åœ¨åŒæ­¥ä»£ç ä¸­æ‰§è¡Œ, å¹¶ä¸”ä½¿ç”¨åŒæ­¥é”å¯¹è±¡æ¥è°ƒç”¨
+* 3.notify()æ–¹æ³•
+	*éšæœºå”¤é†’ä¸€ä¸ªçº¿ç¨‹	 
 * */
 public class Demo04Notify {
 	public static void main(String[] args) {
 		Demo04 demo04=new Demo04();
 		new Thread() {
 			public void run() {
-				//¸¸ÀàÃ»ÓÐÅ×Òì³££¬Ö»ÄÜ×Ô¼º´¦Àí
+				//çˆ¶ç±»æ²¡æœ‰æŠ›å¼‚å¸¸ï¼Œåªèƒ½è‡ªå·±å¤„ç†
 				try {
-				//ÄäÃûÄÚ²¿Àà·ÃÎÊ³ÉÔ±±äÁ¿£¬³ÉÔ±±äÁ¿ÒªÓÃfinalÐÞÊÎ£¬²»¹ýjdk1.8£¨°üÀ¨)ºó¾Í²»ÓÃ
+				//åŒ¿åå†…éƒ¨ç±»è®¿é—®æˆå‘˜å˜é‡ï¼Œæˆå‘˜å˜é‡è¦ç”¨finalä¿®é¥°ï¼Œä¸è¿‡jdk1.8ï¼ˆåŒ…æ‹¬)åŽå°±ä¸ç”¨
 					while(true)
 						demo04.print();
 				} catch (InterruptedException e) {
@@ -30,7 +30,7 @@ public class Demo04Notify {
 		new Thread() {
 			public void run() {
 				try {
-				//ÄäÃûÄÚ²¿Àà·ÃÎÊ³ÉÔ±±äÁ¿£¬³ÉÔ±±äÁ¿ÒªÓÃfinalÐÞÊÎ£¬²»¹ýjdk1.8£¨°üÀ¨)ºó¾Í²»ÓÃ
+				//åŒ¿åå†…éƒ¨ç±»è®¿é—®æˆå‘˜å˜é‡ï¼Œæˆå‘˜å˜é‡è¦ç”¨finalä¿®é¥°ï¼Œä¸è¿‡jdk1.8ï¼ˆåŒ…æ‹¬)åŽå°±ä¸ç”¨
 					while(true)
 						demo04.print02();
 				} catch (InterruptedException e) {

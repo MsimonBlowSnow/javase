@@ -7,43 +7,43 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/* A:»º³åË¼Ïë
-	* ×Ö½ÚÁ÷Ò»´Î¶ÁĞ´Ò»¸öÊı×éµÄËÙ¶ÈÃ÷ÏÔ±ÈÒ»´Î¶ÁĞ´Ò»¸ö×Ö½ÚµÄËÙ¶È¿ìºÜ¶à£¬
-	* ÕâÊÇ¼ÓÈëÁËÊı×éÕâÑùµÄ»º³åÇøĞ§¹û£¬java±¾ÉíÔÚÉè¼ÆµÄÊ±ºò£¬
-	* Ò²¿¼ÂÇµ½ÁËÕâÑùµÄÉè¼ÆË¼Ïë(×°ÊÎÉè¼ÆÄ£Ê½ºóÃæ½²½â)£¬ËùÒÔÌá¹©ÁË×Ö½Ú»º³åÇøÁ÷
+/* A:ç¼“å†²æ€æƒ³
+	* å­—èŠ‚æµä¸€æ¬¡è¯»å†™ä¸€ä¸ªæ•°ç»„çš„é€Ÿåº¦æ˜æ˜¾æ¯”ä¸€æ¬¡è¯»å†™ä¸€ä¸ªå­—èŠ‚çš„é€Ÿåº¦å¿«å¾ˆå¤šï¼Œ
+	* è¿™æ˜¯åŠ å…¥äº†æ•°ç»„è¿™æ ·çš„ç¼“å†²åŒºæ•ˆæœï¼Œjavaæœ¬èº«åœ¨è®¾è®¡çš„æ—¶å€™ï¼Œ
+	* ä¹Ÿè€ƒè™‘åˆ°äº†è¿™æ ·çš„è®¾è®¡æ€æƒ³(è£…é¥°è®¾è®¡æ¨¡å¼åé¢è®²è§£)ï¼Œæ‰€ä»¥æä¾›äº†å­—èŠ‚ç¼“å†²åŒºæµ
 * B.BufferedInputStream
-	* BufferedInputStreamÄÚÖÃÁËÒ»¸ö»º³åÇø(Êı×é)
-	* ´ÓBufferedInputStreamÖĞ¶ÁÈ¡Ò»¸ö×Ö½ÚÊ±
-	* BufferedInputStream»áÒ»´ÎĞÔ´ÓÎÄ¼şÖĞ¶ÁÈ¡8192¸ö,
-	*  ´æÔÚ»º³åÇøÖĞ, ·µ»Ø¸ø³ÌĞòÒ»¸ö
-	* ³ÌĞòÔÙ´Î¶ÁÈ¡Ê±, ¾Í²»ÓÃÕÒÎÄ¼şÁË, Ö±½Ó´Ó»º³åÇøÖĞ»ñÈ¡
-	* Ö±µ½»º³åÇøÖĞËùÓĞµÄ¶¼±»Ê¹ÓÃ¹ı, ²ÅÖØĞÂ´ÓÎÄ¼şÖĞ¶ÁÈ¡8192¸ö
+	* BufferedInputStreamå†…ç½®äº†ä¸€ä¸ªç¼“å†²åŒº(æ•°ç»„)
+	* ä»BufferedInputStreamä¸­è¯»å–ä¸€ä¸ªå­—èŠ‚æ—¶
+	* BufferedInputStreamä¼šä¸€æ¬¡æ€§ä»æ–‡ä»¶ä¸­è¯»å–8192ä¸ª,
+	*  å­˜åœ¨ç¼“å†²åŒºä¸­, è¿”å›ç»™ç¨‹åºä¸€ä¸ª
+	* ç¨‹åºå†æ¬¡è¯»å–æ—¶, å°±ä¸ç”¨æ‰¾æ–‡ä»¶äº†, ç›´æ¥ä»ç¼“å†²åŒºä¸­è·å–
+	* ç›´åˆ°ç¼“å†²åŒºä¸­æ‰€æœ‰çš„éƒ½è¢«ä½¿ç”¨è¿‡, æ‰é‡æ–°ä»æ–‡ä»¶ä¸­è¯»å–8192ä¸ª
 * C.BufferedOutputStream
-	* BufferedOutputStreamÒ²ÄÚÖÃÁËÒ»¸ö»º³åÇø(Êı×é)
-	* ³ÌĞòÏòÁ÷ÖĞĞ´³ö×Ö½ÚÊ±, ²»»áÖ±½ÓĞ´µ½ÎÄ¼ş, ÏÈĞ´µ½»º³åÇøÖĞ
-	* Ö±µ½»º³åÇøĞ´Âú, BufferedOutputStream²Å»á°Ñ»º³åÇøÖĞµÄÊı¾İÒ»´ÎĞÔĞ´µ½ÎÄ¼şÀï
-** D.Ğ¡Êı×éµÄ¶ÁĞ´ºÍ´øBufferedµÄ¶ÁÈ¡ÄÄ¸ö¸ü¿ì?
-	* ¶¨ÒåĞ¡Êı×éÈç¹ûÊÇ8192¸ö×Ö½Ú´óĞ¡ºÍBuffered±È½ÏµÄ»°
-	* ¶¨ÒåĞ¡Êı×é»áÂÔÊ¤Ò»³ï,ÒòÎª¶ÁºÍĞ´²Ù×÷µÄÊÇÍ¬Ò»¸öÊı×é
-	* ¶øBuffered²Ù×÷µÄÊÇÁ½¸öÊı×é
+	* BufferedOutputStreamä¹Ÿå†…ç½®äº†ä¸€ä¸ªç¼“å†²åŒº(æ•°ç»„)
+	* ç¨‹åºå‘æµä¸­å†™å‡ºå­—èŠ‚æ—¶, ä¸ä¼šç›´æ¥å†™åˆ°æ–‡ä»¶, å…ˆå†™åˆ°ç¼“å†²åŒºä¸­
+	* ç›´åˆ°ç¼“å†²åŒºå†™æ»¡, BufferedOutputStreamæ‰ä¼šæŠŠç¼“å†²åŒºä¸­çš„æ•°æ®ä¸€æ¬¡æ€§å†™åˆ°æ–‡ä»¶é‡Œ
+** D.å°æ•°ç»„çš„è¯»å†™å’Œå¸¦Bufferedçš„è¯»å–å“ªä¸ªæ›´å¿«?
+	* å®šä¹‰å°æ•°ç»„å¦‚æœæ˜¯8192ä¸ªå­—èŠ‚å¤§å°å’ŒBufferedæ¯”è¾ƒçš„è¯
+	* å®šä¹‰å°æ•°ç»„ä¼šç•¥èƒœä¸€ç­¹,å› ä¸ºè¯»å’Œå†™æ“ä½œçš„æ˜¯åŒä¸€ä¸ªæ•°ç»„
+	* è€ŒBufferedæ“ä½œçš„æ˜¯ä¸¤ä¸ªæ•°ç»„
  * */
 public class DemoBufferInpsAndBufferOups {
 	public static void main(String[] args) throws IOException {
-		/*´´½¨ÎÄ¼şÊäÈëÁ÷ºÍÊä³öÁ÷¶ÔÏó,¹ØÁª
-		src/day20IOStream/licunxu.pngºÍ
+		/*åˆ›å»ºæ–‡ä»¶è¾“å…¥æµå’Œè¾“å‡ºæµå¯¹è±¡,å…³è”
+		src/day20IOStream/licunxu.pngå’Œ
 		src/day20IOStream/Copylicunxu.png*/
 		FileInputStream fis=new FileInputStream("src/day20IOStream/licunxu.png");
 		FileOutputStream fos = new FileOutputStream("src/day20IOStream/Copylicunxu.png");
 		
 		
-		//´´½¨»º³åÇø¶ÔbfinºÍbfos
+		//åˆ›å»ºç¼“å†²åŒºå¯¹bfinå’Œbfos
 		BufferedInputStream bfin= new BufferedInputStream(fis);
 		BufferedOutputStream bfos = new BufferedOutputStream(fos);
 		int flag=0;
 		while((flag=bfin.read())!=-1) {
 			bfos.write(flag);
 		}
-		bfin.close();						//Ö»¹Ø×°ÊÎºóµÄ¶ÔÏó¼´¿É
+		bfin.close();						//åªå…³è£…é¥°åçš„å¯¹è±¡å³å¯
 		bfos.close();
 	}
 }

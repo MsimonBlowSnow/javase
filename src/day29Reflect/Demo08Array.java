@@ -3,9 +3,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 
-/* A:°¸ÀıÑİÊ¾
-* ArrayList<Integer>µÄÒ»¸ö¶ÔÏó£¬ÔÚÕâ¸ö¼¯ºÏÖĞÌí¼ÓÒ»¸ö×Ö·û´®Êı¾İ£¬ÈçºÎÊµÏÖÄØ£¿*/
-//·¶ĞÍÖ»ÄÜÖµ±àÒëÆÚÓĞĞ§£¬ÔÚÖ´ĞĞÆÚ×Ô¶¯²Á³ö¡£
+/* A:æ¡ˆä¾‹æ¼”ç¤º
+* ArrayList<Integer>çš„ä¸€ä¸ªå¯¹è±¡ï¼Œåœ¨è¿™ä¸ªé›†åˆä¸­æ·»åŠ ä¸€ä¸ªå­—ç¬¦ä¸²æ•°æ®ï¼Œå¦‚ä½•å®ç°å‘¢ï¼Ÿ*/
+//èŒƒå‹åªèƒ½å€¼ç¼–è¯‘æœŸæœ‰æ•ˆï¼Œåœ¨æ‰§è¡ŒæœŸè‡ªåŠ¨æ“¦å‡ºã€‚
 public class Demo08Array {
 	public static void main(String[] args) throws NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		ArrayList<Integer> array01= new ArrayList<>();

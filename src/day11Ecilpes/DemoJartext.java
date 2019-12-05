@@ -1,9 +1,9 @@
 package day11Ecilpes;
 
-import com.ming.domain.User;/*µ¼°ü£¬×Ô¼º×öµÄjar,javaÎÄ¼şÔÚshop/src
+import com.ming.domain.User;/*å¯¼åŒ…ï¼Œè‡ªå·±åšçš„jar,javaæ–‡ä»¶åœ¨shop/src
 							com.ming.domain*/
 
-import day11Makejar.MyHelpClass;//¿ÉÒÔÉ¾³ıday11Makejar,ÒòÎªÓĞjar°ü
+import day11Makejar.MyHelpClass;//å¯ä»¥åˆ é™¤day11Makejar,å› ä¸ºæœ‰jaråŒ…
 
 public class DemoJartext {
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class DemoJartext {
 		System.out.println(MyHelpClass.add(1,3));
 		System.out.println(MyHelpClass.findMax(a));
 		MyHelpClass.findAll(MyHelpClass.array(a));
-		User c=new User();/*µ¼°ü£¬×Ô¼º×öµÄjar,javaÎÄ¼şÔÚshop/src
+		User c=new User();/*å¯¼åŒ…ï¼Œè‡ªå·±åšçš„jar,javaæ–‡ä»¶åœ¨shop/src
 		com.ming.domain*/
 		System.out.println(c.getBirthday());
 	}

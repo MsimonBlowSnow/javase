@@ -3,9 +3,9 @@ package day18map;
 import java.util.HashMap;
 import java.util.Scanner;
 
-/*ÎÊÌâ:
- *Ò»¸öÑ§Ğ£ÓĞ²»Í¬µÄ×¨Òµ£¬Ò»¸ö×¨ÒµÓĞ²»Í¬µÄÑ§Éú
- *ÊäÈëÑ§ÉúĞÅÏ¢£¬²¢±éÀúÕâ¸öÑ§Ğ£µÄÑ§Éú 
+/*é—®é¢˜:
+ *ä¸€ä¸ªå­¦æ ¡æœ‰ä¸åŒçš„ä¸“ä¸šï¼Œä¸€ä¸ªä¸“ä¸šæœ‰ä¸åŒçš„å­¦ç”Ÿ
+ *è¾“å…¥å­¦ç”Ÿä¿¡æ¯ï¼Œå¹¶éå†è¿™ä¸ªå­¦æ ¡çš„å­¦ç”Ÿ 
  * */
 public class Demo2HashMaps {
 	public static void main(String[] args) {
@@ -18,15 +18,15 @@ public class Demo2HashMaps {
 		String[] strs;
 		String str1;
 		while (true) {
-			//map±ØĞëÖØĞÂ¸³Öµ£¬·ñÔòËùÓĞµÄmap2ÀïÃæµÄkey¶¼Ö¸ÏòÒ»¸ö¶ÔÏó
+			//mapå¿…é¡»é‡æ–°èµ‹å€¼ï¼Œå¦åˆ™æ‰€æœ‰çš„map2é‡Œé¢çš„keyéƒ½æŒ‡å‘ä¸€ä¸ªå¯¹è±¡
 			HashMap<Student, Integer> map = new HashMap<>();
-			System.out.println("ÇëÊäÈëÑ§ÉúµÄ×¨Òµ(quitÍË³ö)");
+			System.out.println("è¯·è¾“å…¥å­¦ç”Ÿçš„ä¸“ä¸š(quité€€å‡º)");
 			skill= sc.nextLine();
 			if(skill.equals("quit"))
 				break;
 			map.clear();
 			while(true) {
-			System.out.println("ÇëÊäÈë"+skill+"µÄÑ§ÉúĞÅÏ¢°´(°à¼¶£¬Ñ§ÉúĞÕÃû£¬ÄêÁä):quitÍË³ö");
+			System.out.println("è¯·è¾“å…¥"+skill+"çš„å­¦ç”Ÿä¿¡æ¯æŒ‰(ç­çº§ï¼Œå­¦ç”Ÿå§“åï¼Œå¹´é¾„):quité€€å‡º");
 			 str1 = sc.nextLine();
 			if (str1.equals("quit"))
 				break;
@@ -37,7 +37,7 @@ public class Demo2HashMaps {
 				class1 = Integer.parseInt(strs[0]);
 				map.put(new Student(age, name), class1);
 			} catch (Exception e) {
-				System.out.println("¸ñÊ½´íÎó!ÇëÊäÈëÕıÈ·µÄ¸ñÊ½");
+				System.out.println("æ ¼å¼é”™è¯¯!è¯·è¾“å…¥æ­£ç¡®çš„æ ¼å¼");
 			}
 			}
 			map2.put(map, skill);

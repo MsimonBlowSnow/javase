@@ -7,29 +7,29 @@ public class DemoFangXing5 {
 	
 
 		/**
-		 * * A:·ºĞÍÍ¨Åä·û<?>	
-				* ÈÎÒâÀàĞÍ£¬Èç¹ûÃ»ÓĞÃ÷È·£¬ÄÇÃ´¾ÍÊÇObjectÒÔ¼°ÈÎÒâµÄJavaÀàÁË
+		 * * A:æ³›å‹é€šé…ç¬¦<?>	
+				* ä»»æ„ç±»å‹ï¼Œå¦‚æœæ²¡æœ‰æ˜ç¡®ï¼Œé‚£ä¹ˆå°±æ˜¯Objectä»¥åŠä»»æ„çš„Javaç±»äº†
 			* B:? extends E
-				* ÏòÏÂÏŞ¶¨£¬E¼°Æä×ÓÀà
+				* å‘ä¸‹é™å®šï¼ŒEåŠå…¶å­ç±»
 			* C:? super E
-				* ÏòÉÏÏŞ¶¨£¬E¼°Æä¸¸Àà
-				* ÓÃÓÚcomparable½Ó¿ÚµÈµÈ
+				* å‘ä¸Šé™å®šï¼ŒEåŠå…¶çˆ¶ç±»
+				* ç”¨äºcomparableæ¥å£ç­‰ç­‰
 		 */
 		public static void main(String[] args) {
-			//List<?> list = new ArrayList<Integer>();			//µ±ÓÒ±ßµÄ·ºĞÍÊÇ²»È·¶¨Ê±,×ó±ß¿ÉÒÔÖ¸¶¨Îª?
+			//List<?> list = new ArrayList<Integer>();			//å½“å³è¾¹çš„æ³›å‹æ˜¯ä¸ç¡®å®šæ—¶,å·¦è¾¹å¯ä»¥æŒ‡å®šä¸º?
 			ArrayList<Person> list1 = new ArrayList<>();
-			list1.add(new Person("ÕÅÈı", "23"));
-			list1.add(new Person("ÀîËÄ", "24"));
-			list1.add(new Person("ÍõÎå", "25"));
+			list1.add(new Person("å¼ ä¸‰", "23"));
+			list1.add(new Person("æå››", "24"));
+			list1.add(new Person("ç‹äº”", "25"));
 			
 			ArrayList<Student> list2 = new ArrayList<>();
-			list2.add(new Student("ÕÔÁù", "26"));
-			list2.add(new Student("ÖÜÆß", "27"));
+			list2.add(new Student("èµµå…­", "26"));
+			list2.add(new Student("å‘¨ä¸ƒ", "27"));
 			
 			//public boolean addAll(Collection<? extends E> c)
 			list1.addAll(list2);
-			System.out.println(list1);//´òÓ¡ÖĞÓĞstudent ÊÇ¶àÌ¬ÏÖÏó
-			//list2.addAll(list1);//ÒòÎªlist2 ÊÇ×ÓÀà£¬×ÓÀà¼¯ºÏ²»»á×°¸¸Àà
+			System.out.println(list1);//æ‰“å°ä¸­æœ‰student æ˜¯å¤šæ€ç°è±¡
+			//list2.addAll(list1);//å› ä¸ºlist2 æ˜¯å­ç±»ï¼Œå­ç±»é›†åˆä¸ä¼šè£…çˆ¶ç±»
 		}
 
 	}

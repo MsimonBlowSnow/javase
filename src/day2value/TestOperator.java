@@ -2,7 +2,7 @@ package day2value;
 
 public class TestOperator {
 	public static void main(String[] args) {
-		System.out.println("µÚÒ»Ìâ:");
+		System.out.println("ç¬¬ä¸€é¢˜:");
 		int a = 10;
 		int b = 10;
 		int c = 10;
@@ -14,21 +14,21 @@ public class TestOperator {
 		
 		System.out.println("a = " + a + ",b = " + b + ",c = " + c);
 
-		System.out.println("µÚ¶şÌâ");
+		System.out.println("ç¬¬äºŒé¢˜");
 		int x = 4;
 		//		4	+	6+	60
 		int y = (x++)+(++x)+(x*10);//70
 
 		System.out.println("x = " + x + ",y = " +  y);
 
-		System.out.println("µÚÈıÌâÎÊÄÄ¾ä»á±¨´í,ÎªÊ²Ã´ ");
+		System.out.println("ç¬¬ä¸‰é¢˜é—®å“ªå¥ä¼šæŠ¥é”™,ä¸ºä»€ä¹ˆ ");
 		byte u= 10;
 		u++;					//b = (byte)(b + 1)
-		//u = u + 1;				//µ±byteÓëint½øĞĞ»ìºÏÔËËãµÄÊ±ºò,»áÌáÉıÎªintÀàĞÍ,Á½¸öintÏà¼ÓµÄ½á¹û»¹ÊÇint,¸³Öµ¸øbyte»áËğÊ§¾«¶È
+		//u = u + 1;				//å½“byteä¸intè¿›è¡Œæ··åˆè¿ç®—çš„æ—¶å€™,ä¼šæå‡ä¸ºintç±»å‹,ä¸¤ä¸ªintç›¸åŠ çš„ç»“æœè¿˜æ˜¯int,èµ‹å€¼ç»™byteä¼šæŸå¤±ç²¾åº¦
 		System.out.println("b = " + b);
 		
-		System.out.println("ÃæÊÔÌâ:¿´ÏÂÃæµÄ³ÌĞòÊÇ·ñÓĞÎÊÌâ£¬Èç¹ûÓĞÎÊÌâ£¬ÇëÖ¸³ö²¢ËµÃ÷ÀíÓÉ");
-				//short s=1;s = s+1;			//µ±shortÓëint½øĞĞÔËËãµÄÊ±ºò,»áÌáÉıÎªintÀàĞÍ,Á½¸öintÀàĞÍÏà¼ÓµÄ½á¹ûÒ²ÊÇintÀàĞÍ
+		System.out.println("é¢è¯•é¢˜:çœ‹ä¸‹é¢çš„ç¨‹åºæ˜¯å¦æœ‰é—®é¢˜ï¼Œå¦‚æœæœ‰é—®é¢˜ï¼Œè¯·æŒ‡å‡ºå¹¶è¯´æ˜ç†ç”±");
+				//short s=1;s = s+1;			//å½“shortä¸intè¿›è¡Œè¿ç®—çš„æ—¶å€™,ä¼šæå‡ä¸ºintç±»å‹,ä¸¤ä¸ªintç±»å‹ç›¸åŠ çš„ç»“æœä¹Ÿæ˜¯intç±»å‹
 				short s=1;s+=1;					//s = (short)(s + 1);
 
 				System.out.println(s);

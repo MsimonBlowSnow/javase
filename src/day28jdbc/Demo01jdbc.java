@@ -9,54 +9,54 @@ import java.sql.Statement;
 import com.mysql.jdbc.Driver;
 
 /*
-JDBC²Ù×÷Êı¾İ¿âµÄ²½Öè
-1.×¢²áÇı¶¯
-    ¸æÖªJVMÊ¹ÓÃµÄÊÇÄÄÒ»¸öÊı¾İ¿âµÄÇı¶¯
-2.»ñµÃÁ¬½Ó
-   Ê¹ÓÃJDBCÖĞµÄÀà,Íê³É¶ÔMySQLÊı¾İ¿âµÄÁ¬½Ó
-3.»ñµÃÓï¾äÖ´ĞĞÆ½Ì¨
-  Í¨¹ıÁ¬½Ó¶ÔÏó»ñÈ¡¶ÔSQLÓï¾äµÄÖ´ĞĞÕß¶ÔÏó
-4.Ö´ĞĞsqlÓï¾ä
-  Ê¹ÓÃÖ´ĞĞÕß¶ÔÏó,ÏòÊı¾İ¿âÖ´ĞĞSQLÓï¾ä
-  »ñÈ¡µ½Êı¾İ¿âµÄÖ´ĞĞºóµÄ½á¹û
-5.´¦Àí½á¹û
-6.ÊÍ·Å×ÊÔ´  Ò»¶Ñclose()
+JDBCæ“ä½œæ•°æ®åº“çš„æ­¥éª¤
+1.æ³¨å†Œé©±åŠ¨
+    å‘ŠçŸ¥JVMä½¿ç”¨çš„æ˜¯å“ªä¸€ä¸ªæ•°æ®åº“çš„é©±åŠ¨
+2.è·å¾—è¿æ¥
+   ä½¿ç”¨JDBCä¸­çš„ç±»,å®Œæˆå¯¹MySQLæ•°æ®åº“çš„è¿æ¥
+3.è·å¾—è¯­å¥æ‰§è¡Œå¹³å°
+  é€šè¿‡è¿æ¥å¯¹è±¡è·å–å¯¹SQLè¯­å¥çš„æ‰§è¡Œè€…å¯¹è±¡
+4.æ‰§è¡Œsqlè¯­å¥
+  ä½¿ç”¨æ‰§è¡Œè€…å¯¹è±¡,å‘æ•°æ®åº“æ‰§è¡ŒSQLè¯­å¥
+  è·å–åˆ°æ•°æ®åº“çš„æ‰§è¡Œåçš„ç»“æœ
+5.å¤„ç†ç»“æœ
+6.é‡Šæ”¾èµ„æº  ä¸€å †close()
 */
 public class Demo01jdbc {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		//¼ÓÔØÇı¶¯
+		//åŠ è½½é©±åŠ¨
 		Class.forName("com.mysql.jdbc.Driver");
-		/*Driver ÔÚÇı¶¯°üÀïÃæ,ÀïÃæÓĞÒ»¸ö¾²Ì¬´úÂë¿é£¬»á×Ô¶¯´´½¨ÓÃÏÂÃæµÄ·½·¨¾Í´´×÷ÁËÁ½¸öDriver();
-		²»Ì«Ìá³«ÏÂÃæµÄ·½·¨×¢²á£¬Ó¦¸ÃÓÃClass.forName("");À´×¢²á
+		/*Driver åœ¨é©±åŠ¨åŒ…é‡Œé¢,é‡Œé¢æœ‰ä¸€ä¸ªé™æ€ä»£ç å—ï¼Œä¼šè‡ªåŠ¨åˆ›å»ºç”¨ä¸‹é¢çš„æ–¹æ³•å°±åˆ›ä½œäº†ä¸¤ä¸ªDriver();
+		ä¸å¤ªæå€¡ä¸‹é¢çš„æ–¹æ³•æ³¨å†Œï¼Œåº”è¯¥ç”¨Class.forName("");æ¥æ³¨å†Œ
 		DriverManager.registerDriver(new  Driver());  */
 		
-		//»ñµÃÊı¾İ¿âµÄÁ¬½Ó
+		//è·å¾—æ•°æ®åº“çš„è¿æ¥
 		//getConnection(string url,String user,String password)
-		//urlµÄĞ´·¨:jdbc:mysql://localhost:3306/Êı¾İ¿âÃû
+		//urlçš„å†™æ³•:jdbc:mysql://localhost:3306/æ•°æ®åº“å
 		Connection aConnection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/mydatabases", "root",
 				"123456");
-		//Connection µÄ¶ÔÏóµ÷ÓÃcreateStatement();·½·¨£¬¿ÉÒÔ»ñµÃStatement¶ÔÏó
-		//StatementÊÇjavaÖĞµÄ½Ó¿Ú£¬²»¹ıËûµÄÊµÏÖÀàÔÚjdbcÀïÃæ
+		//Connection çš„å¯¹è±¡è°ƒç”¨createStatement();æ–¹æ³•ï¼Œå¯ä»¥è·å¾—Statementå¯¹è±¡
+		//Statementæ˜¯javaä¸­çš„æ¥å£ï¼Œä¸è¿‡ä»–çš„å®ç°ç±»åœ¨jdbcé‡Œé¢
 		Statement aStatement = aConnection.createStatement();
-		//System.out.println(aConnection);//Êä³östatementÊµÏÖÀà¶ÔÏóµÄ¶ÔÏó
+		//System.out.println(aConnection);//è¾“å‡ºstatementå®ç°ç±»å¯¹è±¡çš„å¯¹è±¡
 		
-		//aStatement.executeUpdate(sql)¶Ôdelete insert update ÓĞĞ§£¬·µ»Øint
+		//aStatement.executeUpdate(sql)å¯¹delete insert update æœ‰æ•ˆï¼Œè¿”å›int
 		ResultSet aResultSet = aStatement.executeQuery("select * from ming");
 		int age = 0;
 		String sex = null;
 		int ID = 0;
 		String nameString = null;
 		while (aResultSet.next()) {
-			//getXXX(int indexof)»ñÈ¡¶ÔÓ¦Ë÷ÒıÉÏµÄÖµ
-			//getXXX(String name)»ñÈ¡¶ÔÓ¦Ãû×ÖµÄÖµ
-			//½¨ÒéÊ¹ÓÃgetXXX(String name)(¿ÉÒÔÓÃgetSting»òÕßgetbject´úÌæ);
+			//getXXX(int indexof)è·å–å¯¹åº”ç´¢å¼•ä¸Šçš„å€¼
+			//getXXX(String name)è·å–å¯¹åº”åå­—çš„å€¼
+			//å»ºè®®ä½¿ç”¨getXXX(String name)(å¯ä»¥ç”¨getStingæˆ–è€…getbjectä»£æ›¿);
 			age = aResultSet.getInt(1);
 			sex = aResultSet.getString("sex1");
 			ID = aResultSet.getInt(3);
 			nameString = aResultSet.getString(4);
 			System.out.println("age: " + age + " sex: " + sex + " ID: " + ID + " nameString: " + nameString);
 		}
-		//¹Ø±Õ×ÊÔ´
+		//å…³é—­èµ„æº
 		aResultSet.close();
 		aStatement.close();
 		aConnection.close();

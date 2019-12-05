@@ -1,7 +1,7 @@
-package Ã¶¾ÙÀà;
+package æšä¸¾ç±»;
 
 public enum Week12 {
-	MON("ĞÇÆÚÒ»"),TUES("ĞÇÆÚ¶ş"),WED("ĞÇÆÚÈı");
+	MON("æ˜ŸæœŸä¸€"),TUES("æ˜ŸæœŸäºŒ"),WED("æ˜ŸæœŸä¸‰");
 	 private String name;
 	private Week12(String name) {
 		this.name=name;

@@ -6,12 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /* 
- * read()·½·¨Ò»´Î¶ÁÒ»¸ö×Ö½Ú,Èç¹û½áÊø·Å»Ø-1									//¹Ø±ÕÁ÷ÊÍ·Å×ÊÔ´
+ * read()æ–¹æ³•ä¸€æ¬¡è¯»ä¸€ä¸ªå­—èŠ‚,å¦‚æœç»“æŸæ”¾å›-1									//å…³é—­æµé‡Šæ”¾èµ„æº
 */
 public class DemoFileInputStream {
 	public static void main(String[] args) throws IOException {
 		File a= new File("src/day20IOStream/a.txt");
-		//read()·½·¨Ã¿´Î¶ÁÒ»¸ö×Ö½Ú£¬²¢·µ»ØÒ»¸öintĞÍÕûÊı£¬µ±ÎÄ¼ş½áÊøÊ±£¬·µ»Ø-1
+		//read()æ–¹æ³•æ¯æ¬¡è¯»ä¸€ä¸ªå­—èŠ‚ï¼Œå¹¶è¿”å›ä¸€ä¸ªintå‹æ•´æ•°ï¼Œå½“æ–‡ä»¶ç»“æŸæ—¶ï¼Œè¿”å›-1
 		methodWhileRead(a);
 		methodRead(a);
 	}
@@ -21,7 +21,7 @@ public class DemoFileInputStream {
 		System.out.println(infile.read());
 		System.out.println(infile.read());
 		System.out.println(infile.read());
-		//½áÊø³ö-1
+		//ç»“æŸå‡º-1
 		System.out.println(infile.read());
 	}
 

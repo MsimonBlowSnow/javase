@@ -1,11 +1,11 @@
 package day12String;
 
-/*AStringµÄÌæ»»¹¦ÄÜ
- 	*String replace(char old,char new);//¶ÔÔ­×Ö·û´®Ã»ÓĞ±ä»¯
+/*AStringçš„æ›¿æ¢åŠŸèƒ½
+ 	*String replace(char old,char new);//å¯¹åŸå­—ç¬¦ä¸²æ²¡æœ‰å˜åŒ–
  	*String replace(String old,String);
- *BÈ¥³ı×Ö·û´®ÀïÃæµÄ¿Õ¸ñ 
- 	*String trim();//È¥³ıÁ½¶Î¿Õ¸ñ
- *C:StringµÄ°´×ÖµäË³Ğò±È½ÏÁ½¸ö×Ö·û´®¼°°¸ÀıÑİÊ¾ 
+ *Bå»é™¤å­—ç¬¦ä¸²é‡Œé¢çš„ç©ºæ ¼ 
+ 	*String trim();//å»é™¤ä¸¤æ®µç©ºæ ¼
+ *C:Stringçš„æŒ‰å­—å…¸é¡ºåºæ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸²åŠæ¡ˆä¾‹æ¼”ç¤º 
  	* int compareto(String str)
  	* int comparetoIngnoreCare(String str)
  * */
@@ -13,22 +13,22 @@ public class Demo12StringMethod {
 	public static void main(String[] args) {
 		//String replace(char old,char new);
 		String str1="aaabbbccc";
-		String str2=str1.replace('a', 'i');//¶ÔÔ­×Ö·û´®Ã»ÓĞ±ä»¯
+		String str2=str1.replace('a', 'i');//å¯¹åŸå­—ç¬¦ä¸²æ²¡æœ‰å˜åŒ–
 	
 		//String replace(String old,String);
 		System.out.println(str2);
-		str2=str1.replace("aaa", "1");//¶ÔÔ­×Ö·û´®Ã»ÓĞ±ä»¯
+		str2=str1.replace("aaa", "1");//å¯¹åŸå­—ç¬¦ä¸²æ²¡æœ‰å˜åŒ–
 		System.out.println(str2);
 		System.out.println(str1);
 		
 		//trim()
-		System.out.println(" a b c edafd adddddvb  ".trim());//È¥µôÁ½¶ËµÄ¿Õ¸ñ
+		System.out.println(" a b c edafd adddddvb  ".trim());//å»æ‰ä¸¤ç«¯çš„ç©ºæ ¼
 		
 		//compareto()
-		String str="ºÚ"+0;
-		String str0="Âí"+0;
-		System.out.println("ºÚ"+0);	//ÕÒUnicodeÂë±í
-		System.out.println("Âí"+0);
+		String str="é»‘"+0;
+		String str0="é©¬"+0;
+		System.out.println("é»‘"+0);	//æ‰¾Unicodeç è¡¨
+		System.out.println("é©¬"+0);
 		System.out.println(str.compareTo(str0));
 		
 		String str5="heima";

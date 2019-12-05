@@ -2,32 +2,32 @@ package day12ClassObject;
 
 import com.ming.domain.User;
 
-/*Object ¶ÔÏó
- * ¸Ã¶ÔÏóÊÇËùÓĞµÄÎŞ¸¸ÀàµÄÄ¬ÈÏ¼Ì³Ğ¶ÔÏóÀï,
- * ¸Ã¶ÔÏóÃæÓĞÕâ¼¸ÖÖ³£ÓÃµÄ·½·¨
- * hashCode(),toString(),getClass(),equalsµÈ·½·¨
- * hashcode():·µ»ØÒ»¸ö¶ÔÏóµÄhashÖµ
- * getClass():·µ»ØÒ»¸ö¶ÔÏóµÄ×Ö½ÚÂëÎÄ¼ş,Í¨¹ıÕâ¸ö¿ÉÒÔÉú³ÉÒ»¸ö¶ÔÏó
- * toString():²»ÖØĞ´µÄÇé¿öÏÂÊÇgetClass().getName()+"@"+ Integer.toHexString(hashCode())
- * equals():objectÖĞequals·½·¨Ã»ÓĞ¾­¹ıÖØĞ´£¬ËùÒÔobjectÖĞequals·½·¨±È½ÏµÄÊÇÁ½¸ö¶ÔÏóµÄµØÖ·Öµ£¬ºÍ==Ò»Ñù
- * Ò»°ã½¨ÒéÖØĞ´£¬ÈçºÍString¶ÔÏóºÍDemoStudHelpÖĞµÄequals()·½·¨Ò»Ñù¡£
- * ==Óëequals()µÄÇø±ğ
- * equals()Ö»ÄÜ±È½ÏÒıÓÃÖµ,²¢ÇÒÔÚÃ»ÓĞÖØĞ´Ö®Ç°ºÍ==²î²»¶à£¬±È½ÏµØÖ·Öµ
+/*Object å¯¹è±¡
+ * è¯¥å¯¹è±¡æ˜¯æ‰€æœ‰çš„æ— çˆ¶ç±»çš„é»˜è®¤ç»§æ‰¿å¯¹è±¡é‡Œ,
+ * è¯¥å¯¹è±¡é¢æœ‰è¿™å‡ ç§å¸¸ç”¨çš„æ–¹æ³•
+ * hashCode(),toString(),getClass(),equalsç­‰æ–¹æ³•
+ * hashcode():è¿”å›ä¸€ä¸ªå¯¹è±¡çš„hashå€¼
+ * getClass():è¿”å›ä¸€ä¸ªå¯¹è±¡çš„å­—èŠ‚ç æ–‡ä»¶,é€šè¿‡è¿™ä¸ªå¯ä»¥ç”Ÿæˆä¸€ä¸ªå¯¹è±¡
+ * toString():ä¸é‡å†™çš„æƒ…å†µä¸‹æ˜¯getClass().getName()+"@"+ Integer.toHexString(hashCode())
+ * equals():objectä¸­equalsæ–¹æ³•æ²¡æœ‰ç»è¿‡é‡å†™ï¼Œæ‰€ä»¥objectä¸­equalsæ–¹æ³•æ¯”è¾ƒçš„æ˜¯ä¸¤ä¸ªå¯¹è±¡çš„åœ°å€å€¼ï¼Œå’Œ==ä¸€æ ·
+ * ä¸€èˆ¬å»ºè®®é‡å†™ï¼Œå¦‚å’ŒStringå¯¹è±¡å’ŒDemoStudHelpä¸­çš„equals()æ–¹æ³•ä¸€æ ·ã€‚
+ * ==ä¸equals()çš„åŒºåˆ«
+ * equals()åªèƒ½æ¯”è¾ƒå¼•ç”¨å€¼,å¹¶ä¸”åœ¨æ²¡æœ‰é‡å†™ä¹‹å‰å’Œ==å·®ä¸å¤šï¼Œæ¯”è¾ƒåœ°å€å€¼
  * */
 
 public class day12ClassObect {
 
 	public static void main(String[] args) {
 		Object a = new Object();
-		User b = new User();// Í¨¹ı×Ô¼º×öµÄjar°ü´´½¨¶ÔÏó
+		User b = new User();// é€šè¿‡è‡ªå·±åšçš„jaråŒ…åˆ›å»ºå¯¹è±¡
 		System.out.println(a.toString());
 		System.out.println(b.hashCode());
 		System.out.println(b.getClass().getName());
-		DemoStudHelp c = new DemoStudHelp("ÕÅÈı", "27");
-		DemoStudHelp d = new DemoStudHelp("ÕÅÈı", "27");
-		System.out.println(d.toString());//¾­ÖØĞ´
-		System.out.println(c.equals(d));//true,Ã»ÖØĞ´±ÈµØÖ·ÖµÊ±Îªfalse£¬
-										//µ«ÊÇ¸Ã·½·¨ÒÑ¾­ÖØĞ´
+		DemoStudHelp c = new DemoStudHelp("å¼ ä¸‰", "27");
+		DemoStudHelp d = new DemoStudHelp("å¼ ä¸‰", "27");
+		System.out.println(d.toString());//ç»é‡å†™
+		System.out.println(c.equals(d));//true,æ²¡é‡å†™æ¯”åœ°å€å€¼æ—¶ä¸ºfalseï¼Œ
+										//ä½†æ˜¯è¯¥æ–¹æ³•å·²ç»é‡å†™
 	}
 
 }

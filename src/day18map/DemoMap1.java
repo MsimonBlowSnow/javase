@@ -5,56 +5,56 @@ import java.util.HashMap;
 import java.util.Map;
 
 /*
- 	* A:Map¼¯ºÏµÄ¹¦ÄÜ¸ÅÊö
-	* a:Ìí¼Ó¹¦ÄÜ
-		* V put(K key,V value):Ìí¼ÓÔªËØ¡£
-			* Èç¹û¼üÊÇµÚÒ»´Î´æ´¢£¬¾ÍÖ±½Ó´æ´¢ÔªËØ£¬·µ»Ønull
-			* Èç¹û¼ü²»ÊÇµÚÒ»´Î´æÔÚ£¬¾ÍÓÃÖµ°ÑÒÔÇ°µÄÖµÌæ»»µô£¬·µ»ØÒÔÇ°µÄÖµ
-	* b:É¾³ı¹¦ÄÜ
-		* void clear():ÒÆ³ıËùÓĞµÄ¼üÖµ¶ÔÔªËØ
-		* V remove(Object key)£º¸ù¾İ¼üÉ¾³ı¼üÖµ¶ÔÔªËØ£¬²¢°ÑÖµ·µ»Ø
-	* c:ÅĞ¶Ï¹¦ÄÜ
-		* boolean containsKey(Object key)£ºÅĞ¶Ï¼¯ºÏÊÇ·ñ°üº¬Ö¸¶¨µÄ¼ü
-		* boolean containsValue(Object value):ÅĞ¶Ï¼¯ºÏÊÇ·ñ°üº¬Ö¸¶¨µÄÖµ
-		* boolean isEmpty()£ºÅĞ¶Ï¼¯ºÏÊÇ·ñÎª¿Õ
-	* d:»ñÈ¡¹¦ÄÜ
+ 	* A:Mapé›†åˆçš„åŠŸèƒ½æ¦‚è¿°
+	* a:æ·»åŠ åŠŸèƒ½
+		* V put(K key,V value):æ·»åŠ å…ƒç´ ã€‚
+			* å¦‚æœé”®æ˜¯ç¬¬ä¸€æ¬¡å­˜å‚¨ï¼Œå°±ç›´æ¥å­˜å‚¨å…ƒç´ ï¼Œè¿”å›null
+			* å¦‚æœé”®ä¸æ˜¯ç¬¬ä¸€æ¬¡å­˜åœ¨ï¼Œå°±ç”¨å€¼æŠŠä»¥å‰çš„å€¼æ›¿æ¢æ‰ï¼Œè¿”å›ä»¥å‰çš„å€¼
+	* b:åˆ é™¤åŠŸèƒ½
+		* void clear():ç§»é™¤æ‰€æœ‰çš„é”®å€¼å¯¹å…ƒç´ 
+		* V remove(Object key)ï¼šæ ¹æ®é”®åˆ é™¤é”®å€¼å¯¹å…ƒç´ ï¼Œå¹¶æŠŠå€¼è¿”å›
+	* c:åˆ¤æ–­åŠŸèƒ½
+		* boolean containsKey(Object key)ï¼šåˆ¤æ–­é›†åˆæ˜¯å¦åŒ…å«æŒ‡å®šçš„é”®
+		* boolean containsValue(Object value):åˆ¤æ–­é›†åˆæ˜¯å¦åŒ…å«æŒ‡å®šçš„å€¼
+		* boolean isEmpty()ï¼šåˆ¤æ–­é›†åˆæ˜¯å¦ä¸ºç©º
+	* d:è·å–åŠŸèƒ½
 		* Set<Map.Entry<K,V>> entrySet():
-		* V get(Object key):¸ù¾İ¼ü»ñÈ¡Öµ
-		* Set<K> keySet():»ñÈ¡¼¯ºÏÖĞËùÓĞ¼üµÄ¼¯ºÏ
-		* Collection<V> values():»ñÈ¡¼¯ºÏÖĞËùÓĞÖµµÄ¼¯ºÏ
-	* e:³¤¶È¹¦ÄÜ
-		* int size()£º·µ»Ø¼¯ºÏÖĞµÄ¼üÖµ¶ÔµÄ¸öÊı
+		* V get(Object key):æ ¹æ®é”®è·å–å€¼
+		* Set<K> keySet():è·å–é›†åˆä¸­æ‰€æœ‰é”®çš„é›†åˆ
+		* Collection<V> values():è·å–é›†åˆä¸­æ‰€æœ‰å€¼çš„é›†åˆ
+	* e:é•¿åº¦åŠŸèƒ½
+		* int size()ï¼šè¿”å›é›†åˆä¸­çš„é”®å€¼å¯¹çš„ä¸ªæ•°
  * 
  * */
 public class DemoMap1 {
 	public static void main(String[] args) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
-		Integer l1 = map.put("ÕÅÈı", 26);// null
-		Integer l2 = map.put("ÀîËÄ", 25);// null
-		Integer l3 = map.put("ÍõÎå", 24);// null
-		Integer l4 = map.put("ÕÔÁù", 23);// null
-		Integer l5 = map.put("ÕÅÈı", 22);// 26,·µ»Ø±»¸²¸ÇÁËµÄÖµ¡£
-		System.out.println(l1 + " " + l2 + " " + l3 + " " + l4 + " " + l5);// null null null null 26,f·µ»Ø±»¸²¸ÇÁËµÄÖµ
-		// remove É¾³ı²¢·µ»Ø¡£
-		System.out.println(map.remove("ÕÅÈı"));// 22
-		System.out.println(map);// {ÀîËÄ=25, ÍõÎå=24, ÕÔÁù=23}ÕÅÈı±»É¾³ı
-		// ÅĞ¶ÏÓï¾äcontainsKey()·½·¨ºÍ containsValue()·½·¨
+		Integer l1 = map.put("å¼ ä¸‰", 26);// null
+		Integer l2 = map.put("æå››", 25);// null
+		Integer l3 = map.put("ç‹äº”", 24);// null
+		Integer l4 = map.put("èµµå…­", 23);// null
+		Integer l5 = map.put("å¼ ä¸‰", 22);// 26,è¿”å›è¢«è¦†ç›–äº†çš„å€¼ã€‚
+		System.out.println(l1 + " " + l2 + " " + l3 + " " + l4 + " " + l5);// null null null null 26,fè¿”å›è¢«è¦†ç›–äº†çš„å€¼
+		// remove åˆ é™¤å¹¶è¿”å›ã€‚
+		System.out.println(map.remove("å¼ ä¸‰"));// 22
+		System.out.println(map);// {æå››=25, ç‹äº”=24, èµµå…­=23}å¼ ä¸‰è¢«åˆ é™¤
+		// åˆ¤æ–­è¯­å¥containsKey()æ–¹æ³•å’Œ containsValue()æ–¹æ³•
 		//methodPanduan(map);
-		//»ñÈ¡¹¦ÄÜ,»ñÈ¡ÀïÃæµÄÖµ
+		//è·å–åŠŸèƒ½,è·å–é‡Œé¢çš„å€¼
 		Collection<Integer> a=map.values();
 		System.out.println(a);
 	}
 
 	private static void methodPanduan(Map<String, Integer> map) {
-		System.out.println(map.containsKey("ÀîËÄ"));
-		System.out.println(map.containsKey("ÕÅÈı"));// ÕÅÈı±»É¾µôÁË
+		System.out.println(map.containsKey("æå››"));
+		System.out.println(map.containsKey("å¼ ä¸‰"));// å¼ ä¸‰è¢«åˆ æ‰äº†
 		System.out.println(map.containsValue(23));
 		System.out.println(map.containsValue(22));
 		if (map.isEmpty()) {
-			System.out.println("²»ÊÇ");
+			System.out.println("ä¸æ˜¯");
 		} else {
-			map.clear();// Çå³ıËùÓĞÔªËØ
-			System.out.println("ÊÇ");
+			map.clear();// æ¸…é™¤æ‰€æœ‰å…ƒç´ 
+			System.out.println("æ˜¯");
 		}
 	}
 }

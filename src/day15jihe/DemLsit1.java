@@ -11,16 +11,16 @@ public class DemLsit1 {
 		a.add(new Student("mmp2", "2"));
 		a.add(new Student("mmp3", "3"));
 		a.add(new Student("mmp4", "4"));
-		System.out.println(a.size());//¼¯ºÏµÄ³¤¶È
+		System.out.println(a.size());//é›†åˆçš„é•¿åº¦
 		for(int i=0;i<a.size();i++) {
-			System.out.println(a.get(i));//¶àÌ¬£¬µ÷ÓÃStudentÖĞµÄtostring·½·¨
+			System.out.println(a.get(i));//å¤šæ€ï¼Œè°ƒç”¨Studentä¸­çš„tostringæ–¹æ³•
 		}
-		//Í¨¸æÏòÏÂ×ªĞÍ£¬µ÷ÓÃget·½·¨
+		//é€šå‘Šå‘ä¸‹è½¬å‹ï¼Œè°ƒç”¨getæ–¹æ³•
 		System.out.println("==================================");
-		System.out.println("Í¨¸æÏòÏÂ×ªĞÍ£¬µ÷ÓÃget·½·¨:");
+		System.out.println("é€šå‘Šå‘ä¸‹è½¬å‹ï¼Œè°ƒç”¨getæ–¹æ³•:");
 		for(int i=0;i<a.size();i++) {
 			Student stud=(Student) a.get(i);
-			System.out.println(stud.getAge()+":"+stud.getName());//¶àÌ¬£¬µ÷ÓÃStudentÖĞµÄtostring·½·¨
+			System.out.println(stud.getAge()+":"+stud.getName());//å¤šæ€ï¼Œè°ƒç”¨Studentä¸­çš„tostringæ–¹æ³•
 		}
 	}
 }

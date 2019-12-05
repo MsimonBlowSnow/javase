@@ -1,31 +1,31 @@
 package day12String;
-/*ÃæÊÔÌâ
+/*é¢è¯•é¢˜
  	*1. String str ="abc";
 		String str1 = "abc";
-		//³£Á¿³ØÀïÃæÃ»ÓĞ¾Í´´½¨¶ÔÏóÈçstr£¬ÓĞ¾ÍÖ±½ÓÒıÓÃ
-		System.out.println(str==str1);//true,×¢ÒâÊÇtrue£¬
+		//å¸¸é‡æ± é‡Œé¢æ²¡æœ‰å°±åˆ›å»ºå¯¹è±¡å¦‚strï¼Œæœ‰å°±ç›´æ¥å¼•ç”¨
+		System.out.println(str==str1);//true,æ³¨æ„æ˜¯trueï¼Œ
 		System.out.println(str.equals(str1));//true
- 	*2.String str =new String("abc");´´½¨ÁË¼¸¸ö¶ÔÏó
- 		*·²ÊÇnewÁË¾ÍÔÚ¶ÑÀïÃæ
- 		*Á½¸ö£¬ÏÈ²é¿´³£Á¿³ØÀïÃæÊÇ·ñÓĞ"abc"£¬Ã»ÓĞ´´½¨Ò»¸öÔÚ³£Á¿³ØÀïÃæ£¬È»ºóÔÚcopy Ò»¸ö¸±±¾½øÈë¶ÑÀïÃæ 	
+ 	*2.String str =new String("abc");åˆ›å»ºäº†å‡ ä¸ªå¯¹è±¡
+ 		*å‡¡æ˜¯newäº†å°±åœ¨å †é‡Œé¢
+ 		*ä¸¤ä¸ªï¼Œå…ˆæŸ¥çœ‹å¸¸é‡æ± é‡Œé¢æ˜¯å¦æœ‰"abc"ï¼Œæ²¡æœ‰åˆ›å»ºä¸€ä¸ªåœ¨å¸¸é‡æ± é‡Œé¢ï¼Œç„¶ååœ¨copy ä¸€ä¸ªå‰¯æœ¬è¿›å…¥å †é‡Œé¢ 	
  	*3.String str=new String("ab");
  		*String str1= "ab";
  		*str1==str//false
  		*str1.eqauls(str);true
- 			*Ô­Òò:str1ÊÇÖ¸Ïò³£Á¿³ØµÄ£¬strÊÇÖ¸Ïò¶ÑÄÚ´æµÄ,µØÖ·Öµ²»Ò»
+ 			*åŸå› :str1æ˜¯æŒ‡å‘å¸¸é‡æ± çš„ï¼Œstræ˜¯æŒ‡å‘å †å†…å­˜çš„,åœ°å€å€¼ä¸ä¸€
  	*4.
- 		ÏÂÃæµÄstrºÍstr1//byte a=3+4;	//ÔÚ±àÒëÊ±£¬¾Í°Ñ7¸³Öµ¸øÁËa£¬³£ÀíÓÅ»¯»úÖÆ
-		String str="a"+"b"+"c";	//±àÒëÊ±£¬¾ÍÊÇÖ¸Ïò³£Á¿³ØÀïÃæµÄ"abc"¡£	
-		String str1="abc";		//Ö¸Ïò³£Á¿³ØÀïÃæµÄ"abc".
+ 		ä¸‹é¢çš„strå’Œstr1//byte a=3+4;	//åœ¨ç¼–è¯‘æ—¶ï¼Œå°±æŠŠ7èµ‹å€¼ç»™äº†aï¼Œå¸¸ç†ä¼˜åŒ–æœºåˆ¶
+		String str="a"+"b"+"c";	//ç¼–è¯‘æ—¶ï¼Œå°±æ˜¯æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„"abc"ã€‚	
+		String str1="abc";		//æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„"abc".
 		System.out.println(str==str1);//true
 		System.out.println(str.equals(str1));//true	
  	*5.String str="ab";
 		String str1="abc";
 		String str2=str+"c";
-		System.out.println(str1==str2);//false£¬str2Ö¸Ïò¶ÑÄÚ´æÀïÃæµÄ"abc",str1Ö¸Ïò³£Á¿³ØÀïÃæµÄ
+		System.out.println(str1==str2);//falseï¼Œstr2æŒ‡å‘å †å†…å­˜é‡Œé¢çš„"abc",str1æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„
 		System.out.println(str2.equals(str1));//true
-			*+ÊÇÏÈ´´½¨Ò»¸östringBuffer»òStringbuilder¶ÔÏóÔÚµ÷ÓÃappend()·½·¨£¬
-			*È»ºóÔÚµ÷ÓÃtoString×°»¯×Ö·û´®£¬²¢°Ñ¸Ã×Ö·û´®¸³Öµ¸østr2£¬
+			*+æ˜¯å…ˆåˆ›å»ºä¸€ä¸ªstringBufferæˆ–Stringbuilderå¯¹è±¡åœ¨è°ƒç”¨append()æ–¹æ³•ï¼Œ
+			*ç„¶ååœ¨è°ƒç”¨toStringè£…åŒ–å­—ç¬¦ä¸²ï¼Œå¹¶æŠŠè¯¥å­—ç¬¦ä¸²èµ‹å€¼ç»™str2ï¼Œ
 			*
 	*/
 public class Demo05StringTest {
@@ -50,9 +50,9 @@ public class Demo05StringTest {
 	}
 
 	private static void method4() {
-		//byte a=3+4;	//ÔÚ±àÒëÊ±£¬¾Í°Ñ7¸³Öµ¸øÁËa£¬³£ÀíÓÅ»¯»úÖÆ
-		String str="a"+"b"+"c";	//±àÒëÊ±£¬¾ÍÊÇÖ¸Ïò³£Á¿³ØÀïÃæµÄ"abc"¡£	
-		String str1="abc";		//Ö¸Ïò³£Á¿³ØÀïÃæµÄ"abc".
+		//byte a=3+4;	//åœ¨ç¼–è¯‘æ—¶ï¼Œå°±æŠŠ7èµ‹å€¼ç»™äº†aï¼Œå¸¸ç†ä¼˜åŒ–æœºåˆ¶
+		String str="a"+"b"+"c";	//ç¼–è¯‘æ—¶ï¼Œå°±æ˜¯æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„"abc"ã€‚	
+		String str1="abc";		//æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„"abc".
 		System.out.println(str==str1);//true
 		System.out.println(str.equals(str1));//true
 	}
@@ -60,21 +60,21 @@ public class Demo05StringTest {
 	private static void method3() {
 		String str2=new String("ab");
 		String str1="ab";
-		//str2ÊÇÖ¸Ïò¶ÑÀïÃæµÄ£¬str1ÊÇÖ¸Ïò³£Á¿³ØÀïÃæµÄ£¬ËùÒÔ==Îªfalse£¬equalsÎªtrue
+		//str2æ˜¯æŒ‡å‘å †é‡Œé¢çš„ï¼Œstr1æ˜¯æŒ‡å‘å¸¸é‡æ± é‡Œé¢çš„ï¼Œæ‰€ä»¥==ä¸ºfalseï¼Œequalsä¸ºtrue
 		System.out.println(str1==str2);//false
 		System.out.println(str2.equals(str1));//true
 	}
 
 	private static void method2() {
-		//´´½¨ÁËÁ½¸ö¶ÔÏó£¬Ò»¸öÔÚ¶ÑÀïÃæ£¬Ò»¸öÔÚ³£Á¿³ØÀïÃæ£¬strÖ¸Ïò¶ÑÀïÃæµÄ(¼´¸±±¾)
+		//åˆ›å»ºäº†ä¸¤ä¸ªå¯¹è±¡ï¼Œä¸€ä¸ªåœ¨å †é‡Œé¢ï¼Œä¸€ä¸ªåœ¨å¸¸é‡æ± é‡Œé¢ï¼ŒstræŒ‡å‘å †é‡Œé¢çš„(å³å‰¯æœ¬)
 		String str =new String("abc1");
 	}
 
 	private static void method1() {
 		String str ="abc";
 		String str1 = "abc";
-		//³£Á¿³ØÀïÃæÃ»ÓĞ¾Í´´½¨¶ÔÏóÈçstr£¬ÓĞ¾ÍÖ±½ÓÒıÓÃ
-		System.out.println(str==str1);//true,×¢ÒâÊÇtrue£¬
+		//å¸¸é‡æ± é‡Œé¢æ²¡æœ‰å°±åˆ›å»ºå¯¹è±¡å¦‚strï¼Œæœ‰å°±ç›´æ¥å¼•ç”¨
+		System.out.println(str==str1);//true,æ³¨æ„æ˜¯trueï¼Œ
 		System.out.println(str.equals(str1));//true
 	}
 }

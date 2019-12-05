@@ -1,8 +1,8 @@
 package day28jdbc;
-/* Ê¹ÓÃBDutil ÀïÃæµÄQureyRunner À´²éÕÒÊı¾İ¿âµÄ
+/* ä½¿ç”¨BDutil é‡Œé¢çš„QureyRunner æ¥æŸ¥æ‰¾æ•°æ®åº“çš„
 	delete insert update
-	Ê¹ÓÃQueryRunnerÀàÖĞµÄupdate(Connection conn,String sql,Object...param)
-	Object... Îª¿É±ä²ÎÊı
+	ä½¿ç”¨QueryRunnerç±»ä¸­çš„update(Connection conn,String sql,Object...param)
+	Object... ä¸ºå¯å˜å‚æ•°
 */
 
 import java.sql.Connection;
@@ -24,11 +24,11 @@ public class Demo06QueryRunner {
 		QueryRunner aQueryRunner = new QueryRunner();
 		Connection conn = JDBCUitlNew.getConnection();
 		String sqlUpdate = "insert into ming values(?,?,?,?)";
-		int flag=aQueryRunner.update(conn, sqlUpdate, new Object[] {111,"ÄĞ",8,"mings"});
+		int flag=aQueryRunner.update(conn, sqlUpdate, new Object[] {111,"ç”·",8,"mings"});
 		DbUtils.closeQuietly(conn);
 	}
 	
-	//Èç¹ûÏëÅĞ¶ÏÅĞ¶Ï·µ»ØµÄ½á¹ûÊÇ1»¹ÊÇ0
+	//å¦‚æœæƒ³åˆ¤æ–­åˆ¤æ–­è¿”å›çš„ç»“æœæ˜¯1è¿˜æ˜¯0
 	public static int delete() throws SQLException {
 		QueryRunner aQueryRunner = new QueryRunner();
 		Connection conn = JDBCUitlNew.getConnection();

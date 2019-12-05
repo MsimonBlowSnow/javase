@@ -5,12 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/* ×Ö½ÚÁ÷¶ÁÈ¡ÖĞÎÄµÄÎÊÌâ
- * Ò»¸öÖĞÎÄ2¸ö×Ö½Ú
-* ×Ö½ÚÁ÷ÔÚ¶ÁÖĞÎÄµÄÊ±ºòÓĞ¿ÉÄÜ»á¶Áµ½°ë¸öÖĞÎÄ,Ôì³ÉÂÒÂë 
-* ×Ö½ÚÁ÷Ğ´³öÖĞÎÄµÄÎÊÌâ
-* ×Ö½ÚÁ÷Ö±½Ó²Ù×÷µÄ×Ö½Ú,ËùÒÔĞ´³öÖĞÎÄ±ØĞë½«×Ö·û´®×ª»»³É×Ö½ÚÊı×é 
-* Ğ´³ö»Ø³µ»»ĞĞ write("\r\n".getBytes());
+/* å­—èŠ‚æµè¯»å–ä¸­æ–‡çš„é—®é¢˜
+ * ä¸€ä¸ªä¸­æ–‡2ä¸ªå­—èŠ‚
+* å­—èŠ‚æµåœ¨è¯»ä¸­æ–‡çš„æ—¶å€™æœ‰å¯èƒ½ä¼šè¯»åˆ°åŠä¸ªä¸­æ–‡,é€ æˆä¹±ç  
+* å­—èŠ‚æµå†™å‡ºä¸­æ–‡çš„é—®é¢˜
+* å­—èŠ‚æµç›´æ¥æ“ä½œçš„å­—èŠ‚,æ‰€ä»¥å†™å‡ºä¸­æ–‡å¿…é¡»å°†å­—ç¬¦ä¸²è½¬æ¢æˆå­—èŠ‚æ•°ç»„ 
+* å†™å‡ºå›è½¦æ¢è¡Œ write("\r\n".getBytes());
 */
 public class DemoStreamChinese {
 	public static void main(String[] args) throws IOException {
@@ -21,7 +21,7 @@ public class DemoStreamChinese {
 		while((flag=fis.read(a))!=-1) {
 			System.out.println( new String(a,0,a.length));
 		}
-		fos.write("ÄãÓĞ²¡".getBytes());
+		fos.write("ä½ æœ‰ç—…".getBytes());
 		fos.write("\r\n".getBytes());
 	}
 }

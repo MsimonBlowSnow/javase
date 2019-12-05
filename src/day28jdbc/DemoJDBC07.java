@@ -43,12 +43,12 @@ public class DemoJDBC07 {
 	}
 	public static void myselect(Connection con,String sql,Object... params) throws SQLException {
 		QueryRunner aQueryRunner =new QueryRunner();
-		//Ö»·µ»Ø²éÑ¯µ½µÄµÚÒ»¸öÊı¾İ£¬²¢·µ»Ø
+		//åªè¿”å›æŸ¥è¯¢åˆ°çš„ç¬¬ä¸€ä¸ªæ•°æ®ï¼Œå¹¶è¿”å›
 		/*Object[] aObjects=aQueryRunner.query(con, sql, params,new ArrayHandler());
 		for (Object object : aObjects) {
 			System.out.println(object);
 		}*/
-		//ArrayListhandler·µ»ØÒ»¸öObjectÊı×éµÄlist,°üÀ¨ËùÓĞĞÅÏ¢
+		//ArrayListhandlerè¿”å›ä¸€ä¸ªObjectæ•°ç»„çš„list,åŒ…æ‹¬æ‰€æœ‰ä¿¡æ¯
 		/*List<Object[]> alist=aQueryRunner.query(con,sql,params,new ArrayListHandler());
 		for (Object[] objects : alist) {
 			for (Object objects2 : objects) {
@@ -56,7 +56,7 @@ public class DemoJDBC07 {
 			}
 			System.out.println();
 		}*/
-		//BeanHandler·µ»ØÊı¾İ¿âÀïÃæµÚÒ»ÌõµÄÊı¾İµÄMingBean£¬Èç¹ûMingBeanÃ»ÓĞ¿Õ²ÎÊı¹¹Ôì·½·¨£¬»á±¨´í
+		//BeanHandlerè¿”å›æ•°æ®åº“é‡Œé¢ç¬¬ä¸€æ¡çš„æ•°æ®çš„MingBeanï¼Œå¦‚æœMingBeanæ²¡æœ‰ç©ºå‚æ•°æ„é€ æ–¹æ³•ï¼Œä¼šæŠ¥é”™
 		MingBean a=aQueryRunner.query(con, sql, new BeanHandler<MingBean>(MingBean.class));
 		System.out.println(a);
 	}

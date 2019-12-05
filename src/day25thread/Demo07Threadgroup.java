@@ -1,56 +1,56 @@
 package day25thread;
-/*A:Ïß³Ì×é¸ÅÊö
-* JavaÖĞÊ¹ÓÃThreadGroupÀ´±íÊ¾Ïß³Ì×é£¬Ëü¿ÉÒÔ¶ÔÒ»ÅúÏß³Ì½øĞĞ·ÖÀà¹ÜÀí£¬JavaÔÊĞí³ÌĞòÖ±½Ó¶ÔÏß³Ì×é½øĞĞ¿ØÖÆ¡£
-* Ä¬ÈÏÇé¿öÏÂ£¬ËùÓĞµÄÏß³Ì¶¼ÊôÓÚÖ÷Ïß³Ì×é¡£
-	* public final ThreadGroup getThreadGroup()//Í¨¹ıÏß³Ì¶ÔÏó»ñÈ¡ËûËùÊôÓÚµÄ×é
-	* public final String getName()//Í¨¹ıÏß³Ì×é¶ÔÏó»ñÈ¡Ëû×éµÄÃû×Ö
-* ÎÒÃÇÒ²¿ÉÒÔ¸øÏß³ÌÉèÖÃ·Ö×é
-	* 1,ThreadGroup(String name) ´´½¨Ïß³Ì×é¶ÔÏó²¢¸øÆä¸³ÖµÃû×Ö
-	* 2,´´½¨Ïß³Ì¶ÔÏó
+/*A:çº¿ç¨‹ç»„æ¦‚è¿°
+* Javaä¸­ä½¿ç”¨ThreadGroupæ¥è¡¨ç¤ºçº¿ç¨‹ç»„ï¼Œå®ƒå¯ä»¥å¯¹ä¸€æ‰¹çº¿ç¨‹è¿›è¡Œåˆ†ç±»ç®¡ç†ï¼ŒJavaå…è®¸ç¨‹åºç›´æ¥å¯¹çº¿ç¨‹ç»„è¿›è¡Œæ§åˆ¶ã€‚
+* é»˜è®¤æƒ…å†µä¸‹ï¼Œæ‰€æœ‰çš„çº¿ç¨‹éƒ½å±äºä¸»çº¿ç¨‹ç»„ã€‚
+	* public final ThreadGroup getThreadGroup()//é€šè¿‡çº¿ç¨‹å¯¹è±¡è·å–ä»–æ‰€å±äºçš„ç»„
+	* public final String getName()//é€šè¿‡çº¿ç¨‹ç»„å¯¹è±¡è·å–ä»–ç»„çš„åå­—
+* æˆ‘ä»¬ä¹Ÿå¯ä»¥ç»™çº¿ç¨‹è®¾ç½®åˆ†ç»„
+	* 1,ThreadGroup(String name) åˆ›å»ºçº¿ç¨‹ç»„å¯¹è±¡å¹¶ç»™å…¶èµ‹å€¼åå­—
+	* 2,åˆ›å»ºçº¿ç¨‹å¯¹è±¡
 	* 3,Thread(ThreadGroup group, Runnable target, String name) 
-	* 4,ÉèÖÃÕû×éµÄÓÅÏÈ¼¶»òÕßÊØ»¤Ïß³Ì//
-* B:°¸ÀıÑİÊ¾
-	* Ïß³Ì×éµÄÊ¹ÓÃ,Ä¬ÈÏÊÇÖ÷Ïß³Ì×é
+	* 4,è®¾ç½®æ•´ç»„çš„ä¼˜å…ˆçº§æˆ–è€…å®ˆæŠ¤çº¿ç¨‹//
+* B:æ¡ˆä¾‹æ¼”ç¤º
+	* çº¿ç¨‹ç»„çš„ä½¿ç”¨,é»˜è®¤æ˜¯ä¸»çº¿ç¨‹ç»„
 * 
 	MyRunnable mr = new MyRunnable();
-	Thread t1 = new Thread(mr, "ÕÅÈı");
-	Thread t2 = new Thread(mr, "ÀîËÄ");
-	//»ñÈ¡Ïß³Ì×é
-	// Ïß³ÌÀàÀïÃæµÄ·½·¨£ºpublic final ThreadGroup getThreadGroup()
+	Thread t1 = new Thread(mr, "å¼ ä¸‰");
+	Thread t2 = new Thread(mr, "æå››");
+	//è·å–çº¿ç¨‹ç»„
+	// çº¿ç¨‹ç±»é‡Œé¢çš„æ–¹æ³•ï¼špublic final ThreadGroup getThreadGroup()
 	ThreadGroup tg1 = t1.getThreadGroup();
 	ThreadGroup tg2 = t2.getThreadGroup();
-	// Ïß³Ì×éÀïÃæµÄ·½·¨£ºpublic final String getName()
+	// çº¿ç¨‹ç»„é‡Œé¢çš„æ–¹æ³•ï¼špublic final String getName()
 	String name1 = tg1.getName();
 	String name2 = tg2.getName();
 	System.out.println(name1);
 	System.out.println(name2);
-	// Í¨¹ı½á¹ûÎÒÃÇÖªµÀÁË£ºÏß³ÌÄ¬ÈÏÇé¿öÏÂÊôÓÚmainÏß³Ì×é
-	// Í¨¹ıÏÂÃæµÄ²âÊÔ£¬ÄãÓ¦¸ÃÄÜ¹»¿´µ½£¬Ä¬ÈÎÇé¿öÏÂ£¬ËùÓĞµÄÏß³Ì¶¼ÊôÓÚÍ¬Ò»¸ö×é
+	// é€šè¿‡ç»“æœæˆ‘ä»¬çŸ¥é“äº†ï¼šçº¿ç¨‹é»˜è®¤æƒ…å†µä¸‹å±äºmainçº¿ç¨‹ç»„
+	// é€šè¿‡ä¸‹é¢çš„æµ‹è¯•ï¼Œä½ åº”è¯¥èƒ½å¤Ÿçœ‹åˆ°ï¼Œé»˜ä»»æƒ…å†µä¸‹ï¼Œæ‰€æœ‰çš„çº¿ç¨‹éƒ½å±äºåŒä¸€ä¸ªç»„
 	System.out.println(Thread.currentThread().getThreadGroup().getName());
 
-* ×Ô¼ºÉè¶¨Ïß³Ì×é
+* è‡ªå·±è®¾å®šçº¿ç¨‹ç»„
 * 			
 	// ThreadGroup(String name)
-	ThreadGroup tg = new ThreadGroup("ÕâÊÇÒ»¸öĞÂµÄ×é");
+	ThreadGroup tg = new ThreadGroup("è¿™æ˜¯ä¸€ä¸ªæ–°çš„ç»„");
 
 	MyRunnable mr = new MyRunnable();
 	// Thread(ThreadGroup group, Runnable target, String name)
-	Thread t1 = new Thread(tg, mr, "ÕÅÈı");
-	Thread t2 = new Thread(tg, mr, "ÀîËÄ");
+	Thread t1 = new Thread(tg, mr, "å¼ ä¸‰");
+	Thread t2 = new Thread(tg, mr, "æå››");
 	
 	System.out.println(t1.getThreadGroup().getName());
 	System.out.println(t2.getThreadGroup().getName());
 	
-	//Í¨¹ı×éÃû³ÆÉèÖÃºóÌ¨Ïß³Ì£¬±íÊ¾¸Ã×éµÄÏß³Ì¶¼ÊÇºóÌ¨Ïß³Ì
+	//é€šè¿‡ç»„åç§°è®¾ç½®åå°çº¿ç¨‹ï¼Œè¡¨ç¤ºè¯¥ç»„çš„çº¿ç¨‹éƒ½æ˜¯åå°çº¿ç¨‹
 
 */
 public class Demo07Threadgroup {
 	public static void main(String[] args) {
-		//method();´´½¨Ä¬ÈÏµÄÏß³Ì×é¶ÔÏó
+		//method();åˆ›å»ºé»˜è®¤çš„çº¿ç¨‹ç»„å¯¹è±¡
 		Demo07 aDemo07=new Demo07();
 		ThreadGroup aGroup=new ThreadGroup("ming");
-		Thread aThread=new Thread(aGroup,aDemo07,"Ïß³Ì1");
-		Thread bThread=new Thread(aGroup,aDemo07,"Ïß³Ì2");
+		Thread aThread=new Thread(aGroup,aDemo07,"çº¿ç¨‹1");
+		Thread bThread=new Thread(aGroup,aDemo07,"çº¿ç¨‹2");
 		System.out.println(aThread.getThreadGroup().getName());
 		System.out.println(bThread.getThreadGroup().getName());
 		System.out.println(bThread.getThreadGroup());
@@ -62,7 +62,7 @@ public class Demo07Threadgroup {
 		Thread thread02=new Thread(aDemo07);
 		ThreadGroup aGroup=thread01.getThreadGroup();
 		ThreadGroup aGroup1=thread02.getThreadGroup();
-		System.out.println(aGroup.getName()+" "+aGroup1.getName());//Ä¬ÈÏÊÇÖ÷Ïß³Ì
+		System.out.println(aGroup.getName()+" "+aGroup1.getName());//é»˜è®¤æ˜¯ä¸»çº¿ç¨‹
 	}
 }
 
@@ -70,7 +70,7 @@ class Demo07 implements Runnable{
 
 	@Override
 	public void run() {
-		System.out.println("Ïß³Ì:"+Thread.currentThread().getName());
+		System.out.println("çº¿ç¨‹:"+Thread.currentThread().getName());
 	}
 	
 }

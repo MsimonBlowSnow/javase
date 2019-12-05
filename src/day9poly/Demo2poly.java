@@ -1,31 +1,31 @@
 package day9poly;
 /*
- * ¹Û²ì¶àÌ¬µÄ±×¶Ë
- * ¸¸Àà±äÁ¿Ö¸Ïò×ÓÀà¶ÔÏó
- * ²»ÄÜÓÃ×ÓÀàµÄ·½·¨
+ * è§‚å¯Ÿå¤šæ€çš„å¼Šç«¯
+ * çˆ¶ç±»å˜é‡æŒ‡å‘å­ç±»å¯¹è±¡
+ * ä¸èƒ½ç”¨å­ç±»çš„æ–¹æ³•
  * */
 public class Demo2poly {
 	public static void main(String[] args) {
 		Person a=new SuperMan();
-		System.out.println(a.name);//¸¸Àà
-		a.eat();//×ÓÀà
-		//a.fly();×ÓÀà²»ÄÜµ÷ÓÃ¸¸ÀàµÄ·½·¨£¬Ã»ÄÚ¿ãÍâ´©
+		System.out.println(a.name);//çˆ¶ç±»
+		a.eat();//å­ç±»
+		//a.fly();å­ç±»ä¸èƒ½è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•ï¼Œæ²¡å†…è£¤å¤–ç©¿
 		SuperMan superman=(SuperMan) a;
-		superman.fly();//ÏòÉÏ×ªĞÍ  ÄÚ¿ãÍâ´©
+		superman.fly();//å‘ä¸Šè½¬å‹  å†…è£¤å¤–ç©¿
 	}
 }
 
 class Person{
 	String name="joke";
 	public void eat() {
-		System.out.println("³Ô¶«Î÷");
+		System.out.println("åƒä¸œè¥¿");
 	}
 }
 
 class SuperMan extends Person{
 	String name ="superman";
 	public void eat() {
-		System.out.println("³Ô¶«Î÷");
+		System.out.println("åƒä¸œè¥¿");
 	}
 	public void fly() {
 		System.out.println("I can fly!");

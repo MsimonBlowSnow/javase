@@ -1,6 +1,6 @@
 package day13regx;
 /*replaceAll(regx,statement)
- *Âú×ã±í´ïÊ½µÄÌæ»»µô
+ *æ»¡è¶³è¡¨è¾¾å¼çš„æ›¿æ¢æ‰
  * */
 public class DemoRegxReplace {
 	public static void main(String[] args) {

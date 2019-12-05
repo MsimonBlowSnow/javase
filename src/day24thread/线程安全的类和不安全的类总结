@@ -1,5 +1,5 @@
-* A:»Ø¹ËÒÔÇ°Ëµ¹ıµÄÏß³Ì°²È«ÎÊÌâ
-	* ¿´Ô´Âë£ºVector,StringBuffer,Hashtable,Collections.synchroinzed(xxx)
-	* VectorÊÇÏß³Ì°²È«µÄ,ArrayListÊÇÏß³Ì²»°²È«µÄ
-	* StringBufferÊÇÏß³Ì°²È«µÄ,StringBuilderÊÇÏß³Ì²»°²È«µÄ
-	* HashtableÊÇÏß³Ì°²È«µÄ,HashMapÊÇÏß³Ì²»°²È«µÄ
+* A:å›é¡¾ä»¥å‰è¯´è¿‡çš„çº¿ç¨‹å®‰å…¨é—®é¢˜
+	* çœ‹æºç ï¼šVector,StringBuffer,Hashtable,Collections.synchroinzed(xxx)
+	* Vectoræ˜¯çº¿ç¨‹å®‰å…¨çš„,ArrayListæ˜¯çº¿ç¨‹ä¸å®‰å…¨çš„
+	* StringBufferæ˜¯çº¿ç¨‹å®‰å…¨çš„,StringBuilderæ˜¯çº¿ç¨‹ä¸å®‰å…¨çš„
+	* Hashtableæ˜¯çº¿ç¨‹å®‰å…¨çš„,HashMapæ˜¯çº¿ç¨‹ä¸å®‰å…¨çš„

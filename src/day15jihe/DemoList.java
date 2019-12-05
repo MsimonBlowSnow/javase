@@ -3,7 +3,7 @@ package day15jihe;
 import java.util.ArrayList;
 import java.util.List;
 
-/* A:List¼¯ºÏµÄÌØÓĞ¹¦ÄÜ¸ÅÊö
+/* A:Listé›†åˆçš„ç‰¹æœ‰åŠŸèƒ½æ¦‚è¿°
 * void add(int index,E element)
 * E remove(int index)
 * E get(int index)
@@ -13,8 +13,8 @@ public class DemoList {
 	public static void main(String[] args) {
 		//method1();
 		List a=new ArrayList();
-		a.remove(1);//ºÍDemoArrayListÖĞµÄremove²»Ò»Ñù£¬
-		//DemoArrayListÖĞµÄremove·µ»ØBoolean£¬Õâ¸öremove·µ»ØÊÇobject
+		a.remove(1);//å’ŒDemoArrayListä¸­çš„removeä¸ä¸€æ ·ï¼Œ
+		//DemoArrayListä¸­çš„removeè¿”å›Booleanï¼Œè¿™ä¸ªremoveè¿”å›æ˜¯object
 	}
 
 	private static void method1() {
@@ -23,10 +23,10 @@ public class DemoList {
 		a.add(1, "1");
 		a.add(2, "2");
 		a.add(3,"3");
-		//a.add(10,"2");Êı×éÔ½½çindexOutOfBoundsException
+		//a.add(10,"2");æ•°ç»„è¶Šç•ŒindexOutOfBoundsException
 		System.out.println(a);
-		Object c=a.remove(3);//Í¨¸æË÷ÒıÉ¾³ı¸ÃÔªËØ£¬²¢·µ»Ø¡£
-		//a.remove(6);Êı×éÔ½½çindexOutOfBoundsException
+		Object c=a.remove(3);//é€šå‘Šç´¢å¼•åˆ é™¤è¯¥å…ƒç´ ï¼Œå¹¶è¿”å›ã€‚
+		//a.remove(6);æ•°ç»„è¶Šç•ŒindexOutOfBoundsException
 		System.out.println(c);
 		System.out.println(a);
 		a.get(2);

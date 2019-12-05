@@ -1,7 +1,7 @@
 package day12ClassObject;
-/*¶ş·Ö·¨²éÕÒÒ»¸öÊı×éÖµ£¬²¢°Ñ·µ»ØË÷Òı,
- * ¾ßÌå¹ı³ÌÇë¿´Demo2Fen.png
- * ²Ù×÷µÄÊı×é±ØĞëÓĞĞò
+/*äºŒåˆ†æ³•æŸ¥æ‰¾ä¸€ä¸ªæ•°ç»„å€¼ï¼Œå¹¶æŠŠè¿”å›ç´¢å¼•,
+ * å…·ä½“è¿‡ç¨‹è¯·çœ‹Demo2Fen.png
+ * æ“ä½œçš„æ•°ç»„å¿…é¡»æœ‰åº
  * */
 public class Demo2Fen {
 	public static void main(String[] args) {

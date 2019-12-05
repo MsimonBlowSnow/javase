@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 import javax.swing.plaf.synth.SynthSeparatorUI;
 
-/*arrayÀàÊÇÒ»¸ö¹¤¾ßÀà£¬ÀïÃæµÄ·½·¨¶¼ÊÇÓÃstaticĞŞÊÎµÄ
- *arrayÀïÃæµÄ·½·¨
- *toString()×ª»¯Îª×Ö·û´®
+/*arrayç±»æ˜¯ä¸€ä¸ªå·¥å…·ç±»ï¼Œé‡Œé¢çš„æ–¹æ³•éƒ½æ˜¯ç”¨staticä¿®é¥°çš„
+ *arrayé‡Œé¢çš„æ–¹æ³•
+ *toString()è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
  * public static String toString(char[] a) {
         if (a == null)
             return "null";
@@ -14,7 +14,7 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
         if (iMax == -1)
             return "[]";
 
-        StringBuilder b = new StringBuilder();//±ÈStringBuffer¸ü¿ì£¬²»¹ıÏß³Ì²»°²È«
+        StringBuilder b = new StringBuilder();//æ¯”StringBufferæ›´å¿«ï¼Œä¸è¿‡çº¿ç¨‹ä¸å®‰å…¨
         b.append('[');
         for (int i = 0; ; i++) {
             b.append(a[i]);
@@ -23,16 +23,16 @@ import javax.swing.plaf.synth.SynthSeparatorUI;
             b.append(", ");
         }
     }
- * sort();½«Êı×éÅÅĞòÅÅĞò
- * binarySearch();//Èç¹ûÊıÔÚÊı×éÖĞ£¬·µ»ØË÷Òı£¬·ñÔò·µ»Ø-£¨²åÈëµãË÷Òı+1£©
- * ¶ş·Ö·¢²éÕÒ
+ * sort();å°†æ•°ç»„æ’åºæ’åº
+ * binarySearch();//å¦‚æœæ•°åœ¨æ•°ç»„ä¸­ï¼Œè¿”å›ç´¢å¼•ï¼Œå¦åˆ™è¿”å›-ï¼ˆæ’å…¥ç‚¹ç´¢å¼•+1ï¼‰
+ * äºŒåˆ†å‘æŸ¥æ‰¾
  * private static int binarySearch0(int[] a, int fromIndex, int toIndex,
                                      int key) {
         int low = fromIndex;
         int high = toIndex - 1;
 
         while (low <= high) {
-            int mid = (low + high) >>> 1;//ÓÒÒÆÒ»Î»
+            int mid = (low + high) >>> 1;//å³ç§»ä¸€ä½
             int midVal = a[mid];
 
             if (midVal < key)

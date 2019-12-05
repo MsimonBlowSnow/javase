@@ -5,27 +5,27 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-/*statement ÓĞsql×¢ÈëµÄ·çÏÕ¡£
- *prepareStatementÍê³ÉµÇÂ¼  
+/*statement æœ‰sqlæ³¨å…¥çš„é£é™©ã€‚
+ *prepareStatementå®Œæˆç™»å½•  
  * 
  * */
 public class Demo03PreparedStatement {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		//¼ÓÔØÇı¶¯Àà
+		//åŠ è½½é©±åŠ¨ç±»
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		//»ñÈ¡Á¬½Ó¶ÔÏó
+		//è·å–è¿æ¥å¯¹è±¡
 		Connection aConnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabases","root","123456");
-		//PreparedStatement¿ÉÒÔ·ÀÖ¹sql×¢Èë£¬StatementµÄ×Ó½Ó¿Ú
+		//PreparedStatementå¯ä»¥é˜²æ­¢sqlæ³¨å…¥ï¼ŒStatementçš„å­æ¥å£
 		PreparedStatement aPreparedStatement=aConnection.prepareStatement("select * from user where user=? and password=?");
 		aPreparedStatement.setString(1, "ming");
 		aPreparedStatement.setString(2, "aaa");
 		ResultSet aResultSet=aPreparedStatement.executeQuery();
 		if(aResultSet.next()) {
-			System.out.println("µÇÂ¼³É¹¦!");
+			System.out.println("ç™»å½•æˆåŠŸ!");
 			System.out.println(aResultSet.getObject(1)+" "+aResultSet.getObject(2));
 		}else {
-			System.out.println("Ïë·Ç·¨µÇÂ¼£¬×÷ÄãµÄ´ºÇï´óÃÎ!");
+			System.out.println("æƒ³éæ³•ç™»å½•ï¼Œä½œä½ çš„æ˜¥ç§‹å¤§æ¢¦!");
 		}
 		aResultSet.close();
 		aPreparedStatement.close();

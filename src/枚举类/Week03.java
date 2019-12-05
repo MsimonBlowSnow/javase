@@ -1,20 +1,20 @@
-package Ã¶¾ÙÀà;
-//ÀïÃæÓĞ³éÏó·½·¨
+package æšä¸¾ç±»;
+//é‡Œé¢æœ‰æŠ½è±¡æ–¹æ³•
 public abstract class Week03 {
-	//´´½¨ÄäÃûÄÚ²¿Àà
-	public static final Week03 MON=new Week03("ĞÇÆÚÒ»") {
+	//åˆ›å»ºåŒ¿åå†…éƒ¨ç±»
+	public static final Week03 MON=new Week03("æ˜ŸæœŸä¸€") {
 		@Override
 		public void show() {
 			System.out.println(this.getName());
 		}
 	};
-	public static  final Week03 TUES=new Week03("ĞÇÆÚ¶ş"){
+	public static  final Week03 TUES=new Week03("æ˜ŸæœŸäºŒ"){
 		@Override
 		public void show() {
 			System.out.println(this.getName());
 		}
 	};
-	public static final Week03 WED=new Week03("ĞÇÆÚÈı"){
+	public static final Week03 WED=new Week03("æ˜ŸæœŸä¸‰"){
 		@Override
 		public void show() {
 			System.out.println(this.getName());

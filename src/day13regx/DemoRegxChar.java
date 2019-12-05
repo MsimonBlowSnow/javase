@@ -1,13 +1,13 @@
 package day13regx;
 
 public class DemoRegxChar {
-//	[abc] a¡¢b »ò c£¨¼òµ¥Àà£© 
-//	[^abc] ÈÎºÎ×Ö·û£¬³ıÁË a¡¢b »ò c£¨·ñ¶¨£© 
-//	[a-zA-Z] a µ½ z »ò A µ½ Z£¬Á½Í·µÄ×ÖÄ¸°üÀ¨ÔÚÄÚ£¨·¶Î§£© 
-//	[a-d[m-p]] a µ½ d »ò m µ½ p£º[a-dm-p]£¨²¢¼¯£© 
-//	[a-z&&[def]] d¡¢e »ò f£¨½»¼¯£© 
-//	[a-z&&[^bc]] a µ½ z£¬³ıÁË b ºÍ c£º[ad-z]£¨¼õÈ¥£© 
-//	[a-z&&[^m-p]] a µ½ z£¬¶ø·Ç m µ½ p£º[a-lq-z]£¨¼õÈ¥£© 
+//	[abc] aã€b æˆ– cï¼ˆç®€å•ç±»ï¼‰ 
+//	[^abc] ä»»ä½•å­—ç¬¦ï¼Œé™¤äº† aã€b æˆ– cï¼ˆå¦å®šï¼‰ 
+//	[a-zA-Z] a åˆ° z æˆ– A åˆ° Zï¼Œä¸¤å¤´çš„å­—æ¯åŒ…æ‹¬åœ¨å†…ï¼ˆèŒƒå›´ï¼‰ 
+//	[a-d[m-p]] a åˆ° d æˆ– m åˆ° pï¼š[a-dm-p]ï¼ˆå¹¶é›†ï¼‰ 
+//	[a-z&&[def]] dã€e æˆ– fï¼ˆäº¤é›†ï¼‰ 
+//	[a-z&&[^bc]] a åˆ° zï¼Œé™¤äº† b å’Œ cï¼š[ad-z]ï¼ˆå‡å»ï¼‰ 
+//	[a-z&&[^m-p]] a åˆ° zï¼Œè€Œé m åˆ° pï¼š[a-lq-z]ï¼ˆå‡å»ï¼‰ 
 	public static void main(String[] args) {
 		String regx="[a-z&&[^m-p]]";
 		System.out.println("a".matches(regx));

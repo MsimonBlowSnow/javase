@@ -1,11 +1,11 @@
 package day17Exceptioon;
-/* A:ÎªÊ²Ã´ÐèÒª×Ô¶¨ÒåÒì³£
-	* ¾ÙÀý£ºÈËµÄÄêÁä
-* B:×Ô¶¨ÒåÒì³£¸ÅÊö
-	* ¼Ì³Ð×ÔException ²»´¦Àí»òÕßÅ×³ö±àÒëÊ±»áÓÐ´íÎóÌáÊ¾
-	* ¼Ì³Ð×ÔRuntimeException ²»´¦Àí»òÕßÅ×³ö±àÒëÊ±Ã»ÓÐ´íÎóÌáÊ¾£¬²»¹ýÔËÐÐÊ±»á³ö´í
-* C:°¸ÀýÑÝÊ¾
-	* ×Ô¶¨ÒåÒì³£µÄ»ù±¾Ê¹ÓÃ 
+/* A:ä¸ºä»€ä¹ˆéœ€è¦è‡ªå®šä¹‰å¼‚å¸¸
+	* ä¸¾ä¾‹ï¼šäººçš„å¹´é¾„
+* B:è‡ªå®šä¹‰å¼‚å¸¸æ¦‚è¿°
+	* ç»§æ‰¿è‡ªException ä¸å¤„ç†æˆ–è€…æŠ›å‡ºç¼–è¯‘æ—¶ä¼šæœ‰é”™è¯¯æç¤º
+	* ç»§æ‰¿è‡ªRuntimeException ä¸å¤„ç†æˆ–è€…æŠ›å‡ºç¼–è¯‘æ—¶æ²¡æœ‰é”™è¯¯æç¤ºï¼Œä¸è¿‡è¿è¡Œæ—¶ä¼šå‡ºé”™
+* C:æ¡ˆä¾‹æ¼”ç¤º
+	* è‡ªå®šä¹‰å¼‚å¸¸çš„åŸºæœ¬ä½¿ç”¨ 
 */
 public class DemoMakeExecption {
 	public static void main(String[] args) {

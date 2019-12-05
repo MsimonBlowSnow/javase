@@ -6,20 +6,20 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-/* 1.Ê²Ã´ÊÇ±ê×¼ÊäÈëÊä³öÁ÷(ÕÆÎÕ)
-	* System.inÊÇInputStream, ±ê×¼ÊäÈëÁ÷, Ä¬ÈÏ¿ÉÒÔ´Ó¼üÅÌÊäÈë¶ÁÈ¡×Ö½ÚÊı¾İ
-	* System.outÊÇPrintStream, ±ê×¼Êä³öÁ÷, Ä¬ÈÏ¿ÉÒÔÏòConsoleÖĞÊä³ö×Ö·ûºÍ×Ö½ÚÊı¾İ
-	*1.1system.in·µ»ØÒ»¸öInputStream¼ûmethodSystemIn();
-		*read()Ö»ÄÜ¶ÁÒ»¸ö×Ö½Ú
-		*Èç¹ûÃ»ÓĞ½¨Á¢¹ÜµÀ£¬£¨¼´Ã»ÓĞºÍÏµÍ³×ÊÔ´Á´½Ó£©²»ÄÜ¹Ø±ÕÁ÷£¬·ñÔò¸ÃÁ÷¾Í²»ÄÜÔÙÓÃÁË
-		*systtem.outÁ÷Ã»ÓĞ¹ØÁªÎÄ¼şÊ±Ò²²»ÓÃ¹Ø	 
+/* 1.ä»€ä¹ˆæ˜¯æ ‡å‡†è¾“å…¥è¾“å‡ºæµ(æŒæ¡)
+	* System.inæ˜¯InputStream, æ ‡å‡†è¾“å…¥æµ, é»˜è®¤å¯ä»¥ä»é”®ç›˜è¾“å…¥è¯»å–å­—èŠ‚æ•°æ®
+	* System.outæ˜¯PrintStream, æ ‡å‡†è¾“å‡ºæµ, é»˜è®¤å¯ä»¥å‘Consoleä¸­è¾“å‡ºå­—ç¬¦å’Œå­—èŠ‚æ•°æ®
+	*1.1system.inè¿”å›ä¸€ä¸ªInputStreamè§methodSystemIn();
+		*read()åªèƒ½è¯»ä¸€ä¸ªå­—èŠ‚
+		*å¦‚æœæ²¡æœ‰å»ºç«‹ç®¡é“ï¼Œï¼ˆå³æ²¡æœ‰å’Œç³»ç»Ÿèµ„æºé“¾æ¥ï¼‰ä¸èƒ½å…³é—­æµï¼Œå¦åˆ™è¯¥æµå°±ä¸èƒ½å†ç”¨äº†
+		*systtem.outæµæ²¡æœ‰å…³è”æ–‡ä»¶æ—¶ä¹Ÿä¸ç”¨å…³	 
  * 
  * 
  */
 public class DemoSystemIn {
 	public static void main(String[] args) throws IOException {
 		//methodSystemIn();
-		//¸Ä±äÄ¬ÈÏ±ê×¼ÊäÁ÷£¬Ä¬ÈÏÊÇÖ¸Ïò¼üÅÌµÄ£¬¸Ä±äºóÖ¸ÏòÎÄ¼ş£¬Ò»°ã²»»áÓÃ
+		//æ”¹å˜é»˜è®¤æ ‡å‡†è¾“æµï¼Œé»˜è®¤æ˜¯æŒ‡å‘é”®ç›˜çš„ï¼Œæ”¹å˜åæŒ‡å‘æ–‡ä»¶ï¼Œä¸€èˆ¬ä¸ä¼šç”¨
 		System.setIn(new FileInputStream("c.txt"));
 		System.setOut(new PrintStream("a.txt"));
 		int flag;
@@ -28,19 +28,19 @@ public class DemoSystemIn {
 		while ((flag=iS.read())!=-1) {
 			pStream.write(flag);
 		}
-		//¹ØÁªÁËÎÄ¼ş£¬±ØĞë¹Ø±ÕÁ÷
+		//å…³è”äº†æ–‡ä»¶ï¼Œå¿…é¡»å…³é—­æµ
 		iS.close();
 		pStream.close();
 	}
 
 	private static void methodSystemIn() throws IOException {
 		InputStream iStream=System.in;
-		int a=iStream.read();//Ò»¸ö×Ö½ÚÒ»¸ö×Ö½ÚµÄ¶Á
-		System.out.println(a);//ÊäÈë43£¬Êä³ö52£¬4µÄaslllÊÇ52
-		//Èç¹ûÃ»ÓĞ½¨Á¢¹ÜµÀ£¬²»ÄÜ¹ØÁ÷£¬ÏµÍ³ÀïÃæÖ»ÓĞÒ»¸öSystem.inÈçÏÂ£º
+		int a=iStream.read();//ä¸€ä¸ªå­—èŠ‚ä¸€ä¸ªå­—èŠ‚çš„è¯»
+		System.out.println(a);//è¾“å…¥43ï¼Œè¾“å‡º52ï¼Œ4çš„aslllæ˜¯52
+		//å¦‚æœæ²¡æœ‰å»ºç«‹ç®¡é“ï¼Œä¸èƒ½å…³æµï¼Œç³»ç»Ÿé‡Œé¢åªæœ‰ä¸€ä¸ªSystem.inå¦‚ä¸‹ï¼š
 		iStream.close();
 		InputStream iStream1=System.in;
-		int a1=iStream.read();//Ò»¸ö×Ö½ÚÒ»¸ö×Ö½ÚµÄ¶Á
+		int a1=iStream.read();//ä¸€ä¸ªå­—èŠ‚ä¸€ä¸ªå­—èŠ‚çš„è¯»
 		System.out.println(a);
 	}
 }

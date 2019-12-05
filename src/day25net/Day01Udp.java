@@ -10,21 +10,21 @@ import java.util.Scanner;
 import javax.sound.sampled.Port;
 
 /*1.UDP
- 	*´«Êä¶Ë:
- 		*´´½¨DategramSocket ¶ÔÏó£¬²»ÓÃ²ÎÊı
- 		*´´½¨DategramPacket ¶ÔÏó£¬´«²ÎÊı(ĞÅÏ¢.getbytes()£¬ĞÅÏ¢³¤¶È£¬ip£¬¶Ë¿ÚºÅ);
- 		*DategramSocket ¶ÔÏó.send(DategramPacket ¶ÔÏó);
- 	*½ÓÊÜ¶Ë
- 		*´´½¨DategramSocket ¶ÔÏó,ÒªÒ»¸ö¶Ë¿ÚºÅ
- 		*´´½¨DategramPacket ¶ÔÏó£¬ÒªÊı¾İ³¤¶ÈºÍ£¬½ÓÊÜµÄÊı×é
-*2.Êı¾İ´«ËÍÓë½ÓÊÜ 
- 	*´«Êä¶Ë:
- 		*DategramSocket ¶ÔÏó.send(DategramPacket ¶ÔÏó);·¢ËÍÊı¾İ°ü
- 	*½ÓÊÜ¶Ë:
- 		*DategramSocket ¶ÔÏó.receive(DategramPacktet ¶ÔÏó);½ÓÊÜÊı¾İ°ü
- 		*Êı¾İ°ü.getAddress();//»ñÈ¡·¢ËÍ¶ËµÄip
-		*Êı¾İ°ü.getData();//»ñÈ¡·¢ËÍµÄÊı¾İ
-		*Êı¾İ°ü.getPort();//»ñÈ¡·¢ËÍ¶ËµÄ¶Ë¿ÚºÅ
+ 	*ä¼ è¾“ç«¯:
+ 		*åˆ›å»ºDategramSocket å¯¹è±¡ï¼Œä¸ç”¨å‚æ•°
+ 		*åˆ›å»ºDategramPacket å¯¹è±¡ï¼Œä¼ å‚æ•°(ä¿¡æ¯.getbytes()ï¼Œä¿¡æ¯é•¿åº¦ï¼Œipï¼Œç«¯å£å·);
+ 		*DategramSocket å¯¹è±¡.send(DategramPacket å¯¹è±¡);
+ 	*æ¥å—ç«¯
+ 		*åˆ›å»ºDategramSocket å¯¹è±¡,è¦ä¸€ä¸ªç«¯å£å·
+ 		*åˆ›å»ºDategramPacket å¯¹è±¡ï¼Œè¦æ•°æ®é•¿åº¦å’Œï¼Œæ¥å—çš„æ•°ç»„
+*2.æ•°æ®ä¼ é€ä¸æ¥å— 
+ 	*ä¼ è¾“ç«¯:
+ 		*DategramSocket å¯¹è±¡.send(DategramPacket å¯¹è±¡);å‘é€æ•°æ®åŒ…
+ 	*æ¥å—ç«¯:
+ 		*DategramSocket å¯¹è±¡.receive(DategramPacktet å¯¹è±¡);æ¥å—æ•°æ®åŒ…
+ 		*æ•°æ®åŒ….getAddress();//è·å–å‘é€ç«¯çš„ip
+		*æ•°æ®åŒ….getData();//è·å–å‘é€çš„æ•°æ®
+		*æ•°æ®åŒ….getPort();//è·å–å‘é€ç«¯çš„ç«¯å£å·
  * */
 public class Day01Udp {
 	public static void main(String[] args) {
@@ -32,14 +32,14 @@ public class Day01Udp {
 			@Override
 			public void run() {
 				try {
-					//´´½¨socket¶ÔÏó
+					//åˆ›å»ºsocketå¯¹è±¡
 					DatagramSocket aSocket = new DatagramSocket();
 					Scanner scanner = new Scanner(System.in);
 					String astring = null;
 					while (true) {
-						System.out.println("ÇëÊäÈëÄãÒª·¢ËÍµÄĞÅÏ¢(quitÍË³ö):");
+						System.out.println("è¯·è¾“å…¥ä½ è¦å‘é€çš„ä¿¡æ¯(quité€€å‡º):");
 						astring = scanner.nextLine();
-						//´´½¨·¢ËÍ°ü
+						//åˆ›å»ºå‘é€åŒ…
 						DatagramPacket aDatagramPacket = new DatagramPacket(astring.getBytes(),
 							astring.getBytes().length, InetAddress.getByName("127.0.0.1"), 9999);
 						aSocket.send(aDatagramPacket);
@@ -53,11 +53,11 @@ public class Day01Udp {
 		new Thread() {
 			public void run() {
 				try {
-					//½ÓÊÜsocketÒ»¶¨ÒªÓĞ¶Ë¿Ú
+					//æ¥å—socketä¸€å®šè¦æœ‰ç«¯å£
 					DatagramSocket datagramSocket= new DatagramSocket(9999);
 					byte[] aBytes= new byte[1024];
 					while(true) {
-						//´´½¨½ÓÊÕ°ü
+						//åˆ›å»ºæ¥æ”¶åŒ…
 						DatagramPacket aPacket= new DatagramPacket(aBytes,1024);
 						datagramSocket.receive(aPacket);
 						InetAddress address=aPacket.getAddress();

@@ -9,10 +9,10 @@ public class DemoRegxSpilt {
 			System.out.println(i.toString());
 		}*/
 		String c="1.2.3.4.5.6.7.8.9";
-		b=c.split(".");//.µÄÕıÔòÎªÈÎÒâ×Ö·û
+		b=c.split(".");//.çš„æ­£åˆ™ä¸ºä»»æ„å­—ç¬¦
 		for(String i:b) {
 			System.out.println(i.toString());
-		}//Îª¿Õ£¬ÒÔÎª.wÎªÈÎÒâ×Ö·û£¬ÏëÓÃ.ÇĞ¸îÒª×ªÒå£¬ÈçÏÂ£º
+		}//ä¸ºç©ºï¼Œä»¥ä¸º.wä¸ºä»»æ„å­—ç¬¦ï¼Œæƒ³ç”¨.åˆ‡å‰²è¦è½¬ä¹‰ï¼Œå¦‚ä¸‹ï¼š
 		b=c.split("\\.");
 		for(String i:b) {
 			System.out.println(i.toString());

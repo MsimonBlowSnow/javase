@@ -90,11 +90,11 @@ public class Person2901 {
 	}
 	
 	public void eat() {
-		System.out.println("Ò»ÌìÒ»Æ»¹û,ÉúÃüÔ¶ÀëÎÒ!");
+		System.out.println("ä¸€å¤©ä¸€è‹¹æœ,ç”Ÿå‘½è¿œç¦»æˆ‘!");
 	}
 	
 	public void eat(int num){
-		System.out.println("Ò»Ìì"+num+"Æ»¹û,ÉúÃüÔ¶ÀëÎÒ!");
+		System.out.println("ä¸€å¤©"+num+"è‹¹æœ,ç”Ÿå‘½è¿œç¦»æˆ‘!");
 	} 
 	@Override
 	public String toString() {

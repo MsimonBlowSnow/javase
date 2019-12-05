@@ -3,29 +3,29 @@ package day29Reflect;
 import java.lang.reflect.Field;
 
 /*Field
-	* Class.getField(String)·½·¨¿ÉÒÔ»ñÈ¡ÀàÖĞµÄÖ¸¶¨×Ö¶Î(¿É¼ûµÄ), 
-	* Èç¹ûÊÇË½ÓĞµÄ¿ÉÒÔÓÃgetDeclaedField("name")·½·¨»ñÈ¡,
-	* Í¨¹ıset(obj, "ÀîËÄ")·½·¨¿ÉÒÔÉèÖÃÖ¸¶¨¶ÔÏóÉÏ¸Ã×Ö¶ÎµÄÖµ, 
-	* Èç¹ûÊÇË½ÓĞµÄĞèÒªÏÈµ÷ÓÃsetAccessible(true)ÉèÖÃ·ÃÎÊÈ¨ÏŞ,
-	* ÓÃ»ñÈ¡µÄÖ¸¶¨µÄ×Ö¶Îµ÷ÓÃget(obj)¿ÉÒÔ»ñÈ¡Ö¸¶¨¶ÔÏóÖĞ¸Ã×Ö¶ÎµÄÖµ
-*2.Ïà¹Ø·½·¨
-	* ClassµÄ·½·¨:getField(name);//»ñÈ¡Ò»¸öÊôĞÔÖµ£¬Ë½ÓĞµÄ²»ÄÜ»ñÈ¡
-	* ClassµÄ·½·¨:getDeclaredField();//±©Á¦»ñÈ¡£¬Ë½ÓĞµÄÒ²¿ÉÒÔ»ñÈ¡
-	* FieldµÄ·½·¨:setAccessible(true);//È¥´¦È¨ÏŞ
+	* Class.getField(String)æ–¹æ³•å¯ä»¥è·å–ç±»ä¸­çš„æŒ‡å®šå­—æ®µ(å¯è§çš„), 
+	* å¦‚æœæ˜¯ç§æœ‰çš„å¯ä»¥ç”¨getDeclaedField("name")æ–¹æ³•è·å–,
+	* é€šè¿‡set(obj, "æå››")æ–¹æ³•å¯ä»¥è®¾ç½®æŒ‡å®šå¯¹è±¡ä¸Šè¯¥å­—æ®µçš„å€¼, 
+	* å¦‚æœæ˜¯ç§æœ‰çš„éœ€è¦å…ˆè°ƒç”¨setAccessible(true)è®¾ç½®è®¿é—®æƒé™,
+	* ç”¨è·å–çš„æŒ‡å®šçš„å­—æ®µè°ƒç”¨get(obj)å¯ä»¥è·å–æŒ‡å®šå¯¹è±¡ä¸­è¯¥å­—æ®µçš„å€¼
+*2.ç›¸å…³æ–¹æ³•
+	* Classçš„æ–¹æ³•:getField(name);//è·å–ä¸€ä¸ªå±æ€§å€¼ï¼Œç§æœ‰çš„ä¸èƒ½è·å–
+	* Classçš„æ–¹æ³•:getDeclaredField();//æš´åŠ›è·å–ï¼Œç§æœ‰çš„ä¹Ÿå¯ä»¥è·å–
+	* Fieldçš„æ–¹æ³•:setAccessible(true);//å»å¤„æƒé™
  * */
 public class Demo06Field {
 	public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		//»ñÈ¡×Ö½ÚÂëµÄÈıÖÖ·½·¨
+		//è·å–å­—èŠ‚ç çš„ä¸‰ç§æ–¹æ³•
 		Class class1=Class.forName("day29Reflect.Person2901");
 		Class class2=Person2901.class;
 		Person2901 p=new Person2901();
 		Class class3= p.getClass();
 		System.out.println(p);
-		//»ñÈ¡³ÉÔ±±äÁ¿
-		//Field field=class1.getField("name"); //Å×³öÒì³££¬²»ÄÜÖ´ĞĞ£¬nameÊÇË½ÓĞµÄ
-		Field field=class1.getDeclaredField("name");//±©Á¦»ñÈ¡
-		field.setAccessible(true);	//È¥´¦È¨ÏŞ
-		field.set(p, "ming1");		//¸Ä±äÒ»¸ö¶ÔÏóµÄÊôĞÔÖµ
+		//è·å–æˆå‘˜å˜é‡
+		//Field field=class1.getField("name"); //æŠ›å‡ºå¼‚å¸¸ï¼Œä¸èƒ½æ‰§è¡Œï¼Œnameæ˜¯ç§æœ‰çš„
+		Field field=class1.getDeclaredField("name");//æš´åŠ›è·å–
+		field.setAccessible(true);	//å»å¤„æƒé™
+		field.set(p, "ming1");		//æ”¹å˜ä¸€ä¸ªå¯¹è±¡çš„å±æ€§å€¼
 		System.out.println(p);
 	}
 }

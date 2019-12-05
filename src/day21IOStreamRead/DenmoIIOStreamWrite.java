@@ -7,12 +7,12 @@ import java.util.Scanner;
 //
 public class DenmoIIOStreamWrite {
 	public static void main(String[] args) throws IOException {
-		//Á½¸ö²ÎÊıºóÃæ¼ÓÒ»¸ötrue¾ÍÊÇ×·¼ÓÄ£Ê½
+		//ä¸¤ä¸ªå‚æ•°åé¢åŠ ä¸€ä¸ªtrueå°±æ˜¯è¿½åŠ æ¨¡å¼
 		FileWriter fw= new FileWriter("a.txt");
 		String str=null;
 		Scanner sc =new Scanner(System.in);
 		while(true) {
-			System.out.println("ÇëÊäÈëÒ»ĞĞÊı¾İ:");
+			System.out.println("è¯·è¾“å…¥ä¸€è¡Œæ•°æ®:");
 			str=sc.nextLine();
 			if(str.equals("quit"))
 				break;

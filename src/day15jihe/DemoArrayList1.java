@@ -3,15 +3,15 @@ package day15jihe;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/** A:°¸ÀıÑİÊ¾
+/** A:æ¡ˆä¾‹æ¼”ç¤º
 * 
-		´øAllµÄ¹¦ÄÜÑİÊ¾
+		å¸¦Allçš„åŠŸèƒ½æ¼”ç¤º
 		
-		boolean addAll(Collection c)//¼ÓÈëÒ»¸ö¼¯ºÏÄÚµÄËùÓĞÔªËØ
-		boolean removeAll(Collection c)//É¾³ıÒ»¸ö¼¯ºÏµÄ½»¼¯
-		boolean containsAll(Collection c)//ÅĞ¶Ï¼¯ºÏÊÇ·ñ°üº¬²ÎÊı¼¯ºÏ
-		boolean retainAll(Collection c)//È¡½»¼¯£¬·µ»Ø½á¹ûÊÇboolean
-		½á¹û²»±äÊÇfalse,½á¹û¸Ä±äÊÇtrue
+		boolean addAll(Collection c)//åŠ å…¥ä¸€ä¸ªé›†åˆå†…çš„æ‰€æœ‰å…ƒç´ 
+		boolean removeAll(Collection c)//åˆ é™¤ä¸€ä¸ªé›†åˆçš„äº¤é›†
+		boolean containsAll(Collection c)//åˆ¤æ–­é›†åˆæ˜¯å¦åŒ…å«å‚æ•°é›†åˆ
+		boolean retainAll(Collection c)//å–äº¤é›†ï¼Œè¿”å›ç»“æœæ˜¯boolean
+		ç»“æœä¸å˜æ˜¯false,ç»“æœæ”¹å˜æ˜¯true
 *
 */
 
@@ -20,11 +20,11 @@ public class DemoArrayList1 {
 		Collection a= new ArrayList();
 		Collection a1= new ArrayList();
 		Collection a2=new ArrayList();
-		//methodAddAll(a, a1);//Ìí¼ÓÒ»¸ö¼¯ºÏµÄËùÓĞÔªËØ
-		//methodRemoveAll(a, a1);//É¾³ıÒ»¸ö¼¯ºÏÓëÔ´¼¯ºÏµÄ½»¼¯ÖĞËùÓĞÔªËØ
-		//methodContains(a, a1, a2);//ÅĞ¶Ï¼¯ºÏÊÇ·ñ°üº¬²ÎÊı¼¯ºÏ
-		methodRetainall(a, a1, a2);//È¡½»¼¯£¬·µ»Ø½á¹ûÊÇboolean
-		//½á¹û²»±äÊÇfalse,½á¹û¸Ä±äÊÇtrue
+		//methodAddAll(a, a1);//æ·»åŠ ä¸€ä¸ªé›†åˆçš„æ‰€æœ‰å…ƒç´ 
+		//methodRemoveAll(a, a1);//åˆ é™¤ä¸€ä¸ªé›†åˆä¸æºé›†åˆçš„äº¤é›†ä¸­æ‰€æœ‰å…ƒç´ 
+		//methodContains(a, a1, a2);//åˆ¤æ–­é›†åˆæ˜¯å¦åŒ…å«å‚æ•°é›†åˆ
+		methodRetainall(a, a1, a2);//å–äº¤é›†ï¼Œè¿”å›ç»“æœæ˜¯boolean
+		//ç»“æœä¸å˜æ˜¯false,ç»“æœæ”¹å˜æ˜¯true
 	}
 
 	private static void methodRetainall(Collection a, Collection a1, Collection a2) {
@@ -41,15 +41,15 @@ public class DemoArrayList1 {
 		a2.add("a2");
 		a2.add("a3");
 		a2.add("a4");
-		if(a.retainAll(a1)) {//a=[a2,a3,a4]½á¹û¸Ä±äÁË
-			System.out.println(a+"aµÄ½á¹û¸Ä±ä");
+		if(a.retainAll(a1)) {//a=[a2,a3,a4]ç»“æœæ”¹å˜äº†
+			System.out.println(a+"açš„ç»“æœæ”¹å˜");
 		}else {
-			System.out.println(a+"aµÄ½á¹û²»¸Ä±ä");
+			System.out.println(a+"açš„ç»“æœä¸æ”¹å˜");
 		}
-		if(a.retainAll(a2)) {//a=[a2,a3,a4]½á¹û²»¸Ä±ä×¢ÒâÉÏÃæÒÑ¾­¸Ä±äÁËa
-			System.out.println(a+"aµÄ½á¹û¸Ä±ä");
+		if(a.retainAll(a2)) {//a=[a2,a3,a4]ç»“æœä¸æ”¹å˜æ³¨æ„ä¸Šé¢å·²ç»æ”¹å˜äº†a
+			System.out.println(a+"açš„ç»“æœæ”¹å˜");
 		}else {
-			System.out.println(a+"aµÄ½á¹û²»¸Ä±ä");
+			System.out.println(a+"açš„ç»“æœä¸æ”¹å˜");
 		}
 	}
 
@@ -66,17 +66,17 @@ public class DemoArrayList1 {
 		a2.add("a2");
 		a2.add("a3");
 		a2.add("a5");
-		if(a.containsAll(a1)) {//ÅĞ¶Ï¼¯ºÏÊÇ·ñ°üº¬²ÎÊı¼¯ºÏ
-			System.out.println("a°üÀ¨a1");
+		if(a.containsAll(a1)) {//åˆ¤æ–­é›†åˆæ˜¯å¦åŒ…å«å‚æ•°é›†åˆ
+			System.out.println("aåŒ…æ‹¬a1");
 		}
 		else {
-			System.out.println("a²»°üÀ¨a1");
+			System.out.println("aä¸åŒ…æ‹¬a1");
 		}
 		if(a.containsAll(a2)) {
-			System.out.println("a°üÀ¨a2");
+			System.out.println("aåŒ…æ‹¬a2");
 		}
 		else {
-			System.out.println("a²»°üÀ¨a2");
+			System.out.println("aä¸åŒ…æ‹¬a2");
 		}
 	}
 
@@ -90,7 +90,7 @@ public class DemoArrayList1 {
 		a1.add("a3");
 		a1.add("a4");
 		
-		a.removeAll(a1);//É¾³ıÒ»¸ö¼¯ºÏµÄ½»¼¯
+		a.removeAll(a1);//åˆ é™¤ä¸€ä¸ªé›†åˆçš„äº¤é›†
 		System.out.println(a);
 	}
 
@@ -104,9 +104,9 @@ public class DemoArrayList1 {
 		a1.add("a2");
 		a1.add("a3");
 		a1.add("a4");
-		a.add(a1);//add¼Ó½øÈ¥ÁËÒ»¸öÊı×é¶ÔÏó
+		a.add(a1);//addåŠ è¿›å»äº†ä¸€ä¸ªæ•°ç»„å¯¹è±¡
 		System.out.println(a);
-		a.addAll(a1);//°Ña1ÖĞµÄÔªËØÈ«²¿¼Ó½øÈ¥ÁË
+		a.addAll(a1);//æŠŠa1ä¸­çš„å…ƒç´ å…¨éƒ¨åŠ è¿›å»äº†
 		System.out.println(a);
 	}
 }

@@ -6,20 +6,20 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 
-/*Í¨¹ı´´½¨Ğ¡Êı×éÀ´Íê³ÉCopy
- * ÎÊÌâ£º
-*	´´½¨µÄÊı×é²»ÊÇÎÄ¼ş´óĞ¡µÄÕûÊı±¶£¬×îºóÒ»´ÎÊı×éµÄÄÚÈİÓĞÒ»²¿·ÖÊÇÎŞĞ§µÄÀıÈçmethod1()ÖĞ
-*	´¦Àí·½·¨£º
-*	fileInputStreamÀïÃæread(byte[] a)·µ»ØÒ»¸öÓĞĞ§Öµ¸öÊı
-*	fileOutputstreamÀïÃæÓĞÒ»¸ö×ÖĞ´ÓĞĞ§µÄ
-*	write(byte[] a,int off,int len)½«Êı×éaË÷ÒıÎªoffµ½len£¨²»°üÀ¨len£©
-*	Ğ´µ½ÎÄ¼şÀïÖĞ
-*	flag=Read(byte[] a)£»
-*	write(a,0,Read(byte[] a))¾Í½â¾öÁË;
-*	Èçmethod2
-*±ê×¼¸ñÊ½:
-*	Ò»°ãÊı×é»á¶¨¶¨ÒåÎª1024µÄÕûÊı±¶
-*	¸ñÊ½¿´Method3
+/*é€šè¿‡åˆ›å»ºå°æ•°ç»„æ¥å®ŒæˆCopy
+ * é—®é¢˜ï¼š
+*	åˆ›å»ºçš„æ•°ç»„ä¸æ˜¯æ–‡ä»¶å¤§å°çš„æ•´æ•°å€ï¼Œæœ€åä¸€æ¬¡æ•°ç»„çš„å†…å®¹æœ‰ä¸€éƒ¨åˆ†æ˜¯æ— æ•ˆçš„ä¾‹å¦‚method1()ä¸­
+*	å¤„ç†æ–¹æ³•ï¼š
+*	fileInputStreamé‡Œé¢read(byte[] a)è¿”å›ä¸€ä¸ªæœ‰æ•ˆå€¼ä¸ªæ•°
+*	fileOutputstreamé‡Œé¢æœ‰ä¸€ä¸ªå­—å†™æœ‰æ•ˆçš„
+*	write(byte[] a,int off,int len)å°†æ•°ç»„aç´¢å¼•ä¸ºoffåˆ°lenï¼ˆä¸åŒ…æ‹¬lenï¼‰
+*	å†™åˆ°æ–‡ä»¶é‡Œä¸­
+*	flag=Read(byte[] a)ï¼›
+*	write(a,0,Read(byte[] a))å°±è§£å†³äº†;
+*	å¦‚method2
+*æ ‡å‡†æ ¼å¼:
+*	ä¸€èˆ¬æ•°ç»„ä¼šå®šå®šä¹‰ä¸º1024çš„æ•´æ•°å€
+*	æ ¼å¼çœ‹Method3
 */
 public class DemoCopy2 {
 	public static void main(String[] args) throws IOException {
@@ -33,7 +33,7 @@ public class DemoCopy2 {
 		FileOutputStream fos= new FileOutputStream("src/day20IOStream/Copylicx.jpg");
 		byte[] a= new byte[1024*8];
 		int flag=0;
-		while((flag=fis.read(a))!=-1) {//¶Áread()ÖĞÒ»¶¨ÒªĞ´Êı×é
+		while((flag=fis.read(a))!=-1) {//è¯»read()ä¸­ä¸€å®šè¦å†™æ•°ç»„
 			fos.write(a,0,flag);
 		}
 	}
@@ -43,7 +43,7 @@ public class DemoCopy2 {
 		FileOutputStream fos= new FileOutputStream("src/day20IOStream/CopyDemoCopy2.txt");
 		byte[] a= new byte[2];
 		int flag=0;
-		while((flag=fis.read(a))!=-1) {//flag±£´æÓĞĞ§³¤¶È
+		while((flag=fis.read(a))!=-1) {//flagä¿å­˜æœ‰æ•ˆé•¿åº¦
 			fos.write(a,0,flag);
 		}
 	}
@@ -53,9 +53,9 @@ public class DemoCopy2 {
 		byte[] a= new byte[2];
 		int flag=0;
 		while((flag=fis.read(a))!=-1) {
-			/*¸ÃÎÄ¼şÀïÖ»ÓĞÈı¸ö×Ö·ûÈ±Êä³öÁËËÄ¸ö×Ö·û£¬
-			Ó¦ÎªÔÚµÚ¶ş´ÎÊäÈëÊ±,µÚÈı¸ö×Ö·û¸²¸ÇÁËµÚÒ»¸ö×Ö·û£¬¶øÃ»ÓĞµÚËÄ¸ö×Ö·û
-			£¬ËùÒÔa[0]mÃ»ÓĞ±ä£¬Èç¹û²»´¦ÀíÒ²»áĞ´µ½ÎÄ¼şÀï*/
+			/*è¯¥æ–‡ä»¶é‡Œåªæœ‰ä¸‰ä¸ªå­—ç¬¦ç¼ºè¾“å‡ºäº†å››ä¸ªå­—ç¬¦ï¼Œ
+			åº”ä¸ºåœ¨ç¬¬äºŒæ¬¡è¾“å…¥æ—¶,ç¬¬ä¸‰ä¸ªå­—ç¬¦è¦†ç›–äº†ç¬¬ä¸€ä¸ªå­—ç¬¦ï¼Œè€Œæ²¡æœ‰ç¬¬å››ä¸ªå­—ç¬¦
+			ï¼Œæ‰€ä»¥a[0]mæ²¡æœ‰å˜ï¼Œå¦‚æœä¸å¤„ç†ä¹Ÿä¼šå†™åˆ°æ–‡ä»¶é‡Œ*/
 			System.out.println(Arrays.toString(a));
 		}
 	}

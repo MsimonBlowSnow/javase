@@ -7,10 +7,10 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/*Í¼Æ¬¼ÓÃÜ£º
- * ÓÃÊä³öÁ÷ÈëÁ÷¶ÁÈ¡Í¼Æ¬×Ö½ÚÓÃÊäÈëÁ÷ÓëÉÏÒ»¸öÊı×Ö£¬È»ºóÔÚÊäÈëÎÄ¼ş¾Í¿ÉÒÔÁË
- * ÃÜÂë£ºÓëµÄÄÇ¸öÊı£¬ÓëÁ½´Î½á¹ûÏàÍ¬
- * ÀıÈç£º¼ÓÃÜÍ¼Æ¬ÈçÏÂ
+/*å›¾ç‰‡åŠ å¯†ï¼š
+ * ç”¨è¾“å‡ºæµå…¥æµè¯»å–å›¾ç‰‡å­—èŠ‚ç”¨è¾“å…¥æµä¸ä¸Šä¸€ä¸ªæ•°å­—ï¼Œç„¶ååœ¨è¾“å…¥æ–‡ä»¶å°±å¯ä»¥äº†
+ * å¯†ç ï¼šä¸çš„é‚£ä¸ªæ•°ï¼Œä¸ä¸¤æ¬¡ç»“æœç›¸åŒ
+ * ä¾‹å¦‚ï¼šåŠ å¯†å›¾ç‰‡å¦‚ä¸‹
  * */
 public class DemoFilePassword {
 	public static void main(String[] args) throws IOException {
@@ -22,7 +22,7 @@ public class DemoFilePassword {
 		FileInputStream fis= new FileInputStream("src/day20IOStream/Passwordlicunxu.jpg");
 		FileOutputStream fos=new FileOutputStream("src/day20IOStream/Jielicunxu.jpg");
 		
-		//1.7°æ±¾¹Ø±ÕÁ÷¶ÔÏó
+		//1.7ç‰ˆæœ¬å…³é—­æµå¯¹è±¡
 		try(BufferedInputStream bfis= new BufferedInputStream(fis);
 			BufferedOutputStream bfos = new BufferedOutputStream(fos);){
 			int flag=0;
@@ -36,7 +36,7 @@ public class DemoFilePassword {
 		FileInputStream fis= new FileInputStream("src/day20IOStream/licunxu.jpg");
 		FileOutputStream fos=new FileOutputStream("src/day20IOStream/Passwordlicunxu.jpg");
 		
-		//1.7°æ±¾¹Ø±ÕÁ÷¶ÔÏó
+		//1.7ç‰ˆæœ¬å…³é—­æµå¯¹è±¡
 		try(BufferedInputStream bfis= new BufferedInputStream(fis);
 			BufferedOutputStream bfos = new BufferedOutputStream(fos);){
 			int flag=0;

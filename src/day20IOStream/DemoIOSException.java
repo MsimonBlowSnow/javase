@@ -5,27 +5,27 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/*´¦ÀíIOException
- * ÏÂÃæ´úÂëÎªjava1.6´¦ÀíÁ÷Òì³£µÄ´úÂëmethod
- * 1.¾¡Á¿°ÑÁ÷¹Øµô
- * 2¸ötry{}finally{}ÊÇÎªÁË±£Ö¤¾¡Á¿¶à¹ØÉÏÁ÷
- * ·ÀÖ¹Ò»¸öÁ÷³öÏÖ´íÎó£¬ÁíÒ»¸ö¹Ø²»ÉÏ
+/*å¤„ç†IOException
+ * ä¸‹é¢ä»£ç ä¸ºjava1.6å¤„ç†æµå¼‚å¸¸çš„ä»£ç method
+ * 1.å°½é‡æŠŠæµå…³æ‰
+ * 2ä¸ªtry{}finally{}æ˜¯ä¸ºäº†ä¿è¯å°½é‡å¤šå…³ä¸Šæµ
+ * é˜²æ­¢ä¸€ä¸ªæµå‡ºç°é”™è¯¯ï¼Œå¦ä¸€ä¸ªå…³ä¸ä¸Š
  * 
- * 1.7°æ±¾Á÷ÊµÏÖÁËautocloseable½Ó¿Ú
- * ¿´method17
+ * 1.7ç‰ˆæœ¬æµå®ç°äº†autocloseableæ¥å£
+ * çœ‹method17
  * */
 public class DemoIOSException {
 	public static void main(String[] args) throws IOException {
-		//1.6°æ±¾´¦ÀíIOException
+		//1.6ç‰ˆæœ¬å¤„ç†IOException
 		method();
-		//1.7°æ±¾Á÷ÊµÏÖÁËautocloseable½Ó¿Ú
+		//1.7ç‰ˆæœ¬æµå®ç°äº†autocloseableæ¥å£
 		method17(); 
 	}
 
 	private static void method17() throws IOException, FileNotFoundException {
 		try(FileInputStream fis=new FileInputStream("a.txt");
-				//ÊµÏÖAutoCloseable½Ó¿Ú£¬ÖØĞ´close·½·¨
-				//¹Ø±ÕÁ÷Ê±×Ô¶¯Ö´ĞĞclose·½·¨
+				//å®ç°AutoCloseableæ¥å£ï¼Œé‡å†™closeæ–¹æ³•
+				//å…³é—­æµæ—¶è‡ªåŠ¨æ‰§è¡Œcloseæ–¹æ³•
 				Stream17 sk=new Stream17();
 				FileOutputStream fos=new FileOutputStream("acopy.txt");) { 
 			int flag = 0;
@@ -46,7 +46,7 @@ public class DemoIOSException {
 				fos.write(flag);
 			} 
 		} finally {
-			//Èç¹ûÃ»ÓĞtry{}finally{},ÉÏÃæ³öÁËÒì³££¬ÕâÕâÁ½¸öÁ÷¾Í²»ÄÜ¹Ø±Õ
+			//å¦‚æœæ²¡æœ‰try{}finally{},ä¸Šé¢å‡ºäº†å¼‚å¸¸ï¼Œè¿™è¿™ä¸¤ä¸ªæµå°±ä¸èƒ½å…³é—­
 			try {
 				if (fis != null)
 					fis.close();
@@ -63,7 +63,7 @@ class Stream17 implements AutoCloseable{
 
 	@Override
 	public void close()  {
-		System.out.println("1.7°æ±¾¹Ø±ÕÁ÷¶ÔÏó");
+		System.out.println("1.7ç‰ˆæœ¬å…³é—­æµå¯¹è±¡");
 	}
 	
 }

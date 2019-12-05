@@ -2,17 +2,17 @@ package day25thread;
 
 import java.io.IOException;
 
-/* RuntimeÀàÊÇÒ»¸öµ¥ÀıÀà
+/* Runtimeç±»æ˜¯ä¸€ä¸ªå•ä¾‹ç±»
  * Runtime r = Runtime.getRuntime();
-			//r.exec("shutdown -s -t 300");		//300Ãëºó¹Ø»ú
-			r.exec("shutdown-a");			//È¡Ïû¹Ø»ú
+			//r.exec("shutdown -s -t 300");		//300ç§’åå…³æœº
+			r.exec("shutdown-a");			//å–æ¶ˆå…³æœº
  * 
 */
 public class Demo02Runtime {
 	public static void main(String[] args) throws IOException {
 		Runtime r = Runtime.getRuntime();
-		//Runtime ÓÃÀ´µ¥ÀıÉè¼ÆÄ£Ê½£¬²Ù×÷µÄÊÇÍ¬Ò»¸ö¶ÔÏó
-		r.exec("shutdown -s -t 60");		//60Ãëºó¹Ø»ú
-		r.exec("shutdown -a");			//È¡Ïû¹Ø»ú
+		//Runtime ç”¨æ¥å•ä¾‹è®¾è®¡æ¨¡å¼ï¼Œæ“ä½œçš„æ˜¯åŒä¸€ä¸ªå¯¹è±¡
+		r.exec("shutdown -s -t 60");		//60ç§’åå…³æœº
+		r.exec("shutdown -a");			//å–æ¶ˆå…³æœº
 	}
 }

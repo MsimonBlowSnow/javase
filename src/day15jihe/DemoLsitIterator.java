@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-/*Ìâ£º
- * Í¨¹ıµü´úÆ÷±éÀú¼¯ºÏÖĞµÄÔªËØ£¬Èç¹ûÓĞ
- * ming ÔòÔÚºóÃæ¼ÓÉÏÒ»¸ö handsome
- * Iterator ÖĞÃ»ÓĞadd()·½·¨²»ÄÜÓÃ¶àÌ¬
- * ListIteratorÖĞÓĞ¸Ã·½·¨
+/*é¢˜ï¼š
+ * é€šè¿‡è¿­ä»£å™¨éå†é›†åˆä¸­çš„å…ƒç´ ï¼Œå¦‚æœæœ‰
+ * ming åˆ™åœ¨åé¢åŠ ä¸Šä¸€ä¸ª handsome
+ * Iterator ä¸­æ²¡æœ‰add()æ–¹æ³•ä¸èƒ½ç”¨å¤šæ€
+ * ListIteratorä¸­æœ‰è¯¥æ–¹æ³•
  * */
 public class DemoLsitIterator {
 	public static void main(String[] args) {
@@ -22,23 +22,23 @@ public class DemoLsitIterator {
 		a.add("HongHaiEr");
 		/*Iterator c=a.iterator();
 		while(c.hasNext()) {
-			String str=(String) c.next();//ÏòÏÂ×ªĞÍ
+			String str=(String) c.next();//å‘ä¸‹è½¬å‹
 			if(str.equals("Ming")) {
 				a.add("handsome");
 				//ConcurrentModificationException
-				//²¢·¢ĞŞ¸ÄÒì³£
+				//å¹¶å‘ä¿®æ”¹å¼‚å¸¸
 			}
 		}*/
 		ListIterator c=a.listIterator();
 		while(c.hasNext()) {
-			String str=(String) c.next();//ÏòÏÂ×ªĞÍ
+			String str=(String) c.next();//å‘ä¸‹è½¬å‹
 			if(str.equals("Ming")) {
-				/* ²»ÄÜÍ¨¹ıListÀ´Ìí¼ÓÁË
+				/* ä¸èƒ½é€šè¿‡Listæ¥æ·»åŠ äº†
 				 * a.add("handsome"); 
 				 * ConcurrentModificationException 
-				 * ²¢·¢ĞŞ¸ÄÒì³£
+				 * å¹¶å‘ä¿®æ”¹å¼‚å¸¸
 				 */
-				//ListIteratorÌá¹©ÁËÒ»¸ö·½·¨À´Íê³É
+				//ListIteratoræä¾›äº†ä¸€ä¸ªæ–¹æ³•æ¥å®Œæˆ
 				c.add("Handsome");			
 			}
 		}

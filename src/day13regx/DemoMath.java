@@ -1,30 +1,30 @@
 package day13regx;
-/* A:MathÀà¸ÅÊö
-* Math Àà°üº¬ÓÃÓÚÖ´ĞĞ»ù±¾ÊıÑ§ÔËËãµÄ·½·¨£¬Èç³õµÈÖ¸Êı¡¢¶ÔÊı¡¢Æ½·½¸ùºÍÈı½Çº¯Êı¡£ 
-* B:³ÉÔ±·½·¨
-* public static int abs(int a)//È¡¾ø¶ÔÖµ
-* public static double ceil(double a)//´óÓÚ»òÕßµÈÓÚaµÄ×îĞ¡ÕûÊı
-* public static double floor(double a)//Ğ¡ÓÚ»òµÈÓÚµÄ×îĞ¡ÕûÊı
-* public static int max(int a,int b) min×ÔÑ§
+/* A:Mathç±»æ¦‚è¿°
+* Math ç±»åŒ…å«ç”¨äºæ‰§è¡ŒåŸºæœ¬æ•°å­¦è¿ç®—çš„æ–¹æ³•ï¼Œå¦‚åˆç­‰æŒ‡æ•°ã€å¯¹æ•°ã€å¹³æ–¹æ ¹å’Œä¸‰è§’å‡½æ•°ã€‚ 
+* B:æˆå‘˜æ–¹æ³•
+* public static int abs(int a)//å–ç»å¯¹å€¼
+* public static double ceil(double a)//å¤§äºæˆ–è€…ç­‰äºaçš„æœ€å°æ•´æ•°
+* public static double floor(double a)//å°äºæˆ–ç­‰äºçš„æœ€å°æ•´æ•°
+* public static int max(int a,int b) minè‡ªå­¦
 * public static double pow(double a,double b)
 * public static double random()
-* public static int round(float a) ²ÎÊıÎªdoubleµÄ×ÔÑ§
+* public static int round(float a) å‚æ•°ä¸ºdoubleçš„è‡ªå­¦
 * public static double sqrt(double a)
 */
 import java.math.*;
 public class DemoMath {
 	public static void main(String[] args) {
-		System.out.println(Math.abs(-10));//10¾ø¶ÔÖµ
+		System.out.println(Math.abs(-10));//10ç»å¯¹å€¼
 		System.out.println(Math.PI);//PI=3.1415926
-		System.out.println(Math.ceil(8.9));//9ÏòÉÏÈ¡Õû
-		System.out.println(Math.floor(8.9));//8ÏòÏÂÈ¡Õû
-		System.out.println(Math.max(10,8));//10£¬±È½ÏÁ½Êı´óĞ¡£¬·µ»Ø´óµÄ
-		System.out.println(Math.min(10, 8));//8,±È½ÏÁ½Êı´óĞ¡£¬·µ»ØĞ¡µÄ
-		System.out.println(Math.pow(10,3));//1000 ·µ»Ø10^3
-		System.out.println(Math.round(9.8));//10 ËÄÉáÎåÈë
-		System.out.println(Math.sqrt(4));//2 ·µ»ØËãÊõÆ½·½¸ù
+		System.out.println(Math.ceil(8.9));//9å‘ä¸Šå–æ•´
+		System.out.println(Math.floor(8.9));//8å‘ä¸‹å–æ•´
+		System.out.println(Math.max(10,8));//10ï¼Œæ¯”è¾ƒä¸¤æ•°å¤§å°ï¼Œè¿”å›å¤§çš„
+		System.out.println(Math.min(10, 8));//8,æ¯”è¾ƒä¸¤æ•°å¤§å°ï¼Œè¿”å›å°çš„
+		System.out.println(Math.pow(10,3));//1000 è¿”å›10^3
+		System.out.println(Math.round(9.8));//10 å››èˆäº”å…¥
+		System.out.println(Math.sqrt(4));//2 è¿”å›ç®—æœ¯å¹³æ–¹æ ¹
 		for(int i=0;i<10;i++) {
-			System.out.println(Math.random());// ·µ»Ø´øÕıºÅµÄ double Öµ£¬¸ÃÖµ´óÓÚµÈÓÚ 0.0 ÇÒĞ¡ÓÚ 1.0¡£
+			System.out.println(Math.random());// è¿”å›å¸¦æ­£å·çš„ double å€¼ï¼Œè¯¥å€¼å¤§äºç­‰äº 0.0 ä¸”å°äº 1.0ã€‚
 		}
 	}
 }

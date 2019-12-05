@@ -1,14 +1,14 @@
 package day18fileSequencsInputStream;
 
 import java.io.Serializable;
-/*person±ØĞëÊµÏÖSerializable½Ó¿Ú²Å¿ÉÒÔĞòÁĞ»¯(Ğ´µ½ÎÄ¼şÀïÃæ)
+/*personå¿…é¡»å®ç°Serializableæ¥å£æ‰å¯ä»¥åºåˆ—åŒ–(å†™åˆ°æ–‡ä»¶é‡Œé¢)
  * 
  * 
  * */
 public class Person implements Serializable{
 	/**
-	 * Serializable½Ó¿ÚÀïÃæµÄId
-	 * IDºÅ£º¶ÔÏó´æµ½ÎÄ¼şÀïÃæºó,Àà±ä»¯ÁË,ÔÙ¶Á»á³öÒì³££¬È»ºó¸æËßÄãIdºÅ(ºÍ°æ±¾ºÅ²î²»¶à)
+	 * Serializableæ¥å£é‡Œé¢çš„Id
+	 * IDå·ï¼šå¯¹è±¡å­˜åˆ°æ–‡ä»¶é‡Œé¢å,ç±»å˜åŒ–äº†,å†è¯»ä¼šå‡ºå¼‚å¸¸ï¼Œç„¶åå‘Šè¯‰ä½ Idå·(å’Œç‰ˆæœ¬å·å·®ä¸å¤š)
 	 */
 	private static final long serialVersionUID = 1L;
 	int age;

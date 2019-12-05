@@ -1,18 +1,18 @@
 package day24thread;
-/** ¼Ì³ĞThreadÀà
+/** ç»§æ‰¿Threadç±»
 	 	
-		new Thread() {													//1,new Àà(){}¼Ì³ĞÕâ¸öÀà
-			public void run() {											//2,ÖØĞ´run·½·¨
-				for(int i = 0; i < 3000; i++) {							//3,½«ÒªÖ´ĞĞµÄ´úÂë,Ğ´ÔÚrun·½·¨ÖĞ
+		new Thread() {													//1,new ç±»(){}ç»§æ‰¿è¿™ä¸ªç±»
+			public void run() {											//2,é‡å†™runæ–¹æ³•
+				for(int i = 0; i < 3000; i++) {							//3,å°†è¦æ‰§è¡Œçš„ä»£ç ,å†™åœ¨runæ–¹æ³•ä¸­
 					System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 				}
 			}
 		}.start();
-* ÊµÏÖRunnable½Ó¿Ú
+* å®ç°Runnableæ¥å£
 			
-		new Thread(new Runnable(){										//1,new ½Ó¿Ú(){}ÊµÏÖÕâ¸ö½Ó¿Ú
-			public void run() {											//2,ÖØĞ´run·½·¨
-				for(int i = 0; i < 3000; i++) {							//3,½«ÒªÖ´ĞĞµÄ´úÂë,Ğ´ÔÚrun·½·¨ÖĞ
+		new Thread(new Runnable(){										//1,new æ¥å£(){}å®ç°è¿™ä¸ªæ¥å£
+			public void run() {											//2,é‡å†™runæ–¹æ³•
+				for(int i = 0; i < 3000; i++) {							//3,å°†è¦æ‰§è¡Œçš„ä»£ç ,å†™åœ¨runæ–¹æ³•ä¸­
 					System.out.println("bb");
 				}
 			}
@@ -23,22 +23,22 @@ package day24thread;
  * */
 public class Demo06NoNameThreads {
 	public static void main(String[] args) {
-		//´´½¨ÄäÃûÄÚ²¿¶ÔÏó¡£
+		//åˆ›å»ºåŒ¿åå†…éƒ¨å¯¹è±¡ã€‚
 		new Thread() {
 			@Override
-			public void run() {//ÖØĞ´run()·½·¨
+			public void run() {//é‡å†™run()æ–¹æ³•
 				for (int i = 0; i <10000; i++) {
-					System.out.println("ThreadÊµÏÖ");
+					System.out.println("Threadå®ç°");
 				}
 			}
 		}.start();
 		
-		//ÊµÏÖRunable½Ó¿Ú£¬°ÑËüµ±×÷²ÎÊı´«¸øthread
+		//å®ç°Runableæ¥å£ï¼ŒæŠŠå®ƒå½“ä½œå‚æ•°ä¼ ç»™thread
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
 				for (int i = 0; i < 10000; i++) {
-					System.out.println("RunnableÊµÏÖ");
+					System.out.println("Runnableå®ç°");
 				}
 			}
 		}).start();

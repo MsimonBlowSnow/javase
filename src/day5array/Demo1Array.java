@@ -5,14 +5,14 @@ public class Demo1Array {
 		int[] arr=new int[5];
 		String[][] str=new String[4][3];
 		for (int i:arr) {
-			System.out.println(arr[i]);//×Ô¶¯³õÊ¼»¯Îª0
-			/*Êı×é³õÊ¼»¯
-			 * int short long ³õÊ¼»¯Îª0
-			 * float,double³õÊ¼»¯0.0
-			 * char ³õÊ¼»¯Îª¡®\u0000¡¯		 * 
+			System.out.println(arr[i]);//è‡ªåŠ¨åˆå§‹åŒ–ä¸º0
+			/*æ•°ç»„åˆå§‹åŒ–
+			 * int short long åˆå§‹åŒ–ä¸º0
+			 * float,doubleåˆå§‹åŒ–0.0
+			 * char åˆå§‹åŒ–ä¸ºâ€˜\u0000â€™		 * 
 			 * */
 		}
-		System.out.println(arr);//[I@XXXXXX,Ò»¸ö[±íÊ¾Ò»¸öÊı×é,I±íÊ¾intĞÍÊı×é£¬XXXXXX±íÊ¾µØÖ·Öµ¡£
+		System.out.println(arr);//[I@XXXXXX,ä¸€ä¸ª[è¡¨ç¤ºä¸€ä¸ªæ•°ç»„,Iè¡¨ç¤ºintå‹æ•°ç»„ï¼ŒXXXXXXè¡¨ç¤ºåœ°å€å€¼ã€‚
 		System.out.println(str);//[[Ljava.lang.String;@299a06ac
 	}
 }

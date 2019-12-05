@@ -8,13 +8,13 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 
-/*1.tcp·¢ËÍÊı¾İ
- 	*¿Í»§¶ËÓÃSocket¶ÔÏó
- 	*·şÎñ¶ËÓÃServerSocket¶ÔÏó
- *2.´´½¨Á÷¶ÔÏó
- 	*±ØĞëÓÃgetOutputstreamºÍgetIpputstream´´½¨¶ÔÏó
- *3.¿Í»§¶Ë´«ÊäÍê³ÉºóÒ»¶¨ÒªÓÃ
-	*Socket.shutdownOutput()Ò»¶¨ÒªÓÃ·ñÔò£¬½ÓÊÜ¶ËÒ»Ö±ÔÚµÈ´ı¶ÁÊı¾İ,²»ÄÜ½øĞĞÏÂÒ»²¿
+/*1.tcpå‘é€æ•°æ®
+ 	*å®¢æˆ·ç«¯ç”¨Socketå¯¹è±¡
+ 	*æœåŠ¡ç«¯ç”¨ServerSocketå¯¹è±¡
+ *2.åˆ›å»ºæµå¯¹è±¡
+ 	*å¿…é¡»ç”¨getOutputstreamå’ŒgetIpputstreamåˆ›å»ºå¯¹è±¡
+ *3.å®¢æˆ·ç«¯ä¼ è¾“å®Œæˆåä¸€å®šè¦ç”¨
+	*Socket.shutdownOutput()ä¸€å®šè¦ç”¨å¦åˆ™ï¼Œæ¥å—ç«¯ä¸€ç›´åœ¨ç­‰å¾…è¯»æ•°æ®,ä¸èƒ½è¿›è¡Œä¸‹ä¸€éƒ¨
  */
 public class Day02TCP {
 	public static void main(String[] args) {
@@ -25,14 +25,14 @@ public class Day02TCP {
 					this.sleep(2000);
 					Socket socketClient = new Socket("127.0.0.1",8888);
 					OutputStream opt = socketClient.getOutputStream();
-					opt.write("ÄãºÃ,·şÎñÆ÷!".getBytes());
+					opt.write("ä½ å¥½,æœåŠ¡å™¨!".getBytes());
 					InputStream aInputStream=socketClient.getInputStream();
 					byte[] a=new byte[1024]; 
 					int len=aInputStream.read(a);
 					System.out.println(new String(a,0,len));
 					socketClient.close();
 				} catch (IOException e) {
-					System.out.println("Ã»Á¬½ÓÉÏ");
+					System.out.println("æ²¡è¿æ¥ä¸Š");
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -47,14 +47,14 @@ public class Day02TCP {
 					System.out.println(aSocket);
 					InputStream aInputStream=aSocket.getInputStream();
 					byte[] a=new byte[1024];
-					//¼ÇÂ¼ÓĞĞ§³¤¶È
+					//è®°å½•æœ‰æ•ˆé•¿åº¦
 					int len=aInputStream.read(a);
 					System.out.println(aSocket.getLocalAddress()+":"+
 							new String(a,0,len));
-					aSocket.getOutputStream().write("ÊÕµ½ĞÅÏ¢!".getBytes());
+					aSocket.getOutputStream().write("æ”¶åˆ°ä¿¡æ¯!".getBytes());
 					socketserver.close();
 				} catch (IOException e) {
-					System.out.println("´íÎó");
+					System.out.println("é”™è¯¯");
 				}
 			}
 		}.start();

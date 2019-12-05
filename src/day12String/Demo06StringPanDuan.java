@@ -1,11 +1,11 @@
 package day12String;
-/*A.StringÀàÀïÃæµÄÅĞ¶Ï·½·¨
- 	*boolean equals(Object obj):±È½ÏÁ½¸ö×Ö·û´®(²»°üÀ¨µØÖ·Öµ)ÊÇ·ñÏàµÈ£¬Çø·Ö´óĞ¡Ğ´
- 	*boolean equalsIgnoreCase(String str):±È½Ï×Ö·û´®µÄÄÚÈİÊÇ·ñÏàµÈ£¬ºöÂÔ´óĞ¡Ğ´
- 	*boolean contains(String str)£ºÅĞ¶Ï´ó×Ö·û´®ÀïÃæÊÇ·ñ°üÀ¨Ğ¡×Ö·û´®
- 	*startWith(String str):ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÔÄ¢¹½Ö¸¶¨×Ö·û´®¿ªÍ·µÄ
- 	*endwith(String str):ÅĞ¶Ï×Ö·û´®ÊÇ·ñÒÑÖ¸¶¨×Ö·û´®½áÎ² 
- 	*isEmpty()ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ(×¢ÒâÎª¿ÕÊÇ"",²»ÊÇnull)
+/*A.Stringç±»é‡Œé¢çš„åˆ¤æ–­æ–¹æ³•
+ 	*boolean equals(Object obj):æ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸²(ä¸åŒ…æ‹¬åœ°å€å€¼)æ˜¯å¦ç›¸ç­‰ï¼ŒåŒºåˆ†å¤§å°å†™
+ 	*boolean equalsIgnoreCase(String str):æ¯”è¾ƒå­—ç¬¦ä¸²çš„å†…å®¹æ˜¯å¦ç›¸ç­‰ï¼Œå¿½ç•¥å¤§å°å†™
+ 	*boolean contains(String str)ï¼šåˆ¤æ–­å¤§å­—ç¬¦ä¸²é‡Œé¢æ˜¯å¦åŒ…æ‹¬å°å­—ç¬¦ä¸²
+ 	*startWith(String str):åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä»¥è˜‘è‡æŒ‡å®šå­—ç¬¦ä¸²å¼€å¤´çš„
+ 	*endwith(String str):åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦å·²æŒ‡å®šå­—ç¬¦ä¸²ç»“å°¾ 
+ 	*isEmpty()åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©º(æ³¨æ„ä¸ºç©ºæ˜¯"",ä¸æ˜¯null)
  * 
  * */	
 public class Demo06StringPanDuan {

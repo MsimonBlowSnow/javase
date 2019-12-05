@@ -3,54 +3,54 @@ package day18file;
 import java.io.File;
 import java.io.IOException;
 
-/* A:´´½¨¹¦ÄÜ
-	* public boolean createNewFile():´´½¨ÎÄ¼þ Èç¹û´æÔÚÕâÑùµÄÎÄ¼þ£¬¾Í²»´´½¨ÁË
-	* public boolean mkdir():´´½¨ÎÄ¼þ¼Ð Èç¹û´æÔÚÕâÑùµÄÎÄ¼þ¼Ð£¬¾Í²»´´½¨ÁË
-	* public boolean mkdirs():´´½¨ÎÄ¼þ¼Ð,Èç¹û¸¸ÎÄ¼þ¼Ð²»´æÔÚ£¬»á°ïÄã´´½¨³öÀ´
-* B:°¸ÀýÑÝÊ¾
-	* FileÀàµÄ´´½¨¹¦ÄÜ
-	* ×¢ÒâÊÂÏî£º
-		* Èç¹ûÄã´´½¨ÎÄ¼þ»òÕßÎÄ¼þ¼ÐÍüÁËÐ´ÅÌ·ûÂ·¾¶£¬ÄÇÃ´£¬Ä¬ÈÏÔÚÏîÄ¿Â·¾¶ÏÂ¡£ 
-* C:ÖØÃüÃûºÍÉ¾³ý¹¦ÄÜ
-	* public boolean renameTo(File dest):°ÑÎÄ¼þÖØÃüÃûÎªÖ¸¶¨µÄÎÄ¼þÂ·¾¶
-	* public boolean delete():É¾³ýÎÄ¼þ»òÕßÎÄ¼þ¼Ð
-* D:ÖØÃüÃû×¢ÒâÊÂÏî
-	* Èç¹ûÂ·¾¶ÃûÏàÍ¬£¬¾ÍÊÇ¸ÄÃû¡£
-	* Èç¹ûÂ·¾¶Ãû²»Í¬£¬¾ÍÊÇ¸ÄÃû²¢¼ôÇÐ¡£
-* E:É¾³ý×¢ÒâÊÂÏî£º
-	* JavaÖÐµÄÉ¾³ý²»×ß»ØÊÕÕ¾¡£
-	* ÒªÉ¾³ýÒ»¸öÎÄ¼þ¼Ð£¬Çë×¢Òâ¸ÃÎÄ¼þ¼ÐÄÚ²»ÄÜ°üº¬ÎÄ¼þ»òÕßÎÄ¼þ¼Ð
+/* A:åˆ›å»ºåŠŸèƒ½
+	* public boolean createNewFile():åˆ›å»ºæ–‡ä»¶ å¦‚æžœå­˜åœ¨è¿™æ ·çš„æ–‡ä»¶ï¼Œå°±ä¸åˆ›å»ºäº†
+	* public boolean mkdir():åˆ›å»ºæ–‡ä»¶å¤¹ å¦‚æžœå­˜åœ¨è¿™æ ·çš„æ–‡ä»¶å¤¹ï¼Œå°±ä¸åˆ›å»ºäº†
+	* public boolean mkdirs():åˆ›å»ºæ–‡ä»¶å¤¹,å¦‚æžœçˆ¶æ–‡ä»¶å¤¹ä¸å­˜åœ¨ï¼Œä¼šå¸®ä½ åˆ›å»ºå‡ºæ¥
+* B:æ¡ˆä¾‹æ¼”ç¤º
+	* Fileç±»çš„åˆ›å»ºåŠŸèƒ½
+	* æ³¨æ„äº‹é¡¹ï¼š
+		* å¦‚æžœä½ åˆ›å»ºæ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹å¿˜äº†å†™ç›˜ç¬¦è·¯å¾„ï¼Œé‚£ä¹ˆï¼Œé»˜è®¤åœ¨é¡¹ç›®è·¯å¾„ä¸‹ã€‚ 
+* C:é‡å‘½åå’Œåˆ é™¤åŠŸèƒ½
+	* public boolean renameTo(File dest):æŠŠæ–‡ä»¶é‡å‘½åä¸ºæŒ‡å®šçš„æ–‡ä»¶è·¯å¾„
+	* public boolean delete():åˆ é™¤æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
+* D:é‡å‘½åæ³¨æ„äº‹é¡¹
+	* å¦‚æžœè·¯å¾„åç›¸åŒï¼Œå°±æ˜¯æ”¹åã€‚
+	* å¦‚æžœè·¯å¾„åä¸åŒï¼Œå°±æ˜¯æ”¹åå¹¶å‰ªåˆ‡ã€‚
+* E:åˆ é™¤æ³¨æ„äº‹é¡¹ï¼š
+	* Javaä¸­çš„åˆ é™¤ä¸èµ°å›žæ”¶ç«™ã€‚
+	* è¦åˆ é™¤ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œè¯·æ³¨æ„è¯¥æ–‡ä»¶å¤¹å†…ä¸èƒ½åŒ…å«æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
 		
 */
 public class DemoFilemk {
 	public static void main(String[] args) throws IOException {
 		File file=new File("ming.txt");
-		//´æÔÚ·µ»Øfalse£¬²»´æÔÚ¾Í´´½¨²¢·µ»Øtrue
+		//å­˜åœ¨è¿”å›žfalseï¼Œä¸å­˜åœ¨å°±åˆ›å»ºå¹¶è¿”å›žtrue
 		System.out.println(file.createNewFile());
-		//ÎÄ¼þ²»Ò»¶¨ÓÐºó×º£¬²»¹ýÒ»°ã»á¼ÓÉÏºó×º£¬±ãÓÚÊ¶±ð
+		//æ–‡ä»¶ä¸ä¸€å®šæœ‰åŽç¼€ï¼Œä¸è¿‡ä¸€èˆ¬ä¼šåŠ ä¸ŠåŽç¼€ï¼Œä¾¿äºŽè¯†åˆ«
 		File file1 = new File("aaa");
 		System.out.println(file1.createNewFile());
 		
-		//´´½¨µ¥»úÎÄ¼þ¼Ð,´æÔÚ·µ»Øfalse£¬²»´æÔÚ¾Í´´½¨²¢·µ»Øtrue
+		//åˆ›å»ºå•æœºæ–‡ä»¶å¤¹,å­˜åœ¨è¿”å›žfalseï¼Œä¸å­˜åœ¨å°±åˆ›å»ºå¹¶è¿”å›žtrue
 		File file2 = new File("ming");
 		System.out.println(file2.mkdir());
 		
-		//ÎÄ¼þ¼Ð¿ÉÒÔÓÐºó×º£¬²»¹ýÒ»°ã²»½¨ÒéÐ´ºó×º
+		//æ–‡ä»¶å¤¹å¯ä»¥æœ‰åŽç¼€ï¼Œä¸è¿‡ä¸€èˆ¬ä¸å»ºè®®å†™åŽç¼€
 		File file3 = new File("ming.txt1");
 		System.out.println(file3.mkdir());
 		
-		//´´½¨¶à¼¶ÎÄ¼þ¼Ð
+		//åˆ›å»ºå¤šçº§æ–‡ä»¶å¤¹
 		File file4= new File("ming\\ming");
 		System.out.println(file4.mkdirs());
 		
 		//renameTo(File file)
-		//Èç¹ûÂ·¾¶ÃûÏàÍ¬£¬¾ÍÊÇ¸ÄÃû¡£ Èç¹ûÂ·¾¶Ãû²»Í¬£¬¾ÍÊÇ¸ÄÃû²¢¼ôÇÐ¡£
+		//å¦‚æžœè·¯å¾„åç›¸åŒï¼Œå°±æ˜¯æ”¹åã€‚ å¦‚æžœè·¯å¾„åä¸åŒï¼Œå°±æ˜¯æ”¹åå¹¶å‰ªåˆ‡ã€‚
 		methodRename(file);
 		
 		//detele()
-		//JavaÖÐµÄÉ¾³ý²»×ß»ØÊÕÕ¾,ÒªÉ¾³ýÒ»¸öÎÄ¼þ¼Ð£¬
-		//Çë×¢Òâ¸ÃÎÄ¼þ¼ÐÄÚ²»ÄÜ°üº¬ÎÄ¼þ»òÕßÎÄ¼þ¼Ð
-		//É¾³ýaaa
+		//Javaä¸­çš„åˆ é™¤ä¸èµ°å›žæ”¶ç«™,è¦åˆ é™¤ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œ
+		//è¯·æ³¨æ„è¯¥æ–‡ä»¶å¤¹å†…ä¸èƒ½åŒ…å«æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹
+		//åˆ é™¤aaa
 		System.out.println(file1.delete());
 	}
 

@@ -1,11 +1,11 @@
 package day12ClassObject;
-/*stringºÍStringBufferºÍStringBuilder
- * 1.StringBufferºÍStringBuilder¶¼ÊÇ×Ö·û´®µÄ»º´æÇø£¬²»¹ıËûÃÇÇø±ğÈçÏÂ:
- * 		StringBufferÊÇÒ»¸ö¶àÏß³Ì°²È«»º´æ.Êı¶È±È½ÏÂı
- * 		StringBuilderÒ»¸ö¶àÏß³Ì²»°²È«µÄ»º´æ,Êı¶È½Ï¿ì
- * 2.StringºÍStringBufferµÄ´«²Î
- * 		StringËäÈ»ÎªÒıÓÃÊı¾İÀàĞÍ²»¹ı´«²ÎÊıºÍ»ù±¾Êı¾İÀàĞÍÒ»ÖÁ
- * 		StringBufferÒıÓÃÊı¾İÀàĞÍ´«²Î
+/*stringå’ŒStringBufferå’ŒStringBuilder
+ * 1.StringBufferå’ŒStringBuilderéƒ½æ˜¯å­—ç¬¦ä¸²çš„ç¼“å­˜åŒºï¼Œä¸è¿‡ä»–ä»¬åŒºåˆ«å¦‚ä¸‹:
+ * 		StringBufferæ˜¯ä¸€ä¸ªå¤šçº¿ç¨‹å®‰å…¨ç¼“å­˜.æ•°åº¦æ¯”è¾ƒæ…¢
+ * 		StringBuilderä¸€ä¸ªå¤šçº¿ç¨‹ä¸å®‰å…¨çš„ç¼“å­˜,æ•°åº¦è¾ƒå¿«
+ * 2.Stringå’ŒStringBufferçš„ä¼ å‚
+ * 		Stringè™½ç„¶ä¸ºå¼•ç”¨æ•°æ®ç±»å‹ä¸è¿‡ä¼ å‚æ•°å’ŒåŸºæœ¬æ•°æ®ç±»å‹ä¸€è‡³
+ * 		StringBufferå¼•ç”¨æ•°æ®ç±»å‹ä¼ å‚
  * */
 public class DemoStrAndSb {
 	public static void main(String[] args) {
@@ -22,6 +22,6 @@ public class DemoStrAndSb {
 	}
 
 	private static String change(String a) {
-		return a="lalala";//¸Ä±äÁËÖ¸Ïò¶ÔÏó
+		return a="lalala";//æ”¹å˜äº†æŒ‡å‘å¯¹è±¡
 	}
 }

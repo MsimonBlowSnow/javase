@@ -1,23 +1,23 @@
 package day9poly;
 
-/*½Ó¿Ú
- * ½Ó¿ÚÖ§³Ö¶àÊµÏÖ¶øÀàÈ´²»ÄÜ
- * ½Ó¿ÚÃ»ÓĞ¹¹Ôì·½·¨
- * ½Ó¿Ú¶¨ÒåµÄ·½·¨¶¼ÊÇ³éÏó·½·¨£¬Êı¾İ¶¼ÊÇ×îÖÕÊı¾İÀàĞÍ
- * ½Ó¿ÚÓëÀàµÄÇø±ğ
- * ½Ó¿Ú¿ÉÒÔµ¥ÊµÏÖ½Ó¿Ú£¬Ò²¿ÉÒÔ¶àÊµÏÖ½Ó¿Ú
- * ÀàÖ»ÄÜµ¥¼Ì³ĞÀà
- * ½Ó¿Ú¿Éµ¥ÒÔ¼Ì³ĞÏÖ½Ó¿ÚÒ²¿ÉÒÔ¶à¼Ì³Ğ½Ó¿Ú¡£
+/*æ¥å£
+ * æ¥å£æ”¯æŒå¤šå®ç°è€Œç±»å´ä¸èƒ½
+ * æ¥å£æ²¡æœ‰æ„é€ æ–¹æ³•
+ * æ¥å£å®šä¹‰çš„æ–¹æ³•éƒ½æ˜¯æŠ½è±¡æ–¹æ³•ï¼Œæ•°æ®éƒ½æ˜¯æœ€ç»ˆæ•°æ®ç±»å‹
+ * æ¥å£ä¸ç±»çš„åŒºåˆ«
+ * æ¥å£å¯ä»¥å•å®ç°æ¥å£ï¼Œä¹Ÿå¯ä»¥å¤šå®ç°æ¥å£
+ * ç±»åªèƒ½å•ç»§æ‰¿ç±»
+ * æ¥å£å¯å•ä»¥ç»§æ‰¿ç°æ¥å£ä¹Ÿå¯ä»¥å¤šç»§æ‰¿æ¥å£ã€‚
  * */
 public class Demo1Interface {
 	public static void main(String[] args) {
 	}
 }
-/*½Ó¿ÚÖĞÃ»ÓĞ¹¹Ôì·½·¨ ½Ó¿ÚÖĞ³ÉÔ±±äÁ¿¶¼ÊÇÄ¬ÈÏÓĞfinal public static ĞŞÊÎµÄ±äÁ¿*/
-/*½Ó¿ÚÖĞµÄ³éÏó·½·¨Ò»¶¨ÓĞpublic ĞŞÊÎ£¬Èç¹ûÃ»ÓĞÄ¬ÈÏ»áÊÇpublic*/
+/*æ¥å£ä¸­æ²¡æœ‰æ„é€ æ–¹æ³• æ¥å£ä¸­æˆå‘˜å˜é‡éƒ½æ˜¯é»˜è®¤æœ‰final public static ä¿®é¥°çš„å˜é‡*/
+/*æ¥å£ä¸­çš„æŠ½è±¡æ–¹æ³•ä¸€å®šæœ‰public ä¿®é¥°ï¼Œå¦‚æœæ²¡æœ‰é»˜è®¤ä¼šæ˜¯public*/
 interface inter1{
 	public static final int  num=10;//
-	int b=9;//Ä¬ÈÏpublic static final
+	int b=9;//é»˜è®¤public static final
 	public abstract void print();
 	public abstract  void print1();
 }
@@ -29,7 +29,7 @@ interface inter2 extends inter1{
 
 class print extends Object implements  inter1,inter2{
 	public print(){
-		super();//ObjectÀïÃæµÄsuper()·½·¨
+		super();//Objecté‡Œé¢çš„super()æ–¹æ³•
 	}
 	@Override
 	public void print1() {

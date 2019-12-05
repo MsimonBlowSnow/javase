@@ -2,7 +2,7 @@ package day12String;
 
 import java.util.Scanner;
 
-/*Í³¼ÆÒ»¸ö×Ö·û´®ÖĞ×ÖÄ¸µÄ¸öÊı:
+/*ç»Ÿè®¡ä¸€ä¸ªå­—ç¬¦ä¸²ä¸­å­—æ¯çš„ä¸ªæ•°:
 *
  * */
 public class Demo09StringCharTimes {
@@ -11,7 +11,7 @@ public class Demo09StringCharTimes {
 		int flag=0;
 		String str="";
 		while (true) {
-			System.out.println("ÇëÊäÈëÒ»¸ö×Ö·û´®(quitÍË³ö):");
+			System.out.println("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²(quité€€å‡º):");
 			 str=scanner.nextLine();
 			if(str.equals("quit"))
 				break;
@@ -20,7 +20,7 @@ public class Demo09StringCharTimes {
 				if(ch<='z'&&ch>='A')
 					flag++;
 			}
-			System.out.println("¸Ã×Ö·û´®ÓĞ"+flag+"¸ö×ÖÄ¸!");
+			System.out.println("è¯¥å­—ç¬¦ä¸²æœ‰"+flag+"ä¸ªå­—æ¯!");
 		}
 	}
 }

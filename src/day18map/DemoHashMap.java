@@ -6,27 +6,27 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-/*HashMapµÄ±éÀú
- * Ê¹ÓÃHashMapÖĞµÄentry()À´½øĞĞ±éÀú
- * ¾ßÌå¿´¸ù¾İ¼üÖµ¶ÔÏó»ñÈ¡.png
+/*HashMapçš„éå†
+ * ä½¿ç”¨HashMapä¸­çš„entry()æ¥è¿›è¡Œéå†
+ * å…·ä½“çœ‹æ ¹æ®é”®å€¼å¯¹è±¡è·å–.png
  * */
 public class DemoHashMap {
 	public static void main(String[] args) {
 		Map<String,Integer> map=new HashMap<String,Integer>();
-		map.put("ÕÅÈı",23);
-		map.put("ÀîËÄ",24);
-		map.put("ÍõÎå",25);
-		map.put("ÕÔÁù",26);
-		//Map.Entry<String,Integer>,EntryÊÇMapÖĞµÄÄÚ²¿½Ó¿Ú
+		map.put("å¼ ä¸‰",23);
+		map.put("æå››",24);
+		map.put("ç‹äº”",25);
+		map.put("èµµå…­",26);
+		//Map.Entry<String,Integer>,Entryæ˜¯Mapä¸­çš„å†…éƒ¨æ¥å£
 		Set<Map.Entry<String, Integer>> mapEntry=map.entrySet();
 		Iterator<Map.Entry<String, Integer>> a= mapEntry.iterator();
 		while(a.hasNext()) {
-			Map.Entry<String, Integer> entry=a.next();//¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó
+			Map.Entry<String, Integer> entry=a.next();//çˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡
 			System.out.println(entry.getKey()+"="+entry.getValue());
 		}
 		
-		//Í¨¹ıforÑ­»·±éÀú
-		for (Entry<String, Integer> entry : map.entrySet()) {//Ö±½Ó»ñÈ¡¶ÔÏó
+		//é€šè¿‡forå¾ªç¯éå†
+		for (Entry<String, Integer> entry : map.entrySet()) {//ç›´æ¥è·å–å¯¹è±¡
 			System.out.println(entry.getKey()+"="+entry.getValue());
 		}
 	}

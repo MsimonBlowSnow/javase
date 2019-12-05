@@ -1,6 +1,6 @@
 package day12String;
-/*StringµÄ±éÀú
- 	*1.Í¨¹ıcharAt(int index)·½·¨	 
+/*Stringçš„éå†
+ 	*1.é€šè¿‡charAt(int index)æ–¹æ³•	 
  * */
 public class Demo08StringBianLi {
 	public static void main(String[] args) {

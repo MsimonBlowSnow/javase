@@ -6,18 +6,18 @@ import java.io.IOException;
 import java.io.LineNumberReader;
 
 /*LineNumberRead
- * ¾ßÓĞ»ñÈ¡ĞĞÊıºÍÉèÖÃÖØÄÄÒ»ĞĞ¿ªÊ¼
- * getLineNumber()»ñÈ¡ĞĞÊı
- *setLineNumber()ÉèÖÃĞĞÊı
+ * å…·æœ‰è·å–è¡Œæ•°å’Œè®¾ç½®é‡å“ªä¸€è¡Œå¼€å§‹
+ * getLineNumber()è·å–è¡Œæ•°
+ *setLineNumber()è®¾ç½®è¡Œæ•°
  */
 public class DemoLineNumberRead {
 	public static void main(String[] args) throws IOException {
 		LineNumberReader lnr= new LineNumberReader(new FileReader("c.txt"));
 		String flag;
-		//»ñÈ¡ĞĞÊı
+		//è·å–è¡Œæ•°
 		//nethodGetLine(lnr);
-		System.out.println("ÉèÖÃĞĞÊı==========================");
-		//ÉèÖÃĞĞÊı£¬²ÎÊı+1£¬ÈçÉèÖÃ31ĞĞ£¬lnr.setLineNumber(30);
+		System.out.println("è®¾ç½®è¡Œæ•°==========================");
+		//è®¾ç½®è¡Œæ•°ï¼Œå‚æ•°+1ï¼Œå¦‚è®¾ç½®31è¡Œï¼Œlnr.setLineNumber(30);
 		methodSetLine(lnr);
 	}
 

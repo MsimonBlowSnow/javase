@@ -2,41 +2,41 @@ package day18file;
 
 import java.io.File;
 
-/* A:FileÀàµÄ¸ÅÊö
-	* File¸üÓ¦¸Ã½Ğ×öÒ»¸öÂ·¾¶
-		* ÎÄ¼şÂ·¾¶»òÕßÎÄ¼ş¼ĞÂ·¾¶  
-		* Â·¾¶·ÖÎª¾ø¶ÔÂ·¾¶ºÍÏà¶ÔÂ·¾¶
-		* ¾ø¶ÔÂ·¾¶ÊÇÒ»¸ö¹Ì¶¨µÄÂ·¾¶,´ÓÅÌ·û¿ªÊ¼
-		* Ïà¶ÔÂ·¾¶Ïà¶ÔÓÚÄ³¸öÎ»ÖÃ,ÔÚeclipseÏÂÊÇÖ¸µ±Ç°ÏîÄ¿ÏÂ,ÔÚdosÏÂ
-	* ²é¿´APIÖ¸µÄÊÇµ±Ç°Â·¾¶
-	* ÎÄ¼şºÍÄ¿Â¼Â·¾¶ÃûµÄ³éÏó±íÊ¾ĞÎÊ½
-* B:¹¹Ôì·½·¨
-	* File(String pathname)£º¸ù¾İÒ»¸öÂ·¾¶µÃµ½File¶ÔÏó
-	* File(String parent, String child):¸ù¾İÒ»¸öÄ¿Â¼ºÍÒ»¸ö×ÓÎÄ¼ş/Ä¿Â¼µÃµ½File¶ÔÏó
-	* File(File parent, String child):¸ù¾İÒ»¸ö¸¸File¶ÔÏóºÍÒ»¸ö×ÓÎÄ¼ş/Ä¿Â¼µÃµ½File¶ÔÏó
-* C:°¸ÀıÑİÊ¾
-	* FileÀàµÄ¹¹Ôì·½·¨
+/* A:Fileç±»çš„æ¦‚è¿°
+	* Fileæ›´åº”è¯¥å«åšä¸€ä¸ªè·¯å¾„
+		* æ–‡ä»¶è·¯å¾„æˆ–è€…æ–‡ä»¶å¤¹è·¯å¾„  
+		* è·¯å¾„åˆ†ä¸ºç»å¯¹è·¯å¾„å’Œç›¸å¯¹è·¯å¾„
+		* ç»å¯¹è·¯å¾„æ˜¯ä¸€ä¸ªå›ºå®šçš„è·¯å¾„,ä»ç›˜ç¬¦å¼€å§‹
+		* ç›¸å¯¹è·¯å¾„ç›¸å¯¹äºæŸä¸ªä½ç½®,åœ¨eclipseä¸‹æ˜¯æŒ‡å½“å‰é¡¹ç›®ä¸‹,åœ¨dosä¸‹
+	* æŸ¥çœ‹APIæŒ‡çš„æ˜¯å½“å‰è·¯å¾„
+	* æ–‡ä»¶å’Œç›®å½•è·¯å¾„åçš„æŠ½è±¡è¡¨ç¤ºå½¢å¼
+* B:æ„é€ æ–¹æ³•
+	* File(String pathname)ï¼šæ ¹æ®ä¸€ä¸ªè·¯å¾„å¾—åˆ°Fileå¯¹è±¡
+	* File(String parent, String child):æ ¹æ®ä¸€ä¸ªç›®å½•å’Œä¸€ä¸ªå­æ–‡ä»¶/ç›®å½•å¾—åˆ°Fileå¯¹è±¡
+	* File(File parent, String child):æ ¹æ®ä¸€ä¸ªçˆ¶Fileå¯¹è±¡å’Œä¸€ä¸ªå­æ–‡ä»¶/ç›®å½•å¾—åˆ°Fileå¯¹è±¡
+* C:æ¡ˆä¾‹æ¼”ç¤º
+	* Fileç±»çš„æ„é€ æ–¹æ³•
 
  * 
  */
 public class DemoFile {
 	public static void main(String[] args) {
-		//¾ø¶ÔÂ·¾¶
+		//ç»å¯¹è·¯å¾„
 		File file = new File("D:\\workspace\\workspace\\javase\\src\\day17set\\DemoTree.java");
 		System.out.println(file.exists());
-		//Ïà¶ÔÂ·¾¶ eclipseÖĞÏà¶ÔÓÚ±¾ÏîÄ¿
+		//ç›¸å¯¹è·¯å¾„ eclipseä¸­ç›¸å¯¹äºæœ¬é¡¹ç›®
 		File file1 = new File("src/day17set/DemoTree.java");
 		System.out.println(file1.exists());
 		File file2 =new  File("nmmp");
 		System.out.println(file2.exists());
 	
 		//File(String parent, String child),
-		//±¾ÊµÀıÖĞµÄparentÏàµÈÓëeclipseÖĞµÄÄ¬ÈÏÂ·¾¶
+		//æœ¬å®ä¾‹ä¸­çš„parentç›¸ç­‰ä¸eclipseä¸­çš„é»˜è®¤è·¯å¾„
 		File file3=new  File("D:\\workspace\\workspace\\javase","src\\day17set\\DemoTree.java");
 		System.out.println(file3.exists());
 		
 		//File(File parent, String child)
-		//ÏÈ°Ñparent·â×°³ÉFile
+		//å…ˆæŠŠparentå°è£…æˆFile
 		String parent="D:\\workspace\\workspace\\javase";
 		File file4=new File(parent);
 		File file5=new File(parent,"src\\day17set\\DemoTree.java");

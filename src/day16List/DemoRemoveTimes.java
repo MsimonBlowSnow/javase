@@ -3,22 +3,22 @@ package day16List;
 import java.util.ArrayList;
 import java.util.List;
 
-/*È¥ÖØ
- * È¥ÌîÒ»¸ö¼Æ»®ÖĞÖØ¸´µÄÔªËØ
- * Ë¼Â·£º
- * ´´½¨ÁíÒ»¸ö¼¯ºÏ
- *°ÑÕâ¸ö¼¯ºÏÀïÃæµÄÔ­Êô·ÅÈëÁíÒ»¸ö¼¯ºÏÖĞÅĞ¶ÏÊÇ·ñÓĞÖØ¸´
- *È¥ÖØ¶ÔÏóÊı¾İÀàĞÍ²»Í¬ÓĞ²»Í¬µÄ
- *containsÖĞÓĞequals()·½·¨
- 	*ÒıÓÃÊı¾İÀàĞÍ£º×Ô¼º¶¨ÒåµÄÀà¶ÔÏó£¬¿´ÊÇ·ñÖØĞ´equals()·½·¨
- 	*»ù±¾Êı¾İÀàĞÍ£º×Ô¶¯×°Ïä£¬»áÓÃ¶ÔÓ¦µÄÀàÖĞÖØĞÂ¶¨ÒåµÄequals();
+/*å»é‡
+ * å»å¡«ä¸€ä¸ªè®¡åˆ’ä¸­é‡å¤çš„å…ƒç´ 
+ * æ€è·¯ï¼š
+ * åˆ›å»ºå¦ä¸€ä¸ªé›†åˆ
+ *æŠŠè¿™ä¸ªé›†åˆé‡Œé¢çš„åŸå±æ”¾å…¥å¦ä¸€ä¸ªé›†åˆä¸­åˆ¤æ–­æ˜¯å¦æœ‰é‡å¤
+ *å»é‡å¯¹è±¡æ•°æ®ç±»å‹ä¸åŒæœ‰ä¸åŒçš„
+ *containsä¸­æœ‰equals()æ–¹æ³•
+ 	*å¼•ç”¨æ•°æ®ç±»å‹ï¼šè‡ªå·±å®šä¹‰çš„ç±»å¯¹è±¡ï¼Œçœ‹æ˜¯å¦é‡å†™equals()æ–¹æ³•
+ 	*åŸºæœ¬æ•°æ®ç±»å‹ï¼šè‡ªåŠ¨è£…ç®±ï¼Œä¼šç”¨å¯¹åº”çš„ç±»ä¸­é‡æ–°å®šä¹‰çš„equals();
  * */
 public class DemoRemoveTimes {
 	public static void main(String[] args) {
 		List a = new ArrayList();
 		List b = new ArrayList();
 		//methodJiben(a, b);
-		//ÒıÓÃÊı¾İÀàĞÍ±ØĞëÖØĞ´equalsf·½·¨
+		//å¼•ç”¨æ•°æ®ç±»å‹å¿…é¡»é‡å†™equalsfæ–¹æ³•
 		methodYingYong(a, b);
 		
 	}
@@ -38,7 +38,7 @@ public class DemoRemoveTimes {
 
 	private static void methodJiben(List a, List b) {
 		for(int i=0;i<15;i++) {
-			a.add(i);	//object ¶ÔÏó»á×Ô¶¯×°Ïä Integerµ÷ÓÃÁËIntergerÀïÃæµÄequals
+			a.add(i);	//object å¯¹è±¡ä¼šè‡ªåŠ¨è£…ç®± Integerè°ƒç”¨äº†Intergeré‡Œé¢çš„equals
 		}
 		for(int i=0;i<10;i++) {
 			a.add(i);

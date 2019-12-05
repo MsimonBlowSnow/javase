@@ -7,16 +7,16 @@ import java.util.Iterator;
 public class DemoIterator {
 	public static void main(String[] args) {
 		Collection a=new ArrayList();
-		a.add(new Student("ÕÅÈı","23"));	//Ïàµ±ÓÚobject obj=new studnet2();
-		a.add(new Student("ÀîËÄ","24"));
-		a.add(new Student("ÍõÎå","25"));
-		a.add(new Student("ÕÔÁù","26"));
-		//´´½¨Ò»¸öµü´úÆ÷
+		a.add(new Student("å¼ ä¸‰","23"));	//ç›¸å½“äºobject obj=new studnet2();
+		a.add(new Student("æå››","24"));
+		a.add(new Student("ç‹äº”","25"));
+		a.add(new Student("èµµå…­","26"));
+		//åˆ›å»ºä¸€ä¸ªè¿­ä»£å™¨
 		Iterator b=a.iterator();
 		while(b.hasNext()) {
-			//System.out.println(b.next());//Ä¬ÈÏµ÷ÓÃtoString·½·¨
-			//Ïñµ÷ÓÃget·½·¨ Í¨¹ıb.next().getXXX()ÊÇ²»ĞĞµÄ£¬Ó¦ÎªÄ¬ÈÏÊÇobject
-			//object²»ÄÜµ÷ÓÃ×ÓÀà·½·¨£¬±ØĞëÏòÏÂ×ªĞÍ
+			//System.out.println(b.next());//é»˜è®¤è°ƒç”¨toStringæ–¹æ³•
+			//åƒè°ƒç”¨getæ–¹æ³• é€šè¿‡b.next().getXXX()æ˜¯ä¸è¡Œçš„ï¼Œåº”ä¸ºé»˜è®¤æ˜¯object
+			//objectä¸èƒ½è°ƒç”¨å­ç±»æ–¹æ³•ï¼Œå¿…é¡»å‘ä¸‹è½¬å‹
 			Student stud=(Student) b.next();
 			System.out.println(stud.getAge()+stud.getName());
 		}

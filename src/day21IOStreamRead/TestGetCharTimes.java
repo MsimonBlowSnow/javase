@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-/* »ñÈ¡Ò»¸öÎÄ±¾ÉÏÃ¿¸ö×Ö·û³öÏÖµÄ´ÎÊı,
- * ½«½á¹ûĞ´ÔÚtimes.txtÉÏ
+/* è·å–ä¸€ä¸ªæ–‡æœ¬ä¸Šæ¯ä¸ªå­—ç¬¦å‡ºç°çš„æ¬¡æ•°,
+ * å°†ç»“æœå†™åœ¨times.txtä¸Š
  */
 public class TestGetCharTimes {
 	public static void main(String[] args) throws IOException {
@@ -26,11 +26,11 @@ public class TestGetCharTimes {
 		}
 		for (char a: tmap.keySet()) {
 			if(a=='\n')
-				System.out.println("\\n"+":"+tmap.get(a)+"´Î");
+				System.out.println("\\n"+":"+tmap.get(a)+"æ¬¡");
 			else if(a=='\r')
-				System.out.println("\\r"+":"+tmap.get(a)+"´Î");	
+				System.out.println("\\r"+":"+tmap.get(a)+"æ¬¡");	
 			else
-				System.out.println(a+":"+tmap.get(a)+"´Î");
+				System.out.println(a+":"+tmap.get(a)+"æ¬¡");
 		}
 		bfr.close();
 	}

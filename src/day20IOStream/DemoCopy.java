@@ -1,16 +1,16 @@
 package day20IOStream;
 
 
-/*copyµÄÈıÖÖ·½Ê½£º
- *A£º¶ÁÒ»¸ö×Ö½ÚĞ´Ò»¸ö×Ö½Ú 	
- * 	Èç¹ûÎÄ¼şÌ«´óÁË²»±ãÓÚÓÃ¸Ã·½·¨£¬
- * 	Ô­ÒòÊÇ¸Ã·½·¨Ã¿´ÎÖ»¶ÁÒ»¸ö×Ö½Ú£¬Ì«ÂıÁË
- * 	ÀıÈç£ºÒ»¸ö1MµÄÎÄ¼ş¿½±´ĞèÒª¶Á1024*1024´Î£¬»¹ÒªĞ´1024*1024´Î£¬
- * 	ËùÓĞ¶ÔÓÚÎÄ¼şÌ«´ó£¬²»½¨ÒéÓÃÕâ¸ö³ÌĞò¿½±´
- *B£º´´½¨Ò»¸öÓëÔ´ÎÄ¼şµÈ´óµÄbyte[] Ò»´Î¶ÁÍê
- *	FileInputStreamÖĞÓĞÒ»¸ö·½·¨available(),·µ»Ø¶ÁÈ¥ÎÄ¼şµÄ´óĞ¡B
- *	²»ÍÆ¼ö£ºÓĞÊ±ºòÎÄ¼ş¹ı´óÓĞ10G Òª´´½¨10GÄÚ´æ£¬ÄÚ´æ²»¹»ÓÃ¡£
- *C´´½¨Ò»¸öÊÊµ±µÄĞ¡Êı×é£¬¼ûDemoCopy2.java
+/*copyçš„ä¸‰ç§æ–¹å¼ï¼š
+ *Aï¼šè¯»ä¸€ä¸ªå­—èŠ‚å†™ä¸€ä¸ªå­—èŠ‚ 	
+ * 	å¦‚æœæ–‡ä»¶å¤ªå¤§äº†ä¸ä¾¿äºç”¨è¯¥æ–¹æ³•ï¼Œ
+ * 	åŸå› æ˜¯è¯¥æ–¹æ³•æ¯æ¬¡åªè¯»ä¸€ä¸ªå­—èŠ‚ï¼Œå¤ªæ…¢äº†
+ * 	ä¾‹å¦‚ï¼šä¸€ä¸ª1Mçš„æ–‡ä»¶æ‹·è´éœ€è¦è¯»1024*1024æ¬¡ï¼Œè¿˜è¦å†™1024*1024æ¬¡ï¼Œ
+ * 	æ‰€æœ‰å¯¹äºæ–‡ä»¶å¤ªå¤§ï¼Œä¸å»ºè®®ç”¨è¿™ä¸ªç¨‹åºæ‹·è´
+ *Bï¼šåˆ›å»ºä¸€ä¸ªä¸æºæ–‡ä»¶ç­‰å¤§çš„byte[] ä¸€æ¬¡è¯»å®Œ
+ *	FileInputStreamä¸­æœ‰ä¸€ä¸ªæ–¹æ³•available(),è¿”å›è¯»å»æ–‡ä»¶çš„å¤§å°B
+ *	ä¸æ¨èï¼šæœ‰æ—¶å€™æ–‡ä»¶è¿‡å¤§æœ‰10G è¦åˆ›å»º10Gå†…å­˜ï¼Œå†…å­˜ä¸å¤Ÿç”¨ã€‚
+ *Cåˆ›å»ºä¸€ä¸ªé€‚å½“çš„å°æ•°ç»„ï¼Œè§DemoCopy2.java
  * */
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,10 +20,10 @@ import java.nio.channels.FileLockInterruptionException;
 
 public class DemoCopy {
 	public static void main(String[] args) throws IOException {
-		FileInputStream fis= new FileInputStream("src/day20IOStream/×Ö½ÚÊäÈëÊä³öÁ÷.png");
+		FileInputStream fis= new FileInputStream("src/day20IOStream/å­—èŠ‚è¾“å…¥è¾“å‡ºæµ.png");
 		FileOutputStream fos =new FileOutputStream("src/day20IOStream/copylicunxu.png");
 		methodReadOneByte(fis, fos);
-		byte[] a= new byte[fis.available()];//FileInputStreamÖĞÓĞÒ»¸ö·½·¨available(),·µ»Ø¶ÁÈ¥ÎÄ¼şµÄ´óĞ¡B
+		byte[] a= new byte[fis.available()];//FileInputStreamä¸­æœ‰ä¸€ä¸ªæ–¹æ³•available(),è¿”å›è¯»å»æ–‡ä»¶çš„å¤§å°B
 		fis.read(a);
 		fos.write(a);
 	}

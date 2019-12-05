@@ -5,16 +5,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /*
- * * A:»ñÈ¡¹¦ÄÜ
-	* public String getAbsolutePath()£º»ñÈ¡¾ø¶ÔÂ·¾¶
-	* public String getPath():»ñÈ¡Â·¾¶
-	* public String getName():»ñÈ¡Ãû³Æ
-	* public long length():»ñÈ¡³¤¶È¡£×Ö½ÚÊı
-	* public long lastModified():»ñÈ¡×îºóÒ»´ÎµÄĞŞ¸ÄÊ±¼ä£¬ºÁÃëÖµ
-	* public String[] list():»ñÈ¡Ö¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş»òÕßÎÄ¼ş¼ĞµÄÃû³ÆÊı×é
-	* public File[] listFiles():»ñÈ¡Ö¸¶¨Ä¿Â¼ÏÂµÄËùÓĞÎÄ¼ş»òÕßÎÄ¼ş¼ĞµÄFileÊı×é 
-* B:°¸ÀıÑİÊ¾
-	* FileÀàµÄ»ñÈ¡¹¦ÄÜ
+ * * A:è·å–åŠŸèƒ½
+	* public String getAbsolutePath()ï¼šè·å–ç»å¯¹è·¯å¾„
+	* public String getPath():è·å–è·¯å¾„
+	* public String getName():è·å–åç§°
+	* public long length():è·å–é•¿åº¦ã€‚å­—èŠ‚æ•°
+	* public long lastModified():è·å–æœ€åä¸€æ¬¡çš„ä¿®æ”¹æ—¶é—´ï¼Œæ¯«ç§’å€¼
+	* public String[] list():è·å–æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹çš„åç§°æ•°ç»„
+	* public File[] listFiles():è·å–æŒ‡å®šç›®å½•ä¸‹çš„æ‰€æœ‰æ–‡ä»¶æˆ–è€…æ–‡ä»¶å¤¹çš„Fileæ•°ç»„ 
+* B:æ¡ˆä¾‹æ¼”ç¤º
+	* Fileç±»çš„è·å–åŠŸèƒ½
   */
 public class DemofileMothed {
 	public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class DemofileMothed {
 		for (String  str: c1) {
 			System.out.println(str);
 		}
-		System.out.println("fileÎÄ¼şÊı×é:");
+		System.out.println("fileæ–‡ä»¶æ•°ç»„:");
 		for (File file : files) {
 			System.out.println(file);
 		}
@@ -34,18 +34,18 @@ public class DemofileMothed {
 	private static void method() {
 		File file= new File("aaa");
 		File file1= new File("D:/workspace/workspace/javase/src/day17set/DemoTree.java");
-		System.out.println(file.getAbsoluteFile());//»ñÈ¡¾ø¶ÔÂ·¾¶
+		System.out.println(file.getAbsoluteFile());//è·å–ç»å¯¹è·¯å¾„
 		System.out.println(file1.getAbsoluteFile());
-		System.out.println(file.getPath());//»ñÈ¡Ğ´ÈëµÄÂ·¾¶£¬¾ÍÊÇaaa
-		System.out.println(file1.getPath());//»ñÈ¡Ğ´ÈëµÄÂ·¾¶£¬¾ÍÊÇD:/workspace/workspace/javase/src/day17set/DemoTree.java
-		System.out.println(file.getName());//»ñÈ¡ÎÄ¼şÃû
+		System.out.println(file.getPath());//è·å–å†™å…¥çš„è·¯å¾„ï¼Œå°±æ˜¯aaa
+		System.out.println(file1.getPath());//è·å–å†™å…¥çš„è·¯å¾„ï¼Œå°±æ˜¯D:/workspace/workspace/javase/src/day17set/DemoTree.java
+		System.out.println(file.getName());//è·å–æ–‡ä»¶å
 		System.out.println(file1.getName());
 		System.out.println(file.exists());
 		System.out.println(file.length());
 		System.out.println(file1.length());
 		Date  date=new Date(file.lastModified());
 		Date  date1=new Date(file1.lastModified());
-		SimpleDateFormat a=new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ HH:mm:ss");
+		SimpleDateFormat a=new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ HH:mm:ss");
 		System.out.println(date);
 		System.out.println(date1);
 		System.out.println(a.format(date));

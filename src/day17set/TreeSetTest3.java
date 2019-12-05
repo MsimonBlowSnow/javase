@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-/* A:°¸ÀıÑİÊ¾
-* ĞèÇó£º¼üÅÌÂ¼Èë5¸öÑ§ÉúĞÅÏ¢(ĞÕÃû,ÓïÎÄ³É¼¨,ÊıÑ§³É¼¨,Ó¢Óï³É¼¨),°´ÕÕ×Ü·Ö´Ó¸ßµ½µÍÊä³öµ½¿ØÖÆÌ¨¡£
+/* A:æ¡ˆä¾‹æ¼”ç¤º
+* éœ€æ±‚ï¼šé”®ç›˜å½•å…¥5ä¸ªå­¦ç”Ÿä¿¡æ¯(å§“å,è¯­æ–‡æˆç»©,æ•°å­¦æˆç»©,è‹±è¯­æˆç»©),æŒ‰ç…§æ€»åˆ†ä»é«˜åˆ°ä½è¾“å‡ºåˆ°æ§åˆ¶å°ã€‚
  * 
  */
 public class TreeSetTest3 {
@@ -17,7 +17,7 @@ public class TreeSetTest3 {
 		int Math;
 		int english;
 		TreeSet<Student2> studs= new TreeSet<>();
-		System.out.println("Çë°´ÏÂÃæ¸ñÊ½ÊäÈë:(name,chinese,math,english)");
+		System.out.println("è¯·æŒ‰ä¸‹é¢æ ¼å¼è¾“å…¥:(name,chinese,math,english)");
 		while(true){
 			String str=sc.nextLine();
 			if(str.equals("quit"))
@@ -30,7 +30,7 @@ public class TreeSetTest3 {
 				stud=new TreeSetTest3().new Student2(chinese,Math,english,strs[0]);
 				studs.add(stud);
 			}catch(Exception e) {
-				System.out.println("ÇëÊäÈëÕıÈ·µÄ¸ñÊ½!");
+				System.out.println("è¯·è¾“å…¥æ­£ç¡®çš„æ ¼å¼!");
 			}
 		}
 		for (Student2 student2 : studs) {
@@ -106,7 +106,7 @@ public class TreeSetTest3 {
 
 @Override
 public int compareTo(Student2 o) {
-	//oÊÇ¼¯ºÏÀïµÄÔªËØ£¬µ÷ÓÃ¸Ã·½·¨µÄÊÇ¼¯ºÏÍâµÄÔªËØ
+	//oæ˜¯é›†åˆé‡Œçš„å…ƒç´ ï¼Œè°ƒç”¨è¯¥æ–¹æ³•çš„æ˜¯é›†åˆå¤–çš„å…ƒç´ 
 	int a=this.scoreAll-o.scoreAll;
 	return a==0?1:-a;
 }

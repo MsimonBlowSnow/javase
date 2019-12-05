@@ -1,8 +1,8 @@
-package ¼òµ¥¹¤³¡Éè¼ÆÄ£Ê½;
+package ç®€å•å·¥åœºè®¾è®¡æ¨¡å¼;
 
 public class Day01Cat extends Day01Aminal {
 	@Override
 	public void eat() {
-		System.out.println("Ã¨³ÔÓã");
+		System.out.println("çŒ«åƒé±¼");
 	}
 }

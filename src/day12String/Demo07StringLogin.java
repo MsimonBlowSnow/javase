@@ -2,9 +2,9 @@ package day12String;
 
 import java.util.Scanner;
 
-/*Ä£ÄâÓÃ»§µÇÈëÒ»¹²ÓĞÈı´¦»ú»á
- * ÃÜÂëºÍÕËºÅ¶¼ÊÇadmin
- * µÇÈë´íÎóÌáÊ¾ÃÜÂë´íÎó»¹ÊÇÕËºÅ´íÎóºÍÌáÊ¾Ê£Óà»ú»á
+/*æ¨¡æ‹Ÿç”¨æˆ·ç™»å…¥ä¸€å…±æœ‰ä¸‰å¤„æœºä¼š
+ * å¯†ç å’Œè´¦å·éƒ½æ˜¯admin
+ * ç™»å…¥é”™è¯¯æç¤ºå¯†ç é”™è¯¯è¿˜æ˜¯è´¦å·é”™è¯¯å’Œæç¤ºå‰©ä½™æœºä¼š
  * */
 public class Demo07StringLogin {
 	public static void main(String[] args) {
@@ -14,28 +14,28 @@ public class Demo07StringLogin {
 		int flag=3;
 		while(true) {
 			if(flag==0) {
-				System.out.println("Ó¦Îª¶à´ÎÊäÈë´íÎó,ÄãµÄÕËºÅ½«±»¶³½á");
+				System.out.println("åº”ä¸ºå¤šæ¬¡è¾“å…¥é”™è¯¯,ä½ çš„è´¦å·å°†è¢«å†»ç»“");
 				break;
 			}
 			if(flag!=3) {
-				System.out.println("Äã»¹ÓĞ"+flag+"´Î»ú»á");
+				System.out.println("ä½ è¿˜æœ‰"+flag+"æ¬¡æœºä¼š");
 			}
-				System.out.println("ÇëÊäÈëÕËºÅ:");
+				System.out.println("è¯·è¾“å…¥è´¦å·:");
 				String str1=sc.nextLine();
-				System.out.println("ÇëÊäÈëÄãµÄÃÜÂë:");
+				System.out.println("è¯·è¾“å…¥ä½ çš„å¯†ç :");
 				String str2=sc.nextLine();
 				if(str1.equals(account)) {
 					if(str2.equals(password)) 
 						break;
 					else 
-						System.out.println("ÃÜÂë´íÎó!");
+						System.out.println("å¯†ç é”™è¯¯!");
 				}else {
-					System.out.println("ÕËºÅ´íÎó!");
+					System.out.println("è´¦å·é”™è¯¯!");
 				}
 				flag--;
 		}
 		if(flag!=0) {
-			System.out.println("³É¹¦µÇÈë");
+			System.out.println("æˆåŠŸç™»å…¥");
 		}
 	}
 }

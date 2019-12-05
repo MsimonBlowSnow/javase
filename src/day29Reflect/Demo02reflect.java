@@ -1,18 +1,18 @@
 package day29Reflect;
 /*
-* A:·´Éä¸ÅÊö
-	* JAVA·´Éä»úÖÆÊÇÔÚÔËÐÐ×´Ì¬ÖÐ£¬¶ÔÓÚÈÎÒâÒ»¸öÀà£¬¶¼ÄÜ¹»ÖªµÀÕâ¸öÀàµÄËùÓÐÊôÐÔºÍ·½·¨£»
-	* ¶ÔÓÚÈÎÒâÒ»¸ö¶ÔÏó£¬¶¼ÄÜ¹»µ÷ÓÃËüµÄÈÎÒâÒ»¸ö·½·¨ºÍÊôÐÔ£»
-	* ÕâÖÖ¶¯Ì¬»ñÈ¡µÄÐÅÏ¢ÒÔ¼°¶¯Ì¬µ÷ÓÃ¶ÔÏóµÄ·½·¨µÄ¹¦ÄÜ³ÆÎªjavaÓïÑÔµÄ·´Éä»úÖÆ¡£
-	* ÒªÏë½âÆÊÒ»¸öÀà,±ØÐëÏÈÒª»ñÈ¡µ½¸ÃÀàµÄ×Ö½ÚÂëÎÄ¼þ¶ÔÏó¡£
-	* ¶ø½âÆÊÊ¹ÓÃµÄ¾ÍÊÇClassÀàÖÐµÄ·½·¨£¬ËùÒÔÏÈÒª»ñÈ¡µ½Ã¿Ò»¸ö×Ö½ÚÂëÎÄ¼þ¶ÔÓ¦µÄClassÀàÐÍµÄ¶ÔÏó¡£
+* A:åå°„æ¦‚è¿°
+	* JAVAåå°„æœºåˆ¶æ˜¯åœ¨è¿è¡ŒçŠ¶æ€ä¸­ï¼Œå¯¹äºŽä»»æ„ä¸€ä¸ªç±»ï¼Œéƒ½èƒ½å¤ŸçŸ¥é“è¿™ä¸ªç±»çš„æ‰€æœ‰å±žæ€§å’Œæ–¹æ³•ï¼›
+	* å¯¹äºŽä»»æ„ä¸€ä¸ªå¯¹è±¡ï¼Œéƒ½èƒ½å¤Ÿè°ƒç”¨å®ƒçš„ä»»æ„ä¸€ä¸ªæ–¹æ³•å’Œå±žæ€§ï¼›
+	* è¿™ç§åŠ¨æ€èŽ·å–çš„ä¿¡æ¯ä»¥åŠåŠ¨æ€è°ƒç”¨å¯¹è±¡çš„æ–¹æ³•çš„åŠŸèƒ½ç§°ä¸ºjavaè¯­è¨€çš„åå°„æœºåˆ¶ã€‚
+	* è¦æƒ³è§£å‰–ä¸€ä¸ªç±»,å¿…é¡»å…ˆè¦èŽ·å–åˆ°è¯¥ç±»çš„å­—èŠ‚ç æ–‡ä»¶å¯¹è±¡ã€‚
+	* è€Œè§£å‰–ä½¿ç”¨çš„å°±æ˜¯Classç±»ä¸­çš„æ–¹æ³•ï¼Œæ‰€ä»¥å…ˆè¦èŽ·å–åˆ°æ¯ä¸€ä¸ªå­—èŠ‚ç æ–‡ä»¶å¯¹åº”çš„Classç±»åž‹çš„å¯¹è±¡ã€‚
 
-* B:ÈýÖÖ·½Ê½
-	* a:ObjectÀàµÄgetClass()·½·¨,ÅÐ¶ÏÁ½¸ö¶ÔÏóÊÇ·ñÊÇÍ¬Ò»¸ö×Ö½ÚÂëÎÄ¼þ
-	* b:¾²Ì¬ÊôÐÔclass,Ëø¶ÔÏó
-	* c:ClassÀàÖÐ¾²Ì¬·½·¨forName(),¶ÁÈ¡ÅäÖÃÎÄ¼þ
-* C:°¸ÀýÑÝÊ¾
-	* »ñÈ¡classÎÄ¼þ¶ÔÏóµÄÈýÖÖ·½Ê½ 
+* B:ä¸‰ç§æ–¹å¼
+	* a:Objectç±»çš„getClass()æ–¹æ³•,åˆ¤æ–­ä¸¤ä¸ªå¯¹è±¡æ˜¯å¦æ˜¯åŒä¸€ä¸ªå­—èŠ‚ç æ–‡ä»¶
+	* b:é™æ€å±žæ€§class,é”å¯¹è±¡
+	* c:Classç±»ä¸­é™æ€æ–¹æ³•forName(),è¯»å–é…ç½®æ–‡ä»¶
+* C:æ¡ˆä¾‹æ¼”ç¤º
+	* èŽ·å–classæ–‡ä»¶å¯¹è±¡çš„ä¸‰ç§æ–¹å¼ 
  * */
 public class Demo02reflect {
 	public static void main(String[] args) throws ClassNotFoundException {

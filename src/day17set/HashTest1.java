@@ -3,7 +3,7 @@ package day17set;
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
-/* Ê¹ÓÃScanner´Ó¼üÅÌ¶ÁÈ¡Ò»ĞĞÊäÈë,È¥µôÆäÖĞÖØ¸´×Ö·û, ´òÓ¡³ö²»Í¬µÄÄÇĞ©×Ö·û
+/* ä½¿ç”¨Scannerä»é”®ç›˜è¯»å–ä¸€è¡Œè¾“å…¥,å»æ‰å…¶ä¸­é‡å¤å­—ç¬¦, æ‰“å°å‡ºä¸åŒçš„é‚£äº›å­—ç¬¦
  */
 public class HashTest1 {	
 	public static void main(String[] args) {

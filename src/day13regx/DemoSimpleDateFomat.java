@@ -1,14 +1,14 @@
 package day13regx;
-/*DateFormatÊÇSimpleDateFormatµÄ³éÏó¸¸Àà,
- * DateFormatÖ»Ìá¹©ÁËÓĞprotectĞŞÊÎµÄ¹¹Ôì·½·¨ÈÃ×ÓÀàÊ¹ÓÃ
- *  A:DateFormatÀàµÄ¸ÅÊö
-	* DateFormat ÊÇÈÕÆÚ/Ê±¼ä¸ñÊ½»¯×ÓÀàµÄ³éÏóÀà£¬ËüÒÔÓëÓïÑÔÎŞ¹ØµÄ·½Ê½¸ñÊ½»¯²¢½âÎöÈÕÆÚ»òÊ±¼ä¡£ÊÇ³éÏóÀà£¬ËùÒÔÊ¹ÓÃÆä×ÓÀàSimpleDateFormat
-* B:SimpleDateFormat¹¹Ôì·½·¨
-	* public SimpleDateFormat()//Ä¬ÈÏ¸ñÊ½
-	* public SimpleDateFormat(String pattern)//×Ô¼º¿ØÖÆ¸ñÊ½
-* C:³ÉÔ±·½·¨
-	* public final String format(Date date)//ÊäÈëdateµÄÊ±¼ä
-	* public Date parse(String source)//°Ñsource×ª»¯ÎªÖ¸¶¨¸ñÊ½µÄÊ±¼ä¶ÔÏó
+/*DateFormatæ˜¯SimpleDateFormatçš„æŠ½è±¡çˆ¶ç±»,
+ * DateFormatåªæä¾›äº†æœ‰protectä¿®é¥°çš„æ„é€ æ–¹æ³•è®©å­ç±»ä½¿ç”¨
+ *  A:DateFormatç±»çš„æ¦‚è¿°
+	* DateFormat æ˜¯æ—¥æœŸ/æ—¶é—´æ ¼å¼åŒ–å­ç±»çš„æŠ½è±¡ç±»ï¼Œå®ƒä»¥ä¸è¯­è¨€æ— å…³çš„æ–¹å¼æ ¼å¼åŒ–å¹¶è§£ææ—¥æœŸæˆ–æ—¶é—´ã€‚æ˜¯æŠ½è±¡ç±»ï¼Œæ‰€ä»¥ä½¿ç”¨å…¶å­ç±»SimpleDateFormat
+* B:SimpleDateFormatæ„é€ æ–¹æ³•
+	* public SimpleDateFormat()//é»˜è®¤æ ¼å¼
+	* public SimpleDateFormat(String pattern)//è‡ªå·±æ§åˆ¶æ ¼å¼
+* C:æˆå‘˜æ–¹æ³•
+	* public final String format(Date date)//è¾“å…¥dateçš„æ—¶é—´
+	* public Date parse(String source)//æŠŠsourceè½¬åŒ–ä¸ºæŒ‡å®šæ ¼å¼çš„æ—¶é—´å¯¹è±¡
  * 
  * 
  * */
@@ -21,13 +21,13 @@ public class DemoSimpleDateFomat {
 	public static void main(String[] args) throws ParseException {
 		DateFormat a=DateFormat.getDateInstance();
 		Date c=new Date();
-		String source="2019/8/15 ÉÏÎç9:17";
+		String source="2019/8/15 ä¸Šåˆ9:17";
 		SimpleDateFormat b=new SimpleDateFormat();
-		SimpleDateFormat b1=new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ HH:mm:ss");
+		SimpleDateFormat b1=new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥ HH:mm:ss");
 		System.out.println(c);
 		System.out.println(b.format(c));
 		System.out.println(b1.format(c));
-		System.out.println(b.parse(source));//·µ»ØÒ»¸ödate
+		System.out.println(b.parse(source));//è¿”å›ä¸€ä¸ªdate
 		System.out.println(b1.format(b.parse(source)));
 	}
 }

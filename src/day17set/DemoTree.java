@@ -2,8 +2,8 @@ package day17set;
 
 import java.util.TreeSet;
 
-/*TreeSet 中不允许重复元素
- * TreeSet按照一定的排序方法排序 completeto()方法
+/*TreeSet 涓笉鍏佽閲嶅鍏冪礌
+ * TreeSet鎸夌収涓�瀹氱殑鎺掑簭鏂规硶鎺掑簭 completeto()鏂规硶
  * */
 public class DemoTree {
 	public static void main(String[] args) {

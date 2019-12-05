@@ -4,15 +4,15 @@ import java.util.LinkedList;
 
 import java.util.List;
 
-/* A:LinkedListÀà¸ÅÊö
- 	*Ò»¸öµ×²ãÓÃÁ´Ê½½á¹¹ÊµÏÖµÄ¼¯ºÏ
- 	*²éÕÒÂı£¬ÒªÒ»¸öÒ»¸öµÄ±éÀú
- 	*²åÈëĞŞ¸Ä·½±ã 
-* B:LinkedListÀàÌØÓĞ¹¦ÄÜ
-* Ôö¼ÓÒ»¸öÔªËØ,¼ÓÔÚÁ´Í·»òÕßÁ´Î»
-	* public void addFirst(E e)¼°addLast(E e)
-	* public E getFirst()¼°getLast()
-	* public E removeFirst()¼°public E removeLast()
+/* A:LinkedListç±»æ¦‚è¿°
+ 	*ä¸€ä¸ªåº•å±‚ç”¨é“¾å¼ç»“æ„å®ç°çš„é›†åˆ
+ 	*æŸ¥æ‰¾æ…¢ï¼Œè¦ä¸€ä¸ªä¸€ä¸ªçš„éå†
+ 	*æ’å…¥ä¿®æ”¹æ–¹ä¾¿ 
+* B:LinkedListç±»ç‰¹æœ‰åŠŸèƒ½
+* å¢åŠ ä¸€ä¸ªå…ƒç´ ,åŠ åœ¨é“¾å¤´æˆ–è€…é“¾ä½
+	* public void addFirst(E e)åŠaddLast(E e)
+	* public E getFirst()åŠgetLast()
+	* public E removeFirst()åŠpublic E removeLast()
 	* public E get(int index);
   */
 public class DemoLinkedList {

@@ -6,21 +6,21 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-/* ½«¼üÅÌÂ¼ÈëµÄÊı¾İ¿½±´µ½µ±Ç°ÏîÄ¿ÏÂµÄtext.txtÎÄ¼şÖĞ,
- * ¼üÅÌÂ¼ÈëÊı¾İµ±Óöµ½quitÊ±¾ÍÍË³ö
- * Ë¼Â·:
- 	*1.´´½¨Á÷¶ÔÏóºÍScanner¶ÔÏó
- 	*2.´´½¨Ñ­»· £¬²¢ÊäÈëµÄÊı¾İÎªquitÍË³ö
- 	*3.Í¨¹ıÊ¹ÓÃgetByte()·½·¨£¬½«×Ö·û´®×ª»»ÎªbtyeÊı×é
- 	*4.Í¨¹ıÁ÷Êä³ö
- 	*5.¹Ø±ÕÁ÷¶ÔÏó	
+/* å°†é”®ç›˜å½•å…¥çš„æ•°æ®æ‹·è´åˆ°å½“å‰é¡¹ç›®ä¸‹çš„text.txtæ–‡ä»¶ä¸­,
+ * é”®ç›˜å½•å…¥æ•°æ®å½“é‡åˆ°quitæ—¶å°±é€€å‡º
+ * æ€è·¯:
+ 	*1.åˆ›å»ºæµå¯¹è±¡å’ŒScannerå¯¹è±¡
+ 	*2.åˆ›å»ºå¾ªç¯ ï¼Œå¹¶è¾“å…¥çš„æ•°æ®ä¸ºquité€€å‡º
+ 	*3.é€šè¿‡ä½¿ç”¨getByte()æ–¹æ³•ï¼Œå°†å­—ç¬¦ä¸²è½¬æ¢ä¸ºbtyeæ•°ç»„
+ 	*4.é€šè¿‡æµè¾“å‡º
+ 	*5.å…³é—­æµå¯¹è±¡	
 */
 public class DemoScannerCopy {
 	public static void main(String[] args) throws IOException {
 		Scanner sc=new Scanner(System.in);
 		FileOutputStream fos= new FileOutputStream("a.txt");
 		while(true) {
-			System.out.println("ÇëÊäÈëÒ»ĞĞÊı¾İ");
+			System.out.println("è¯·è¾“å…¥ä¸€è¡Œæ•°æ®");
 			String string=sc.nextLine();
 			if(string.equals("quit"))
 				break;

@@ -2,30 +2,30 @@ package day2value;
 
 public class Demodatatype {
 	public static void main(String[] args) {
-		//ÕûÊıÀàĞÍ
-		byte b = 10;			//Õ¼Ò»¸ö×Ö½Ú,-128 µ½ 127
-		short s = 20;			//Õ¼Á½¸ö×Ö½Ú
-		int i = 30;				//Õ¼ËÄ¸ö×Ö½Ú			ÕûÊıÄ¬ÈÏµÄÊı¾İÀàĞÍ¾ÍÊÇintÀàĞÍ
-		long x = 8888888888L;	//Õ¼°Ë¸ö×Ö½Ú	Èç¹ûlongÀàĞÍºóÃæ¼ÓL½øĞĞ±êÊ¶×îºÃ¼Ó´óL,ÒòÎªĞ¡lÌ«ÏñÒ»ÁË
+		//æ•´æ•°ç±»å‹
+		byte b = 10;			//å ä¸€ä¸ªå­—èŠ‚,-128 åˆ° 127
+		short s = 20;			//å ä¸¤ä¸ªå­—èŠ‚
+		int i = 30;				//å å››ä¸ªå­—èŠ‚			æ•´æ•°é»˜è®¤çš„æ•°æ®ç±»å‹å°±æ˜¯intç±»å‹
+		long x = 8888888888L;	//å å…«ä¸ªå­—èŠ‚	å¦‚æœlongç±»å‹åé¢åŠ Lè¿›è¡Œæ ‡è¯†æœ€å¥½åŠ å¤§L,å› ä¸ºå°lå¤ªåƒä¸€äº†
 		System.out.println(b);
 		System.out.println(s);
 		System.out.println(i);
 		System.out.println(x);
-		System.out.println("intµÄ×î´óÖµ:"+Integer.MAX_VALUE+"\n"+"intµÄ×îĞ¡Öµ:"+Integer.MIN_VALUE);
-		System.out.println(2111111111+2111111111);//-72745074,Ô½½ç
-		//¼ÓÒ»¸öL±äÎªLongĞÍ£¬·ÀÖ¹Ô½½ç
+		System.out.println("intçš„æœ€å¤§å€¼:"+Integer.MAX_VALUE+"\n"+"intçš„æœ€å°å€¼:"+Integer.MIN_VALUE);
+		System.out.println(2111111111+2111111111);//-72745074,è¶Šç•Œ
+		//åŠ ä¸€ä¸ªLå˜ä¸ºLongå‹ï¼Œé˜²æ­¢è¶Šç•Œ
 		System.out.println(2111111111+2111111111L);
-		//¸¡µãÀàĞÍ
-		float f = 12.3F;		//Õ¼ËÄ¸ö×Ö½Ú Ä¬ÈÏĞ¡ÊıÎªdouble,ËùÒÔfloatÒª¼Óf
-		double d = 33.4;		//Õ¼°Ë¸ö×Ö½Ú			Ğ¡ÊıÄ¬ÈÏµÄÊı¾İÀàĞÍÊÇdouble,doubleÀàĞÍºóÃæÒ²¿ÉÒÔÓÃD»òd±êÊ¶,µ«ÊÇÒ»°ã²»¼Ó
+		//æµ®ç‚¹ç±»å‹
+		float f = 12.3F;		//å å››ä¸ªå­—èŠ‚ é»˜è®¤å°æ•°ä¸ºdouble,æ‰€ä»¥floatè¦åŠ f
+		double d = 33.4;		//å å…«ä¸ªå­—èŠ‚			å°æ•°é»˜è®¤çš„æ•°æ®ç±»å‹æ˜¯double,doubleç±»å‹åé¢ä¹Ÿå¯ä»¥ç”¨Dæˆ–dæ ‡è¯†,ä½†æ˜¯ä¸€èˆ¬ä¸åŠ 
 		System.out.println(f);
 		System.out.println(d);
 
-		//×Ö·ûÀàĞÍ
-		char c = 'a';			//Õ¼Á½¸ö×Ö½Ú£¬¿ÉÒÔ´æºº×Ö£¬ÒòÎªÊÇunicod±àÂë,²»ÄÜ´æ¿Õ£¬0-9£¬A-z£¬ÈÎÒâ·ûºÅ
+		//å­—ç¬¦ç±»å‹
+		char c = 'a';			//å ä¸¤ä¸ªå­—èŠ‚ï¼Œå¯ä»¥å­˜æ±‰å­—ï¼Œå› ä¸ºæ˜¯unicodç¼–ç ,ä¸èƒ½å­˜ç©ºï¼Œ0-9ï¼ŒA-zï¼Œä»»æ„ç¬¦å·
 		System.out.println(c);
 
-		//²¼¶ûÀàĞÍ
+		//å¸ƒå°”ç±»å‹
 		boolean b1 = true;
 		boolean b2 = false;
 		System.out.println(b1);

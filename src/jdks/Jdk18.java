@@ -2,24 +2,24 @@ package jdks;
 
 import day8object.test;
 
-/** ½Ó¿ÚÖÐ¿ÉÒÔ¶¨ÒåÓÐ·½·¨ÌåµÄ·½·¨,Èç¹ûÊÇ·Ç¾²Ì¬,±ØÐëÓÃdefaultÐÞÊÎ	
-* Èç¹ûÊÇ¾²Ì¬µÄ¾Í²»ÓÃÁË
+/** æŽ¥å£ä¸­å¯ä»¥å®šä¹‰æœ‰æ–¹æ³•ä½“çš„æ–¹æ³•,å¦‚æžœæ˜¯éžé™æ€,å¿…é¡»ç”¨defaultä¿®é¥°	
+* å¦‚æžœæ˜¯é™æ€çš„å°±ä¸ç”¨äº†
 
 
-		¾Ö²¿ÄÚ²¿ÀàÔÚ·ÃÎÊËûËùÔÚ·½·¨ÖÐµÄ¾Ö²¿±äÁ¿±ØÐëÓÃfinalÐÞÊÎ,ÎªÊ²Ã´?
-		ÒòÎªµ±µ÷ÓÃÕâ¸ö·½·¨Ê±,¾Ö²¿±äÁ¿Èç¹ûÃ»ÓÐÓÃfinalÐÞÊÎ,ËûµÄÉúÃüÖÜÆÚºÍ·½·¨µÄÉúÃüÖÜÆÚÊÇÒ»ÑùµÄ,
-		µ±·½·¨µ¯Õ»,Õâ¸ö¾Ö²¿±äÁ¿Ò²»áÏûÊ§,ÄÇÃ´Èç¹û¾Ö²¿ÄÚ²¿Àà¶ÔÏó»¹Ã»ÓÐÂíÉÏÏûÊ§ÏëÓÃÕâ¸ö¾Ö²¿±äÁ¿,¾ÍÃ»ÓÐÁË,
-		Èç¹ûÓÃfinalÐÞÊÎ»áÔÚÀà¼ÓÔØµÄÊ±ºò½øÈë³£Á¿³Ø,¼´Ê¹·½·¨µ¯Õ»,³£Á¿³ØµÄ³£Á¿»¹ÔÚ,Ò²¿ÉÒÔ¼ÌÐøÊ¹ÓÃ
+		å±€éƒ¨å†…éƒ¨ç±»åœ¨è®¿é—®ä»–æ‰€åœ¨æ–¹æ³•ä¸­çš„å±€éƒ¨å˜é‡å¿…é¡»ç”¨finalä¿®é¥°,ä¸ºä»€ä¹ˆ?
+		å› ä¸ºå½“è°ƒç”¨è¿™ä¸ªæ–¹æ³•æ—¶,å±€éƒ¨å˜é‡å¦‚æžœæ²¡æœ‰ç”¨finalä¿®é¥°,ä»–çš„ç”Ÿå‘½å‘¨æœŸå’Œæ–¹æ³•çš„ç”Ÿå‘½å‘¨æœŸæ˜¯ä¸€æ ·çš„,
+		å½“æ–¹æ³•å¼¹æ ˆ,è¿™ä¸ªå±€éƒ¨å˜é‡ä¹Ÿä¼šæ¶ˆå¤±,é‚£ä¹ˆå¦‚æžœå±€éƒ¨å†…éƒ¨ç±»å¯¹è±¡è¿˜æ²¡æœ‰é©¬ä¸Šæ¶ˆå¤±æƒ³ç”¨è¿™ä¸ªå±€éƒ¨å˜é‡,å°±æ²¡æœ‰äº†,
+		å¦‚æžœç”¨finalä¿®é¥°ä¼šåœ¨ç±»åŠ è½½çš„æ—¶å€™è¿›å…¥å¸¸é‡æ± ,å³ä½¿æ–¹æ³•å¼¹æ ˆ,å¸¸é‡æ± çš„å¸¸é‡è¿˜åœ¨,ä¹Ÿå¯ä»¥ç»§ç»­ä½¿ç”¨
  * 
  * */
 public class Jdk18 {
 	public static void main(String[] args) {
-		//´´½¨Ò»¸öÄäÃûÀà²¿Ààµ÷ÓÃjdk18µÄdefaultÐÞÊÎµÄ·½·¨
+		//åˆ›å»ºä¸€ä¸ªåŒ¿åç±»éƒ¨ç±»è°ƒç”¨jdk18çš„defaultä¿®é¥°çš„æ–¹æ³•
 		new jdk(){}.HelloMMP();
-		//jdk18Ö§³ÖµÄ¾²Ì¬ÓÐ·½·¨ÌåµÄ·½·¨
+		//jdk18æ”¯æŒçš„é™æ€æœ‰æ–¹æ³•ä½“çš„æ–¹æ³•
 		jdk.say();
 		
-		//´´½¨ÄäÃûÀà²¢µ÷ÓÃrun()·½·¨;²âÊÔ¾Ö²¿ÄÚ²¿Ààµ÷ÓÃ³ÉÔ±±äÁ¿ÊÇ·ñ¿ÉÒÔÊ¡ÂÔfinal(18ÒÔÉÏÖ§³Ö)
+		//åˆ›å»ºåŒ¿åç±»å¹¶è°ƒç”¨run()æ–¹æ³•;æµ‹è¯•å±€éƒ¨å†…éƒ¨ç±»è°ƒç”¨æˆå‘˜å˜é‡æ˜¯å¦å¯ä»¥çœç•¥final(18ä»¥ä¸Šæ”¯æŒ)
 		new Test().run();
 	}
 }
@@ -27,7 +27,7 @@ public class Jdk18 {
 
 class Test {
 	public void run() {
-		int x = 10; //jdk1.8Ç°ÃæµÄfinal¿ÉÒÔÊ¡ÂÔ£¬²»¹ýÏµÍ³»áÄ¬ÈÏ¼ÓÉÏ,²»ÄÜÐÞ¸Ä 
+		int x = 10; //jdk1.8å‰é¢çš„finalå¯ä»¥çœç•¥ï¼Œä¸è¿‡ç³»ç»Ÿä¼šé»˜è®¤åŠ ä¸Š,ä¸èƒ½ä¿®æ”¹ 
 		class Inner {
 			public void method() {
 				//x=20;

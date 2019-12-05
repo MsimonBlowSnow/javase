@@ -15,7 +15,7 @@ public class DemoStudHelp {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		DemoStudHelp a=(DemoStudHelp) obj;//向下转型
+		DemoStudHelp a=(DemoStudHelp) obj;//鍚戜笅杞瀷
 		return this.name.equals(a.name)&&this.age.equals(a.age);
 	}
 

@@ -4,16 +4,16 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/*timer1 ÀïÃæµÄschedule
- *schedule()Èı¸ö²ÎÊı£¬Ò»¸öÊÇ¼Ì³ĞÁËTimerTaskµÄ×ÖÀà¶ÔÏó£¬Ò»¸öÊÇ¿ªÊ¼Ö´ĞĞµÄdate£¬Ò»¸öÊÇ¸ôÒ»¶ÎÊ±¼ä
-*Ö´ĞĞµÄ²ÎÊıµ¥Î»ÎªºÁÃë
+/*timer1 é‡Œé¢çš„schedule
+ *schedule()ä¸‰ä¸ªå‚æ•°ï¼Œä¸€ä¸ªæ˜¯ç»§æ‰¿äº†TimerTaskçš„å­—ç±»å¯¹è±¡ï¼Œä¸€ä¸ªæ˜¯å¼€å§‹æ‰§è¡Œçš„dateï¼Œä¸€ä¸ªæ˜¯éš”ä¸€æ®µæ—¶é—´
+*æ‰§è¡Œçš„å‚æ•°å•ä½ä¸ºæ¯«ç§’
  * 
  * */
 public class Demo03Timer {
 	public static void main(String[] args) throws InterruptedException {
 		Timer timer1= new Timer();
-		//schedule()Èı¸ö²ÎÊı£¬Ò»¸öÊÇ¼Ì³ĞÁËTimerTaskµÄ×ÖÀà¶ÔÏó£¬Ò»¸öÊÇ¿ªÊ¼Ö´ĞĞµÄdate£¬Ò»¸öÊÇ¸ôÒ»¶ÎÊ±¼ä
-		//Ö´ĞĞµÄ²ÎÊıµ¥Î»ÎªºÁÃë
+		//schedule()ä¸‰ä¸ªå‚æ•°ï¼Œä¸€ä¸ªæ˜¯ç»§æ‰¿äº†TimerTaskçš„å­—ç±»å¯¹è±¡ï¼Œä¸€ä¸ªæ˜¯å¼€å§‹æ‰§è¡Œçš„dateï¼Œä¸€ä¸ªæ˜¯éš”ä¸€æ®µæ—¶é—´
+		//æ‰§è¡Œçš„å‚æ•°å•ä½ä¸ºæ¯«ç§’
 		timer1.schedule(new Demo03(), new Date(119,8,11,16,04,0),3000);
 		while(true) {
 			System.out.println(new Date()); 
@@ -27,7 +27,7 @@ class Demo03 extends TimerTask{
 
 	@Override
 	public void run() {
-		System.out.println("Æğ´²ÁË£¬Ì«ÑôÕÕÆ¨Æ¨ÁË!");
+		System.out.println("èµ·åºŠäº†ï¼Œå¤ªé˜³ç…§å±å±äº†!");
 	}
 	
 }

@@ -14,7 +14,7 @@ public class Day02sendmessages {
 		String messageString="";
 		DatagramSocket aDatagramSocket=new DatagramSocket();
 		while(true) {
-			System.out.println("ÊäÈëĞÅÏ¢(quitÍË³ö):");
+			System.out.println("è¾“å…¥ä¿¡æ¯(quité€€å‡º):");
 			messageString=scanner.nextLine();
 			if(!messageString.equals("quit")) {
 				DatagramPacket  aDatagramPacket=new DatagramPacket(messageString.getBytes(),	

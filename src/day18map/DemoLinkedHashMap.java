@@ -2,14 +2,14 @@ package day18map;
 
 import java.util.LinkedHashMap;
 
-/*LinkedHashMapÖĞ*/
+/*LinkedHashMapä¸­*/
 public class DemoLinkedHashMap {
 	public static void main(String[] args) {
 		LinkedHashMap<String,Integer> a=new LinkedHashMap<>();
 		a.put("mmp", 0);
 		a.put("mmp1", 1);
 		a.put("mmp2", 2);
-		a.put("mmp", 1);//Í¨¹ıhashcodeºÍequals·½·¨È¥ÖØ(°ÑÇ°ÃæÒ»ÑùµÄkey¸²¸ÇÁË)
+		a.put("mmp", 1);//é€šè¿‡hashcodeå’Œequalsæ–¹æ³•å»é‡(æŠŠå‰é¢ä¸€æ ·çš„keyè¦†ç›–äº†)
 		System.out.println(a);
 	}
 }

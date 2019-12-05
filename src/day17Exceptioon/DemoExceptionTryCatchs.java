@@ -1,34 +1,34 @@
 package day17Exceptioon;
 /**
- * * A:°¸ÀıÑİÊ¾
- * try...catchµÄ·½Ê½´¦Àí¶à¸öÒì³£
- * JDK7ÒÔºó´¦Àí¶à¸öÒì³£µÄ·½Ê½¼°×¢ÒâÊÂÏî
+ * * A:æ¡ˆä¾‹æ¼”ç¤º
+ * try...catchçš„æ–¹å¼å¤„ç†å¤šä¸ªå¼‚å¸¸
+ * JDK7ä»¥åå¤„ç†å¤šä¸ªå¼‚å¸¸çš„æ–¹å¼åŠæ³¨æ„äº‹é¡¹
  * 
- * °²×¿,¿Í»§¶Ë¿ª·¢,ÈçºÎ´¦ÀíÒì³£?try{}catch(Exception e){}
- * ee,·şÎñ¶Ë¿ª·¢,Ò»°ã¶¼ÊÇµ×²ã¿ª·¢,´Óµ×²ãÏòÉÏÅ×
+ * å®‰å“,å®¢æˆ·ç«¯å¼€å‘,å¦‚ä½•å¤„ç†å¼‚å¸¸?try{}catch(Exception e){}
+ * ee,æœåŠ¡ç«¯å¼€å‘,ä¸€èˆ¬éƒ½æ˜¯åº•å±‚å¼€å‘,ä»åº•å±‚å‘ä¸ŠæŠ›
  * 
- * tryºóÃæÈç¹û¸ú¶à¸öcatch,ÄÇÃ´Ğ¡µÄÒì³£·ÅÇ°Ãæ,´óµÄÒì³£·ÅºóÃæ,¸ù¾İ¶àÌ¬µÄÔ­Àí,Èç¹û´óµÄ·ÅÇ°Ãæ,¾Í»á½«ËùÓĞµÄ×ÓÀà¶ÔÏó½ÓÊÕ
- * ºóÃæµÄcatch¾ÍÃ»ÓĞÒâÒåÁË
+ * tryåé¢å¦‚æœè·Ÿå¤šä¸ªcatch,é‚£ä¹ˆå°çš„å¼‚å¸¸æ”¾å‰é¢,å¤§çš„å¼‚å¸¸æ”¾åé¢,æ ¹æ®å¤šæ€çš„åŸç†,å¦‚æœå¤§çš„æ”¾å‰é¢,å°±ä¼šå°†æ‰€æœ‰çš„å­ç±»å¯¹è±¡æ¥æ”¶
+ * åé¢çš„catchå°±æ²¡æœ‰æ„ä¹‰äº†
  */
 
-//ÏÂÃæµÄ³ÌĞòÖ»»áÖ´ĞĞÒ»¸öÒì³£¡£Ó¦ÎªÒì³£³åint a=10/0 ¾ÍÌøµ½catchÖĞ±»ÈË´¦ÀíÁË
+//ä¸‹é¢çš„ç¨‹åºåªä¼šæ‰§è¡Œä¸€ä¸ªå¼‚å¸¸ã€‚åº”ä¸ºå¼‚å¸¸å†²int a=10/0 å°±è·³åˆ°catchä¸­è¢«äººå¤„ç†äº†
 public class DemoExceptionTryCatchs {
 	public static void main(String[] args) {
 		try {
-			int a=10/0;//³ı0Òì³£
+			int a=10/0;//é™¤0å¼‚å¸¸
 			int[] c=new int[1];
-			System.out.println(c[2]);//Êı×éÔ½½çÒì³£
-			String arr=null;//¿ÕÖ¸ÕëÒì³£
+			System.out.println(c[2]);//æ•°ç»„è¶Šç•Œå¼‚å¸¸
+			String arr=null;//ç©ºæŒ‡é’ˆå¼‚å¸¸
 			System.out.println(arr.charAt(1));
 		}catch(ArithmeticException e){
-			System.out.println("0²»ÄÜ×ö³ıÊı");
+			System.out.println("0ä¸èƒ½åšé™¤æ•°");
 		}catch(NullPointerException e) {
-			System.out.println("¿ÕÖ¸ÕëÒì³£");
+			System.out.println("ç©ºæŒ‡é’ˆå¼‚å¸¸");
 		}catch(ArrayIndexOutOfBoundsException e) {
-			System.out.println("Êı×éÔ½½çÒì³£");
-			//´óÒì³£·ÅºóÃæ¡£·ñÔòĞ¡Òì³£Ã»ÓÃÁË
-		}catch(Exception e) {//¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó Exceptption e= new XXX();Òì³£
-			System.out.println("³ö´íÁË");
+			System.out.println("æ•°ç»„è¶Šç•Œå¼‚å¸¸");
+			//å¤§å¼‚å¸¸æ”¾åé¢ã€‚å¦åˆ™å°å¼‚å¸¸æ²¡ç”¨äº†
+		}catch(Exception e) {//çˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡ Exceptption e= new XXX();å¼‚å¸¸
+			System.out.println("å‡ºé”™äº†");
 		}
 		
 		

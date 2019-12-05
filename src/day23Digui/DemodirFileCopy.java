@@ -9,11 +9,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-/*ÎÊÌâ£ºÊäÈëÒ»¸öÎÄ¼ş£¬Í¨¹ıµİ¹éÈ¥¿½±´£¬
- 	*²½Öè£º
- 		*1.ÊäÈëÒ»¸öÎÄ¼ş¼ĞÅĞ¶ÏÊÇÎÄ¼ş»¹ÊÇÎÄ¼ş¼Ğ£¬Ö»ÓĞÊÇÎÄ¼ş¼Ğ²Å·µ»Ø
- 		*2.ÊäÈëÒ»¸öÎÄ¼ş¼Ğ£¬µİ¹éÈç¹ûÊÇÎÄ¼ş¾Ícopy,ÎÄ¼ş¼Ğ¼ÌĞøµİ¹é 
- 		*3.´´½¨×Ö·ûÁ÷£¬copyÎÄ¼ş¡£ 
+/*é—®é¢˜ï¼šè¾“å…¥ä¸€ä¸ªæ–‡ä»¶ï¼Œé€šè¿‡é€’å½’å»æ‹·è´ï¼Œ
+ 	*æ­¥éª¤ï¼š
+ 		*1.è¾“å…¥ä¸€ä¸ªæ–‡ä»¶å¤¹åˆ¤æ–­æ˜¯æ–‡ä»¶è¿˜æ˜¯æ–‡ä»¶å¤¹ï¼Œåªæœ‰æ˜¯æ–‡ä»¶å¤¹æ‰è¿”å›
+ 		*2.è¾“å…¥ä¸€ä¸ªæ–‡ä»¶å¤¹ï¼Œé€’å½’å¦‚æœæ˜¯æ–‡ä»¶å°±copy,æ–‡ä»¶å¤¹ç»§ç»­é€’å½’ 
+ 		*3.åˆ›å»ºå­—ç¬¦æµï¼Œcopyæ–‡ä»¶ã€‚ 
  * */
 public class DemodirFileCopy {
 	public static void main(String[] args) throws IOException {
@@ -21,7 +21,7 @@ public class DemodirFileCopy {
 		
 		
 		File file=methodFile();
-		System.out.println("ÇëÊäÈëÄãÒª¿½±´µ½ÄÇÀï:");
+		System.out.println("è¯·è¾“å…¥ä½ è¦æ‹·è´åˆ°é‚£é‡Œ:");
 		Scanner scanner = new Scanner(System.in);
 		String pathname = scanner.nextLine();
 		File fileC=new File(pathname);
@@ -34,9 +34,9 @@ public class DemodirFileCopy {
 			File[] files=file.listFiles();
 			for (File file2 : files) {
 				
-				//ÅĞ¶Ï¸ÃÎÄ¼ş¼ĞÊÇ·ñÔÚ¿½±´Â·¾¶´æÔÚ£¬²»´æÔÚ£¬¾Í´´½¨
+				//åˆ¤æ–­è¯¥æ–‡ä»¶å¤¹æ˜¯å¦åœ¨æ‹·è´è·¯å¾„å­˜åœ¨ï¼Œä¸å­˜åœ¨ï¼Œå°±åˆ›å»º
 				if(file2.isDirectory()) {
-					//ÓÃ¿½±´ÎÄ¼ş¼ĞµÄ¾ø¶ÔÂ·¾¶È¥Ìæ´úÔ­Ô­ÎÄ¼ş¼ĞµÄÂ·¾¶£¬ÊÇ¿½±´ÎÄ¼ş¼ĞÀïÃæµÄ¶«Î÷ºÍÔ­ÎÄ¼ş¼ĞÂ·¾¶ÊÇÒ»ÑùµÄ
+					//ç”¨æ‹·è´æ–‡ä»¶å¤¹çš„ç»å¯¹è·¯å¾„å»æ›¿ä»£åŸåŸæ–‡ä»¶å¤¹çš„è·¯å¾„ï¼Œæ˜¯æ‹·è´æ–‡ä»¶å¤¹é‡Œé¢çš„ä¸œè¥¿å’ŒåŸæ–‡ä»¶å¤¹è·¯å¾„æ˜¯ä¸€æ ·çš„
 					StringBuilder strb=new StringBuilder(file2.getAbsolutePath());
 					String pathC=new String(strb.replace(0,yfile.length(),fileC.getAbsolutePath()));
 					File pathCF=new File(pathC);
@@ -65,7 +65,7 @@ public class DemodirFileCopy {
 
 	private static File methodFile() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÄãÒª¿½±´µÄÎÄ¼ş:");
+		System.out.println("è¯·è¾“å…¥ä½ è¦æ‹·è´çš„æ–‡ä»¶:");
 		String pathname = scanner.nextLine();
 		File file;
 		while (true) {
@@ -74,7 +74,7 @@ public class DemodirFileCopy {
 			if (file.isDirectory()) {
 				 return file;
 			} else {
-				System.out.println("ÇëÖØĞÂÊäÈë:");
+				System.out.println("è¯·é‡æ–°è¾“å…¥:");
 			}
 		}
 	}

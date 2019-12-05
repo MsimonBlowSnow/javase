@@ -2,7 +2,7 @@ package day5array;
 
 import java.util.Arrays;
 
-/*fill()·½·¨
+/*fill()æ–¹æ³•
  * 
  * 
  * */

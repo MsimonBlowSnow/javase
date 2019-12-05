@@ -7,13 +7,13 @@ public class DemoInClass4 {
 		}
 }
 		
-//¾Ö²¿ÄÚ²¿Àà
+//å±€éƒ¨å†…éƒ¨ç±»
 class Outer4 {
 		public void method() {
-			final int num = 10;//±ØĞë¶¨ÒåÎªfinal
+			final int num = 10;//å¿…é¡»å®šä¹‰ä¸ºfinal
 			class Inner {
 				public void print() {
-					System.out.println(num);//±ØĞëÊ±final²Å¿ÉÒÔ·ÃÎÊ
+					System.out.println(num);//å¿…é¡»æ—¶finalæ‰å¯ä»¥è®¿é—®
 				}
 			}
 
@@ -22,7 +22,7 @@ class Outer4 {
 		}
 
 		/*public void run() {
-			Inner i = new Inner();				//¾Ö²¿ÄÚ²¿Àà,Ö»ÄÜÔÚÆäËùÔÚµÄ·½·¨ÖĞ·ÃÎÊ
+			Inner i = new Inner();				//å±€éƒ¨å†…éƒ¨ç±»,åªèƒ½åœ¨å…¶æ‰€åœ¨çš„æ–¹æ³•ä¸­è®¿é—®
 			i.print();
 		}*/
 	}

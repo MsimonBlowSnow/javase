@@ -2,35 +2,35 @@ package day13regx;
 
 import java.math.BigDecimal;
 
-/* A:BigDecimalµÄ¸ÅÊö
-* ÓÉÓÚÔÚÔËËãµÄÊ±ºò£¬floatÀàĞÍºÍdoubleºÜÈİÒ×¶ªÊ§¾«¶È£¬ÑİÊ¾°¸Àı¡£
-* ËùÒÔ£¬ÎªÁËÄÜ¾«È·µÄ±íÊ¾¡¢¼ÆËã¸¡µãÊı£¬JavaÌá¹©ÁËBigDecimal
+/* A:BigDecimalçš„æ¦‚è¿°
+* ç”±äºåœ¨è¿ç®—çš„æ—¶å€™ï¼Œfloatç±»å‹å’Œdoubleå¾ˆå®¹æ˜“ä¸¢å¤±ç²¾åº¦ï¼Œæ¼”ç¤ºæ¡ˆä¾‹ã€‚
+* æ‰€ä»¥ï¼Œä¸ºäº†èƒ½ç²¾ç¡®çš„è¡¨ç¤ºã€è®¡ç®—æµ®ç‚¹æ•°ï¼ŒJavaæä¾›äº†BigDecimal
 
-* ²»¿É±äµÄ¡¢ÈÎÒâ¾«¶ÈµÄÓĞ·ûºÅÊ®½øÖÆÊı¡£
-* B:¹¹Ôì·½·¨
+* ä¸å¯å˜çš„ã€ä»»æ„ç²¾åº¦çš„æœ‰ç¬¦å·åè¿›åˆ¶æ•°ã€‚
+* B:æ„é€ æ–¹æ³•
 * public BigDecimal(String val)
-* C:³ÉÔ±·½·¨
+* C:æˆå‘˜æ–¹æ³•
 * public BigDecimal add(BigDecimal augend)
 * public BigDecimal subtract(BigDecimal subtrahend)
 * public BigDecimal multiply(BigDecimal multiplicand)
 * public BigDecimal divide(BigDecimal divisor)
-* D:°¸ÀıÑİÊ¾
-* BigDecimalÀàµÄ¹¹Ôì·½·¨ºÍ³ÉÔ±·½·¨Ê¹ÓÃ*/
+* D:æ¡ˆä¾‹æ¼”ç¤º
+* BigDecimalç±»çš„æ„é€ æ–¹æ³•å’Œæˆå‘˜æ–¹æ³•ä½¿ç”¨*/
 
 public class DemoBigDecimal {
 	public static void main(String[] args) {
-		System.out.println(2.3-1.1);//1.1999999 ²»·½±ã¼ÆËã
+		System.out.println(2.3-1.1);//1.1999999 ä¸æ–¹ä¾¿è®¡ç®—
 		BigDecimal a=new BigDecimal(2.3);
 		BigDecimal c=new BigDecimal(1.1);
-		System.out.println(a.subtract(c));//²»¾«È·
+		System.out.println(a.subtract(c));//ä¸ç²¾ç¡®
 		
 		BigDecimal a1=BigDecimal.valueOf(2.3);
 		BigDecimal c1=BigDecimal.valueOf(1.1);
-		System.out.println(a1.subtract(c1));//¾«È·
+		System.out.println(a1.subtract(c1));//ç²¾ç¡®
 		
 		BigDecimal a2=new BigDecimal("2.3");
 		BigDecimal c2=new BigDecimal("1.1");
-		System.out.println(a1.subtract(c1));//¾«È·
+		System.out.println(a1.subtract(c1));//ç²¾ç¡®
 		
 	}
 }

@@ -1,6 +1,6 @@
 package day24thread;
-/* join(), µ±Ç°Ïß³ÌÔİÍ£, µÈ´ıÖ¸¶¨µÄÏß³ÌÖ´ĞĞ½áÊøºó, µ±Ç°Ïß³ÌÔÙ¼ÌĞø
-* join(int), ¿ÉÒÔµÈ´ıÖ¸¶¨µÄºÁÃëÖ®ºó¼ÌĞø
+/* join(), å½“å‰çº¿ç¨‹æš‚åœ, ç­‰å¾…æŒ‡å®šçš„çº¿ç¨‹æ‰§è¡Œç»“æŸå, å½“å‰çº¿ç¨‹å†ç»§ç»­
+* join(int), å¯ä»¥ç­‰å¾…æŒ‡å®šçš„æ¯«ç§’ä¹‹åç»§ç»­
  * */
 public class Demo11ThreadJoin {
 
@@ -10,7 +10,7 @@ public class Demo11ThreadJoin {
 				
 				this.setName("thread1");
 				for (int i = 0; i <10; i++) {
-					//ÔÚnew Thread()²»ÄÜÅ×Òì³££¬ËùÒÔÖ»ÄÜ×Ô¼º´¦Àí
+					//åœ¨new Thread()ä¸èƒ½æŠ›å¼‚å¸¸ï¼Œæ‰€ä»¥åªèƒ½è‡ªå·±å¤„ç†
 					try {
 						this.sleep(1000);
 					} catch (InterruptedException e) {
@@ -26,16 +26,16 @@ public class Demo11ThreadJoin {
 			
 			@Override
 			public void run() {
-				//¸ÃÏß³ÌÊÇÊµÏÖRunable½Ó¿ÚµÄ£¬ËùÒÔ²»ÄÜµ÷ÓÃThreadµÄ·½·¨£¬
-				//²»¹ı¿ÉÒÔÍ¨¹ıcurrentThread()»ñÈ¡ËüµÄÏß³Ì£¬È»ºóÔÚµ÷ÓÃThreadÀïÃæµÄ·½·¨
+				//è¯¥çº¿ç¨‹æ˜¯å®ç°Runableæ¥å£çš„ï¼Œæ‰€ä»¥ä¸èƒ½è°ƒç”¨Threadçš„æ–¹æ³•ï¼Œ
+				//ä¸è¿‡å¯ä»¥é€šè¿‡currentThread()è·å–å®ƒçš„çº¿ç¨‹ï¼Œç„¶ååœ¨è°ƒç”¨Threadé‡Œé¢çš„æ–¹æ³•
 				Thread.currentThread().setName("Thread2-----");
 				for (int i = 0; i <10; i++) {
-					//ÔÚnew Thread()²»ÄÜÅ×Òì³££¬ËùÒÔÖ»ÄÜ×Ô¼º´¦Àí
+					//åœ¨new Thread()ä¸èƒ½æŠ›å¼‚å¸¸ï¼Œæ‰€ä»¥åªèƒ½è‡ªå·±å¤„ç†
 					try {
 						if(i==5) {
 						//th1.join();
-						//°ÑÒ»Ïß³Ì¼ÓÈËÈë
-						th1.join(2000);//Ò»Ïß³ÌÖ´ĞĞÁ½Ãë£¬ÔÚÖ´ĞĞ¸ÃÏß³Ì
+						//æŠŠä¸€çº¿ç¨‹åŠ äººå…¥
+						th1.join(2000);//ä¸€çº¿ç¨‹æ‰§è¡Œä¸¤ç§’ï¼Œåœ¨æ‰§è¡Œè¯¥çº¿ç¨‹
 						}
 						
 					} catch (InterruptedException e) {

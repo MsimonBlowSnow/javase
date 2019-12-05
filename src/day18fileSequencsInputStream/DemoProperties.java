@@ -8,24 +8,24 @@ import java.time.chrono.MinguoChronology;
 import java.util.Enumeration;
 import java.util.Properties;
 
-/* A:PropertiesµÄ¸ÅÊö
-* Properties Àà±íÊ¾ÁËÒ»¸ö³Ö¾ÃµÄÊôĞÔ¼¯¡£
-* Properties ¿É±£´æÔÚÁ÷ÖĞ»ò´ÓÁ÷ÖĞ¼ÓÔØ¡£
-* ÊôĞÔÁĞ±íÖĞÃ¿¸ö¼ü¼°Æä¶ÔÓ¦Öµ¶¼ÊÇÒ»¸ö×Ö·û´®¡£ 
-* B:°¸ÀıÑİÊ¾
-* Properties×÷ÎªMap¼¯ºÏµÄÊ¹ÓÃ
-* properties ÊÇhashtablesµÄ³¬×ÓÀà 
-* hashtables Ïß³Ì°²È«
+/* A:Propertiesçš„æ¦‚è¿°
+* Properties ç±»è¡¨ç¤ºäº†ä¸€ä¸ªæŒä¹…çš„å±æ€§é›†ã€‚
+* Properties å¯ä¿å­˜åœ¨æµä¸­æˆ–ä»æµä¸­åŠ è½½ã€‚
+* å±æ€§åˆ—è¡¨ä¸­æ¯ä¸ªé”®åŠå…¶å¯¹åº”å€¼éƒ½æ˜¯ä¸€ä¸ªå­—ç¬¦ä¸²ã€‚ 
+* B:æ¡ˆä¾‹æ¼”ç¤º
+* Propertiesä½œä¸ºMapé›†åˆçš„ä½¿ç”¨
+* properties æ˜¯hashtablesçš„è¶…å­ç±» 
+* hashtables çº¿ç¨‹å®‰å…¨
 * 
-*C:PropertiesµÄÌØÊâ¹¦ÄÜ
+*C:Propertiesçš„ç‰¹æ®ŠåŠŸèƒ½
 	* public Object setProperty(String key,String value)
 	* public String getProperty(String key)
 	* public Enumeration<String> stringPropertyNames()
-*D:°¸ÀıÑİÊ¾
-	* PropertiesµÄÌØÊâ¹¦ÄÜ
-* E:PropertiesµÄload()ºÍstore()¹¦ÄÜ
-	*load(FileInputStream fis);´ÓÎÄ¼şÀïÃæ¶ÁÈ¡¼üÖµ¶Ô²¢·ÅÈëpropertiesÖĞ
-	*store(FileOutStream fis)ĞŞ¸ÄpropertiesÖĞµÄ¼üÖµ¶Ô²¢ĞŞ¸Ä
+*D:æ¡ˆä¾‹æ¼”ç¤º
+	* Propertiesçš„ç‰¹æ®ŠåŠŸèƒ½
+* E:Propertiesçš„load()å’Œstore()åŠŸèƒ½
+	*load(FileInputStream fis);ä»æ–‡ä»¶é‡Œé¢è¯»å–é”®å€¼å¯¹å¹¶æ”¾å…¥propertiesä¸­
+	*store(FileOutStream fis)ä¿®æ”¹propertiesä¸­çš„é”®å€¼å¯¹å¹¶ä¿®æ”¹
 */
 public class DemoProperties {
 	public static void main(String[] args) throws FileNotFoundException, IOException {
@@ -33,22 +33,22 @@ public class DemoProperties {
 		Properties pro = new Properties();
 		pro.load(new FileInputStream("src/day18fileSequencsInputStream/config.properties"));
 		System.out.println(pro);
-		pro.setProperty("password", "123");//²»ÄÜĞ´µ½ÎÄ¼ş
-		//store()·½·¨µÄµÚ¶ş¸ö²ÎÊı£¬Ğ´ÈëÎÄ¼şÀïÃæµÄ½âÊÍĞÅÏ¢
+		pro.setProperty("password", "123");//ä¸èƒ½å†™åˆ°æ–‡ä»¶
+		//store()æ–¹æ³•çš„ç¬¬äºŒä¸ªå‚æ•°ï¼Œå†™å…¥æ–‡ä»¶é‡Œé¢çš„è§£é‡Šä¿¡æ¯
 		pro.store(new FileOutputStream("src/day18fileSequencsInputStream/config.properties"),"ming");
 	}
 	private static void method() {
-		//½¨Á¢properteis²¢Ê¹ÓÃput·½·¨Ìí¼Ó¼üÖµ¶Ô
+		//å»ºç«‹properteiså¹¶ä½¿ç”¨putæ–¹æ³•æ·»åŠ é”®å€¼å¯¹
 		Properties pro = new Properties();
 		pro.put("ming", "handsome");
 		pro.put("chenqi","ugly");
 		pro.put("zs", "12");
 		pro.put("ls", "13");
-		pro.setProperty("ls", "14");//ĞŞ¸Äproperties
+		pro.setProperty("ls", "14");//ä¿®æ”¹properties
 		System.out.println(pro);
 		
-		//±éÀúproperteis ÔªËØ
-		//»ñÈ¡propertiesÀïÃæµÄ¼ü£¬²¢°Ñobject¶ÔÏñÇ¿×ª
+		//éå†properteis å…ƒç´ 
+		//è·å–propertiesé‡Œé¢çš„é”®ï¼Œå¹¶æŠŠobjectå¯¹åƒå¼ºè½¬
 		Enumeration<String> enum1 =(Enumeration<String>) pro.propertyNames(); 
 		while(enum1.hasMoreElements()) {
 			String str =enum1.nextElement();

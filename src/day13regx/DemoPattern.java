@@ -4,16 +4,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 /*matches(String)
  * compile();
- * find(regx);ÕÒµ½Ò»¸ö·ûºÏregxµÄ±í´ïÊ½¾Í·´»Øtrue
+ * find(regx);æ‰¾åˆ°ä¸€ä¸ªç¬¦åˆregxçš„è¡¨è¾¾å¼å°±åå›true
  * group();
  * */
 public class DemoPattern {
 	public static void main(String[] args) {
-		Pattern p= Pattern.compile("a*b");//»ñÈ¡ÕıÔò±í´ïÊ½
-		Matcher M=p.matcher("aaaab");//»ñÈ¡Æ¥ÅäÆ÷
-		//System.out.println(M.matches());//¿´ÊÇ·ñÆ¥Åä£¬Æ¥Åä·µ»ØtrueÏàµ±ÓÚÏÂÃæµÄ²½Öè£º
+		Pattern p= Pattern.compile("a*b");//è·å–æ­£åˆ™è¡¨è¾¾å¼
+		Matcher M=p.matcher("aaaab");//è·å–åŒ¹é…å™¨
+		//System.out.println(M.matches());//çœ‹æ˜¯å¦åŒ¹é…ï¼ŒåŒ¹é…è¿”å›trueç›¸å½“äºä¸‹é¢çš„æ­¥éª¤ï¼š
 		//System.out.println("aaaab".matches("a*b"));
-		String s="ÎÒµÄµç»°ºÅÂë:15170318010 ÎÒµÄÊÖ»úºÅÂë:13879822419";
+		String s="æˆ‘çš„ç”µè¯å·ç :15170318010 æˆ‘çš„æ‰‹æœºå·ç :13879822419";
 		String regx="1[3578]\\d{9}";
 		Pattern p1=Pattern.compile(regx);
 		Matcher M1=p1.matcher(s);

@@ -7,18 +7,18 @@ public class DemoTreeSet1 {
 
 			/**
 			 * @param args
-			 * TreeSet¼¯ºÏÊÇÓÃÀ´¶ÔÏóÔªËØ½øĞĞÅÅĞòµÄ,Í¬ÑùËûÒ²¿ÉÒÔ±£Ö¤ÔªËØµÄÎ¨Ò»
-			 * µ±compareTo·½·¨·µ»Ø0µÄÊ±ºò¼¯ºÏÖĞÖ»ÓĞÒ»¸öÔªËØ
-			 * µ±compareTo·½·¨·µ»ØÕıÊıµÄÊ±ºò¼¯ºÏ»áÔõÃ´´æ¾ÍÔõÃ´È¡
-			 * µ±compareTo·½·¨·µ»Ø¸ºÊıµÄÊ±ºò¼¯ºÏ»áµ¹Ğò´æ´¢
+			 * TreeSeté›†åˆæ˜¯ç”¨æ¥å¯¹è±¡å…ƒç´ è¿›è¡Œæ’åºçš„,åŒæ ·ä»–ä¹Ÿå¯ä»¥ä¿è¯å…ƒç´ çš„å”¯ä¸€
+			 * å½“compareToæ–¹æ³•è¿”å›0çš„æ—¶å€™é›†åˆä¸­åªæœ‰ä¸€ä¸ªå…ƒç´ 
+			 * å½“compareToæ–¹æ³•è¿”å›æ­£æ•°çš„æ—¶å€™é›†åˆä¼šæ€ä¹ˆå­˜å°±æ€ä¹ˆå–
+			 * å½“compareToæ–¹æ³•è¿”å›è´Ÿæ•°çš„æ—¶å€™é›†åˆä¼šå€’åºå­˜å‚¨
 			 */
 			public static void main(String[] args) {
 				demo1();
 				demo2();
 				//demo3();
 				//demo4();
-				//ĞèÇó:½«×Ö·û´®°´ÕÕ³¤¶ÈÅÅĞò
-				//×Ô¶¨Òå±È½ÏÆ÷
+				//éœ€æ±‚:å°†å­—ç¬¦ä¸²æŒ‰ç…§é•¿åº¦æ’åº
+				//è‡ªå®šä¹‰æ¯”è¾ƒå™¨
 				TreeSet<String> ts = new TreeSet<>(new CompareByLen());		//Comparator c = new CompareByLen();
 				ts.add("aaaaaaaa");
 				ts.add("z");
@@ -40,27 +40,27 @@ public class DemoTreeSet1 {
 
 			public static void demo3() {
 				TreeSet<Student17> ts = new TreeSet<>();
-				ts.add(new Student17(13,"ÀîËÄ"));
-				ts.add(new Student17(23,"ÕÅÈı"));
-				ts.add(new Student17(43,"ÍõÎå"));
-				ts.add(new Student17(33,"ÕÔÁù"));
+				ts.add(new Student17(13,"æå››"));
+				ts.add(new Student17(23,"å¼ ä¸‰"));
+				ts.add(new Student17(43,"ç‹äº”"));
+				ts.add(new Student17(33,"èµµå…­"));
 				
-				System.out.println('ÕÅ' + 0);//²»Í¬µÄunicode
-				System.out.println('Àî' + 0);//
-				System.out.println('Íõ' + 0);//
-				System.out.println('ÕÔ' + 0);//
+				System.out.println('å¼ ' + 0);//ä¸åŒçš„unicode
+				System.out.println('æ' + 0);//
+				System.out.println('ç‹' + 0);//
+				System.out.println('èµµ' + 0);//
 				
 				System.out.println(ts);
 			}
 
 			public static void demo2() {
 				TreeSet<Student17> ts = new TreeSet<>();
-				ts.add(new Student17( 23,"ÕÅÈı"));
-				ts.add(new Student17(13,"ÀîËÄ"));
-				ts.add(new Student17(13,"ÖÜÆß"));
-				ts.add(new Student17(43,"ÍõÎå"));
-				ts.add(new Student17(33,"ÕÔÁù"));
-				ts.add(new Student17( 23,"ÕÅÈı"));
+				ts.add(new Student17( 23,"å¼ ä¸‰"));
+				ts.add(new Student17(13,"æå››"));
+				ts.add(new Student17(13,"å‘¨ä¸ƒ"));
+				ts.add(new Student17(43,"ç‹äº”"));
+				ts.add(new Student17(33,"èµµå…­"));
+				ts.add(new Student17( 23,"å¼ ä¸‰"));
 				System.out.println(ts);
 			}
 
@@ -83,9 +83,9 @@ public class DemoTreeSet1 {
 		class CompareByLen /*extends Object*/ implements Comparator<String> {
 
 			@Override
-			public int compare(String s1, String s2) {		//°´ÕÕ×Ö·û´®µÄ³¤¶È±È½Ï
-				int num = s1.length() - s2.length();		//³¤¶ÈÎªÖ÷ÒªÌõ¼ş
-				return num == 0 ? s1.compareTo(s2) : num;	//ÄÚÈİÎª´ÎÒªÌõ¼ş
+			public int compare(String s1, String s2) {		//æŒ‰ç…§å­—ç¬¦ä¸²çš„é•¿åº¦æ¯”è¾ƒ
+				int num = s1.length() - s2.length();		//é•¿åº¦ä¸ºä¸»è¦æ¡ä»¶
+				return num == 0 ? s1.compareTo(s2) : num;	//å†…å®¹ä¸ºæ¬¡è¦æ¡ä»¶
 			}
 			
 		}

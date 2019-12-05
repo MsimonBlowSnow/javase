@@ -4,8 +4,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/*Í¨¹ıÊµÏÖcallableÀ´ÊµÏÖ¶àÏß³Ì(ÆÕÍ¨Çé›rÏÂ²»ÄÜÓÃ)
- 	*ÊµÏÖcallableÖ»ÄÜÔÚ ExecutorService²ÅÄÜÊµÏÖ¶àÏß³Ì
+/*é€šè¿‡å®ç°callableæ¥å®ç°å¤šçº¿ç¨‹(æ™®é€šæƒ…æ³ä¸‹ä¸èƒ½ç”¨)
+ 	*å®ç°callableåªèƒ½åœ¨ ExecutorServiceæ‰èƒ½å®ç°å¤šçº¿ç¨‹
 */
 public class Demo09Call {
 	public static void main(String[] args) throws Exception {

@@ -1,8 +1,8 @@
 package day29Reflect;
 /** Constructor
-	* ClassÀàµÄnewInstance()·½·¨ÊÇÊ¹ÓÃ¸ÃÀàÎŞ²ÎµÄ¹¹Ôìº¯Êı´´½¨¶ÔÏó, Èç¹ûÒ»¸öÀàÃ»ÓĞÎŞ²ÎµÄ¹¹Ôìº¯Êı,
-	*¾Í²»ÄÜÕâÑù´´½¨ÁË,¿ÉÒÔµ÷ÓÃClassÀàµÄgetConstructor(String.class,int.class)
-	*·½·¨»ñÈ¡Ò»¸öÖ¸¶¨µÄ¹¹Ôìº¯ÊıÈ»ºóÔÙµ÷ÓÃConstructorÀàµÄnewInstance("ÕÅÈı",20)·½·¨´´½¨¶ÔÏó
+	* Classç±»çš„newInstance()æ–¹æ³•æ˜¯ä½¿ç”¨è¯¥ç±»æ— å‚çš„æ„é€ å‡½æ•°åˆ›å»ºå¯¹è±¡, å¦‚æœä¸€ä¸ªç±»æ²¡æœ‰æ— å‚çš„æ„é€ å‡½æ•°,
+	*å°±ä¸èƒ½è¿™æ ·åˆ›å»ºäº†,å¯ä»¥è°ƒç”¨Classç±»çš„getConstructor(String.class,int.class)
+	*æ–¹æ³•è·å–ä¸€ä¸ªæŒ‡å®šçš„æ„é€ å‡½æ•°ç„¶åå†è°ƒç”¨Constructorç±»çš„newInstance("å¼ ä¸‰",20)æ–¹æ³•åˆ›å»ºå¯¹è±¡
  * 
  * */
 public class Demo04ReflectConstructor {

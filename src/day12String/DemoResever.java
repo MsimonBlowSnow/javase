@@ -1,5 +1,5 @@
 package day12String;
-/*×Ö·û´®µÄ·´×ª*/
+/*å­—ç¬¦ä¸²çš„åè½¬*/
 public class DemoResever {
 	public static void main(String[] args) {
 		String str1="abcd";

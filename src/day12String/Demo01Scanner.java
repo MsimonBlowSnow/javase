@@ -3,26 +3,26 @@ package day12String;
 import java.util.Scanner;
 
 /*1.Scanner
- 	*¹¹ÔìScanner(InputStream); 
- 	*ÊäÈë·½·¨ nextInt,nextString(ºÍnextÒ»Ñù)£¬next(Ä¬ÈÏnextString)£¬nextLine()
- 	*ÅĞ¶Ï·½·¨£¬hasnextInt 
+ 	*æ„é€ Scanner(InputStream); 
+ 	*è¾“å…¥æ–¹æ³• nextInt,nextString(å’Œnextä¸€æ ·)ï¼Œnext(é»˜è®¤nextString)ï¼ŒnextLine()
+ 	*åˆ¤æ–­æ–¹æ³•ï¼ŒhasnextInt 
  * */
 public class Demo01Scanner {
 	public static void main(String[] args) {
 		Scanner sc= new Scanner(System.in);
-		//Èç¹û²»ÅĞ¶Ï£¬¿ÉÄÜÊäÈëÒ»¸ö·Çintµ¼ÖÂÅ×³öInputMismatchExceptionÒì³£
+		//å¦‚æœä¸åˆ¤æ–­ï¼Œå¯èƒ½è¾“å…¥ä¸€ä¸ªéintå¯¼è‡´æŠ›å‡ºInputMismatchExceptionå¼‚å¸¸
 		/*
 		 * try { 
 		 * 		int a=sc.nextInt(); System.out.println(a); 
 		 * } catch (Exception e) { 
 		 * //TODO Auto-generated catch block 
-		 * System.out.println("³ö´íÁË"); }
+		 * System.out.println("å‡ºé”™äº†"); }
 		 */
 		
 		if (sc.hasNextInt()) {
 			int a= sc.nextInt();
 		}else {
-			System.out.println("³ö´íÁË");
+			System.out.println("å‡ºé”™äº†");
 		}
 	}
 }

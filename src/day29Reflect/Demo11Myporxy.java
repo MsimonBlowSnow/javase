@@ -12,9 +12,9 @@ public class Demo11Myporxy implements InvocationHandler {
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		System.out.println("¼ì²éÈ¨ÏŞ");
+		System.out.println("æ£€æŸ¥æƒé™");
 		method.invoke(obj);
-		System.out.println("Ìá½»ÈÕÖ¾");
+		System.out.println("æäº¤æ—¥å¿—");
 		return null;
 	}
 }

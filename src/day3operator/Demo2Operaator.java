@@ -2,8 +2,8 @@ package day3operator;
 
 public class Demo2Operaator {
 	public static void main(String[] args) {
-		/**ÈıÄ¿ÔËËã·û
-		 * ()£¿a:b
+		/**ä¸‰ç›®è¿ç®—ç¬¦
+		 * ()ï¼Ÿa:b
 		 * */
 		int a=10;
 		int b=20;
@@ -12,7 +12,7 @@ public class Demo2Operaator {
 		System.out.println(a<b?a=b:(c=a));
 		
 		int max;
-		/*ÀûÓÃÈıÄ¿ÔËËã·û±È´óĞ¡ */
+		/*åˆ©ç”¨ä¸‰ç›®è¿ç®—ç¬¦æ¯”å¤§å° */
 		max=a<b?b:a;
 		max=max<c?c:max;
 		System.out.print(max);

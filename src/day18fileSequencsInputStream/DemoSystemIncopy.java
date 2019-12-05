@@ -6,15 +6,15 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintStream;
 
-/*ĞŞ¸Ä±ê×¼ÊäÈëÊä³öÁ÷È¥¿½±´Æ¬
- * ¿ª·¢²»ÍÆ¼öÊ¹ÓÃ
+/*ä¿®æ”¹æ ‡å‡†è¾“å…¥è¾“å‡ºæµå»æ‹·è´ç‰‡
+ * å¼€å‘ä¸æ¨èä½¿ç”¨
  * */
 public class DemoSystemIncopy {
 	public static void main(String[] args) throws IOException {
-		System.setIn(new FileInputStream("c.txt"));//¸Ä±ä±ê×¼ÊäÈëÁ÷
-		System.setOut(new PrintStream("a.txt"));//¸Ä±ä±ê×¼Êä³öÁ÷
+		System.setIn(new FileInputStream("c.txt"));//æ”¹å˜æ ‡å‡†è¾“å…¥æµ
+		System.setOut(new PrintStream("a.txt"));//æ”¹å˜æ ‡å‡†è¾“å‡ºæµ
 		byte[] a= new byte[1024*8];
-		int len;//¼ÇÂ¼ÓĞĞ§³¤¶È
+		int len;//è®°å½•æœ‰æ•ˆé•¿åº¦
 		InputStream is=System.in; 
 		PrintStream ps=System.out;
 		while((len=is.read(a))!=-1) {

@@ -1,13 +1,13 @@
 package jdks;
-/*jdk18½Ó¿ÚÀïÃæÌá¹©defaultĞŞÊÎ½Ó¿ÚÀïÃæµÄ·Ç¾²Ì¬·Ç³éÏó·½·¨
+/*jdk18æ¥å£é‡Œé¢æä¾›defaultä¿®é¥°æ¥å£é‡Œé¢çš„éé™æ€éæŠ½è±¡æ–¹æ³•
 *
 */
 public interface jdk {
 	public default void HelloMMP() {
-		System.out.println("ºÃÄãÂèµÄ±Æ");
+		System.out.println("å¥½ä½ å¦ˆçš„é€¼");
 	}
 	
 	public static void say() {
-		System.out.println("ÄãºÃ");
+		System.out.println("ä½ å¥½");
 	}
 }

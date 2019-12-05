@@ -1,5 +1,5 @@
-package Ã¶¾ÙÀà;
-//Ïàµ±ÓëWeek01
+package æšä¸¾ç±»;
+//ç›¸å½“ä¸Week01
 public enum Week11 {
 	MON,TUES,WED;
 }

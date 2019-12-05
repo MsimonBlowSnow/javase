@@ -3,18 +3,18 @@ package day13regx;
 import java.math.BigInteger;
 import java.util.Arrays;
 
-/* A:BigIntegerµÄ¸ÅÊö
-* ¿ÉÒÔÈÃ³¬¹ıInteger·¶Î§ÄÚµÄÊı¾İ½øĞĞÔËËã
-* B:¹¹Ôì·½·¨
+/* A:BigIntegerçš„æ¦‚è¿°
+* å¯ä»¥è®©è¶…è¿‡IntegerèŒƒå›´å†…çš„æ•°æ®è¿›è¡Œè¿ç®—
+* B:æ„é€ æ–¹æ³•
 * public BigInteger(String val)
-* C:³ÉÔ±·½·¨
+* C:æˆå‘˜æ–¹æ³•
 * public BigInteger add(BigInteger val)
 * public BigInteger subtract(BigInteger val)
 * public BigInteger multiply(BigInteger val)
 * public BigInteger divide(BigInteger val)
 * public BigInteger[] divideAndRemainder(BigInteger val)
 *
-*BigInteger µ±longºÍint²»ÄÜ´æ·ÅÕâÃ´¶àµÄÊı×ÖÊÇ£¬¿ÉÒÔÓÃBigIntegerºÜ´óµÄÊı×Ö
+*BigInteger å½“longå’Œintä¸èƒ½å­˜æ”¾è¿™ä¹ˆå¤šçš„æ•°å­—æ˜¯ï¼Œå¯ä»¥ç”¨BigIntegerå¾ˆå¤§çš„æ•°å­—
 */
 
 
@@ -22,10 +22,10 @@ public class DemoBigInteger {
 	public static void main(String[] args) {
 		BigInteger a=new BigInteger("100");
 		BigInteger b=new BigInteger("50");
-		System.out.println(a.add(b));//¼Ó·¨
-		System.out.println(a.subtract(b));//¼õ·¨
-		System.out.println(a.multiply(b));//³Ë·¨
-		System.out.println(a.divide(b));//³ı·¨
+		System.out.println(a.add(b));//åŠ æ³•
+		System.out.println(a.subtract(b));//å‡æ³•
+		System.out.println(a.multiply(b));//ä¹˜æ³•
+		System.out.println(a.divide(b));//é™¤æ³•
 		BigInteger[] c=a.divideAndRemainder(b);
 		System.out.println(Arrays.toString(c));
 	}

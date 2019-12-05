@@ -81,10 +81,10 @@ public class GUI extends Frame{
 	public void south() {
 		Panel southPanel =new Panel();
 		tf=new  TextField(15);
-		clearButton=new Button("ÇåÆÁ");
-		sendButton =new Button("·¢ËÍ");
-		shakeButton =new Button("Õñ¶¯");
-		logButton=new Button("¼ÇÂ¼"); 
+		clearButton=new Button("æ¸…å±");
+		sendButton =new Button("å‘é€");
+		shakeButton =new Button("æŒ¯åŠ¨");
+		logButton=new Button("è®°å½•"); 
 		southPanel.add(tf);
 		southPanel.add(sendButton);
 		southPanel.add(logButton);

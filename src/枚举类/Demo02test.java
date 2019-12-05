@@ -1,27 +1,27 @@
-package Ã¶¾ÙÀà;
-/* A:°¸ÀıÑİÊ¾
-* ¶¨ÒåÃ¶¾ÙÀàÒªÓÃ¹Ø¼ü×Öenum
-* ËùÓĞÃ¶¾ÙÀà¶¼ÊÇEnumµÄ×ÓÀà
-* Ã¶¾ÙÀàµÄµÚÒ»ĞĞÉÏ±ØĞëÊÇÃ¶¾ÙÏî£¬×îºóÒ»¸öÃ¶¾ÙÏîºóµÄ·ÖºÅÊÇ¿ÉÒÔÊ¡ÂÔµÄ£¬µ«ÊÇÈç¹ûÃ¶¾ÙÀàÓĞÆäËûµÄ¶«Î÷£¬Õâ¸ö·ÖºÅ¾Í²»ÄÜÊ¡ÂÔ¡£½¨Òé²»ÒªÊ¡ÂÔ
-* Ã¶¾ÙÀà¿ÉÒÔÓĞ¹¹ÔìÆ÷£¬µ«±ØĞëÊÇprivateµÄ£¬ËüÄ¬ÈÏµÄÒ²ÊÇprivateµÄ¡£
-* Ã¶¾ÙÀàÒ²¿ÉÒÔÓĞ³éÏó·½·¨£¬µ«ÊÇÃ¶¾ÙÏî±ØĞëÖØĞ´¸Ã·½·¨
-* Ã¶¾ÙÔÚswitchÓï¾äÖĞµÄÊ¹ÓÃ*/
+package æšä¸¾ç±»;
+/* A:æ¡ˆä¾‹æ¼”ç¤º
+* å®šä¹‰æšä¸¾ç±»è¦ç”¨å…³é”®å­—enum
+* æ‰€æœ‰æšä¸¾ç±»éƒ½æ˜¯Enumçš„å­ç±»
+* æšä¸¾ç±»çš„ç¬¬ä¸€è¡Œä¸Šå¿…é¡»æ˜¯æšä¸¾é¡¹ï¼Œæœ€åä¸€ä¸ªæšä¸¾é¡¹åçš„åˆ†å·æ˜¯å¯ä»¥çœç•¥çš„ï¼Œä½†æ˜¯å¦‚æœæšä¸¾ç±»æœ‰å…¶ä»–çš„ä¸œè¥¿ï¼Œè¿™ä¸ªåˆ†å·å°±ä¸èƒ½çœç•¥ã€‚å»ºè®®ä¸è¦çœç•¥
+* æšä¸¾ç±»å¯ä»¥æœ‰æ„é€ å™¨ï¼Œä½†å¿…é¡»æ˜¯privateçš„ï¼Œå®ƒé»˜è®¤çš„ä¹Ÿæ˜¯privateçš„ã€‚
+* æšä¸¾ç±»ä¹Ÿå¯ä»¥æœ‰æŠ½è±¡æ–¹æ³•ï¼Œä½†æ˜¯æšä¸¾é¡¹å¿…é¡»é‡å†™è¯¥æ–¹æ³•
+* æšä¸¾åœ¨switchè¯­å¥ä¸­çš„ä½¿ç”¨*/
 public class Demo02test {
 	public static void main(String[] args) {
-		//Ã¶¾ÙµÄµÚÒ»ÖÖ·½Ê½
+		//æšä¸¾çš„ç¬¬ä¸€ç§æ–¹å¼
 		method();
-		//µÚ¶şÖÖÃ¶¾ÙµÄ·½·¨
+		//ç¬¬äºŒç§æšä¸¾çš„æ–¹æ³•
 		method2();
-		//µÚÈıÖÖÃ¶¾Ù·½·¨
+		//ç¬¬ä¸‰ç§æšä¸¾æ–¹æ³•
 		method3();
 		Week13 monWeek1= Week13.MON;
 		switch (monWeek1) {
 		case MON:
-			System.out.println("ĞÇÆÚÒ»");break;
+			System.out.println("æ˜ŸæœŸä¸€");break;
 		case TUES:
-			System.out.println("ĞÇÆÚ¶ş");break;
+			System.out.println("æ˜ŸæœŸäºŒ");break;
 		case WED:
-			System.out.println("ĞÇÆÚÈı");break;
+			System.out.println("æ˜ŸæœŸä¸‰");break;
 		default:
 			throw new IllegalArgumentException("Unexpected value: " + monWeek1);
 		}
@@ -41,7 +41,7 @@ public class Demo02test {
 		System.out.println(monWeek1.getName());
 	}
 	
-	//×Ô¶¨ÒåÃ¶¾ÙµÄµÚÒ»ÖÖ·½Ê½
+	//è‡ªå®šä¹‰æšä¸¾çš„ç¬¬ä¸€ç§æ–¹å¼
 	private static void method() {
 		Week11 monWeek1= Week11.MON;
 		Week11 tuesWeek1= Week11.TUES;

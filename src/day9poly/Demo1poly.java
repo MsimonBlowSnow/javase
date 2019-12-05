@@ -1,37 +1,37 @@
 package day9poly;
-/*¶àÌ¬£¬¸¸Àà±äÁ¿Ö¸Ïò×ÓÀà¶ÔÏó
- * 1.³ÉÔ±±äÁ¿
- * ±àÒë¿´¸¸Àà£¬ÔËĞĞ¿´¸¸Àà¡£
- * 2.³ÉÔ±·½·¨
- * ±àÒë¿´¸¸Àà£¬ÔËĞĞ¿´×ÓÀà¡£
- * 3.static·½·¨
- * ±àÒë¿´¸¸Àà£¬ÔËĞĞ¿´¸¸Àà¡£
+/*å¤šæ€ï¼Œçˆ¶ç±»å˜é‡æŒ‡å‘å­ç±»å¯¹è±¡
+ * 1.æˆå‘˜å˜é‡
+ * ç¼–è¯‘çœ‹çˆ¶ç±»ï¼Œè¿è¡Œçœ‹çˆ¶ç±»ã€‚
+ * 2.æˆå‘˜æ–¹æ³•
+ * ç¼–è¯‘çœ‹çˆ¶ç±»ï¼Œè¿è¡Œçœ‹å­ç±»ã€‚
+ * 3.staticæ–¹æ³•
+ * ç¼–è¯‘çœ‹çˆ¶ç±»ï¼Œè¿è¡Œçœ‹çˆ¶ç±»ã€‚
  * */
 public class Demo1poly {
 	public static void main(String[] args) {
 		Animal a=new Cat();
-		a.eat();//³ÔÓã,×ÓÀà
-		System.out.println(a.num);//10,¸¸Àà
-		a.sleep();//Ë¯¾õ£¬¸¸Àà
+		a.eat();//åƒé±¼,å­ç±»
+		System.out.println(a.num);//10,çˆ¶ç±»
+		a.sleep();//ç¡è§‰ï¼Œçˆ¶ç±»
 	}
 }
 
 class Animal{
 	int num=10;
 	public void eat() {
-		System.out.println("³Ô¶«Î÷");
+		System.out.println("åƒä¸œè¥¿");
 	}
 	public static void sleep() {
-		System.out.println("Ë¯¾õ");
+		System.out.println("ç¡è§‰");
 	}
 }
 
 class Cat extends Animal{
 	int num=20;
 	public void eat() {
-		System.out.println("³ÔÓã");
+		System.out.println("åƒé±¼");
 	}
 	public static void sleep() {
-		System.out.println("²»Ë¯¾õ");
+		System.out.println("ä¸ç¡è§‰");
 	}
 }

@@ -1,4 +1,4 @@
-package day28jdbc;
+﻿package day28jdbc;
 
 public class MingBean {
 	private String sex1;

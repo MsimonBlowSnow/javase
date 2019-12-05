@@ -3,19 +3,19 @@ package day21IOStreamRead;
 import java.io.FileReader;
 import java.io.IOException;
 
-/* 1.×Ö·ûÁ÷ÊÇÊ²Ã´
-* ×Ö·ûÁ÷ÊÇ¿ÉÒÔÖ±½Ó¶ÁĞ´×Ö·ûµÄIOÁ÷
-* ×Ö·ûÁ÷¶ÁÈ¡×Ö·û, ¾ÍÒªÏÈ¶ÁÈ¡µ½×Ö½ÚÊı¾İ, È»ºó×ªÎª×Ö·û. Èç¹ûÒªĞ´³ö×Ö·û, ĞèÒª°Ñ×Ö·û×ªÎª×Ö½ÚÔÙĞ´³ö.    
+/* 1.å­—ç¬¦æµæ˜¯ä»€ä¹ˆ
+* å­—ç¬¦æµæ˜¯å¯ä»¥ç›´æ¥è¯»å†™å­—ç¬¦çš„IOæµ
+* å­—ç¬¦æµè¯»å–å­—ç¬¦, å°±è¦å…ˆè¯»å–åˆ°å­—èŠ‚æ•°æ®, ç„¶åè½¬ä¸ºå­—ç¬¦. å¦‚æœè¦å†™å‡ºå­—ç¬¦, éœ€è¦æŠŠå­—ç¬¦è½¬ä¸ºå­—èŠ‚å†å†™å‡º.    
 * 2.FileReader
-* FileReaderÀàµÄread()·½·¨¿ÉÒÔ°´ÕÕ×Ö·û´óĞ¡¶ÁÈ¡
+* FileReaderç±»çš„read()æ–¹æ³•å¯ä»¥æŒ‰ç…§å­—ç¬¦å¤§å°è¯»å–
 * 
-	FileReader fr = new FileReader("aaa.txt");				//´´½¨ÊäÈëÁ÷¶ÔÏó,¹ØÁªaaa.txt
+	FileReader fr = new FileReader("aaa.txt");				//åˆ›å»ºè¾“å…¥æµå¯¹è±¡,å…³è”aaa.txt
 	int ch;
-	while((ch = fr.read()) != -1) {							//½«¶Áµ½µÄ×Ö·û¸³Öµ¸øch
-		System.out.println((char)ch);						//½«¶Áµ½µÄ×Ö·ûÇ¿×ªºó´òÓ¡
+	while((ch = fr.read()) != -1) {							//å°†è¯»åˆ°çš„å­—ç¬¦èµ‹å€¼ç»™ch
+		System.out.println((char)ch);						//å°†è¯»åˆ°çš„å­—ç¬¦å¼ºè½¬åæ‰“å°
 	}
 	
-	fr.close();												//¹ØÁ÷ 
+	fr.close();												//å…³æµ 
 /
 public class DemoIOStraamRead {
 	public static void main(String[] args) {
@@ -25,10 +25,10 @@ public class DemoIOStraamRead {
 */
 public class DemoIOStraamRead {
 	public static void main(String[] args) throws IOException {
-		FileReader fr = new FileReader("a.txt");				//´´½¨ÊäÈëÁ÷¶ÔÏó,¹ØÁªaaa.txt
+		FileReader fr = new FileReader("a.txt");				//åˆ›å»ºè¾“å…¥æµå¯¹è±¡,å…³è”aaa.txt
 		int ch;
-		while((ch = fr.read()) != -1) {							//½«¶Áµ½µÄ×Ö·û¸³Öµ¸øch
-			System.out.println((char)ch);						//½«¶Áµ½µÄ×Ö·ûÇ¿×ªºó´òÓ¡
+		while((ch = fr.read()) != -1) {							//å°†è¯»åˆ°çš„å­—ç¬¦èµ‹å€¼ç»™ch
+			System.out.println((char)ch);						//å°†è¯»åˆ°çš„å­—ç¬¦å¼ºè½¬åæ‰“å°
 		}
 		fr.close();
 	}

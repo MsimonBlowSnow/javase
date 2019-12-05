@@ -7,42 +7,42 @@ public class Demo1Operator {
 		int b=20;
 		int c=30;
 		
-		//& Óë
-		System.out.println("& Óë:");
+		//& ä¸
+		System.out.println("& ä¸:");
 		System.out.println(a<b&b<c);//true true&true
 		System.out.println(a<b&b>c);//false true&false
 		System.out.println(a>b&b<c);//false false&true
 		System.out.println(a>b&b>c);//false false&false		
 		
 		
-		// | »ò
-		System.out.println("| »ò:"); 
+		// | æˆ–
+		System.out.println("| æˆ–:"); 
 		System.out.println(a<b|b<c);//true true|true
 		System.out.println(a<b|b>c);//true true|false
 		System.out.println(a>b|b<c);//true false|true
 		System.out.println(a>b|b>c);//false false|false		
 		
-		// ^ Òì»ò
-		System.out.println("^ Òì»ò:");
+		// ^ å¼‚æˆ–
+		System.out.println("^ å¼‚æˆ–:");
 		System.out.println(a<b^b<c);//false true|true
 		System.out.println(a<b^b>c);//true true|false
 		System.out.println(a>b^b<c);//true false|true
 		System.out.println(a>b^b>c);//false false|false
 		
-		// ! ·Ç
-		System.out.println("! ·Ç");
+		// ! é
+		System.out.println("! é");
 		System.out.println(!true);//false
 		System.out.println(!false);//true
 		
-		//&& ¶ÌÂ·Óë
-		System.out.println("&& ¶ÌÂ·Óë");
+		//&& çŸ­è·¯ä¸
+		System.out.println("&& çŸ­è·¯ä¸");
 		System.out.println((a++)>b&&(a++)>c);//
-		System.out.println(a);//a=11  a++>b false ËùÒÔ²»ÓÃÖ´ĞĞ(a++)>c ²»Ö´ĞĞ¡£ 
+		System.out.println(a);//a=11  a++>b false æ‰€ä»¥ä¸ç”¨æ‰§è¡Œ(a++)>c ä¸æ‰§è¡Œã€‚ 
 		
-		//|| ¶ÌÂ·»ò
-		System.out.println("|| ¶ÌÂ·»ò");
+		//|| çŸ­è·¯æˆ–
+		System.out.println("|| çŸ­è·¯æˆ–");
 		System.out.println((a++)<b||(a++)>c);
-		System.out.println(a);//a=11 (a++)<b Îªtrue ²»Ö´ĞĞ
+		System.out.println(a);//a=11 (a++)<b ä¸ºtrue ä¸æ‰§è¡Œ
 		
 		
 	}

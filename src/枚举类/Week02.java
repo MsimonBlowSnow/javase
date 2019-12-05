@@ -1,9 +1,9 @@
-package Ã¶¾ÙÀà;
+package æžšä¸¾ç±»;
 
 public class Week02 {
-	public static final Week02 MON=new Week02("ÐÇÆÚÒ»");
-	public static  final Week02 TUES=new Week02("ÐÇÆÚ¶þ");
-	public static final Week02 WED=new Week02("ÐÇÆÚÈý");
+	public static final Week02 MON=new Week02("æ˜ŸæœŸä¸€");
+	public static  final Week02 TUES=new Week02("æ˜ŸæœŸäºŒ");
+	public static final Week02 WED=new Week02("æ˜ŸæœŸä¸‰");
 	private String name;
 	private Week02(String name){
 		this.name=name;

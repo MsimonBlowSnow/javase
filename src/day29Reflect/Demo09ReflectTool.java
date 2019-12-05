@@ -5,8 +5,8 @@ import java.lang.reflect.Field;
 public class Demo09ReflectTool {
 	public static void setvalues(Object aobject,String fieldString,Object value) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		Class aClass =aobject.getClass();
-		Field afiled=aClass.getDeclaredField(fieldString); //±©Á¦·´Éä
-		afiled.setAccessible(true);		//È¥´¦È¨ÏŞ
-		afiled.set(aobject,value);		//ÉèÖÃÖµ
+		Field afiled=aClass.getDeclaredField(fieldString); //æš´åŠ›åå°„
+		afiled.setAccessible(true);		//å»å¤„æƒé™
+		afiled.set(aobject,value);		//è®¾ç½®å€¼
 	}
 }

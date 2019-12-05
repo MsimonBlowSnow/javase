@@ -12,7 +12,7 @@ public class DemoJiSuanFile {
 	public static void main(String[] args) {
 		String file;
 		Scanner sc=new Scanner(System.in); 
-		System.out.println("请输入你要计算的文件:");
+		System.out.println("璇疯緭鍏ヤ綘瑕佽绠楃殑鏂囦欢:");
 		file=sc.nextLine();
 		long big=0;
 		if(file!=null) {

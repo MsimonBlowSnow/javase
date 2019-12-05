@@ -1,7 +1,7 @@
 package day10package;
 
-/*ÄäÃûÄÚ²¿ÀàÊÊÓÃÓÚÖØĞ´Ò»¸ö·½·¨,ÇÒ²»ÄÜÏòÏÂ×ªĞÍ¡£
- * ÀıÈç
+/*åŒ¿åå†…éƒ¨ç±»é€‚ç”¨äºé‡å†™ä¸€ä¸ªæ–¹æ³•,ä¸”ä¸èƒ½å‘ä¸‹è½¬å‹ã€‚
+ * ä¾‹å¦‚
  * 
  * */
 public class DemoNoNameClass1 {
@@ -44,14 +44,14 @@ class OuterNoname2{
 			}
 		}.print2();
 		
-		Inter2 a=new Inter2() {//¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó
+		Inter2 a=new Inter2() {//çˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡
 			@Override
 			public void print1() {
-				System.out.println("¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó£ºprint1");
+				System.out.println("çˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡ï¼šprint1");
 			}
 			@Override
 			public void print2() {
-				System.out.println("¸¸ÀàÒıÓÃÖ¸Ïò×ÓÀà¶ÔÏó£ºprint2");
+				System.out.println("çˆ¶ç±»å¼•ç”¨æŒ‡å‘å­ç±»å¯¹è±¡ï¼šprint2");
 			}
 			public void print3() {
 				System.out.println("print3");
@@ -59,6 +59,6 @@ class OuterNoname2{
 		};
 		a.print1();
 		a.print2();
-		//a.print3();//´íÎó¸¸ÀàÒıÓÃÖ¸×ÓÀà¶ÔÏó£¬²»ÄÜÏòÏÂ×ªĞÍ
+		//a.print3();//é”™è¯¯çˆ¶ç±»å¼•ç”¨æŒ‡å­ç±»å¯¹è±¡ï¼Œä¸èƒ½å‘ä¸‹è½¬å‹
 	}
 }

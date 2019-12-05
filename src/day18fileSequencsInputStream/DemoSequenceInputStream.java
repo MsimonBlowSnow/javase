@@ -10,35 +10,35 @@ import java.util.Enumeration;
 import java.util.Vector;
 
 
-/* 1.Ê²Ã´ÊÇĞòÁĞÁ÷
-	* ĞòÁĞÁ÷¿ÉÒÔ°Ñ¶à¸ö×Ö½ÚÊäÈëÁ÷ÕûºÏ³ÉÒ»¸ö, ´ÓĞòÁĞÁ÷ÖĞ¶ÁÈ¡Êı¾İÊ±, ½«´Ó±»ÕûºÏµÄµÚÒ»¸öÁ÷¿ªÊ¼¶Á, ¶ÁÍêÒ»¸öÖ®ºó¼ÌĞø¶ÁµÚ¶ş¸ö, ÒÔ´ËÀàÍÆ.
-* 2.Ê¹ÓÃ·½Ê½
-* 2.1¶à¸öÊäÈëÁ÷	
+/* 1.ä»€ä¹ˆæ˜¯åºåˆ—æµ
+	* åºåˆ—æµå¯ä»¥æŠŠå¤šä¸ªå­—èŠ‚è¾“å…¥æµæ•´åˆæˆä¸€ä¸ª, ä»åºåˆ—æµä¸­è¯»å–æ•°æ®æ—¶, å°†ä»è¢«æ•´åˆçš„ç¬¬ä¸€ä¸ªæµå¼€å§‹è¯», è¯»å®Œä¸€ä¸ªä¹‹åç»§ç»­è¯»ç¬¬äºŒä¸ª, ä»¥æ­¤ç±»æ¨.
+* 2.ä½¿ç”¨æ–¹å¼
+* 2.1å¤šä¸ªè¾“å…¥æµ	
 	*SequenceInputStream(Enumeration<? extends InputStream> e) 
-    *Í¨¹ı¼Ç×¡²ÎÊıÀ´³õÊ¼»¯ĞÂ´´½¨µÄ SequenceInputStream£¬
-    *¸Ã²ÎÊı±ØĞëÊÇÉú³ÉÔËĞĞÊ±ÀàĞÍÎª InputStream ¶ÔÏóµÄ Enumeration ĞÍ²ÎÊı¡£ 
-*2.2Á½¸öÊäÈëÁ÷
+    *é€šè¿‡è®°ä½å‚æ•°æ¥åˆå§‹åŒ–æ–°åˆ›å»ºçš„ SequenceInputStreamï¼Œ
+    *è¯¥å‚æ•°å¿…é¡»æ˜¯ç”Ÿæˆè¿è¡Œæ—¶ç±»å‹ä¸º InputStream å¯¹è±¡çš„ Enumeration å‹å‚æ•°ã€‚ 
+*2.2ä¸¤ä¸ªè¾“å…¥æµ
 	*SequenceInputStream(InputStream s1, InputStream s2) 
-    *Í¨¹ı¼Ç×¡ÕâÁ½¸ö²ÎÊıÀ´³õÊ¼»¯ĞÂ´´½¨µÄ SequenceInputStream
-    *£¨½«°´Ë³Ğò¶ÁÈ¡ÕâÁ½¸ö²ÎÊı£¬ÏÈ¶ÁÈ¡ s1£¬È»ºó¶ÁÈ¡ s2£©£¬
-    *ÒÔÌá¹©´Ó´Ë SequenceInputStream ¶ÁÈ¡µÄ×Ö½Ú¡£  
-*3.Èç¹ûÓĞÈı¸öÁ÷¶ÔÏó¾ÍÓÃsequenceÁ¬½ÓÁ½¸öÏÈ(²»ÍÆ¼ö£¬Ì«Âé·³ÁË)
-*ÔÚÓÃÁ¬½ÓÁËÁ½¸öµÄ¶ÔÏóÁ÷Á¬½ÓµÚÈı¸ö
-*Èç£º
+    *é€šè¿‡è®°ä½è¿™ä¸¤ä¸ªå‚æ•°æ¥åˆå§‹åŒ–æ–°åˆ›å»ºçš„ SequenceInputStream
+    *ï¼ˆå°†æŒ‰é¡ºåºè¯»å–è¿™ä¸¤ä¸ªå‚æ•°ï¼Œå…ˆè¯»å– s1ï¼Œç„¶åè¯»å– s2ï¼‰ï¼Œ
+    *ä»¥æä¾›ä»æ­¤ SequenceInputStream è¯»å–çš„å­—èŠ‚ã€‚  
+*3.å¦‚æœæœ‰ä¸‰ä¸ªæµå¯¹è±¡å°±ç”¨sequenceè¿æ¥ä¸¤ä¸ªå…ˆ(ä¸æ¨èï¼Œå¤ªéº»çƒ¦äº†)
+*åœ¨ç”¨è¿æ¥äº†ä¸¤ä¸ªçš„å¯¹è±¡æµè¿æ¥ç¬¬ä¸‰ä¸ª
+*å¦‚ï¼š
 	*FileInputStream fis= new FileInputStream("src/day18fileSequencsInputStream/a.txt");
 	FileInputStream fis1=new FileInputStream("src/day18fileSequencsInputStream/c.txt");
 	FileInputStream fis2=new FileInputStream("src/day18fileSequencsInputStream/v.txt");
-		//´´½¨Á¬½ÓÊäÈëÁ÷¶ÔÏó
+		//åˆ›å»ºè¿æ¥è¾“å…¥æµå¯¹è±¡
 	SequenceInputStream  sis= new SequenceInputStream(fis,fis1);
 	SequenceInputStream  sis1= new SequenceInputStream(sis,fis2);
 */
 public class DemoSequenceInputStream {
 	public static void main(String[] args) throws IOException {
-		//ÆÕÍ¨Çé¿öÏÂµÄÁ½¸öinputStream
+		//æ™®é€šæƒ…å†µä¸‹çš„ä¸¤ä¸ªinputStream
 		//method();
-		//Í¨¹ısequenceInputStreamÕûºÏÁ½¸öÊäÈëÁ÷
+		//é€šè¿‡sequenceInputStreamæ•´åˆä¸¤ä¸ªè¾“å…¥æµ
 		//methodSequenceIS();
-		//Í¨¹ØsequenceInputStream¹¹Ôì·½·¨Á¬½ÓÈı¸ö¶ÔÏó
+		//é€šå…³sequenceInputStreamæ„é€ æ–¹æ³•è¿æ¥ä¸‰ä¸ªå¯¹è±¡
 		mehtodSequence3();
 	}
 
@@ -57,7 +57,7 @@ public class DemoSequenceInputStream {
 		while((flag=sis.read())!=-1) {
 			fos.write(flag);
 		}
-		sis.close();//sis¹Ø±ÕÁË£¬Èı¸öÊä³öÁ÷×ÔÈ»¹Ø±Õ
+		sis.close();//siså…³é—­äº†ï¼Œä¸‰ä¸ªè¾“å‡ºæµè‡ªç„¶å…³é—­
 		fos.close();
 	}
 
@@ -65,14 +65,14 @@ public class DemoSequenceInputStream {
 		//SequenceInputStream
 		FileInputStream fis= new FileInputStream("src/day18fileSequencsInputStream/a.txt");
 		FileInputStream fis1=new FileInputStream("src/day18fileSequencsInputStream/c.txt");
-		//´´½¨Á¬½ÓÊäÈëÁ÷¶ÔÏó
+		//åˆ›å»ºè¿æ¥è¾“å…¥æµå¯¹è±¡
 		SequenceInputStream  sis= new SequenceInputStream(fis,fis1);
 		FileOutputStream fos=new FileOutputStream("src/day18fileSequencsInputStream/acopy.txt");
 		int flag=0;
 		while((flag=sis.read())!=-1) {
 			fos.write(flag);
 		}
-		sis.close();//sis¹Ø±ÕÁË£¬Á½¸öÊä³öÁ÷×ÔÈ»¹Ø±Õ
+		sis.close();//siså…³é—­äº†ï¼Œä¸¤ä¸ªè¾“å‡ºæµè‡ªç„¶å…³é—­
 		fos.close();
 	}
 

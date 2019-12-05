@@ -1,4 +1,4 @@
-package ÊÊÅäÆ÷Éè¼ÆÄ£Ê½;
+package é€‚é…å™¨è®¾è®¡æ¨¡å¼;
 
 public interface Ming {
 	public abstract  void eat();

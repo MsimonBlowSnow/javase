@@ -7,19 +7,19 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
-/*1.·¢ËÍSend
-	* ´´½¨DatagramSocket, Ëæ»ú¶Ë¿ÚºÅ
-	* ´´½¨DatagramPacket, Ö¸¶¨Êı¾İ, ³¤¶È, µØÖ·, ¶Ë¿Ú
-	* Ê¹ÓÃDatagramSocket·¢ËÍDatagramPacket
-* 2.½ÓÊÕ·½»ñÈ¡ipºÍ¶Ë¿ÚºÅ
+/*1.å‘é€Send
+	* åˆ›å»ºDatagramSocket, éšæœºç«¯å£å·
+	* åˆ›å»ºDatagramPacket, æŒ‡å®šæ•°æ®, é•¿åº¦, åœ°å€, ç«¯å£
+	* ä½¿ç”¨DatagramSocketå‘é€DatagramPacket
+* 2.æ¥æ”¶æ–¹è·å–ipå’Œç«¯å£å·
 	* String ip = packet.getAddress().getHostAddress();
 	* int port = packet.getPort();
 */
 public class Day01send {
 	public static void main(String[] args) throws IOException {
-		String string="ÄêÇáÈË£¬may force be with you!"; //´´½¨·¢ËÍĞÅÏ¢
-		DatagramSocket dSocket=new DatagramSocket();  //´´½¨Socket¶ÔÏó
-		//´´½¨Ò»¸öpacketµÄ°ü£¬·¢ËÍµ½127.0.0.1µÄ9999¶Ë¿Ú
+		String string="å¹´è½»äººï¼Œmay force be with you!"; //åˆ›å»ºå‘é€ä¿¡æ¯
+		DatagramSocket dSocket=new DatagramSocket();  //åˆ›å»ºSocketå¯¹è±¡
+		//åˆ›å»ºä¸€ä¸ªpacketçš„åŒ…ï¼Œå‘é€åˆ°127.0.0.1çš„9999ç«¯å£
 		DatagramPacket dpackPacket =new DatagramPacket(string.getBytes(),
 				string.getBytes().length,InetAddress.getByName("127.0.0.1"),9999);
 		dSocket.send(dpackPacket);

@@ -2,22 +2,22 @@ package day25thread;
 
 import java.awt.TexturePaint;
 
-/** ¶à¸öÏß³ÌÍ¨ÐÅµÄÎÊÌâ
-	* notify()·½·¨ÊÇËæ»ú»½ÐÑÒ»¸öÏß³Ì
-	* notifyAll()·½·¨ÊÇ»½ÐÑËùÓÐÏß³Ì
-	* JDK5Ö®Ç°ÎÞ·¨»½ÐÑÖ¸¶¨µÄÒ»¸öÏß³Ì
-	* Èç¹û¶à¸öÏß³ÌÖ®¼äÍ¨ÐÅ, ÐèÒªÊ¹ÓÃnotifyAll()Í¨ÖªËùÓÐÏß³Ì, ÓÃwhileÀ´·´¸´ÅÐ¶ÏÌõ¼þ
+/** å¤šä¸ªçº¿ç¨‹é€šä¿¡çš„é—®é¢˜
+	* notify()æ–¹æ³•æ˜¯éšæœºå”¤é†’ä¸€ä¸ªçº¿ç¨‹
+	* notifyAll()æ–¹æ³•æ˜¯å”¤é†’æ‰€æœ‰çº¿ç¨‹
+	* JDK5ä¹‹å‰æ— æ³•å”¤é†’æŒ‡å®šçš„ä¸€ä¸ªçº¿ç¨‹
+	* å¦‚æžœå¤šä¸ªçº¿ç¨‹ä¹‹é—´é€šä¿¡, éœ€è¦ä½¿ç”¨notifyAll()é€šçŸ¥æ‰€æœ‰çº¿ç¨‹, ç”¨whileæ¥åå¤åˆ¤æ–­æ¡ä»¶
 */
-//Èý¸öÒÔÉÏµÄÏß³Ì£¬1.5°æ±¾µÄÊµÏÖ£¬²»·½±ã»½ÐÑÏß³ÌÓÐ¹Ø±ÕÁË
-/*1.Í¬²½´úÂë¿éÓÃÁËÄÇ¸ö¶ÔÏó¶ÔÏó£¬¾Íµ÷ÓÃÄÇ¸ö¶ÔÏóµÄwait()
- * 2.ÎªÊ²Ã´wait ºÍnotify()·½·¨Òª¶¨ÒåÔÚObjectÀïÃæ
- 	*objectÊÇËùÓÐ¶ÔÏóµÄ³¬Àà£¬Ëù¶ÔÏó¿ÉÒÔÈÎÒâ¶ÔÏó
- *3.sleepºÍwaitµÄÇø±ð
- 	*1.sleepÊÇ±ØÐë´«Èë²ÎÊýµ½ÁËÊ±¼ä¾ÍÐÑ¹ýÀ´£¬
- 	*wait()´«Èë²ÎÊýÔÚÊ±¼äµ½ÁË»áµÈ´ý£¬²»´«²ÎÊý¾Í»áÒ»Ö±µÈ´ý£¬ÒªÓÃnotify·½·¨»½ÐÑ¡£
+//ä¸‰ä¸ªä»¥ä¸Šçš„çº¿ç¨‹ï¼Œ1.5ç‰ˆæœ¬çš„å®žçŽ°ï¼Œä¸æ–¹ä¾¿å”¤é†’çº¿ç¨‹æœ‰å…³é—­äº†
+/*1.åŒæ­¥ä»£ç å—ç”¨äº†é‚£ä¸ªå¯¹è±¡å¯¹è±¡ï¼Œå°±è°ƒç”¨é‚£ä¸ªå¯¹è±¡çš„wait()
+ * 2.ä¸ºä»€ä¹ˆwait å’Œnotify()æ–¹æ³•è¦å®šä¹‰åœ¨Objecté‡Œé¢
+ 	*objectæ˜¯æ‰€æœ‰å¯¹è±¡çš„è¶…ç±»ï¼Œæ‰€å¯¹è±¡å¯ä»¥ä»»æ„å¯¹è±¡
+ *3.sleepå’Œwaitçš„åŒºåˆ«
+ 	*1.sleepæ˜¯å¿…é¡»ä¼ å…¥å‚æ•°åˆ°äº†æ—¶é—´å°±é†’è¿‡æ¥ï¼Œ
+ 	*wait()ä¼ å…¥å‚æ•°åœ¨æ—¶é—´åˆ°äº†ä¼šç­‰å¾…ï¼Œä¸ä¼ å‚æ•°å°±ä¼šä¸€ç›´ç­‰å¾…ï¼Œè¦ç”¨notifyæ–¹æ³•å”¤é†’ã€‚
  	*
- 	*2.sleep ÊÇÕ¼ÓÃ×Ê cpu£¬Ô´ºÍËù¶ÔÏóµÄ£¬(¼´²»ÊÍ·ÅËø×ÊÔ´)
- 	*wait»áÍË³öcpuºÍËø¶ÔÏó¶ÔÏó£¬£¨¼´ÊÍ·ÅËø×ÊÔ´£©
+ 	*2.sleep æ˜¯å ç”¨èµ„ cpuï¼Œæºå’Œæ‰€å¯¹è±¡çš„ï¼Œ(å³ä¸é‡Šæ”¾é”èµ„æº)
+ 	*waitä¼šé€€å‡ºcpuå’Œé”å¯¹è±¡å¯¹è±¡ï¼Œï¼ˆå³é‡Šæ”¾é”èµ„æºï¼‰
  	* */	
 public class Demo05Notify {
 	public static void main(String[] args) {
@@ -25,7 +25,7 @@ public class Demo05Notify {
 		new Thread() {
 			public void run() {
 				synchronized (this) {
-					//¸¸ÀàÃ»ÓÐÃ»ÓÐÅ×Òì³££¬×ÓÀàÖ»ÄÜ×Ô¼º´¦Àí
+					//çˆ¶ç±»æ²¡æœ‰æ²¡æœ‰æŠ›å¼‚å¸¸ï¼Œå­ç±»åªèƒ½è‡ªå·±å¤„ç†
 					try {
 						while(true)
 							demo05.print01();
@@ -41,7 +41,7 @@ public class Demo05Notify {
 		new Thread() {
 			public void run() {
 				synchronized (this) {
-					//¸¸ÀàÃ»ÓÐÃ»ÓÐÅ×Òì³££¬×ÓÀàÖ»ÄÜ×Ô¼º´¦Àí
+					//çˆ¶ç±»æ²¡æœ‰æ²¡æœ‰æŠ›å¼‚å¸¸ï¼Œå­ç±»åªèƒ½è‡ªå·±å¤„ç†
 					try {
 						while(true)
 						demo05.print02();
@@ -57,7 +57,7 @@ public class Demo05Notify {
 		new Thread() {
 			public void run() {
 				synchronized (this) {
-					//¸¸ÀàÃ»ÓÐÃ»ÓÐÅ×Òì³££¬×ÓÀàÖ»ÄÜ×Ô¼º´¦Àí
+					//çˆ¶ç±»æ²¡æœ‰æ²¡æœ‰æŠ›å¼‚å¸¸ï¼Œå­ç±»åªèƒ½è‡ªå·±å¤„ç†
 					try {
 						while(true)
 						demo05.print03();
@@ -77,8 +77,8 @@ class Demo05{
 	public void print01() throws InterruptedException {
 		synchronized (this) {
 			while(flag!=1) {
-				//Èç¹ûÓÃif¾Í¿ÉÄÜ²»Ö´ÐÐÁË
-				this.wait();//waitÔÚÄÇÀïµÈ´ý£¬¾ÍÔÚÄÇÀïÐÑÀ´
+				//å¦‚æžœç”¨ifå°±å¯èƒ½ä¸æ‰§è¡Œäº†
+				this.wait();//waitåœ¨é‚£é‡Œç­‰å¾…ï¼Œå°±åœ¨é‚£é‡Œé†’æ¥
 			}
 			System.out.print("1");
 			System.out.print("1");
@@ -86,7 +86,7 @@ class Demo05{
 			System.out.print("1");
 			System.out.println();
 			flag=2;
-			//notifyÖ»ÄÜËæ¼´»½ÐÑÒ»¸öÏß³Ì£¬notifyAll()»½ÐÑËùÓÐµÈ´ýÏß³ÌÏß³Ì
+			//notifyåªèƒ½éšå³å”¤é†’ä¸€ä¸ªçº¿ç¨‹ï¼ŒnotifyAll()å”¤é†’æ‰€æœ‰ç­‰å¾…çº¿ç¨‹çº¿ç¨‹
 			this.notifyAll();
 		}
 	}
@@ -94,8 +94,8 @@ class Demo05{
 	public void print02() throws InterruptedException {
 		synchronized (this) {
 			while(flag!=2) {
-				//Èç¹ûÓÃif¾Í¿ÉÄÜ²»Ö´ÐÐÁË
-				this.wait();//waitÔÚÄÇÀïµÈ´ý£¬¾ÍÔÚÄÇÀïÐÑÀ´
+				//å¦‚æžœç”¨ifå°±å¯èƒ½ä¸æ‰§è¡Œäº†
+				this.wait();//waitåœ¨é‚£é‡Œç­‰å¾…ï¼Œå°±åœ¨é‚£é‡Œé†’æ¥
 			}
 			System.out.print("2");
 			System.out.print("2");
@@ -109,8 +109,8 @@ class Demo05{
 	public void print03() throws InterruptedException {
 		synchronized (this) {
 			while(flag!=3) {
-				//Èç¹ûÓÃif¾Í¿ÉÄÜ²»Ö´ÐÐÁË
-				this.wait();//waitÔÚÄÇÀïµÈ´ý£¬¾ÍÔÚÄÇÀïÐÑÀ´
+				//å¦‚æžœç”¨ifå°±å¯èƒ½ä¸æ‰§è¡Œäº†
+				this.wait();//waitåœ¨é‚£é‡Œç­‰å¾…ï¼Œå°±åœ¨é‚£é‡Œé†’æ¥
 			}
 			System.out.print("3");
 			System.out.print("3");

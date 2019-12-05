@@ -1,12 +1,12 @@
 package day24thread;
-/*(»ñÈ¡µ±Ç°Ïß³ÌµÄ¶ÔÏó)(ÕÆÎÕ)
- * currentTread()·½·¨Ê¹Ò»¸östatic·½·¨£¬¿ÉÒÔÊ¹ÓÃThreadµ÷ÓÃ
-* Thread.currentThread(), Ö÷Ïß³ÌÒ²¿ÉÒÔ»ñÈ¡ 
-* currentThreadÊ¹ÊµÏÖRunable½Ó¿ÚµÄÏß³ÌÒ²¿ÉÒÔµ÷ÓÃgetNameºÍsetName
+/*(è·å–å½“å‰çº¿ç¨‹çš„å¯¹è±¡)(æŒæ¡)
+ * currentTread()æ–¹æ³•ä½¿ä¸€ä¸ªstaticæ–¹æ³•ï¼Œå¯ä»¥ä½¿ç”¨Threadè°ƒç”¨
+* Thread.currentThread(), ä¸»çº¿ç¨‹ä¹Ÿå¯ä»¥è·å– 
+* currentThreadä½¿å®ç°Runableæ¥å£çš„çº¿ç¨‹ä¹Ÿå¯ä»¥è°ƒç”¨getNameå’ŒsetName
  * */
 public class Demo08currentThread {
 	public static void main(String[] args) {
-		//»ñÈ¡Ö÷Ïß³Ì²¢¸ÄÃû
+		//è·å–ä¸»çº¿ç¨‹å¹¶æ”¹å
 		Thread.currentThread().setName("ming");
 		System.out.println(Thread.currentThread().getName());
 		new Thread(new Runnable() {
@@ -14,7 +14,7 @@ public class Demo08currentThread {
 			@Override
 			public void run() {
 				Thread.currentThread().setName("yue");
-				System.out.println(Thread.currentThread().getName()+" "+"runable½Ó¿Ú");
+				System.out.println(Thread.currentThread().getName()+" "+"runableæ¥å£");
 			}
 		}).start();
 	}

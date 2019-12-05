@@ -16,8 +16,8 @@ public class DemoToArray {
 		Object[] c=a.toArray();
 		for(Object i:c) {
 			
-			System.out.println(i);//¶àÌ¬
-			Student j=(Student)i;//ÏòÏÂ×ªĞÍ
+			System.out.println(i);//å¤šæ€
+			Student j=(Student)i;//å‘ä¸‹è½¬å‹
 			System.out.println(j.getAge()+" "+j.getName());
 		}
 	}

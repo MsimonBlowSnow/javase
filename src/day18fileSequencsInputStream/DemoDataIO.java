@@ -7,17 +7,17 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/*1.Ê²Ã´ÊÇÊı¾İÊäÈëÊä³öÁ÷
-	* DataInputStream, DataOutputStream¿ÉÒÔ°´ÕÕ»ù±¾Êı¾İÀàĞÍ´óĞ¡¶ÁĞ´Êı¾İ
-	* ÀıÈç°´Long´óĞ¡Ğ´³öÒ»¸öÊı×Ö, Ğ´³öÊ±¸ÃÊı¾İÕ¼8×Ö½Ú. ¶ÁÈ¡µÄÊ±ºòÒ²¿ÉÒÔ°´ÕÕLongÀàĞÍ¶ÁÈ¡, Ò»´Î¶ÁÈ¡8¸ö×Ö½Ú.
-* DataOutputStream writeInt();·½·¨
-* DataOutputStream ReadInt();·½·¨
+/*1.ä»€ä¹ˆæ˜¯æ•°æ®è¾“å…¥è¾“å‡ºæµ
+	* DataInputStream, DataOutputStreamå¯ä»¥æŒ‰ç…§åŸºæœ¬æ•°æ®ç±»å‹å¤§å°è¯»å†™æ•°æ®
+	* ä¾‹å¦‚æŒ‰Longå¤§å°å†™å‡ºä¸€ä¸ªæ•°å­—, å†™å‡ºæ—¶è¯¥æ•°æ®å 8å­—èŠ‚. è¯»å–çš„æ—¶å€™ä¹Ÿå¯ä»¥æŒ‰ç…§Longç±»å‹è¯»å–, ä¸€æ¬¡è¯»å–8ä¸ªå­—èŠ‚.
+* DataOutputStream writeInt();æ–¹æ³•
+* DataOutputStream ReadInt();æ–¹æ³•
  * */
 public class DemoDataIO {
 	public static void main(String[] args) throws IOException {
 		//mehtodIO();
 		DataOutputStream dos =new DataOutputStream(new FileOutputStream("a.txt"));
-		dos.writeInt(999);//¸ü¾ßÊı¾İ´óĞ¡ÊäÈë²»»á½ØÈ¡ºó°ËÎ»
+		dos.writeInt(999);//æ›´å…·æ•°æ®å¤§å°è¾“å…¥ä¸ä¼šæˆªå–åå…«ä½
 		dos.writeInt(998);
 		dos.writeInt(997);
 		dos.close();
@@ -31,9 +31,9 @@ public class DemoDataIO {
 	}
 
 	private static void mehtodIO() throws FileNotFoundException, IOException {
-		//fileoutStream ¸ÃÁ÷Ò»´ÎÖ»ÄÜĞ´Ò»¸ö8Î»Êı(¼´ºó°ËÎ»)
+		//fileoutStream è¯¥æµä¸€æ¬¡åªèƒ½å†™ä¸€ä¸ª8ä½æ•°(å³åå…«ä½)
 		FileOutputStream fos=new FileOutputStream ("a.txt"); 
-		//999µÄÔ´Âë00000000 00000000 00000011 11100111 Ö»ÓĞºó°ËÎ»ÊäÈëÁË
+		//999çš„æºç 00000000 00000000 00000011 11100111 åªæœ‰åå…«ä½è¾“å…¥äº†
 		fos.write(999); 
 		fos.write(998);
 		fos.write(997);

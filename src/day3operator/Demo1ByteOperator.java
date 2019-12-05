@@ -2,25 +2,25 @@ package day3operator;
 
 public class Demo1ByteOperator {
 	public static void main(String[] args) {
-		/*Î»ÔËËã·û
+		/*ä½è¿ç®—ç¬¦
 		 * &,|,~,^,<<,>>,<<<,>>>
-		 * ËùÓĞµÄÎ»ÔËËã·û¶¼ÊÇÒÔ²¹ÂëµÄĞÎÊ½ÔËĞĞµÄ
-		 * ÏÂÃæÊı×Ö¶¼ÊÇÕûÊıint£¬ÎªÁË·½±ã½âÊÍÓÃ8Î»½âÊÍ
+		 * æ‰€æœ‰çš„ä½è¿ç®—ç¬¦éƒ½æ˜¯ä»¥è¡¥ç çš„å½¢å¼è¿è¡Œçš„
+		 * ä¸‹é¢æ•°å­—éƒ½æ˜¯æ•´æ•°intï¼Œä¸ºäº†æ–¹ä¾¿è§£é‡Šç”¨8ä½è§£é‡Š
 		 * */
-		System.out.println("& Î»Óë:");
-		//                            ²¹Âë                         ²¹Âë                     ²¹Âë                     ·´Âë                     Ô´Âë
+		System.out.println("& ä½ä¸:");
+		//                            è¡¥ç                          è¡¥ç                      è¡¥ç                      åç                      æºç 
 		System.out.println(-6&3);//2  11111010&00000011 00000010 00000010 00000010
 		System.out.println(7&2);//2  */
 		
-		System.out.println("| Î»»ò:");
+		System.out.println("| ä½æˆ–:");
 		System.out.println(-6|3);//-5 11111010|00000011 11111011 11111010 10000101
 		System.out.println(5|2);//7 
 		
-		System.out.println("~ Î»·Ç");
+		System.out.println("~ ä½é");
 		System.out.println(~6);//-7 ~00000110            11111001 10000111
 		System.out.println(~2);//-3 
 		
-		System.out.println("^ Òì»ò");
+		System.out.println("^ å¼‚æˆ–");
 		System.out.println(-6^2);//-8    11111010^00000010 11111000 10001000
 		System.out.println(5^1);//4    00000101^00000001 00000100
 		

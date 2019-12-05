@@ -1,8 +1,8 @@
 package day17Exceptioon;
-/* ¼üÅÌÂ¼ÈëÒ»¸öintÀàĞÍµÄÕûÊı,¶ÔÆäÇó¶ş½øÖÆ±íÏÖĞÎÊ½
-* Èç¹ûÂ¼ÈëµÄÕûÊı¹ı´ó,¸øÓèÌáÊ¾,Â¼ÈëµÄÕûÊı¹ı´óÇëÖØĞÂÂ¼ÈëÒ»¸öÕûÊıBigInteger
-* Èç¹ûÂ¼ÈëµÄÊÇĞ¡Êı,¸øÓèÌáÊ¾,Â¼ÈëµÄÊÇĞ¡Êı,ÇëÖØĞÂÂ¼ÈëÒ»¸öÕûÊı
-* Èç¹ûÂ¼ÈëµÄÊÇÆäËû×Ö·û,¸øÓèÌáÊ¾,Â¼ÈëµÄÊÇ·Ç·¨×Ö·û,ÇëÖØĞÂÂ¼ÈëÒ»¸öÕûÊı*/
+/* é”®ç›˜å½•å…¥ä¸€ä¸ªintç±»å‹çš„æ•´æ•°,å¯¹å…¶æ±‚äºŒè¿›åˆ¶è¡¨ç°å½¢å¼
+* å¦‚æœå½•å…¥çš„æ•´æ•°è¿‡å¤§,ç»™äºˆæç¤º,å½•å…¥çš„æ•´æ•°è¿‡å¤§è¯·é‡æ–°å½•å…¥ä¸€ä¸ªæ•´æ•°BigInteger
+* å¦‚æœå½•å…¥çš„æ˜¯å°æ•°,ç»™äºˆæç¤º,å½•å…¥çš„æ˜¯å°æ•°,è¯·é‡æ–°å½•å…¥ä¸€ä¸ªæ•´æ•°
+* å¦‚æœå½•å…¥çš„æ˜¯å…¶ä»–å­—ç¬¦,ç»™äºˆæç¤º,å½•å…¥çš„æ˜¯éæ³•å­—ç¬¦,è¯·é‡æ–°å½•å…¥ä¸€ä¸ªæ•´æ•°*/
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -12,7 +12,7 @@ public class ExceptionTest {
 	public static void main(String[] args) {
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öintĞÍÕûÊı");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªintå‹æ•´æ•°");
 		int flag=0;
 		int intnum=0;
 		String str;
@@ -27,13 +27,13 @@ public class ExceptionTest {
 			}}catch(NumberFormatException e) {
 				try {
 					new BigInteger(str);
-					System.out.println("ÊäÈëµÄÊıÌ«´óÁË");
+					System.out.println("è¾“å…¥çš„æ•°å¤ªå¤§äº†");
 				}catch (Exception sfd) {
 					try {
 						new BigDecimal(str);
-						System.out.println("ÊäÈëĞ¡ÊıÎŞĞ§£¬ÇëÊäÈëÕûÊı");
+						System.out.println("è¾“å…¥å°æ•°æ— æ•ˆï¼Œè¯·è¾“å…¥æ•´æ•°");
 					}catch(Exception sfd1) {
-						System.out.println("ÊäÈëµÄ×Ö·ûÎª·Ç·¨×Ö·û");
+						System.out.println("è¾“å…¥çš„å­—ç¬¦ä¸ºéæ³•å­—ç¬¦");
 					}
 					}
 			}

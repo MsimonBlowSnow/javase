@@ -4,15 +4,15 @@ import java.util.Comparator;
 import java.util.Map;
 import java.util.TreeMap;
 
-/*TreeMap ÓĞÒ»¶¨µÄË³Ğò
- * ±£Ö¤Ë³ĞòºÍÈ¥ÖØÍ¨¹ıµÄÁ½ÖÖ·½·¨£¬ºÍTreeSetÒ»Ñù
- 	* 1.ÊµÏÖcomparable½Ó¿ÚÀïµÄcompareto()·½·¨
- 	* 2.Í¨¹ınew¹¹ÔìÆ÷£¬²¢ÊµÏÖÀïÃæµÄcompare()·½·¨
- * Èç¹ûÃ»ÓÃĞ´compareto()·½·¨,½«»á±¨ java.lang.ClassCastExceptionµÄÒì³£
+/*TreeMap æœ‰ä¸€å®šçš„é¡ºåº
+ * ä¿è¯é¡ºåºå’Œå»é‡é€šè¿‡çš„ä¸¤ç§æ–¹æ³•ï¼Œå’ŒTreeSetä¸€æ ·
+ 	* 1.å®ç°comparableæ¥å£é‡Œçš„compareto()æ–¹æ³•
+ 	* 2.é€šè¿‡newæ„é€ å™¨ï¼Œå¹¶å®ç°é‡Œé¢çš„compare()æ–¹æ³•
+ * å¦‚æœæ²¡ç”¨å†™compareto()æ–¹æ³•,å°†ä¼šæŠ¥ java.lang.ClassCastExceptionçš„å¼‚å¸¸
  * */
 public class DemoTreeMap {
 	public static void main(String[] args) {
-		//Í¨¹ıStudentÊµÏÖcomparable½Ó¿ÚÀïÃæµÄcompareto()·½·¨
+		//é€šè¿‡Studentå®ç°comparableæ¥å£é‡Œé¢çš„compareto()æ–¹æ³•
 		//method1();
 		TreeMap<Student,String> a= new TreeMap<>(new Comparator<Student>() {
 			@Override
@@ -26,7 +26,7 @@ public class DemoTreeMap {
 		a.put(new Student(2,"nmp"),"nmp2");
 		a.put(new Student(1,"laji"),"laji1");
 		a.put(new Student(1,"slliy"),"slliy1");
-		a.put(new Student(1,"slliy"),"slliy2");//Í¨¹ıcomparetoÈ¥ÖØ
+		a.put(new Student(1,"slliy"),"slliy2");//é€šè¿‡comparetoå»é‡
 		System.out.println(a);
 	}
 
@@ -36,7 +36,7 @@ public class DemoTreeMap {
 		a.put(new Student(2,"nmp"),"nmp2");
 		a.put(new Student(1,"laji"),"laji1");
 		a.put(new Student(1,"slliy"),"slliy1");
-		a.put(new Student(1,"slliy"),"slliy2");//Í¨¹ıcomparetoÈ¥ÖØ
+		a.put(new Student(1,"slliy"),"slliy2");//é€šè¿‡comparetoå»é‡
 		System.out.println(a);
 	}
 }

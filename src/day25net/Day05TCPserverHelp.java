@@ -15,7 +15,7 @@ public class Day05TCPserverHelp implements Runnable {
 	}
 	@Override
 	public void run() {
-		//Ö»ÄÜ×Ô¼º´¦Àí£¬²»ÄÜÅ×Òì³£
+		//åªèƒ½è‡ªå·±å¤„ç†ï¼Œä¸èƒ½æŠ›å¼‚å¸¸
 		try {
 			InputStream netInputStream=serSocket.getInputStream();
 			OutputStream netOutputStream = serSocket.getOutputStream();
@@ -28,7 +28,7 @@ public class Day05TCPserverHelp implements Runnable {
 				System.out.println(new String(abyte,0,len));
 				fOutputStream.write(abyte,0,len);
 			}
-				netOutputStream.write("´«ËÍ³É¹¦".getBytes());
+				netOutputStream.write("ä¼ é€æˆåŠŸ".getBytes());
 				fOutputStream.close();
 				serSocket.close();
 		} catch (IOException e) {

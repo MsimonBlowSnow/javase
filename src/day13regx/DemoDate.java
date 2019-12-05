@@ -2,14 +2,14 @@ package day13regx;
 
 import java.util.Date;
 
-/* A:DateÀàµÄ¸ÅÊö
-* Àà Date ±íÊ¾ÌØ¶¨µÄË²¼ä£¬¾«È·µ½ºÁÃë¡£ 
-* B:¹¹Ôì·½·¨
+/* A:Dateç±»çš„æ¦‚è¿°
+* ç±» Date è¡¨ç¤ºç‰¹å®šçš„ç¬é—´ï¼Œç²¾ç¡®åˆ°æ¯«ç§’ã€‚ 
+* B:æ„é€ æ–¹æ³•
 * public Date()
 * public Date(long date)
-* C:³ÉÔ±·½·¨
-* public long getTime()//»ñÈ¡ºÁÃëÖµ
-* public void setTime(long time)//´«ÈëºÁÃëÖµ¸Ä±äÊ±¼ä¶ÔÏó
+* C:æˆå‘˜æ–¹æ³•
+* public long getTime()//è·å–æ¯«ç§’å€¼
+* public void setTime(long time)//ä¼ å…¥æ¯«ç§’å€¼æ”¹å˜æ—¶é—´å¯¹è±¡
 */
 public class DemoDate {
 	public static void main(String[] args) {

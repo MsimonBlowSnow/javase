@@ -3,12 +3,12 @@ package day25thread;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-/* 1.Í¬²½
-	* Ê¹ÓÃReentrantLockÀàµÄlock()ºÍunlock()·½·¨½øĞĞÍ¬²½
-* 2.Í¨ĞÅ
-	* Ê¹ÓÃReentrantLockÀàµÄnewCondition()·½·¨¿ÉÒÔ»ñÈ¡Condition¶ÔÏó
-	* ĞèÒªµÈ´ıµÄÊ±ºòÊ¹ÓÃConditionµÄawait()·½·¨, »½ĞÑµÄÊ±ºòÓÃsignal()·½·¨
-	* ²»Í¬µÄÏß³ÌÊ¹ÓÃ²»Í¬µÄCondition, ÕâÑù¾ÍÄÜÇø·Ö»½ĞÑµÄÊ±ºòÕÒÄÄ¸öÏß³ÌÁË 
+/* 1.åŒæ­¥
+	* ä½¿ç”¨ReentrantLockç±»çš„lock()å’Œunlock()æ–¹æ³•è¿›è¡ŒåŒæ­¥
+* 2.é€šä¿¡
+	* ä½¿ç”¨ReentrantLockç±»çš„newCondition()æ–¹æ³•å¯ä»¥è·å–Conditionå¯¹è±¡
+	* éœ€è¦ç­‰å¾…çš„æ—¶å€™ä½¿ç”¨Conditionçš„await()æ–¹æ³•, å”¤é†’çš„æ—¶å€™ç”¨signal()æ–¹æ³•
+	* ä¸åŒçš„çº¿ç¨‹ä½¿ç”¨ä¸åŒçš„Condition, è¿™æ ·å°±èƒ½åŒºåˆ†å”¤é†’çš„æ—¶å€™æ‰¾å“ªä¸ªçº¿ç¨‹äº† 
  * */
 public class Demo06ReentrantLock {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Demo06ReentrantLock {
 			@Override
 			public void run() {
 				while(true)
-					//¸ÃÒì³£Ö»ÄÜÅ×
+					//è¯¥å¼‚å¸¸åªèƒ½æŠ›
 					try {
 						demo06.Print1();
 					} catch (InterruptedException e) {
@@ -30,7 +30,7 @@ public class Demo06ReentrantLock {
 			@Override
 			public void run() {
 				while(true)
-					//¸ÃÒì³£Ö»ÄÜÅ×
+					//è¯¥å¼‚å¸¸åªèƒ½æŠ›
 					try {
 						demo06.Print2();
 					} catch (InterruptedException e) {
@@ -43,7 +43,7 @@ public class Demo06ReentrantLock {
 			@Override
 			public void run() {
 				while(true)
-					//¸ÃÒì³£Ö»ÄÜÅ×
+					//è¯¥å¼‚å¸¸åªèƒ½æŠ›
 					try {
 						demo06.Print3();
 					} catch (InterruptedException e) {

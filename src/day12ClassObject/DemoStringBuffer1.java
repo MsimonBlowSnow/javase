@@ -1,8 +1,8 @@
 package day12ClassObject;
 
-//StringBuffer ´´½¨¶ÔÏó£¬»á´´½¨Ò»¿é¶ÑÄÚ´æ£¬³¤¶ÈÎª16µÄ×Ö·ûÊı×é
-//ÔÙµ÷ÓÃÌí¼Ó·½·¨Ê±²»»á´´½¨
-/*StringBufferÖĞµÄ³£ÓÃ¶ÔÏó·½·¨
+//StringBuffer åˆ›å»ºå¯¹è±¡ï¼Œä¼šåˆ›å»ºä¸€å—å †å†…å­˜ï¼Œé•¿åº¦ä¸º16çš„å­—ç¬¦æ•°ç»„
+//å†è°ƒç”¨æ·»åŠ æ–¹æ³•æ—¶ä¸ä¼šåˆ›å»º
+/*StringBufferä¸­çš„å¸¸ç”¨å¯¹è±¡æ–¹æ³•
  * append();
  * insert(int a,String b)
  * toString()
@@ -14,26 +14,26 @@ public class DemoStringBuffer1 {
 		StringBuffer sb=new StringBuffer("abc");
 		StringBuffer sb1=sb.append(true);
 		StringBuffer sb2=sb.append("ming");
-		StringBuffer sb3=sb.append("ÌìĞ«");
-		//sb,sb1,sb2,sb3ËÄ¸ö¶¼ÊÇÍ¬Ò»¸ö¶ÔÏó²¢ÇÒStringBuffer
-		//ÖØĞ´ÁËtoString·½·¨
+		StringBuffer sb3=sb.append("å¤©è");
+		//sb,sb1,sb2,sb3å››ä¸ªéƒ½æ˜¯åŒä¸€ä¸ªå¯¹è±¡å¹¶ä¸”StringBuffer
+		//é‡å†™äº†toStringæ–¹æ³•
 		System.out.println(sb);
 		System.out.println(sb1);
 		System.out.println(sb2);
 		System.out.println(sb3);
-		//ÔÚË÷Òı´¦¼ÓÖ¸¶¨×Ö·û´®,Ë÷Òı³¬¹ı·¶Î§£¬Ôò»á±¨´í
+		//åœ¨ç´¢å¼•å¤„åŠ æŒ‡å®šå­—ç¬¦ä¸²,ç´¢å¼•è¶…è¿‡èŒƒå›´ï¼Œåˆ™ä¼šæŠ¥é”™
 		sb3.insert(1, "lalala");
 		System.out.println(sb3);
-		//É¾³ıÖ¸¶¨Ë÷ÒıµÄ×Ö·û
+		//åˆ é™¤æŒ‡å®šç´¢å¼•çš„å­—ç¬¦
 		System.out.println(sb3.deleteCharAt(2));
-		//delete É¾³ı´ÓµÚÒ»¸ö²ÎÊıµÄË÷Òıµ½µÚ¶ş¸ö²ÎÊı,·Å»ØÉ¾³ıºóµÄ×Ö·û
+		//delete åˆ é™¤ä»ç¬¬ä¸€ä¸ªå‚æ•°çš„ç´¢å¼•åˆ°ç¬¬äºŒä¸ªå‚æ•°,æ”¾å›åˆ é™¤åçš„å­—ç¬¦
 		System.out.println(sb.delete(0,3));
-		//Çå¿Õ×Ö·û´®(0,length())
+		//æ¸…ç©ºå­—ç¬¦ä¸²(0,length())
 		System.out.println(sb.delete(0, sb3.length()));
 		
 		/*sb3=new StringBuffer();
-		 * ²»ÄÜÓÃ¸Ã·½·¨£¬Èç¹ûÓÃ¸Ã·½·¨Çå¿Õ£¬»áµ¼ÖÂÉÏÒ»¸ö¶ÔÏó³ÉÀ¬»ø£¬
-		 * ÓÖÖØĞÂ´´×÷ÁËÒ»¸ö¶ÔÏó,ÀË·ÑÄÚ´æ
+		 * ä¸èƒ½ç”¨è¯¥æ–¹æ³•ï¼Œå¦‚æœç”¨è¯¥æ–¹æ³•æ¸…ç©ºï¼Œä¼šå¯¼è‡´ä¸Šä¸€ä¸ªå¯¹è±¡æˆåƒåœ¾ï¼Œ
+		 * åˆé‡æ–°åˆ›ä½œäº†ä¸€ä¸ªå¯¹è±¡,æµªè´¹å†…å­˜
 		 * */
 		
 	}

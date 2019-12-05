@@ -1,10 +1,10 @@
 package day28jdbc;
 
-/*1.ÎÊÌâ½â¾ö:
- 	*config.propertieÎÄ¼şµÄ»ñÈ¡£¬²»ÄÜÖ±½Ó»ñÈ¡src/config.propertie,
- 	*ÒòÎª¸øÓÃ»§µÄÖ»ÓĞbinÎÄ¼ş£¬²»¹ıÔÚsrcÀïÃæµÄÎÄ¼şÔÚ´´½¨µÄÊ±ºò»á×Ô¶¯¸øbindÒ»·İ
- 	*½â¾ö:
- 		*Í¨¹ıÀàµÄ¼ÓÔØÆ÷À´¼ÓÔØ
+/*1.é—®é¢˜è§£å†³:
+ 	*config.propertieæ–‡ä»¶çš„è·å–ï¼Œä¸èƒ½ç›´æ¥è·å–src/config.propertie,
+ 	*å› ä¸ºç»™ç”¨æˆ·çš„åªæœ‰binæ–‡ä»¶ï¼Œä¸è¿‡åœ¨srcé‡Œé¢çš„æ–‡ä»¶åœ¨åˆ›å»ºçš„æ—¶å€™ä¼šè‡ªåŠ¨ç»™bindä¸€ä»½
+ 	*è§£å†³:
+ 		*é€šè¿‡ç±»çš„åŠ è½½å™¨æ¥åŠ è½½
  		* InputStream aInputStream=JDBCUitlNew.class.getClassLoader().getResourceAsStream("config.propertie");
 			Properties aProperties=new Properties();
 			aProperties.load(aInputStream);
@@ -13,10 +13,10 @@ package day28jdbc;
 			String user=aProperties.getProperty("user");
 			String Password=aProperties.getProperty("password");
 			Class.forName(driverClass);
-*config´´½¨ÎÊÌâ
-	*ÃèÊö:
-		*config.propertieÎÄ¼şÓ¦¸Ã´´½¨ÔÚsrcÏÂÃæ£¬Í¨¹ıeclipse»á°ïÄã¿½±´µ½binÀïÃæ
-		*Ö´ĞĞµÄÊÇbinÀïÃæµÄÎÄ¼ş			
+*configåˆ›å»ºé—®é¢˜
+	*æè¿°:
+		*config.propertieæ–‡ä»¶åº”è¯¥åˆ›å»ºåœ¨srcä¸‹é¢ï¼Œé€šè¿‡eclipseä¼šå¸®ä½ æ‹·è´åˆ°biné‡Œé¢
+		*æ‰§è¡Œçš„æ˜¯biné‡Œé¢çš„æ–‡ä»¶			
  * */
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,7 +27,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 public class JDBCUitlNew {
-	//Ë½ÓĞ»¯¹¹Ôì·½·¨
+	//ç§æœ‰åŒ–æ„é€ æ–¹æ³•
 	private static Connection con;
 	private static  String driverClass;
 	private static String url;

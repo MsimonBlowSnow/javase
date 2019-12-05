@@ -8,8 +8,8 @@ public class DemoChar {
 		byte b = -128;//-128--127
 		char c1 = 97;		//0 - 65535
 		System.out.println(c1);
-		//char c2=-1;//´íÎó·¶Î§ÊÇ0 - 65535
-		System.out.println("Byte×î´óÖµ£º"+Byte.MAX_VALUE+"\n"+"Byte×îĞ¡Öµ:"+Byte.MIN_VALUE);
+		//char c2=-1;//é”™è¯¯èŒƒå›´æ˜¯0 - 65535
+		System.out.println("Byteæœ€å¤§å€¼ï¼š"+Byte.MAX_VALUE+"\n"+"Byteæœ€å°å€¼:"+Byte.MIN_VALUE);
 		char c2 = 3;
 		char c3 = 4;
 		char c4 = 5;
@@ -20,9 +20,9 @@ public class DemoChar {
 		System.out.println(c4);
 		System.out.println(c5);
 
-		//charÀàĞÍÊÇ·ñ¿ÉÒÔ´æ´¢ÖĞÎÄ
-		//javaÖĞ²ÉÓÃunicode±àÂë£¬charÎªÁ½¸ö×Ö½Ú£¬Ò»¸öÖĞÎÄÒ²ÊÇÁ½¸ö×Ö½Ú
-		char c6 = 'ÖĞ';
+		//charç±»å‹æ˜¯å¦å¯ä»¥å­˜å‚¨ä¸­æ–‡
+		//javaä¸­é‡‡ç”¨unicodeç¼–ç ï¼Œcharä¸ºä¸¤ä¸ªå­—èŠ‚ï¼Œä¸€ä¸ªä¸­æ–‡ä¹Ÿæ˜¯ä¸¤ä¸ªå­—èŠ‚
+		char c6 = 'ä¸­';
 		System.out.println(c6);
 	}
 }

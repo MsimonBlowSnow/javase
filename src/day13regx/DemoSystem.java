@@ -2,17 +2,17 @@ package day13regx;
 
 import java.util.Arrays;
 
-/*System¶ÔÏó
- * ¹¹Ôì·½·¨ÊÇË½ÓĞµÄ²»ÄÜ´´Ôì¶ÔÏó
- * * A:SystemÀàµÄ¸ÅÊö
-	* System Àà°üº¬Ò»Ğ©ÓĞÓÃµÄÀà×Ö¶ÎºÍ·½·¨¡£Ëü²»ÄÜ±»ÊµÀı»¯¡£ 
-* B:³ÉÔ±·½·¨
-	* public static void gc()//Í¨ÖªÀ¬»ø»ØÊÕÏµÍ³
-	* public static void exit(int status)//·Ç0ÎªÒì³£ÍË³ö£¬0ÎªÕı³£ÍË³ö
-	* public static long currentTimeMillis()//»ñÈ¡ÏÖÔÚµÄÊ±¼ä¾àÀë19700101µÄºÁÃëÖµ
+/*Systemå¯¹è±¡
+ * æ„é€ æ–¹æ³•æ˜¯ç§æœ‰çš„ä¸èƒ½åˆ›é€ å¯¹è±¡
+ * * A:Systemç±»çš„æ¦‚è¿°
+	* System ç±»åŒ…å«ä¸€äº›æœ‰ç”¨çš„ç±»å­—æ®µå’Œæ–¹æ³•ã€‚å®ƒä¸èƒ½è¢«å®ä¾‹åŒ–ã€‚ 
+* B:æˆå‘˜æ–¹æ³•
+	* public static void gc()//é€šçŸ¥åƒåœ¾å›æ”¶ç³»ç»Ÿ
+	* public static void exit(int status)//é0ä¸ºå¼‚å¸¸é€€å‡ºï¼Œ0ä¸ºæ­£å¸¸é€€å‡º
+	* public static long currentTimeMillis()//è·å–ç°åœ¨çš„æ—¶é—´è·ç¦»19700101çš„æ¯«ç§’å€¼
 	* pubiic static void arraycopy(Object src, int srcPos, Object dest, int destPos, int length) 
-* C:°¸ÀıÑİÊ¾
-	* SystemÀàµÄ³ÉÔ±·½·¨Ê¹ÓÃ
+* C:æ¡ˆä¾‹æ¼”ç¤º
+	* Systemç±»çš„æˆå‘˜æ–¹æ³•ä½¿ç”¨
 
 
  * 
@@ -42,21 +42,21 @@ public class DemoSystem {
 	}
 
 	private static void methodExit() {
-		System.exit(0);//ÍË³ö²»ÔÚÖ´ĞĞÏÂÃæµÄ´úÂë
-		System.out.println("mmp");//ÍË³ö£¬²»Ö´ĞĞÕâ¾ä»°
+		System.exit(0);//é€€å‡ºä¸åœ¨æ‰§è¡Œä¸‹é¢çš„ä»£ç 
+		System.out.println("mmp");//é€€å‡ºï¼Œä¸æ‰§è¡Œè¿™å¥è¯
 	}
 
 	private static void methodgc() {
 		for(int i=0;i<100;i++) {
 			new minggc();
-			System.gc();//µ÷ÓÃ»ØÊÕ·½·¨
+			System.gc();//è°ƒç”¨å›æ”¶æ–¹æ³•
 	}
 	}
 }
 
 class minggc{
 	@Override
-	public void finalize(){//ÖØĞ´»ØÊÕ¶ÔÏóµÄÊ±Ö´ĞĞµÄ·½·¨
-		System.out.println("½ĞÊ²Ã´½Ğ£¬ÊÕÀ¬»ø²»ÒªÇ®ÄÇ!");
+	public void finalize(){//é‡å†™å›æ”¶å¯¹è±¡çš„æ—¶æ‰§è¡Œçš„æ–¹æ³•
+		System.out.println("å«ä»€ä¹ˆå«ï¼Œæ”¶åƒåœ¾ä¸è¦é’±é‚£!");
 	}
 }

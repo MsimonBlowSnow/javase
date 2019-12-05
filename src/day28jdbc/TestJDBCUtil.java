@@ -8,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 public class TestJDBCUtil {
 	public static void main(String[] args) throws SQLException {
-		//´´½¨Ò»¸ö¼¯ºÏ±£´æResultSetµÄ½á¹û
+		//åˆ›å»ºä¸€ä¸ªé›†åˆä¿å­˜ResultSetçš„ç»“æœ
 		List<JDBCHelpMing> alist=new ArrayList<JDBCHelpMing>();
 		
-		//Í¨¹ıJDBCUtil»ñÈ¡Á¬½Ó¶ÔÏó
+		//é€šè¿‡JDBCUtilè·å–è¿æ¥å¯¹è±¡
 		Connection connection=JDBCUtil.getConnection();
 		String sqlString="select * from ming";
-		//´´½¨PreparedStatement
+		//åˆ›å»ºPreparedStatement
 		PreparedStatement aPreparedStatement= connection.prepareStatement(sqlString);
 		ResultSet rSet=aPreparedStatement.executeQuery();
 		while (rSet.next()) {

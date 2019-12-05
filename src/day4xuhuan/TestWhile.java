@@ -19,6 +19,6 @@ public class TestWhile {
 			}
 			i++;
 		}
-		System.out.println("Ò»¹²ÓÐ"+count+"¶ä»¨¡£");
+		System.out.println("ä¸€å…±æœ‰"+count+"æœµèŠ±ã€‚");
 	}
 }

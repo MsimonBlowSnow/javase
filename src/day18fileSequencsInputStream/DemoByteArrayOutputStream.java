@@ -5,12 +5,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-/* 1.Ê²Ã´ÊÇÄÚ´æÊä³öÁ÷
-	* ¸ÃÊä³öÁ÷¿ÉÒÔÏòÄÚ´æÖĞĞ´Êı¾İ, °ÑÄÚ´æµ±×÷Ò»¸ö»º³åÇø, Ğ´³öÖ®ºó¿ÉÒÔÒ»´ÎĞÔ»ñÈ¡³öËùÓĞÊı¾İ
-* 2.Ê¹ÓÃ·½Ê½
-	* ´´½¨¶ÔÏó: new ByteArrayOutputStream()
-	* Ğ´³öÊı¾İ: write(int), write(byte[])
-	* »ñÈ¡Êı¾İ: toByteArray()
+/* 1.ä»€ä¹ˆæ˜¯å†…å­˜è¾“å‡ºæµ
+	* è¯¥è¾“å‡ºæµå¯ä»¥å‘å†…å­˜ä¸­å†™æ•°æ®, æŠŠå†…å­˜å½“ä½œä¸€ä¸ªç¼“å†²åŒº, å†™å‡ºä¹‹åå¯ä»¥ä¸€æ¬¡æ€§è·å–å‡ºæ‰€æœ‰æ•°æ®
+* 2.ä½¿ç”¨æ–¹å¼
+	* åˆ›å»ºå¯¹è±¡: new ByteArrayOutputStream()
+	* å†™å‡ºæ•°æ®: write(int), write(byte[])
+	* è·å–æ•°æ®: toByteArray()
 	* 
 			FileInputStream fis = new FileInputStream("a.txt");
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -19,7 +19,7 @@ import java.io.IOException;
 				baos.write(b);
 			}
 			
-			//byte[] newArr = baos.toByteArray();				//½«ÄÚ´æ»º³åÇøÖĞËùÓĞµÄ×Ö½Ú´æ´¢ÔÚnewArrÖĞ
+			//byte[] newArr = baos.toByteArray();				//å°†å†…å­˜ç¼“å†²åŒºä¸­æ‰€æœ‰çš„å­—èŠ‚å­˜å‚¨åœ¨newArrä¸­
 			//System.out.println(new String(newArr));
 			System.out.println(baos);
 			fis.close();
@@ -27,29 +27,29 @@ import java.io.IOException;
  * */
 public class DemoByteArrayOutputStream {
 	public static void main(String[] args) throws IOException {
-		//Í¨¹ı×Ö½ÚÁ÷ÊäÈëÎÄ¼şÄÚÈİ»áÓĞÂÒÂëÀıÈç:
+		//é€šè¿‡å­—èŠ‚æµè¾“å…¥æ–‡ä»¶å†…å®¹ä¼šæœ‰ä¹±ç ä¾‹å¦‚:
 		//methodFileInputStream();
-		/*Í¨¹ı×Ö½ÚÁ÷ÊäÈëÓĞ¿ÉÄÜÂÒÂë,ÎÊÌâÔ­ÒòÊÇÖĞÎÄÊÇ2¸ö×Ö½ÚµÄ,Ò»´Î»ñÈ¡ÁËÆæÊı¸ö×Ö½Ú
-		 µ¼ÖÂÍ¨¹ıÂë±í×ªÒå³öÁËÎÊÌâ£¬
-		 ½â¾öË¼Â·£º
-		 	*Ò»´ÎĞÔ¶Á³öËùÓĞ×Ö½Ú²¢±£´æÔÚÄÚ´æÖĞ£¬È»ºóÒ»´ÎĞÔÊä³ö
-		 	*±£´æÔÚÄÚ´æÀïÃæĞèÒªByteArrayOutputstream
+		/*é€šè¿‡å­—èŠ‚æµè¾“å…¥æœ‰å¯èƒ½ä¹±ç ,é—®é¢˜åŸå› æ˜¯ä¸­æ–‡æ˜¯2ä¸ªå­—èŠ‚çš„,ä¸€æ¬¡è·å–äº†å¥‡æ•°ä¸ªå­—èŠ‚
+		 å¯¼è‡´é€šè¿‡ç è¡¨è½¬ä¹‰å‡ºäº†é—®é¢˜ï¼Œ
+		 è§£å†³æ€è·¯ï¼š
+		 	*ä¸€æ¬¡æ€§è¯»å‡ºæ‰€æœ‰å­—èŠ‚å¹¶ä¿å­˜åœ¨å†…å­˜ä¸­ï¼Œç„¶åä¸€æ¬¡æ€§è¾“å‡º
+		 	*ä¿å­˜åœ¨å†…å­˜é‡Œé¢éœ€è¦ByteArrayOutputstream
 		 */
 		ByteArrayOutputStream baos= new ByteArrayOutputStream();
-		FileInputStream fis= new FileInputStream("c.txt");//Ä¬ÈÏÂ·¾¶JavaseÏîÄ¿ÏÂ
+		FileInputStream fis= new FileInputStream("c.txt");//é»˜è®¤è·¯å¾„Javaseé¡¹ç›®ä¸‹
 		int flag;
 		while((flag=fis.read())!=-1) {
 			baos.write(flag);
 		}
-		System.out.println(baos);//ByteAByteArrayOutputStreamÖØĞ´ÁËtostring()·½·¨
-		baos.close();//µ×²ãÓÃÊı×é¿ª·¢µÄ£¬²¢Ã»ÓĞ½¨Á¢¹ÜµÀ(Á÷)ËùÓĞ²»¹Ø±Õ£¬Ò²Ã»¹ØÏµ
+		System.out.println(baos);//ByteAByteArrayOutputStreamé‡å†™äº†tostring()æ–¹æ³•
+		baos.close();//åº•å±‚ç”¨æ•°ç»„å¼€å‘çš„ï¼Œå¹¶æ²¡æœ‰å»ºç«‹ç®¡é“(æµ)æ‰€æœ‰ä¸å…³é—­ï¼Œä¹Ÿæ²¡å…³ç³»
 	}
 
 	private static void methodFileInputStream() throws FileNotFoundException, IOException {
-		FileInputStream fis= new FileInputStream("c.txt");//Ä¬ÈÏÂ·¾¶JavaseÏîÄ¿ÏÂ
+		FileInputStream fis= new FileInputStream("c.txt");//é»˜è®¤è·¯å¾„Javaseé¡¹ç›®ä¸‹
 		byte[] a=new byte[3];
 		int len;
-		while((len=fis.read(a))!=-1) {//len»ñÈ¡Êı×éÓĞĞ§Êı×é³¤¶È
+		while((len=fis.read(a))!=-1) {//lenè·å–æ•°ç»„æœ‰æ•ˆæ•°ç»„é•¿åº¦
 			System.out.println( new String(a,0,len));
 		}
 		fis.close();

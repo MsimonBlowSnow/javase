@@ -1,5 +1,5 @@
 package day17set;
-/*³ÌĞòÆô¶¯ºó, ¿ÉÒÔ´Ó¼üÅÌÊäÈë½ÓÊÕ¶à¸öÕûÊı, Ö±µ½ÊäÈëquitÊ±½áÊøÊäÈë. °ÑËùÓĞÊäÈëµÄÕûÊıµ¹ĞòÅÅÁĞ´òÓ¡.
+/*ç¨‹åºå¯åŠ¨å, å¯ä»¥ä»é”®ç›˜è¾“å…¥æ¥æ”¶å¤šä¸ªæ•´æ•°, ç›´åˆ°è¾“å…¥quitæ—¶ç»“æŸè¾“å…¥. æŠŠæ‰€æœ‰è¾“å…¥çš„æ•´æ•°å€’åºæ’åˆ—æ‰“å°.
 */
 
 import java.util.Collection;
@@ -14,7 +14,7 @@ public class TreeSetTest2 {
 
 			@Override
 			public int compare(Integer o1, Integer o2) {
-				int num=o2-o1;//µ¹Ğò´òÓ¡£¬·µ»ØÕıÊı£¬o1ÔÚÇ°Ãæ £¬¸ºÊıo1ÔÚºóÃæ
+				int num=o2-o1;//å€’åºæ‰“å°ï¼Œè¿”å›æ­£æ•°ï¼Œo1åœ¨å‰é¢ ï¼Œè´Ÿæ•°o1åœ¨åé¢
 				return num==0?1:num;
 			}
 		});
@@ -28,7 +28,7 @@ public class TreeSetTest2 {
 					flag=Integer.parseInt(str);
 					tree.add(flag);
 				}catch (Exception e) {
-					System.out.println("ÇëÊäÈëÊı×Ö");
+					System.out.println("è¯·è¾“å…¥æ•°å­—");
 				}
 				
 		}

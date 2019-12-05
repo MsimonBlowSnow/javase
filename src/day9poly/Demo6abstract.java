@@ -2,9 +2,9 @@ package day9poly;
 
 public class Demo6abstract {
 	public static void main(String[] args) {
-		Cat6 a=new Cat6(10,"¼Ó·Æ");
+		Cat6 a=new Cat6(10,"æ±¤å§†");
 		System.out.println(a.getAge()+a.getName());
-		Dog6 c=new Dog6(8,"°Ë¹«");
+		Dog6 c=new Dog6(8,"å“®å¤©çŠ¬");
 		System.out.println(c.getAge()+a.getName());
 	}
 }
@@ -39,7 +39,7 @@ class Cat6 extends Animal6{
 	}
 	@Override
 	public void eat() {
-		System.out.println("³ÔÓã");
+		System.out.println("çŒ«åƒé±¼");
 	}
 }
 
@@ -50,6 +50,6 @@ class Dog6 extends Animal6{
 	}
 	@Override
 	public void eat() {
-		System.out.println("³ÔÈâ");
+		System.out.println("ç‹—åƒè‚‰");
 	}
 }

@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
-/*ListIteratorÖĞµÄ·½·¨
- * hasNext();ÅĞ¶ÏÖ¸ÕëºóÒ»Î»ÊÇ·ñÎª¿Õ
- * nextÖ¸ÕëÏòºóÒÆÒ»Î»
- * hasPrevious();ÅĞ¶ÏÖ¸ÕëÉÏÒ»Î»ÊÇ·ñÎª¿Õ
- * previousÖ¸ÕëÏòÇ°ÒÆÒ»Î»
+/*ListIteratorä¸­çš„æ–¹æ³•
+ * hasNext();åˆ¤æ–­æŒ‡é’ˆåä¸€ä½æ˜¯å¦ä¸ºç©º
+ * nextæŒ‡é’ˆå‘åç§»ä¸€ä½
+ * hasPrevious();åˆ¤æ–­æŒ‡é’ˆä¸Šä¸€ä½æ˜¯å¦ä¸ºç©º
+ * previousæŒ‡é’ˆå‘å‰ç§»ä¸€ä½
 */
 public class DemoList2 {
 	public static void main(String[] args) {
@@ -19,12 +19,12 @@ public class DemoList2 {
 		a.add("3");
 		a.add("4");
 		ListIterator c=a.listIterator();
-		while(c.hasNext()) {//ÅĞ¶ÏÖ¸ÕëºóÒ»Î»ÊÇ·ñÎª¿Õ
-			System.out.println(c.next());//Ö¸ÕëÏòºóÒÆÒ»Î»
+		while(c.hasNext()) {//åˆ¤æ–­æŒ‡é’ˆåä¸€ä½æ˜¯å¦ä¸ºç©º
+			System.out.println(c.next());//æŒ‡é’ˆå‘åç§»ä¸€ä½
 		}
 		System.out.println("============================");
-		while(c.hasPrevious()) {//ÅĞ¶ÏÖ¸ÕëÉÏÒ»Î»ÊÇ·ñÎª¿Õ
-			System.out.println(c.previous());//Ö¸ÕëÏòÇ°ÒÆÒ»Î»
+		while(c.hasPrevious()) {//åˆ¤æ–­æŒ‡é’ˆä¸Šä¸€ä½æ˜¯å¦ä¸ºç©º
+			System.out.println(c.previous());//æŒ‡é’ˆå‘å‰ç§»ä¸€ä½
 		}
 	}
 }

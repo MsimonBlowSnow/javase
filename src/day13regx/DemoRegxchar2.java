@@ -1,23 +1,23 @@
 package day13regx;
 
 public class DemoRegxchar2 {
-//	Ô¤¶¨Òå×Ö·ûÀà 
-//	. ÈÎºÎ×Ö·û£¨ÓëĞĞ½áÊø·û¿ÉÄÜÆ¥ÅäÒ²¿ÉÄÜ²»Æ¥Åä£© 
-//	\d Êı×Ö£º[0-9] 
-//	\D ·ÇÊı×Ö£º [^0-9] 
-//	\s ¿Õ°××Ö·û£º[ \t\n\x0B\f\r] 
-//	\S ·Ç¿Õ°××Ö·û£º[^\s] 
-//	\w µ¥´Ê×Ö·û£º[a-zA-Z_0-9] 
-//	\W ·Çµ¥´Ê×Ö·û£º[^\w] 
+//	é¢„å®šä¹‰å­—ç¬¦ç±» 
+//	. ä»»ä½•å­—ç¬¦ï¼ˆä¸è¡Œç»“æŸç¬¦å¯èƒ½åŒ¹é…ä¹Ÿå¯èƒ½ä¸åŒ¹é…ï¼‰ 
+//	\d æ•°å­—ï¼š[0-9] 
+//	\D éæ•°å­—ï¼š [^0-9] 
+//	\s ç©ºç™½å­—ç¬¦ï¼š[ \t\n\x0B\f\r] 
+//	\S éç©ºç™½å­—ç¬¦ï¼š[^\s] 
+//	\w å•è¯å­—ç¬¦ï¼š[a-zA-Z_0-9] 
+//	\W éå•è¯å­—ç¬¦ï¼š[^\w] 
 	public static void main(String[] args) {
 		System.out.println("a".matches("."));//true
 		System.out.println("ab".matches("."));//false
 		System.out.println("ab".matches(".."));//true
-		System.out.println("a".matches("\\d"));//false \Îª×ªÒå×Ö·û\d[0-9]
+		System.out.println("a".matches("\\d"));//false \ä¸ºè½¬ä¹‰å­—ç¬¦\d[0-9]
 		System.out.println("a".matches("\\D"));//true
-		System.out.println(" ".matches("\\s"));//true Ò»¸ö¿Õ¸ñ
-		System.out.println("	".matches("\\s"));//true Ò»¸ötab
-		System.out.println("    ".matches("\\s"));//false ËÄ¸ö¿Õ¸ñ
+		System.out.println(" ".matches("\\s"));//true ä¸€ä¸ªç©ºæ ¼
+		System.out.println("	".matches("\\s"));//true ä¸€ä¸ªtab
+		System.out.println("    ".matches("\\s"));//false å››ä¸ªç©ºæ ¼
 		System.out.println("_".matches("\\w"));//true a-zA-Z_0-9
 		System.out.println("%".matches("\\W"));//true
 	}

@@ -1,25 +1,25 @@
-package ö����;
-/* A:ö�ٸ���
-* ��ָ��������ֵһһ�г���,������ֵֻ�����оٳ�����ֵ�ķ�Χ�ڡ�������һ��ֻ��7�죬һ��ֻ��12���µȡ�
-* B:���뵥�����ģʽ����������һ����ֻ��һ��ʵ��
-* ��ô���������һ�����ж��ʵ�������������޸�����ʵ�����������޸�����ʵ�����������ö���ࡣ
-* C:������ʾ
-* �Լ�ʵ��ö����
-1,�Զ���װ��
-2,����
-3,�ɱ����
-4,��̬����
-5,��ǿforѭ��
-6,������
-7,ö��
+package 枚举类;
+/* A:枚举概述
+* 是指将变量的值一一列出来,变量的值只限于列举出来的值的范围内。举例：一周只有7天，一年只有12个月等。
+* B:回想单例设计模式：单例类是一个类只有一个实例
+* 那么多例类就是一个类有多个实例，但不是无限个数的实例，而是有限个数的实例。这才能是枚举类。
+* C:案例演示
+* 自己实现枚举类
+1,自动拆装箱
+2,泛型
+3,可变参数
+4,静态导入
+5,增强for循环
+6,互斥锁
+7,枚举
 */	
 public class Demo01test {
 	public static void main(String[] args) {
-		//�Զ���ö�ٵĵ�һ�ַ�ʽ
+		//自定义枚举的第一种方式
 		method();
-		//�ڶ����Զ���ö�ٵķ���
+		//第二种自定义枚举的方法
 		method2();
-		//�������Զ���ö�ٷ���
+		//第三种自定义枚举方法
 		method3();
 	}
 
@@ -37,7 +37,7 @@ public class Demo01test {
 		System.out.println(monWeek1.getName());
 	}
 	
-	//�Զ���ö�ٵĵ�һ�ַ�ʽ
+	//自定义枚举的第一种方式
 	private static void method() {
 		Week01 monWeek1= Week01.MON;
 		Week01 tuesWeek1= Week01.TUES;

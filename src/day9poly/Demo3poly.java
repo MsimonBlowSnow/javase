@@ -1,10 +1,10 @@
 package day9poly;
-/*Ê¹ÓÃ¶àÌ¬µÄºÃ´¦ºÍinstanof
- * ¶àÌ¬ÓÃÓÚ´«µİ
+/*ä½¿ç”¨å¤šæ€çš„å¥½å¤„å’Œinstanof
+ * å¤šæ€ç”¨äºä¼ é€’
  * 
  * */
 public class Demo3poly {
-	//Ê¹ÓÃ¶àÌ¬²ÎÊı ¼È¿ÉÒÔNew Cat() ÓÖ¿ÉÒÔNew Dog(),µ±²ÎÊıÊ¹ÓÃ¶ÔÏó
+	//ä½¿ç”¨å¤šæ€å‚æ•° æ—¢å¯ä»¥New Cat() åˆå¯ä»¥New Dog(),å½“å‚æ•°ä½¿ç”¨å¯¹è±¡
 	public static void print(Animal3 a) {
 		if (a instanceof Cat3) {
 			Cat3 c = (Cat3) a;
@@ -27,13 +27,13 @@ public class Demo3poly {
 
 class Animal3{
 	public void eat() {
-		System.out.println("³Ô¶«Î÷");
+		System.out.println("åƒä¸œè¥¿");
 	}
 }
 
 class Cat3 extends Animal3{
 	public void eat() {
-		System.out.println("Ã¨³ÔÓã");
+		System.out.println("çŒ«åƒé±¼");
 	}
 	public void catchMouse() {
 		System.out.println("Cat can Catch mouses!");
@@ -42,7 +42,7 @@ class Cat3 extends Animal3{
 
 class dog extends Animal3{
 	public void eat() {
-		System.out.println("¹·³ÔÈâ");
+		System.out.println("ç‹—åƒè‚‰");
 	}
 	public void lookhome() {
 		System.out.println("Dog can look home!");

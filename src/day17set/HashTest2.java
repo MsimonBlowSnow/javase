@@ -14,7 +14,7 @@ public class HashTest2 {
 			a.add(""+i);
 		}
 		System.out.println(a);
-		System.out.println("去重之后:");
+		System.out.println("鍘婚噸涔嬪悗:");
 		method1(a);
 		System.out.println(a);
 	}

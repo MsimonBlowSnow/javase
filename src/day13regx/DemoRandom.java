@@ -3,21 +3,21 @@ package day13regx;
 import java.util.Random;
 
 /*Random
- * Á½ÕÅ¹¹Ôì
- * Random();//¸ü¾ßÄÉÃëÖµÀ´²úÉúËæ»úÊı
- * Random(int n);¸ù¾İÖÖ×Ó²úÉúËæ»úÊı
+ * ä¸¤å¼ æ„é€ 
+ * Random();//æ›´å…·çº³ç§’å€¼æ¥äº§ç”Ÿéšæœºæ•°
+ * Random(int n);æ ¹æ®ç§å­äº§ç”Ÿéšæœºæ•°
  * */
 public class DemoRandom {
 	public static void main(String[] args) {
 		Random a=new Random();
 		Random b= new Random(10);
 		Random c=new Random(10);
-		System.out.println(a.nextInt());//Ëæ»ú²úÉúÒ»¸öËæ»úÕûÊı
-		System.out.println(a.nextInt(100));//Ëæ»ú²úÉúÒ»¸ö0-99µÄÊı
-		System.out.println(b.nextInt());//Ëæ»ú²úÉúÒ»¸öËæ»úÕûÊı
-		System.out.println(c.nextInt());//Ëæ»ú²úÉúÒ»¸öËæ»úÕûÊı
-		System.out.println(b.nextInt(100));//Ëæ»ú²úÉúÒ»¸ö0-99Ëæ»úÕûÊı
-		System.out.println(c.nextInt(100));//Ëæ»ú²úÉúÒ»¸ö0-99Ëæ»úÕûÊı
-		System.out.println("bc²úÉúµÄËæ»úÊıÏàµÈ£¬Ó¦ÎªÖÖ×ÓÊÇÒ»ÑùµÄ");
+		System.out.println(a.nextInt());//éšæœºäº§ç”Ÿä¸€ä¸ªéšæœºæ•´æ•°
+		System.out.println(a.nextInt(100));//éšæœºäº§ç”Ÿä¸€ä¸ª0-99çš„æ•°
+		System.out.println(b.nextInt());//éšæœºäº§ç”Ÿä¸€ä¸ªéšæœºæ•´æ•°
+		System.out.println(c.nextInt());//éšæœºäº§ç”Ÿä¸€ä¸ªéšæœºæ•´æ•°
+		System.out.println(b.nextInt(100));//éšæœºäº§ç”Ÿä¸€ä¸ª0-99éšæœºæ•´æ•°
+		System.out.println(c.nextInt(100));//éšæœºäº§ç”Ÿä¸€ä¸ª0-99éšæœºæ•´æ•°
+		System.out.println("bcäº§ç”Ÿçš„éšæœºæ•°ç›¸ç­‰ï¼Œåº”ä¸ºç§å­æ˜¯ä¸€æ ·çš„");
 	}
 }

@@ -3,42 +3,42 @@ package day15jihe;
 import java.util.ArrayList;
 import java.util.Collection;
 
-/** A:°¸ÀıÑİÊ¾	
-		»ù±¾¹¦ÄÜÑİÊ¾
+/** A:æ¡ˆä¾‹æ¼”ç¤º	
+		åŸºæœ¬åŠŸèƒ½æ¼”ç¤º
 		  
-		boolean add(E e)//Ìí¼ÓÒ»¸ö¶ÔÏóÎŞÂÛÊÇÊ²Ã´Êı¾İÀàĞÍ¶¼¿ÉÒÔ
-		boolean remove(Object o)//ÒÆ³ıÒ»¸ö¶ÔÏó
-		void clear()//Çå¿Õ¼¯ºÏ
-		boolean contains(Object o)//ÊÇ·ñ°üº¬¸Ã¶ÔÏó
-		boolean isEmpty()//ÅĞ¶Ï¼¯ºÏÊÇ·ñÊÇ¿ÕµÄ
-		int size()//·µ»Ø¼¯ºÏÄÚ¶ÔÏóµÄ¸öÊı
+		boolean add(E e)//æ·»åŠ ä¸€ä¸ªå¯¹è±¡æ— è®ºæ˜¯ä»€ä¹ˆæ•°æ®ç±»å‹éƒ½å¯ä»¥
+		boolean remove(Object o)//ç§»é™¤ä¸€ä¸ªå¯¹è±¡
+		void clear()//æ¸…ç©ºé›†åˆ
+		boolean contains(Object o)//æ˜¯å¦åŒ…å«è¯¥å¯¹è±¡
+		boolean isEmpty()//åˆ¤æ–­é›†åˆæ˜¯å¦æ˜¯ç©ºçš„
+		int size()//è¿”å›é›†åˆå†…å¯¹è±¡çš„ä¸ªæ•°
 
-* B:×¢Òâ:
+* B:æ³¨æ„:
 * 
-		collectionXxx.javaÊ¹ÓÃÁËÎ´¾­¼ì²é»ò²»°²È«µÄ²Ù×÷.
-		×¢Òâ:ÒªÁË½âÏêÏ¸ĞÅÏ¢,ÇëÊ¹ÓÃ -Xlint:uncheckedÖØĞÂ±àÒë.
-		java±àÒëÆ÷ÈÏÎª¸Ã³ÌĞò´æÔÚ°²È«Òş»¼
-		ÎÂÜ°ÌáÊ¾:Õâ²»ÊÇ±àÒëÊ§°Ü,ËùÒÔÏÈ²»ÓÃÀí»á,µÈÑ§ÁË·ºĞÍÄã¾ÍÖªµÀÁË 
+		collectionXxx.javaä½¿ç”¨äº†æœªç»æ£€æŸ¥æˆ–ä¸å®‰å…¨çš„æ“ä½œ.
+		æ³¨æ„:è¦äº†è§£è¯¦ç»†ä¿¡æ¯,è¯·ä½¿ç”¨ -Xlint:uncheckedé‡æ–°ç¼–è¯‘.
+		javaç¼–è¯‘å™¨è®¤ä¸ºè¯¥ç¨‹åºå­˜åœ¨å®‰å…¨éšæ‚£
+		æ¸©é¦¨æç¤º:è¿™ä¸æ˜¯ç¼–è¯‘å¤±è´¥,æ‰€ä»¥å…ˆä¸ç”¨ç†ä¼š,ç­‰å­¦äº†æ³›å‹ä½ å°±çŸ¥é“äº† 
  * */
-@SuppressWarnings({ "rawtypes", "unchecked" })//µÈÑ§ÁË·ºĞÍÄã¾ÍÖªµÀÁË
+@SuppressWarnings({ "rawtypes", "unchecked" })//ç­‰å­¦äº†æ³›å‹ä½ å°±çŸ¥é“äº†
 public class DemoArrayList{
 	public static void main(String[] args) {
 		Collection a=new ArrayList();
 		a.add("mmp");
-		a.add(1);//Arraylist·µ»ØÖµÒ»¶¨ÊÇtrue
+		a.add(1);//Arraylistè¿”å›å€¼ä¸€å®šæ˜¯true
 		a.add("laji");
 		if(a.contains("mmp")) {
-			System.out.println("´ó¼Ò¶¼ÊÇÎÄÃ÷ÈË!");
+			System.out.println("å¤§å®¶éƒ½æ˜¯æ–‡æ˜äºº!");
 		}
 		System.out.println(a.toString()+a.size());
 		a.remove(1);
 		System.out.println(a.toString()+a.size());
 		a.clear();
 		if(a.isEmpty()) {
-			System.out.println("ÕâÊÇÒ»¸ö¿Õ¼¯ºÏ!");
+			System.out.println("è¿™æ˜¯ä¸€ä¸ªç©ºé›†åˆ!");
 		}
 		if(a.contains("mmp")) {
-			System.out.println("´ó¼Ò¶¼ÊÇÎÄÃ÷ÈË!");
+			System.out.println("å¤§å®¶éƒ½æ˜¯æ–‡æ˜äºº!");
 		}
 	}
 }

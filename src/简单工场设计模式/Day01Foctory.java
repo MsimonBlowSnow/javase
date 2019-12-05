@@ -1,7 +1,7 @@
-package ¼òµ¥¹¤³¡Éè¼ÆÄ£Ê½;
+package ç®€å•å·¥åœºè®¾è®¡æ¨¡å¼;
 
 public class Day01Foctory {
-	//×¢ÊÍµÄ²¿·Ö´úÂë¸´ÓÃ·Ç³£µÍ
+	//æ³¨é‡Šçš„éƒ¨åˆ†ä»£ç å¤ç”¨éå¸¸ä½
 	/*
 	 * public static Dog Dog() {
 	 * 	 return new Dog(); 

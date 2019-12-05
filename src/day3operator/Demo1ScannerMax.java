@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Demo1ScannerMax {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëµÚÒ»¸öÕûÊı:");
+		System.out.println("è¯·è¾“å…¥ç¬¬ä¸€ä¸ªæ•´æ•°:");
 		int a=sc.nextInt();
-		System.out.println("ÇëÊäÈëµÚ¶ş¸öÕûÊı:");
+		System.out.println("è¯·è¾“å…¥ç¬¬äºŒä¸ªæ•´æ•°:");
 		int b=sc.nextInt();
-		System.out.println((a<b?a:b)+"±È½ÏĞ¡!");
-		System.out.println((a<b?b:a)+"±È½Ï´ó");
+		System.out.println((a<b?a:b)+"æ¯”è¾ƒå°!");
+		System.out.println((a<b?b:a)+"æ¯”è¾ƒå¤§");
 	}
 }

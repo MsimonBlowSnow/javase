@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/* A:CollectionsÀà¸ÅÊö
-	* Õë¶Ô¼¯ºÏ²Ù×÷ µÄ¹¤¾ßÀà
-* B:Collections³ÉÔ±·½·¨
+/* A:Collectionsç±»æ¦‚è¿°
+	* é’ˆå¯¹é›†åˆæ“ä½œ çš„å·¥å…·ç±»
+* B:Collectionsæˆå‘˜æ–¹æ³•
 * 
 		public static <T> void sort(List<T> list)
 		public static <T> int binarySearch(List<?> list,T key)
@@ -18,24 +18,24 @@ public class DemoCollections {
 	public static void main(String[] args) {
 		
 		List<Character> a= new ArrayList<>();
-		/*collections.sort() ×Ô¶¯ÅÅĞò
+		/*collections.sort() è‡ªåŠ¨æ’åº
 		methodSort();
 		*/
 		
 		/*Collections.binarySearch(a)
-		 * ¶ş·Ö·¨²éÕÒÖµ¶ÔµÄË÷Òı£¬²¢·µ»ØË÷Òı£¬Èç¹ûÃ»ÓĞ¶ÔÓ¦µÄÔªËØ£¬Ôò·µ»Ø-²åÈëµÄË÷Òı-1
+		 * äºŒåˆ†æ³•æŸ¥æ‰¾å€¼å¯¹çš„ç´¢å¼•ï¼Œå¹¶è¿”å›ç´¢å¼•ï¼Œå¦‚æœæ²¡æœ‰å¯¹åº”çš„å…ƒç´ ï¼Œåˆ™è¿”å›-æ’å…¥çš„ç´¢å¼•-1
 		methodBinarySearch(a);
 		*/
 		
-		/*·µ»Øa¼¯ºÏÀïÃæ×î´óµÄÔªËØ¡£Collection.max(a);
+		/*è¿”å›aé›†åˆé‡Œé¢æœ€å¤§çš„å…ƒç´ ã€‚Collection.max(a);
 		methodMax();
 		*/
 		
-		/*½«a¼¯ºÏ·´×ª Collections.reverse(a);
+		/*å°†aé›†åˆåè½¬ Collections.reverse(a);
 		methodReverse();
 		*/
 		
-		/*Colllections.shuffle(a)¶Ôa½øĞĞÏ´ÅÆ
+		/*Colllections.shuffle(a)å¯¹aè¿›è¡Œæ´—ç‰Œ
 		*/
 		
 		methodShuffle();
@@ -89,7 +89,7 @@ public class DemoCollections {
 		int flag=Collections.binarySearch(a, 'b');
 		System.out.println(flag);
 		flag=Collections.binarySearch(a, 'g');
-		System.out.println(flag);//·µ»Ø-²åÈëµÄË÷Òı-1
+		System.out.println(flag);//è¿”å›-æ’å…¥çš„ç´¢å¼•-1
 	}
 
 	private static void methodSort() {

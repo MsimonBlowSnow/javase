@@ -1,22 +1,22 @@
 package day17Exceptioon;
-/* A:JVMÄ¬ÈÏÊÇÈçºÎ´¦ÀíÒì³£µÄ
-* mainº¯ÊýÊÕµ½Õâ¸öÎÊÌâÊ±,ÓÐÁ½ÖÖ´¦Àí·½Ê½:
-	* a:×Ô¼º½«¸ÃÎÊÌâ´¦Àí,È»ºó¼ÌÐøÔËÐÐ
-	* b:×Ô¼ºÃ»ÓÐÕë¶ÔµÄ´¦Àí·½Ê½,Ö»ÓÐ½»¸øµ÷ÓÃmainµÄjvmÀ´´¦Àí,²»ÄÜÔËÐÐ
-* jvmÓÐÒ»¸öÄ¬ÈÏµÄÒì³£´¦Àí»úÖÆ,¾Í½«¸ÃÒì³£½øÐÐ´¦Àí.
-* ²¢½«¸ÃÒì³£µÄÃû³Æ,Òì³£µÄÐÅÏ¢.Òì³£³öÏÖµÄÎ»ÖÃ´òÓ¡ÔÚÁË¿ØÖÆÌ¨ÉÏ,Í¬Ê±½«³ÌÐòÍ£Ö¹ÔËÐÐ
-* B:°¸ÀýÑÝÊ¾
-* JVMÄ¬ÈÏÈçºÎ´¦ÀíÒì³£
+/* A:JVMé»˜è®¤æ˜¯å¦‚ä½•å¤„ç†å¼‚å¸¸çš„
+* mainå‡½æ•°æ”¶åˆ°è¿™ä¸ªé—®é¢˜æ—¶,æœ‰ä¸¤ç§å¤„ç†æ–¹å¼:
+	* a:è‡ªå·±å°†è¯¥é—®é¢˜å¤„ç†,ç„¶åŽç»§ç»­è¿è¡Œ
+	* b:è‡ªå·±æ²¡æœ‰é’ˆå¯¹çš„å¤„ç†æ–¹å¼,åªæœ‰äº¤ç»™è°ƒç”¨mainçš„jvmæ¥å¤„ç†,ä¸èƒ½è¿è¡Œ
+* jvmæœ‰ä¸€ä¸ªé»˜è®¤çš„å¼‚å¸¸å¤„ç†æœºåˆ¶,å°±å°†è¯¥å¼‚å¸¸è¿›è¡Œå¤„ç†.
+* å¹¶å°†è¯¥å¼‚å¸¸çš„åç§°,å¼‚å¸¸çš„ä¿¡æ¯.å¼‚å¸¸å‡ºçŽ°çš„ä½ç½®æ‰“å°åœ¨äº†æŽ§åˆ¶å°ä¸Š,åŒæ—¶å°†ç¨‹åºåœæ­¢è¿è¡Œ
+* B:æ¡ˆä¾‹æ¼”ç¤º
+* JVMé»˜è®¤å¦‚ä½•å¤„ç†å¼‚å¸¸
 */
 
 
 public class DemoExceptionJVM {
 	public static void main(String[] args) {
-		int c=chu(10,0);//main·½·¨Ã»ÓÐ´¦Àí£¬½»¸øjvm£¬jvm´òÓ¡³ö´íÎóµÄÐÅÏ¢
+		int c=chu(10,0);//mainæ–¹æ³•æ²¡æœ‰å¤„ç†ï¼Œäº¤ç»™jvmï¼Œjvmæ‰“å°å‡ºé”™è¯¯çš„ä¿¡æ¯
 		System.out.println(c);
 	}
 
 	private static int chu(int i, int j) {
-		return i/j; //²úÉúÒì³£²¢Å×main·½·¨  newArithmeticException("/ by zero") 
+		return i/j; //äº§ç”Ÿå¼‚å¸¸å¹¶æŠ›mainæ–¹æ³•  newArithmeticException("/ by zero") 
 	}
 }

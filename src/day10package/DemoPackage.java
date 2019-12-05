@@ -1,20 +1,20 @@
 package day10package;
 
 //import java.util.Scanner;
-//µ¼±¨¿ÉÒÔÓÃÍ¨Åä·û*£¬Èç£º²»¹ı²»Ìá³«£¬ÒòÎªÕâÑù¼ÓÔØËÙ¶È»á±äÂı
+//å¯¼æŠ¥å¯ä»¥ç”¨é€šé…ç¬¦*ï¼Œå¦‚ï¼šä¸è¿‡ä¸æå€¡ï¼Œå› ä¸ºè¿™æ ·åŠ è½½é€Ÿåº¦ä¼šå˜æ…¢
 import java.awt.color.*;
 
-/*µ¼°üÊ¹ÓÃÄ³¸ö°üÏÂµÄ¾ßÌåÊı¾İÒªÓÃµ¼¸Ã°ü»òÕßÖ±½Óµ÷ÓÃ°üÃû 
+/*å¯¼åŒ…ä½¿ç”¨æŸä¸ªåŒ…ä¸‹çš„å…·ä½“æ•°æ®è¦ç”¨å¯¼è¯¥åŒ…æˆ–è€…ç›´æ¥è°ƒç”¨åŒ…å 
  * 
- *×¢Òâ:Ê¹ÓÃcmd ±àÒëÊ±£¬¿ÉÒÔÓÃD:\java\HelloWorld¾ÙÀı
- * ±àÒëJavac -d . HelloWorld ÔÚHelloWorldÉú³ÉÒ»¸öJava1µÄÎÄ¼ş
- * ÔËĞĞJava Java1.HelloWorld 
+ *æ³¨æ„:ä½¿ç”¨cmd ç¼–è¯‘æ—¶ï¼Œå¯ä»¥ç”¨D:\java\HelloWorldä¸¾ä¾‹
+ * ç¼–è¯‘Javac -d . HelloWorld åœ¨HelloWorldç”Ÿæˆä¸€ä¸ªJava1çš„æ–‡ä»¶
+ * è¿è¡ŒJava Java1.HelloWorld 
  * */
 
 
 public class DemoPackage {
 	public static void main(String[] args) {
-		//Scanner a=new Scanner(System.in);//µ¼°üÇé¿öÏÂ
+		//Scanner a=new Scanner(System.in);//å¯¼åŒ…æƒ…å†µä¸‹
 		java.util.Scanner a=new java.util.Scanner(System.in);
 		
 	}

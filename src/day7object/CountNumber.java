@@ -14,8 +14,8 @@ public class CountNumber {
 		while (flag3!= 0) {
 			flag1=false;
 			mun= new Munber1();
-			System.out.println("¿ªÊ¼ÓÎÏ·:");
-			System.out.println("ÇëÊäÈëÒ»¸ö1-100µÄÕûÊı£¬ÄãÓĞ10´Î»ú»á");
+			System.out.println("å¼€å§‹æ¸¸æˆ:");
+			System.out.println("è¯·è¾“å…¥ä¸€ä¸ª1-100çš„æ•´æ•°ï¼Œä½ æœ‰10æ¬¡æœºä¼š");
 			flag=10;
 			while (flag != 0) {
 				count = 0;
@@ -23,22 +23,22 @@ public class CountNumber {
 				count = sc.nextInt();
 				if (mun.guess(count)) {
 					flag1 = true;
-					System.out.println("¹§Ï²Äã´ğ¶ÔÁË!");
+					System.out.println("æ­å–œä½ ç­”å¯¹äº†!");
 					break;
 				} else {
 					if (mun.bigorsmall(count)) {
-						System.out.println("ÄãÊäÈëµÄÊı´óÁË!");
+						System.out.println("ä½ è¾“å…¥çš„æ•°å¤§äº†!");
 					} else {
-						System.out.println("ÄãÊäÈëµÄÊıĞ¡ÁË!");
+						System.out.println("ä½ è¾“å…¥çš„æ•°å°äº†!");
 					}
 				}
 			}
 			if (flag1) {
-				System.out.println("¹§Ï²Äã²Â¶ÔÁË!");
+				System.out.println("æ­å–œä½ çŒœå¯¹äº†!");
 			} else {
-				System.out.println("ºÜ¿ÉÏ§,ÄãÊ§°ÜÁË!ÕıÈ·´ğ°¸ÊÇ:" + mun.getNumber1());
+				System.out.println("å¾ˆå¯æƒœ,ä½ å¤±è´¥äº†!æ­£ç¡®ç­”æ¡ˆæ˜¯:" + mun.getNumber1());
 			}
-			System.out.println("Çë¾ö¶¨ÊÇ·ñ¼ÌĞø£º[0ÍË³ö/1¼ÌĞø]");
+			System.out.println("è¯·å†³å®šæ˜¯å¦ç»§ç»­ï¼š[0é€€å‡º/1ç»§ç»­]");
 			flag3 = sc.nextInt();
 		}
 	}

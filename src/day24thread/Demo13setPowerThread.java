@@ -1,7 +1,7 @@
 package day24thread;
 /*
- *  setPriority()设置线程的优先级
- *  最小是1，最大是10，默认是5
+ *  setPriority()璁剧疆绾跨▼鐨勪紭鍏堢骇
+ *  鏈�灏忔槸1锛屾渶澶ф槸10锛岄粯璁ゆ槸5
  * */
 public class Demo13setPowerThread {
 	public static void main(String[] args) {

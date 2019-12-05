@@ -1,6 +1,6 @@
 package day24thread;
-/*24.11_¶àÏß³Ì(ÐÝÃßÏß³Ì)
- * sleep(int ºÁÃë)£»
+/*24.11_å¤šçº¿ç¨‹(ä¼‘çœ çº¿ç¨‹)
+ * sleep(int æ¯«ç§’)ï¼›
  * */
 public class Demo09ThreadSleep {
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class Demo09ThreadSleep {
 			public void run() {
 				for (int i = 0; i <10; i++) {
 					System.out.println(i+"thread");
-					//new Thread()²»ÄÜÅ×³öÒì³££¬ËùÒÔ¸ÃÒì³£Ö»ÄÜ×Ô¼º´¦Àí	
+					//new Thread()ä¸èƒ½æŠ›å‡ºå¼‚å¸¸ï¼Œæ‰€ä»¥è¯¥å¼‚å¸¸åªèƒ½è‡ªå·±å¤„ç†	
 					try {
 						Thread.currentThread().sleep(1000);
 					} catch (InterruptedException e) {
@@ -25,8 +25,8 @@ public class Demo09ThreadSleep {
 			@Override
 			public void run() {
 				for (int i = 0; i < 10; i++) {
-					System.out.println(i+"runable½Ó¿Ú");
-					//new Thread()²»ÄÜÅ×³öÒì³££¬ËùÒÔ¸ÃÒì³£Ö»ÄÜ×Ô¼º´¦Àí	
+					System.out.println(i+"runableæŽ¥å£");
+					//new Thread()ä¸èƒ½æŠ›å‡ºå¼‚å¸¸ï¼Œæ‰€ä»¥è¯¥å¼‚å¸¸åªèƒ½è‡ªå·±å¤„ç†	
 					try {
 						Thread.currentThread().sleep(1000);
 					} catch (InterruptedException e) {

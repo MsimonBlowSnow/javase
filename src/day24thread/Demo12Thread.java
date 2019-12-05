@@ -1,6 +1,6 @@
 package day24thread;
-/*yieldÈÃ³öcpu
- * ÈÃ³öcpuÈÃÁíÒ»¸öÖ´ĞĞ
+/*yieldè®©å‡ºcpu
+ * è®©å‡ºcpuè®©å¦ä¸€ä¸ªæ‰§è¡Œ
  */
 public class Demo12Thread {
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ class Demo12 extends Thread{
 	public void run() {
 		for (int i = 0; i < 1000; i++) {
 			if(i%10==0) {
-				this.yield();//ÈÃ³öcpu
+				this.yield();//è®©å‡ºcpu
 			}
 			System.out.println(i+this.getName());
 		}

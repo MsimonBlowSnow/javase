@@ -4,38 +4,38 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
-/* 1.Ê²Ã´ÊÇ´òÓ¡Á÷
-* ¸ÃÁ÷¿ÉÒÔºÜ·½±ãµÄ½«¶ÔÏóµÄtoString()½á¹ûÊä³ö, ²¢ÇÒ×Ô¶¯¼ÓÉÏ»»ĞĞ, ¶øÇÒ¿ÉÒÔÊ¹ÓÃ×Ô¶¯Ë¢³öµÄÄ£Ê½
-* System.out¾ÍÊÇÒ»¸öPrintStream, ÆäÄ¬ÈÏÏò¿ØÖÆÌ¨Êä³öĞÅÏ¢
-* 2.Ê¹ÓÃ·½Ê½
-* ´òÓ¡: print(), println()
-* ×Ô¶¯Ë¢³ö: PrintWriter(OutputStream out, boolean autoFlush, String encoding) 
-* ´òÓ¡Á÷Ö»²Ù×÷Êı¾İÄ¿µÄ
+/* 1.ä»€ä¹ˆæ˜¯æ‰“å°æµ
+* è¯¥æµå¯ä»¥å¾ˆæ–¹ä¾¿çš„å°†å¯¹è±¡çš„toString()ç»“æœè¾“å‡º, å¹¶ä¸”è‡ªåŠ¨åŠ ä¸Šæ¢è¡Œ, è€Œä¸”å¯ä»¥ä½¿ç”¨è‡ªåŠ¨åˆ·å‡ºçš„æ¨¡å¼
+* System.outå°±æ˜¯ä¸€ä¸ªPrintStream, å…¶é»˜è®¤å‘æ§åˆ¶å°è¾“å‡ºä¿¡æ¯
+* 2.ä½¿ç”¨æ–¹å¼
+* æ‰“å°: print(), println()
+* è‡ªåŠ¨åˆ·å‡º: PrintWriter(OutputStream out, boolean autoFlush, String encoding) 
+* æ‰“å°æµåªæ“ä½œæ•°æ®ç›®çš„
 */
 public class DemoSystemOut {
 	public static void main(String[] args) throws FileNotFoundException {
 		methodprintStream();
-		//¼Ótrue Õâ¸ö²ÎÊıÓĞ×Ô¶¯Ë¢³öµÄ¹¦ÄÜ²»¹ıÖ»ÄÜÕë¶Ôprintln()·½·¨
+		//åŠ true è¿™ä¸ªå‚æ•°æœ‰è‡ªåŠ¨åˆ·å‡ºçš„åŠŸèƒ½ä¸è¿‡åªèƒ½é’ˆå¯¹println()æ–¹æ³•
 		PrintWriter pw = new PrintWriter(new FileOutputStream("g.txt"),true);
 		pw.print(true);
 		pw.write(97);
 		pw.println(97);
 		pw.write(99);
-		//pw.close;//Èç¹û²»¹ØÁ÷£¬println()ÓĞ×Ô¶¯Ë¢³öµÄ¹¦ÄÜ,println()Ç°ÃæµÄ»áË¢³ö,ºóÃæµÄ²»»á
+		//pw.close;//å¦‚æœä¸å…³æµï¼Œprintln()æœ‰è‡ªåŠ¨åˆ·å‡ºçš„åŠŸèƒ½,println()å‰é¢çš„ä¼šåˆ·å‡º,åé¢çš„ä¸ä¼š
 	}
 
 	private static void methodprintStream() throws FileNotFoundException {
 		PrintStream ps = System.out;
-		ps.println(97);					//ÆäÊµµ×²ãÓÃµÄÊÇInteger.toString(x),½«x×ª»»ÎªÊı×Ö×Ö·û´®´òÓ¡
-		ps.write(97);					//a,×ª»¯³É×Ö·ûÁË
+		ps.println(97);					//å…¶å®åº•å±‚ç”¨çš„æ˜¯Integer.toString(x),å°†xè½¬æ¢ä¸ºæ•°å­—å­—ç¬¦ä¸²æ‰“å°
+		ps.write(97);					//a,è½¬åŒ–æˆå­—ç¬¦äº†
 		ps.println("xxx");
-		ps.println(new Person(23,"ÕÅÈı"));
+		ps.println(new Person(23,"å¼ ä¸‰"));
 		Person p = null;
-		ps.println(p);//Èç¹ûÊÇnull,¾Í·µ»Ønull,Èç¹û²»ÊÇnull,¾Íµ÷ÓÃ¶ÔÏóµÄtoString()
+		ps.println(p);//å¦‚æœæ˜¯null,å°±è¿”å›null,å¦‚æœä¸æ˜¯null,å°±è°ƒç”¨å¯¹è±¡çš„toString()
 		PrintWriter pw = new PrintWriter(new FileOutputStream("g.txt"), true);
 		pw.write(97);
-		pw.print("´ó¼ÒºÃ");
-		pw.println("ÄãºÃ");				//×Ô¶¯Ë¢³ö,Ö»Õë¶ÔµÄÊÇprintln·½·¨
+		pw.print("å¤§å®¶å¥½");
+		pw.println("ä½ å¥½");				//è‡ªåŠ¨åˆ·å‡º,åªé’ˆå¯¹çš„æ˜¯printlnæ–¹æ³•
 		pw.close();
 	}
 }

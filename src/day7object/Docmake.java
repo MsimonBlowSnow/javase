@@ -1,6 +1,6 @@
 package day7object;
 /**
- ÕâÊÇÒ»¸öÊÇ¹¤¾ßÀà
+ è¿™æ˜¯ä¸€ä¸ªæ˜¯å·¥å…·ç±»
 @author Ming
 @version v1.0
 */
@@ -9,9 +9,9 @@ public class Docmake {
 	private Docmake() {}
 	
 	/**
-	 * ÕâÊÇÒ»¸ö»ñÈ¡Ò»¸öÊı×éÖĞµÄ×î´óÖµµÄ·½·¨
-	 * @param arr Ò»¸öintĞÍÊı×é
-	 * @return max Êı×éÖĞ×î´óµÄÕûÊı
+	 * è¿™æ˜¯ä¸€ä¸ªè·å–ä¸€ä¸ªæ•°ç»„ä¸­çš„æœ€å¤§å€¼çš„æ–¹æ³•
+	 * @param arr ä¸€ä¸ªintå‹æ•°ç»„
+	 * @return max æ•°ç»„ä¸­æœ€å¤§çš„æ•´æ•°
 	 * */
 	public static int getMax(int[] arr) {
 		int max=arr[0];
@@ -24,8 +24,8 @@ public class Docmake {
 	
 
 	/**
-	 * ÕâÊÇÒ»¸ö´òÓ¡Ò»¸öÊı×éµÄ·½·¨
-	 * @param arr  Ò»¸öÕûÊıÊı×é
+	 * è¿™æ˜¯ä¸€ä¸ªæ‰“å°ä¸€ä¸ªæ•°ç»„çš„æ–¹æ³•
+	 * @param arr  ä¸€ä¸ªæ•´æ•°æ•°ç»„
 	 * */
 	public static void print(int[] arr) {
 		for(int i:arr) {
@@ -34,9 +34,9 @@ public class Docmake {
 	}
 	
 	/**
-	 * ÕâÊÇÒ»¸ö·´×ªÊı×éµÄ·½·¨
-	 * @param arr Ò»¸öÕûÊıÊı×é
-	 * @return arr Ò»¸öÕûÊıÊı×é
+	 * è¿™æ˜¯ä¸€ä¸ªåè½¬æ•°ç»„çš„æ–¹æ³•
+	 * @param arr ä¸€ä¸ªæ•´æ•°æ•°ç»„
+	 * @return arr ä¸€ä¸ªæ•´æ•°æ•°ç»„
 	 * */
 	public static int[] revArray(int[] arr) {
 		for(int i=0;i<arr.length;i++) {

@@ -22,7 +22,7 @@ public class Day05TCP {
 					while((len=fileInputStream.read(a))!=-1) {
 						netOutputStream.write(a,0,len);
 					}
-					//±ÜÃâ·şÎñÆ÷Ïß³ÌÒ»Ö±µÈ´ı
+					//é¿å…æœåŠ¡å™¨çº¿ç¨‹ä¸€ç›´ç­‰å¾…
 					aSocket.shutdownOutput();
 					len=netInputStream.read(a);
 					System.out.println(new String(a,0,len));

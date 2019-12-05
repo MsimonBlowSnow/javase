@@ -3,9 +3,9 @@ package day17Exceptioon;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 
-/*1.catchµ½ÁËÒì³£ºóÃæ»¹»áÖ´ĞĞÂğ
+/*1.catchåˆ°äº†å¼‚å¸¸åé¢è¿˜ä¼šæ‰§è¡Œå—
  	* 
- * 2.throwºóÃæ»¹»áÖ´ĞĞÂğ
+ * 2.throwåé¢è¿˜ä¼šæ‰§è¡Œå—
  * */
 public class DemozTest {
 	public static void main(String[] args) throws FileNotFoundException {
@@ -16,13 +16,13 @@ public class DemozTest {
 				try {
 					aString.charAt(1);
 				} catch (Exception e) {
-					System.out.println("¿ÕÖµ²»ÄÜµ÷ÓÃ·½·¨");
+					System.out.println("ç©ºå€¼ä¸èƒ½è°ƒç”¨æ–¹æ³•");
 				}
 				System.out.println(1);
 			}
 		}.start();
 		FileInputStream aFileInputStream=new FileInputStream("mmp");
-		System.out.println("²»ÄÜ¼ÌĞø");
+		System.out.println("ä¸èƒ½ç»§ç»­");
 		int a=10/0;
 		System.out.println("mmp");
 	}

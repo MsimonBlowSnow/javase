@@ -3,9 +3,9 @@ package day23Digui;
 import java.io.File;
 import java.util.Scanner;
 
-/*É¾³ıÎÄ¼ş¼Ğ
- 	*1.ÊäÈëÒ»¸öÎÄ¼ş¼Ğ»òÎÄ¼ş	 
- 	* Èç¹ûÊÇÎÄ¼ş¾ÍÉ¾³ı£¬Èç¹ûÊÇÎÄ¼ş¼Ğ¾Í»ñÈ¡¸ÃÎÄ¼ş¼ĞµÄÎÄ¼şÊı×é£¬²¢Ò»¸öÒ»¸öµÄµİ¹é 
+/*åˆ é™¤æ–‡ä»¶å¤¹
+ 	*1.è¾“å…¥ä¸€ä¸ªæ–‡ä»¶å¤¹æˆ–æ–‡ä»¶	 
+ 	* å¦‚æœæ˜¯æ–‡ä»¶å°±åˆ é™¤ï¼Œå¦‚æœæ˜¯æ–‡ä»¶å¤¹å°±è·å–è¯¥æ–‡ä»¶å¤¹çš„æ–‡ä»¶æ•°ç»„ï¼Œå¹¶ä¸€ä¸ªä¸€ä¸ªçš„é€’å½’ 
  * */
 public class Demo02dirremove {
 	public static void main(String[] args) {
@@ -31,14 +31,14 @@ public class Demo02dirremove {
 		String file;
 		File file1;
 		while(true) {
-			System.out.println("ÇëÊäÈëÒ»¸öÎÄ¼ş¼Ğ:");
+			System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ–‡ä»¶å¤¹:");
 			file=scanner.nextLine();
 			file1=new File(file);
 		if(file1.exists()) {
 			if(file1.isDirectory()) {
 				return file1;
 			}else {
-				System.out.println("ÇëÊäÈëÒ»¸öÎÄ¼ş¼Ğ:");
+				System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ–‡ä»¶å¤¹:");
 			}
 		}
 	}

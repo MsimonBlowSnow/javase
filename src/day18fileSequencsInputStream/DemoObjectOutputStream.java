@@ -4,11 +4,11 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 
-/* 1.Ê²Ã´ÊÇ¶ÔÏó²Ù×÷Á÷
-* ¸ÃÁ÷¿ÉÒÔ½«Ò»¸ö¶ÔÏóĞ´³ö, »òÕß¶ÁÈ¡Ò»¸ö¶ÔÏóµ½³ÌĞòÖĞ. Ò²¾ÍÊÇÖ´ĞĞÁËĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯µÄ²Ù×÷.
-*1.1Ê²Ã´½ĞĞòÁĞ»¯ºÍ·´ĞòÁĞ»¯,°Ñ¶ÔÏóĞ´ÈëÎÄ¼şÀïÃæ½ĞĞòÁĞ»¯£¬¶ÁÈ¡ÎÄ¼şÀïÃæµÄ¶ÔÏó½Ğ·´ĞòÁĞ»¯
-* 2.Ê¹ÓÃ·½Ê½
-* Ğ´³ö: new ObjectOutputStream(OutputStream), writeObject()
+/* 1.ä»€ä¹ˆæ˜¯å¯¹è±¡æ“ä½œæµ
+* è¯¥æµå¯ä»¥å°†ä¸€ä¸ªå¯¹è±¡å†™å‡º, æˆ–è€…è¯»å–ä¸€ä¸ªå¯¹è±¡åˆ°ç¨‹åºä¸­. ä¹Ÿå°±æ˜¯æ‰§è¡Œäº†åºåˆ—åŒ–å’Œååºåˆ—åŒ–çš„æ“ä½œ.
+*1.1ä»€ä¹ˆå«åºåˆ—åŒ–å’Œååºåˆ—åŒ–,æŠŠå¯¹è±¡å†™å…¥æ–‡ä»¶é‡Œé¢å«åºåˆ—åŒ–ï¼Œè¯»å–æ–‡ä»¶é‡Œé¢çš„å¯¹è±¡å«ååºåˆ—åŒ–
+* 2.ä½¿ç”¨æ–¹å¼
+* å†™å‡º: new ObjectOutputStream(OutputStream), writeObject()
 
 		public class Demo3_ObjectOutputStream {
 
@@ -16,18 +16,18 @@ import java.io.ObjectOutputStream;
 */
 public class DemoObjectOutputStream {
 	public static void main(String[] args) throws IOException {
-			Person p1 = new Person(23,"ÕÅÈı");
-			Person p2 = new Person(24,"ÀîËÄ");
+			Person p1 = new Person(23,"å¼ ä¸‰");
+			Person p2 = new Person(24,"æå››");
 	//		FileOutputStream fos = new FileOutputStream("e.txt");
 	//		fos.write(p1);
 	//		FileWriter fw = new FileWriter("e.txt");
 	//		fw.write(p1);
-			//ÎŞÂÛÊÇ×Ö½ÚÊä³öÁ÷,»¹ÊÇ×Ö·ûÊä³öÁ÷¶¼²»ÄÜÖ±½ÓĞ´³ö¶ÔÏó
-			//ĞòÁĞ»¯¶ÔÏó±ØĞëÊµÏÖĞòÁĞ»¯½Ó¿Ú
-			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("e.txt"));//´´½¨¶ÔÏóÊä³öÁ÷
-			oos.writeObject(p1);//´æ½øÈ¥object¶ÔÏó
+			//æ— è®ºæ˜¯å­—èŠ‚è¾“å‡ºæµ,è¿˜æ˜¯å­—ç¬¦è¾“å‡ºæµéƒ½ä¸èƒ½ç›´æ¥å†™å‡ºå¯¹è±¡
+			//åºåˆ—åŒ–å¯¹è±¡å¿…é¡»å®ç°åºåˆ—åŒ–æ¥å£
+			ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("e.txt"));//åˆ›å»ºå¯¹è±¡è¾“å‡ºæµ
+			oos.writeObject(p1);//å­˜è¿›å»objectå¯¹è±¡
 			oos.writeObject(p2);
-			//ĞòÁĞ»¯ºó£¬¿´ÎÄ¼şÊÇ¿´²»¶®µÄ£¬Ó¦Îª½ø¹ıÁËÂë±íµÄ×ªÒÆ,Ò²²»ĞíÒª¿´¶®,Ö»ÒªÄÜ·´ĞòÁĞ»¯¾ÍĞĞ
+			//åºåˆ—åŒ–åï¼Œçœ‹æ–‡ä»¶æ˜¯çœ‹ä¸æ‡‚çš„ï¼Œåº”ä¸ºè¿›è¿‡äº†ç è¡¨çš„è½¬ç§»,ä¹Ÿä¸è®¸è¦çœ‹æ‡‚,åªè¦èƒ½ååºåˆ—åŒ–å°±è¡Œ
 			oos.close();
 	}	
 }

@@ -2,47 +2,47 @@ package day13regx;
 
 import java.util.Calendar;
 
-/* Calendar ÀàÊÇÒ»¸ö³éÏóÀà£¬ËüÎªÌØ¶¨Ë²¼äÓëÒ»×éÖîÈç YEAR¡¢MONTH¡¢DAY_OF_MONTH¡¢HOUR µÈÈÕÀú×Ö¶ÎÖ®¼äµÄ×ª»»Ìá¹©ÁËÒ»Ğ©·½·¨£¬²¢Îª²Ù×÷ÈÕÀú×Ö¶Î£¨ÀıÈç»ñµÃÏÂĞÇÆÚµÄÈÕÆÚ£©Ìá¹©ÁËÒ»Ğ©·½·¨¡£
-* B:³ÉÔ±·½·¨
+/* Calendar ç±»æ˜¯ä¸€ä¸ªæŠ½è±¡ç±»ï¼Œå®ƒä¸ºç‰¹å®šç¬é—´ä¸ä¸€ç»„è¯¸å¦‚ YEARã€MONTHã€DAY_OF_MONTHã€HOUR ç­‰æ—¥å†å­—æ®µä¹‹é—´çš„è½¬æ¢æä¾›äº†ä¸€äº›æ–¹æ³•ï¼Œå¹¶ä¸ºæ“ä½œæ—¥å†å­—æ®µï¼ˆä¾‹å¦‚è·å¾—ä¸‹æ˜ŸæœŸçš„æ—¥æœŸï¼‰æä¾›äº†ä¸€äº›æ–¹æ³•ã€‚
+* B:æˆå‘˜æ–¹æ³•
 	* public static Calendar getInstance()
 	* public int get(int field)
-		*filedµÄ²ÎÊıÀàĞÍ 
-		* Calendar.YEAR		//Äê·İ
-		* Calendar.MONTH	//ÔÂ·İ-1 ÒÔÎªÒ»ÔÂ·İÓÃ0ÁË
-		* Calendar.DAY_OF_YEAR	//Ò»ÄêÖĞµÄµÚ¼¸Ìì
-		* Calendar.DAY_OF_MONTH	//Ò»¸öÔÂÖĞµÄµÚ¼¸Ìì
-		* Calendar.DAY_OF_WEEK	//ĞÇÆÚÈÕÎª0
-*CalendarÖĞµÄget()set()·½·¨
-*add()ĞŞ¸Ä×Ö¶Î 
-*set()ÉèÖÃ×Ö¶Î
+		*filedçš„å‚æ•°ç±»å‹ 
+		* Calendar.YEAR		//å¹´ä»½
+		* Calendar.MONTH	//æœˆä»½-1 ä»¥ä¸ºä¸€æœˆä»½ç”¨0äº†
+		* Calendar.DAY_OF_YEAR	//ä¸€å¹´ä¸­çš„ç¬¬å‡ å¤©
+		* Calendar.DAY_OF_MONTH	//ä¸€ä¸ªæœˆä¸­çš„ç¬¬å‡ å¤©
+		* Calendar.DAY_OF_WEEK	//æ˜ŸæœŸæ—¥ä¸º0
+*Calendarä¸­çš„get()set()æ–¹æ³•
+*add()ä¿®æ”¹å­—æ®µ 
+*set()è®¾ç½®å­—æ®µ
 */
 public class DemoCalendar {
 	public static void main(String[] args) {
 		Calendar a=Calendar.getInstance();
 		System.out.println(a);
-		System.out.println(a.get(Calendar.YEAR));//Äê·İ
-		System.out.println(a.get(Calendar.MONTH));//ÔÂ·İ-1  ÒòÎªÒ»ÔÂ·İÓÃ0ÁË
-		System.out.println(a.get(Calendar.DAY_OF_YEAR));//Ò»ÄêÖĞµÄµÚ¼¸Ìì
-		System.out.println(a.get(Calendar.DAY_OF_MONTH));//Ò»¸öÔÂÖĞµÄµÚ¼¸Ìì
-		System.out.println(a.get(Calendar.DAY_OF_WEEK));//ĞÇÆÚÈÕÎª1
+		System.out.println(a.get(Calendar.YEAR));//å¹´ä»½
+		System.out.println(a.get(Calendar.MONTH));//æœˆä»½-1  å› ä¸ºä¸€æœˆä»½ç”¨0äº†
+		System.out.println(a.get(Calendar.DAY_OF_YEAR));//ä¸€å¹´ä¸­çš„ç¬¬å‡ å¤©
+		System.out.println(a.get(Calendar.DAY_OF_MONTH));//ä¸€ä¸ªæœˆä¸­çš„ç¬¬å‡ å¤©
+		System.out.println(a.get(Calendar.DAY_OF_WEEK));//æ˜ŸæœŸæ—¥ä¸º1
 		System.out.println(YYYY_XX_DD(a));
-		a.set(Calendar.YEAR, 2000);//Äê·İ±äÎª2000
+		a.set(Calendar.YEAR, 2000);//å¹´ä»½å˜ä¸º2000
 		System.out.println(YYYY_XX_DD(a));
-		a.add(Calendar.YEAR,-1);//Äê·İ±äÎª2000-1
+		a.add(Calendar.YEAR,-1);//å¹´ä»½å˜ä¸º2000-1
 		System.out.println(YYYY_XX_DD(a));
 	}
 	private static String getWeekday(int a) {
-		String[] c={"","ĞÇÆÚÈÕ","ĞÇÆÚÒ»","ĞÇÆÚ¶ş","ĞÇÆÚÈı","ĞÇÆÚËÄ","ĞÇÆÚÎå","ĞÇÆÚÁù"};
+		String[] c={"","æ˜ŸæœŸæ—¥","æ˜ŸæœŸä¸€","æ˜ŸæœŸäºŒ","æ˜ŸæœŸä¸‰","æ˜ŸæœŸå››","æ˜ŸæœŸäº”","æ˜ŸæœŸå…­"};
 		return c[a];
 	}
 	private static String getMonth(int a) {
-		return (a+1>9)?a+1+"ÔÂ":"0"+(a+1)+"ÔÂ";
+		return (a+1>9)?a+1+"æœˆ":"0"+(a+1)+"æœˆ";
 	}
 	private static String getDayOfMonth(int a) {
-		return (a>9)?a+"ºÅ":"0"+a+"ºÅ";
+		return (a>9)?a+"å·":"0"+a+"å·";
 	}
 	private static String YYYY_XX_DD(Calendar a) {
-		return a.get(Calendar.YEAR)+"Äê"+
+		return a.get(Calendar.YEAR)+"å¹´"+
 		getMonth(a.get(Calendar.MONTH))+
 		getDayOfMonth(a.get(Calendar.DAY_OF_MONTH))+
 		getWeekday(a.get(Calendar.DAY_OF_WEEK));

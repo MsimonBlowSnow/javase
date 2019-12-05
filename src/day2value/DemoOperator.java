@@ -3,16 +3,16 @@ package day2value;
 public class DemoOperator {
 	public static void main(String[] args) {
 		int a=3;
-		/*ËãÊõÔËËã·û
+		/*ç®—æœ¯è¿ç®—ç¬¦
 		 * + - * / % ++ --
  		 */ 
-		System.out.println(10/3);//3ÕûÊý³ýÕûÊýµÈÓÚÕûÊý  
-		System.out.println(10/3.0);//ÕûÊý³ýdoubleÐÍÏÈ×ª»¯ÎªdoubleÐÍÔÙ³ý
-		System.out.println(-12%5);//-2 ·ûºÅÎ»ºÍµÚÒ»¸öÊýÒ»ÖÂ
-		System.out.println(12%-5);//2 ·ûºÅÎ»ºÍµÚÒ»¸öÊýÒ»ÖÂ
-		System.out.println(++a);//ÏÈ¼ÓÒ»ºóÔËËã
-		System.out.println(a++);//ºó¼ÓÒ»ÏÈÔËËã
-		//¹ØÏµÔËËã·û·´»ØbooleanÖµ
+		System.out.println(10/3);//3æ•´æ•°é™¤æ•´æ•°ç­‰äºŽæ•´æ•°  
+		System.out.println(10/3.0);//æ•´æ•°é™¤doubleåž‹å…ˆè½¬åŒ–ä¸ºdoubleåž‹å†é™¤
+		System.out.println(-12%5);//-2 ç¬¦å·ä½å’Œç¬¬ä¸€ä¸ªæ•°ä¸€è‡´
+		System.out.println(12%-5);//2 ç¬¦å·ä½å’Œç¬¬ä¸€ä¸ªæ•°ä¸€è‡´
+		System.out.println(++a);//å…ˆåŠ ä¸€åŽè¿ç®—
+		System.out.println(a++);//åŽåŠ ä¸€å…ˆè¿ç®—
+		//å…³ç³»è¿ç®—ç¬¦åå›žbooleanå€¼
 		System.out.println(4 == 3);
 		System.out.println(4 != 3);
 		System.out.println(4 > 4);

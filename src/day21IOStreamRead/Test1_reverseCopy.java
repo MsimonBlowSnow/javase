@@ -12,15 +12,15 @@ import java.util.List;
 import java.util.TreeSet;
 
 
-/* ½«Ò»¸öÎÄ±¾ÎÄµµÉÏµÄÎÄ±¾·´×ª,µÚÒ»ÐÐºÍµ¹ÊýµÚÒ»ÐÐ½»»»,µÚ¶þÐÐºÍµ¹ÊýµÚ¶þÐÐ½»»»
- * Ë¼Â·
- * 1.´´½¨Êä³öÊäÈë×Ö·ûÁ÷Á÷
- * 2.´´½¨Ò»¸öStringÐÍµÄ¼¯ºÏ
- * 3.ÓÃÊäÈë×Ö·ûÁ÷¶Á³ö³öÊý¾Ý²¢±£´æÔÚStringµÄ¼¯ºÏÖÐ
- * 4.µ÷ÓÃ·´×ªº¯Êý
- * 5.Í¨¹ýÊä³öÁ÷±£´æµ½ÎÄ¼þÖÐ
+/* å°†ä¸€ä¸ªæ–‡æœ¬æ–‡æ¡£ä¸Šçš„æ–‡æœ¬åè½¬,ç¬¬ä¸€è¡Œå’Œå€’æ•°ç¬¬ä¸€è¡Œäº¤æ¢,ç¬¬äºŒè¡Œå’Œå€’æ•°ç¬¬äºŒè¡Œäº¤æ¢
+ * æ€è·¯
+ * 1.åˆ›å»ºè¾“å‡ºè¾“å…¥å­—ç¬¦æµæµ
+ * 2.åˆ›å»ºä¸€ä¸ªStringåž‹çš„é›†åˆ
+ * 3.ç”¨è¾“å…¥å­—ç¬¦æµè¯»å‡ºå‡ºæ•°æ®å¹¶ä¿å­˜åœ¨Stringçš„é›†åˆä¸­
+ * 4.è°ƒç”¨åè½¬å‡½æ•°
+ * 5.é€šè¿‡è¾“å‡ºæµä¿å­˜åˆ°æ–‡ä»¶ä¸­
  * 
- *Á÷¾¡Á¿Íí¿ªÔçÈçÏÂ
+ *æµå°½é‡æ™šå¼€æ—©å¦‚ä¸‹
  */
 public class Test1_reverseCopy {
 	public static void main(String[] args) throws IOException {

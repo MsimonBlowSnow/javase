@@ -1,26 +1,26 @@
 package day12ClassObject;
-/*StringBufferºÍStringµÄÏà»¥×ª»¯*/
+/*StringBufferå’ŒStringçš„ç›¸äº’è½¬åŒ–*/
 public class DemoStringBuffer3 {
 	public static void main(String[] args) {
-		//String×ª»¯ÎªStringBuffer
+		//Stringè½¬åŒ–ä¸ºStringBuffer
 		System.out.println(StrChSb());
-		//StringBuffer×ª»¯ÎªString
+		//StringBufferè½¬åŒ–ä¸ºString
 		SbChStr();
 	}
 
 	public static void SbChStr() {
 		StringBuffer b=new StringBuffer("ming");
-		//Í¨¹ı¹¹Ôì·½·¨×ª»¯
+		//é€šè¿‡æ„é€ æ–¹æ³•è½¬åŒ–
 		String c=new String(b);
-		//Í¨¹ısubstring·½·¨½ØÈ¡
+		//é€šè¿‡substringæ–¹æ³•æˆªå–
 		String c1=b.substring(0);
 		String c2=b.substring(0,b.length());
 	}
 
 	public static StringBuffer StrChSb() {
-		//Í¨¹ı¹¹Ôì·½·¨×ª»¯
+		//é€šè¿‡æ„é€ æ–¹æ³•è½¬åŒ–
 		StringBuffer a=new StringBuffer("true");
-		//Í¨¹ıStringBufferµÄappend·½·¨×ª»¯
+		//é€šè¿‡StringBufferçš„appendæ–¹æ³•è½¬åŒ–
 		StringBuffer b=new StringBuffer();
 		b.append("ming");
 		return a;

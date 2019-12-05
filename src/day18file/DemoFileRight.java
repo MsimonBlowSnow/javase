@@ -5,36 +5,36 @@ import java.io.File;
 public class DemoFileRight {
 
 	/**
-	 * * A:ÅĞ¶Ï¹¦ÄÜ public boolean isDirectory():ÅĞ¶ÏÊÇ·ñÊÇÄ¿Â¼
-	 * public boolean isFile():ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş
-	 * public boolean exists():ÅĞ¶ÏÊÇ·ñ´æÔÚ 
-	 * public boolean canRead():ÅĞ¶ÏÊÇ·ñ¿É¶Á 
-	 * public booleancanWrite():ÅĞ¶ÏÊÇ·ñ¿ÉĞ´ 
-	 * public boolean isHidden():ÅĞ¶ÏÊÇ·ñÒş²Ø 
-	 * B:°¸ÀıÑİÊ¾ FileÀàµÄÅĞ¶Ï¹¦ÄÜ
+	 * * A:åˆ¤æ–­åŠŸèƒ½ public boolean isDirectory():åˆ¤æ–­æ˜¯å¦æ˜¯ç›®å½•
+	 * public boolean isFile():åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶
+	 * public boolean exists():åˆ¤æ–­æ˜¯å¦å­˜åœ¨ 
+	 * public boolean canRead():åˆ¤æ–­æ˜¯å¦å¯è¯» 
+	 * public booleancanWrite():åˆ¤æ–­æ˜¯å¦å¯å†™ 
+	 * public boolean isHidden():åˆ¤æ–­æ˜¯å¦éšè— 
+	 * B:æ¡ˆä¾‹æ¼”ç¤º Fileç±»çš„åˆ¤æ–­åŠŸèƒ½
 	 */
 	public static void main(String[] args) {
 		// demo1();
 		File file = new File("src/day18file/aaa");
 		System.out.println(file.exists());
 		file.setReadable(false);
-		System.out.println(file.canRead()); // windowsÏµÍ³ÈÏÎªËùÓĞµÄÎÄ¼ş¶¼ÊÇ¿É¶ÁµÄ
+		System.out.println(file.canRead()); // windowsç³»ç»Ÿè®¤ä¸ºæ‰€æœ‰çš„æ–‡ä»¶éƒ½æ˜¯å¯è¯»çš„
 		file.setWritable(false);
-		System.out.println(file.canWrite()); // windowsÏµÍ³¿ÉÒÔÉèÖÃÎª²»¿ÉĞ´
+		System.out.println(file.canWrite()); // windowsç³»ç»Ÿå¯ä»¥è®¾ç½®ä¸ºä¸å¯å†™
 
 		File file2 = new File("src/day18file/aaa");
-		System.out.println(file2.isHidden()); // ÅĞ¶ÏÊÇ·ñÊÇÒş²ØÎÄ¼ş
+		System.out.println(file2.isHidden()); // åˆ¤æ–­æ˜¯å¦æ˜¯éšè—æ–‡ä»¶
 		System.out.println(file.isHidden());
 	}
 
 	public static void demo1() {
 		File dir1 = new File("aaa");
-		System.out.println(dir1.isDirectory()); // ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş¼Ğ
+		System.out.println(dir1.isDirectory()); // åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶å¤¹
 
 		File dir2 = new File("aaa");
 		System.out.println(dir2.isDirectory());
 
-		System.out.println(dir1.isFile()); // ÅĞ¶ÏÊÇ·ñÊÇÎÄ¼ş
+		System.out.println(dir1.isFile()); // åˆ¤æ–­æ˜¯å¦æ˜¯æ–‡ä»¶
 		System.out.println(dir2.isFile());
 	}
 

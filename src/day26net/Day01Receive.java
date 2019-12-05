@@ -7,27 +7,27 @@ import java.net.InetAddress;
 import java.net.SocketException;
 
 
-/*1.½ÓÊÕReceive
- 	* ´´½¨DatagramSocket, Ö¸¶¨¶Ë¿ÚºÅ
- 	* ´´½¨DatagramPacket, Ö¸¶¨Êı×é, ³¤¶È
- 	* Ê¹ÓÃDatagramSocket½ÓÊÕDatagramPacket
- 	* ¹Ø±ÕDatagramSocket
- 	* ´ÓDatagramPacketÖĞ»ñÈ¡Êı¾İ
-*2.½ÓÊÕ·½»ñÈ¡ipºÍ¶Ë¿ÚºÅ
+/*1.æ¥æ”¶Receive
+ 	* åˆ›å»ºDatagramSocket, æŒ‡å®šç«¯å£å·
+ 	* åˆ›å»ºDatagramPacket, æŒ‡å®šæ•°ç»„, é•¿åº¦
+ 	* ä½¿ç”¨DatagramSocketæ¥æ”¶DatagramPacket
+ 	* å…³é—­DatagramSocket
+ 	* ä»DatagramPacketä¸­è·å–æ•°æ®
+*2.æ¥æ”¶æ–¹è·å–ipå’Œç«¯å£å·
 	* String ip = packet.getAddress().getHostAddress();
 	* int port = packet.getPort(); 
 */
 public class Day01Receive {
 	public static void main(String[] args) throws IOException {
-		DatagramSocket datagramSocket=new DatagramSocket(9999);   //´´½¨Ö¸¶¨¶Ë¿ÚµÄsocket
-		//´´½¨Ò»¸ö½ÓÊÕ°ü
+		DatagramSocket datagramSocket=new DatagramSocket(9999);   //åˆ›å»ºæŒ‡å®šç«¯å£çš„socket
+		//åˆ›å»ºä¸€ä¸ªæ¥æ”¶åŒ…
  		DatagramPacket datagramPacket=new DatagramPacket(new byte[1024], 1024);
-		datagramSocket.receive(datagramPacket);	//½ÓÊÕÏûÏ¢
+		datagramSocket.receive(datagramPacket);	//æ¥æ”¶æ¶ˆæ¯
 		
-		InetAddress address=datagramPacket.getAddress();//»ñÈ¡·¢ËÍ¶ËÖ÷»ú
+		InetAddress address=datagramPacket.getAddress();//è·å–å‘é€ç«¯ä¸»æœº
 		System.out.println(address);
-		byte[] arr=datagramPacket.getData(); //»ñÈ¡½ÓÊÜĞÅÏ¢²¢´æÈëÊı×é
-		int length=datagramPacket.getLength(); //»ñÈ¡Êı×éµÄÓĞĞ§³¤¶È
-		System.out.println(new String(arr,0,arr.length)); //Êä³öĞÅÏ¢
+		byte[] arr=datagramPacket.getData(); //è·å–æ¥å—ä¿¡æ¯å¹¶å­˜å…¥æ•°ç»„
+		int length=datagramPacket.getLength(); //è·å–æ•°ç»„çš„æœ‰æ•ˆé•¿åº¦
+		System.out.println(new String(arr,0,arr.length)); //è¾“å‡ºä¿¡æ¯
 	}
 }

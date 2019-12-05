@@ -1,13 +1,13 @@
 package day24thread;
 
-/*1.synchronizedxĞŞÊÎµÄ·½·¨Ä¬ÈÏÊÇ¸Ã¶ÔÏó»òÕß×Ö½ÚÂë
- 	*¾²Ì¬·½·¨¾ÍÊÇ¶ÔÏó£¬static¾ÍÊÇ×Ö½ÚÂë¶ÔÏó
- * 2.synchronizedÔÚ·Ç¾²Ì¬·½·¨ÀïÃæ£¬¿ÉÒÔÖ±½Óµ÷ÓÃthis£¬µ«ÊÇÔÚ¾²Ì¬ÀïÃæ²»ÄÜÓÃthis,
- 	* Ö»ÄÜÓÃ×Ö½ÚÂë¡£
+/*1.synchronizedxä¿®é¥°çš„æ–¹æ³•é»˜è®¤æ˜¯è¯¥å¯¹è±¡æˆ–è€…å­—èŠ‚ç 
+ 	*é™æ€æ–¹æ³•å°±æ˜¯å¯¹è±¡ï¼Œstaticå°±æ˜¯å­—èŠ‚ç å¯¹è±¡
+ * 2.synchronizedåœ¨éé™æ€æ–¹æ³•é‡Œé¢ï¼Œå¯ä»¥ç›´æ¥è°ƒç”¨thisï¼Œä½†æ˜¯åœ¨é™æ€é‡Œé¢ä¸èƒ½ç”¨this,
+ 	* åªèƒ½ç”¨å­—èŠ‚ç ã€‚
  *3.
  	*a0b0c01 zw3 abcq abc0
- *ËµÃ÷static synchronizedxĞŞÊÎµÄ·½·¨µÄËøÊÇÍ¬Ò»ÀàĞÍ¼°Demo15.class
- *·Ç¾²Ì¬ÊÇ²»Í¬ÀàĞÍ
+ *è¯´æ˜static synchronizedxä¿®é¥°çš„æ–¹æ³•çš„é”æ˜¯åŒä¸€ç±»å‹åŠDemo15.class
+ *éé™æ€æ˜¯ä¸åŒç±»å‹
  * 
  * */
 public class Demo15ThreadSynchronized {
@@ -19,7 +19,7 @@ public class Demo15ThreadSynchronized {
 		  @Override 
 		  public void run() { 
 			  for (int i = 0; i < 100; i++) {
-		  //1.7°æ±¾ÄäÃûÄÚ²¿Àà·ÃÎÊÀà³ÉÔ±±ØĞëÓÃfinalĞŞÊÎ //1.8°æ±¾ 
+		  //1.7ç‰ˆæœ¬åŒ¿åå†…éƒ¨ç±»è®¿é—®ç±»æˆå‘˜å¿…é¡»ç”¨finalä¿®é¥° //1.8ç‰ˆæœ¬ 
 			  aDemo15.print1(); 
 			  }
 		  } 
@@ -29,7 +29,7 @@ public class Demo15ThreadSynchronized {
 		  
 		  @Override public void run() { 
 			  for (int i = 0; i < 100; i++) {
-		  //1.7°æ±¾ÄäÃûÄÚ²¿Àà·ÃÎÊÀà³ÉÔ±±ØĞëÓÃfinalĞŞÊÎ //1.8°æ±¾ 
+		  //1.7ç‰ˆæœ¬åŒ¿åå†…éƒ¨ç±»è®¿é—®ç±»æˆå‘˜å¿…é¡»ç”¨finalä¿®é¥° //1.8ç‰ˆæœ¬ 
 				  aDemo15.print2(); 
 				  }
 			  }
@@ -40,7 +40,7 @@ public class Demo15ThreadSynchronized {
 		  new Thread() {
 		 
 		  @Override public void run() { for (int i = 0; i < 100; i++)  {
-		  //1.7°æ±¾ÄäÃûÄÚ²¿Àà·ÃÎÊÀà³ÉÔ±±ØĞëÓÃfinalĞŞÊÎ //1.8°æ±¾ 
+		  //1.7ç‰ˆæœ¬åŒ¿åå†…éƒ¨ç±»è®¿é—®ç±»æˆå‘˜å¿…é¡»ç”¨finalä¿®é¥° //1.8ç‰ˆæœ¬ 
 			  aDemo15.print3(); 
 			  } 
 		  	} 
@@ -51,8 +51,8 @@ public class Demo15ThreadSynchronized {
 			@Override
 			public void run() {
 				for (int i = 0; i < 100; i++) {
-					//1.7°æ±¾ÄäÃûÄÚ²¿Àà·ÃÎÊÀà³ÉÔ±±ØĞëÓÃfinalĞŞÊÎ
-					//1.8°æ±¾
+					//1.7ç‰ˆæœ¬åŒ¿åå†…éƒ¨ç±»è®¿é—®ç±»æˆå‘˜å¿…é¡»ç”¨finalä¿®é¥°
+					//1.8ç‰ˆæœ¬
 					aDemo15.print0();
 				}
 			}
@@ -62,14 +62,14 @@ public class Demo15ThreadSynchronized {
 }
 
  class Demo15 {
-	//this¶ÔÏó
+	//thiså¯¹è±¡
 	synchronized void print0(){
 		System.out.print("a");
 		System.out.print("b");
 		System.out.print("c");
 		System.out.println("\r\n");
 	}
-	//ÓÃµÄÊÇ×Ö½ÚÂë¶ÔÏó
+	//ç”¨çš„æ˜¯å­—èŠ‚ç å¯¹è±¡
 	public  static synchronized void print1(){
 		System.out.print("a0");
 		System.out.print("b0");
@@ -77,9 +77,9 @@ public class Demo15ThreadSynchronized {
 		System.out.println("\r\n");
 	}
 	
-	//this¶ÔÏó
+	//thiså¯¹è±¡
  public void print2(){
-	 	//·Ç¾²Ì¬·½·¨¿ÉÒÔÓÃthis
+	 	//éé™æ€æ–¹æ³•å¯ä»¥ç”¨this
 	 	synchronized (this){
 		System.out.print("1");
 		System.out.print("2");
@@ -88,12 +88,12 @@ public class Demo15ThreadSynchronized {
  	}	
 	}
  
- //×Ö½ÚÂë¶ÔÏó
+ //å­—èŠ‚ç å¯¹è±¡
   public  static void print3(){
 	 synchronized (Demo15.class){
-	 //·Ç¾²Ì¬·½·¨¿ÉÒÔÓÃthis£¬¾²Ì¬·½·¨²»ÄÜÓÃthis
+	 //éé™æ€æ–¹æ³•å¯ä»¥ç”¨thisï¼Œé™æ€æ–¹æ³•ä¸èƒ½ç”¨this
 	//synchronized (this){
-	 //ÓÃ×Ö½ÚÂë¶ÔÏó
+	 //ç”¨å­—èŠ‚ç å¯¹è±¡
 		System.out.print("z");
 		System.out.print("w");
 		System.out.print("q");

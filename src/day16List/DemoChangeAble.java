@@ -2,13 +2,13 @@ package day16List;
 
 public class DemoChangeAble {
 		/**
-		 * * A:¿É±ä²ÎÊý¸ÅÊö
-				* ¶¨Òå·½·¨µÄÊ±ºò²»ÖªµÀ¸Ã¶¨Òå¶àÉÙ¸ö²ÎÊý
-			* B:¸ñÊ½
-				* ÐÞÊÎ·û ·µ»ØÖµÀàÐÍ ·½·¨Ãû(Êý¾ÝÀàÐÍ¡­  ±äÁ¿Ãû){}
-			* C:×¢ÒâÊÂÏî£º
-				* ÕâÀïµÄ±äÁ¿ÆäÊµÊÇÒ»¸öÊý×é
-				* Èç¹ûÒ»¸ö·½·¨ÓÐ¿É±ä²ÎÊý£¬²¢ÇÒÓÐ¶à¸ö²ÎÊý£¬ÄÇÃ´£¬¿É±ä²ÎÊý¿Ï¶¨ÊÇ×îºóÒ»¸ö
+		 * * A:å¯å˜å‚æ•°æ¦‚è¿°
+				* å®šä¹‰æ–¹æ³•çš„æ—¶å€™ä¸çŸ¥é“è¯¥å®šä¹‰å¤šå°‘ä¸ªå‚æ•°
+			* B:æ ¼å¼
+				* ä¿®é¥°ç¬¦ è¿”å›žå€¼ç±»åž‹ æ–¹æ³•å(æ•°æ®ç±»åž‹â€¦  å˜é‡å){}
+			* C:æ³¨æ„äº‹é¡¹ï¼š
+				* è¿™é‡Œçš„å˜é‡å…¶å®žæ˜¯ä¸€ä¸ªæ•°ç»„
+				* å¦‚æžœä¸€ä¸ªæ–¹æ³•æœ‰å¯å˜å‚æ•°ï¼Œå¹¶ä¸”æœ‰å¤šä¸ªå‚æ•°ï¼Œé‚£ä¹ˆï¼Œå¯å˜å‚æ•°è‚¯å®šæ˜¯æœ€åŽä¸€ä¸ª
 		 */
 		public static void main(String[] args) {
 			int[] arr = {11,22,33,44,55};
@@ -25,7 +25,7 @@ public class DemoChangeAble {
 		}*/
 		
 		
-		public static void print(int ... arr) {			//¿É±ä²ÎÊýÆäÊµÊÇÒ»¸öÊý×é
+		public static void print(int ... arr) {			//å¯å˜å‚æ•°å…¶å®žæ˜¯ä¸€ä¸ªæ•°ç»„
 			for (int i = 0; i < arr.length; i++) {
 				System.out.println(arr[i]);
 			}

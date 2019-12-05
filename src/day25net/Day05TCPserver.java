@@ -4,12 +4,12 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/*±£Ö¤·şÎñÆ÷¶àÏß³Ì£¬·½±ã·ÃÎÊ
+/*ä¿è¯æœåŠ¡å™¨å¤šçº¿ç¨‹ï¼Œæ–¹ä¾¿è®¿é—®
  * ServerSocket aServerSocket= new ServerSocket(9999);
 		while(true) {
-			//·şÎñÆ÷»ñÈ¡Á¬½Ó
+			//æœåŠ¡å™¨è·å–è¿æ¥
 			Socket aSocket=aServerSocket.accept();
-			//¸ù¾İÁ¬½ÓµÄ¿Í»§¶Ë²»Í¬´´½¨Ò»¸öÏß³Ì
+			//æ ¹æ®è¿æ¥çš„å®¢æˆ·ç«¯ä¸åŒåˆ›å»ºä¸€ä¸ªçº¿ç¨‹
 			new Thread(new Day05TCPserverHelp(aSocket)).start();
 		}
  * */

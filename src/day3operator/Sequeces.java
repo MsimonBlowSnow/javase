@@ -3,31 +3,31 @@ package day3operator;
 import java.util.Scanner;
 
 public class Sequeces {
-	/*½á¹¹£º
-	 * 1.Ë³Ğò½á¹¹
-	 * 2.Ñ¡Ôñ½á¹¹
+	/*ç»“æ„ï¼š
+	 * 1.é¡ºåºç»“æ„
+	 * 2.é€‰æ‹©ç»“æ„
 	 * */
 	public static void main(String[] args) {
-		System.out.println("Ë³Ğò½á¹¹:");
-		System.out.println("Ë³Ğò½á¹¹1");
-		System.out.println("Ë³Ğò½á¹¹2");
+		System.out.println("é¡ºåºç»“æ„:");
+		System.out.println("é¡ºåºç»“æ„1");
+		System.out.println("é¡ºåºç»“æ„2");
 		
-		//Ñ¡Ôñ½á¹¹
-		System.out.println("Ñ¡Ôñ½á¹¹:");
+		//é€‰æ‹©ç»“æ„
+		System.out.println("é€‰æ‹©ç»“æ„:");
 		Scanner sc =new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸ö³É¼¨");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæˆç»©");
 		int grades= sc.nextInt();
 		if(grades<60) {
-			System.out.println("·ÖÊı:"+grades+"Îª²»¼°¸ñ!");
+			System.out.println("åˆ†æ•°:"+grades+"ä¸ºä¸åŠæ ¼!");
 		}
 		else if(grades>60&&grades<70){
-			System.out.println("·ÖÊı:"+grades+"Îª¼°¸ñ!");
+			System.out.println("åˆ†æ•°:"+grades+"ä¸ºåŠæ ¼!");
 		}else if(grades>70&&grades<80) {
-			System.out.println("·ÖÊı:"+grades+"ÎªÁ¼!");
+			System.out.println("åˆ†æ•°:"+grades+"ä¸ºè‰¯!");
 		}else if(grades>80&&grades<90) {
-			System.out.println("·ÖÊı:"+grades+"ÎªÓÅĞã!");
+			System.out.println("åˆ†æ•°:"+grades+"ä¸ºä¼˜ç§€!");
 		}else {
-			System.out.println("·ÖÊı:"+grades+"·Ç³£°ô!");
+			System.out.println("åˆ†æ•°:"+grades+"éå¸¸æ£’!");
 		}
 		
 	}

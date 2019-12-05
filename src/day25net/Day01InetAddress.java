@@ -4,30 +4,30 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /*
- *  ±íÊ¾»¥ÁªÍøÖĞµÄIPµØÖ·
+ *  è¡¨ç¤ºäº’è”ç½‘ä¸­çš„IPåœ°å€
  *    java.net.InetAddress
- *  ¾²Ì¬·½·¨
- *    ·µ»Ø±¾µØÖ÷»ú,·µ»ØÖµInetAddress¶ÔÏó
- *    static InetAddress  getLocalHost()   LocalHost±¾µØÖ÷»ú
- *    static InetAddress getByName(String hostName)´«µİÖ÷»úÃû,»ñÈ¡IPµØÖ·¶ÔÏó
+ *  é™æ€æ–¹æ³•
+ *    è¿”å›æœ¬åœ°ä¸»æœº,è¿”å›å€¼InetAddresså¯¹è±¡
+ *    static InetAddress  getLocalHost()   LocalHostæœ¬åœ°ä¸»æœº
+ *    static InetAddress getByName(String hostName)ä¼ é€’ä¸»æœºå,è·å–IPåœ°å€å¯¹è±¡
  *    
- *  ·Ç¾²Ì¬·½·¨
- *     String getHoustAddress()»ñÈ¡Ö÷»úIPµØÖ·
- *     String getHoustName()»ñÈ¡Ö÷»úÃû
+ *  éé™æ€æ–¹æ³•
+ *     String getHoustAddress()è·å–ä¸»æœºIPåœ°å€
+ *     String getHoustName()è·å–ä¸»æœºå
  */
 public class Day01InetAddress {
 	public static void main(String[] args) throws UnknownHostException {
 		InetAddress iAddress=InetAddress.getLocalHost();
-		//Êä³ö½á¹û¾ÍÊÇÖ÷»úÃû,ºÍ IPµØÖ·
+		//è¾“å‡ºç»“æœå°±æ˜¯ä¸»æœºå,å’Œ IPåœ°å€
 		System.out.println(iAddress);
 		InetAddress address1=InetAddress.getByName("www.baidu.com");
-		//getHostName()Êä³öÖ÷»úÃû
+		//getHostName()è¾“å‡ºä¸»æœºå
 		System.out.println(address1.getHostName());
 		System.out.println(iAddress.getHostName());
 		System.out.println(iAddress.getHostAddress());
-		//static InetAddress  getLocalHost()   LocalHost±¾µØÖ÷»ú
+		//static InetAddress  getLocalHost()   LocalHostæœ¬åœ°ä¸»æœº
 		System.out.println(InetAddress.getLocalHost());
-		//static InetAddress getByName(String hostName)´«µİÖ÷»úÃû,»ñÈ¡IPµØÖ·¶ÔÏó
+		//static InetAddress getByName(String hostName)ä¼ é€’ä¸»æœºå,è·å–IPåœ°å€å¯¹è±¡
 		System.out.println(InetAddress.getByName("www.baidu.com"));
 	}
 }

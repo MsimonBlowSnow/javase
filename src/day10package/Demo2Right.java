@@ -10,11 +10,11 @@ package day10package;
 
 public class Demo2Right {
 	public static void main(String[] args) {
-		System.out.println("       |м╛р╩╦ЖюЮ   | м╛р╩╦Ж╟Э   | ╡╩м╛╟Э╣двсюЮ | ╡╩м╛╟Э╣д╥гвсюЮ");
-		System.out.println("private|©ирт           | NO    |      NO  |       NO |");
-		System.out.println("д╛хо           |©ирт           |©ирт            |NO         |  NO      |");
-		System.out.println("protect|©ирт        |©ирт           |©ирт                            |  NO   ");
-		System.out.println("public |©ирт       |©ирт           | ©ирт                        |  ©ирт     ");
+		System.out.println("       |Е░▄Д╦─Д╦╙Г╠╩   | Е░▄Д╦─Д╦╙Е▄┘   | Д╦█Е░▄Е▄┘Г └Е╜░Г╠╩ | Д╦█Е░▄Е▄┘Г └И²·Е╜░Г╠╩");
+		System.out.println("private|Е▐╞Д╩╔           | NO    |      NO  |       NO |");
+		System.out.println("И╩≤Х╝╓           |Е▐╞Д╩╔           |Е▐╞Д╩╔            |NO         |  NO      |");
+		System.out.println("protect|Е▐╞Д╩╔        |Е▐╞Д╩╔           |Е▐╞Д╩╔                            |  NO   ");
+		System.out.println("public |Е▐╞Д╩╔       |Е▐╞Д╩╔           | Е▐╞Д╩╔                        |  Е▐╞Д╩╔     ");
 		
 	}
 }

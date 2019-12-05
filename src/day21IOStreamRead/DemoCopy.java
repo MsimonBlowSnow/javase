@@ -12,20 +12,20 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-/*×Ö·ûÁ÷µÄcopy
- * ×Ö·ûÁ÷Ö»ÄÜ¿½±´´¿ÎÄ±¾ÎÄ¼ş
+/*å­—ç¬¦æµçš„copy
+ * å­—ç¬¦æµåªèƒ½æ‹·è´çº¯æ–‡æœ¬æ–‡ä»¶
  * */
 public class DemoCopy {
 	public static void main(String[] args) throws IOException {
-		//ÆÕÍ¨µÄ¿½±´
+		//æ™®é€šçš„æ‹·è´
 		//method();
-		//×Ô¶¨ÒåÊı×éµÄ¿½±´
+		//è‡ªå®šä¹‰æ•°ç»„çš„æ‹·è´
 		//methodArrayCopy();
-		//bufferd¿½±´
+		//bufferdæ‹·è´
 		methodBufferCopy();
-		//×Ö½ÚÁ÷¿½±´·Ç´¿ÎÄ±¾ÎÄ¼ş£¬¿½±´ÎÄ¼ş³É¹¦,×Ö½ÚÁ÷¿½±´ÎÄ¼ş
+		//å­—èŠ‚æµæ‹·è´éçº¯æ–‡æœ¬æ–‡ä»¶ï¼Œæ‹·è´æ–‡ä»¶æˆåŠŸ,å­—èŠ‚æµæ‹·è´æ–‡ä»¶
 		methodInputFei();
-		//×Ö·ûÁ÷¿½±´·Ç´¿ÎÄ±¾ÎÄ¼ş,¿½±´ÎÄ¼ş²»³É¹¦,×Ö·ûÁ÷²»ÄÜ¿½±´·ÇÎÄ¼ş
+		//å­—ç¬¦æµæ‹·è´éçº¯æ–‡æœ¬æ–‡ä»¶,æ‹·è´æ–‡ä»¶ä¸æˆåŠŸ,å­—ç¬¦æµä¸èƒ½æ‹·è´éæ–‡ä»¶
 		methodReadyFei();
 	}
 
@@ -41,8 +41,8 @@ public class DemoCopy {
 	}
 
 	private static void methodReadyFei() throws FileNotFoundException, IOException {
-		BufferedReader a= new BufferedReader(new FileReader("src/day21IOStreamRead/×ª»»Á÷.png"));
-		BufferedWriter b= new BufferedWriter(new FileWriter("src/day21IOStreamRead/×ª»»Á÷copy.png"));
+		BufferedReader a= new BufferedReader(new FileReader("src/day21IOStreamRead/è½¬æ¢æµ.png"));
+		BufferedWriter b= new BufferedWriter(new FileWriter("src/day21IOStreamRead/è½¬æ¢æµcopy.png"));
 		int flag1=0;
 		while ((flag1=a.read())!=-1) {
 			b.write(flag1);
@@ -53,8 +53,8 @@ public class DemoCopy {
 
 	private static void methodInputFei() throws FileNotFoundException, IOException {
 		int flag1=0;
-		BufferedInputStream a1=new BufferedInputStream(new FileInputStream("src/day21IOStreamRead/×ª»»Á÷.png"));
-		BufferedOutputStream b1= new BufferedOutputStream(new FileOutputStream("src/day21IOStreamRead/×ª»»Á÷copy1.png"));
+		BufferedInputStream a1=new BufferedInputStream(new FileInputStream("src/day21IOStreamRead/è½¬æ¢æµ.png"));
+		BufferedOutputStream b1= new BufferedOutputStream(new FileOutputStream("src/day21IOStreamRead/è½¬æ¢æµcopy1.png"));
 		while ((flag1=a1.read())!=-1) {
 			b1.write(flag1);
 		}
@@ -66,7 +66,7 @@ public class DemoCopy {
 		FileReader fr= new FileReader("a.txt");
 		FileWriter fw =new FileWriter("acopy.txt");
 		char[] chs=new char[1024];
-		int len=0;//ÓĞĞ§³¤¶È
+		int len=0;//æœ‰æ•ˆé•¿åº¦
 		while((len=fr.read(chs))!=-1) {
 			fw.write(chs,0,len);
 		}
@@ -75,7 +75,7 @@ public class DemoCopy {
 	}
 
 	private static void method() throws IOException, FileNotFoundException {
-		//1.7°æ±¾ĞÂÌØĞÔ£¬Á÷ÊµÏÖÁËAutocloseable½Ó¿ÚÖĞµÄclose·½·¨
+		//1.7ç‰ˆæœ¬æ–°ç‰¹æ€§ï¼Œæµå®ç°äº†Autocloseableæ¥å£ä¸­çš„closeæ–¹æ³•
 		try (FileReader fr = new FileReader("a.txt"); FileWriter fw = new FileWriter("acopy.txt");) {
 			int flag = 0;
 			while ((flag = fr.read()) != -1) {

@@ -1,7 +1,7 @@
-package Ã¶¾ÙÀà;
+package æžšä¸¾ç±»;
 
 public enum Week13 {
-	MON("ÐÇÆÚÒ»") {
+	MON("æ˜ŸæœŸä¸€") {
 
 		@Override
 		public void show() {
@@ -9,7 +9,7 @@ public enum Week13 {
 		}
 
 	},
-	TUES("ÐÇÆÚ¶þ") {
+	TUES("æ˜ŸæœŸäºŒ") {
 
 		@Override
 		public void show() {
@@ -18,7 +18,7 @@ public enum Week13 {
 		}
 
 	},
-	WED("ÐÇÆÚÈý") {
+	WED("æ˜ŸæœŸä¸‰") {
 
 		@Override
 		public void show() {

@@ -2,6 +2,6 @@ package day29Reflect;
 
 public class Demo10TestHelp {
 	public void say() {
-		System.out.println("ºÃºÃÑ§Ï°£¬ÌìÌìÏòÉÏ!");
+		System.out.println("å¥½å¥½å­¦ä¹ ï¼Œå¤©å¤©å‘ä¸Š!");
 	}
 }

@@ -11,10 +11,10 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Random;
 
-/*shutdownOutput();·Ç³£ÖØÒª£¬²»¼Ó´Ë·½·¨¿ÉÄÜµ¼ÖÂËÀËø
+/*shutdownOutput();éå¸¸é‡è¦ï¼Œä¸åŠ æ­¤æ–¹æ³•å¯èƒ½å¯¼è‡´æ­»é”
  * 
- *±£Ö¤´«ÊäÎÄ¼şµÄÃû×Ö²»Ò»Ñù
- 	*¡°±£´æÂ·¾¶¡±+System.currentTimeMillis()+new Random().nextInt(9999)+¡°ÎÄ¼şÃû¡±;
+ *ä¿è¯ä¼ è¾“æ–‡ä»¶çš„åå­—ä¸ä¸€æ ·
+ 	*â€œä¿å­˜è·¯å¾„â€+System.currentTimeMillis()+new Random().nextInt(9999)+â€œæ–‡ä»¶åâ€;
  * */
 public class Day04TCPCOPY {
 	public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Day04TCPCOPY {
 					while((len=aInputStream.read(a))!=-1) {
 						aOutputStream.write(new String(a,0,len).getBytes());
 					}
-					//¸æËß·şÎñÆ÷¶Ë£¬ÖÕÖ¹´«Êä£¬²»ÒªÔÚµÈÁË
+					//å‘Šè¯‰æœåŠ¡å™¨ç«¯ï¼Œç»ˆæ­¢ä¼ è¾“ï¼Œä¸è¦åœ¨ç­‰äº†
 					socketclient.shutdownOutput();
 					len=aInputStream1.read(a);
 					System.out.println(new String(a,0,len));
@@ -62,7 +62,7 @@ public class Day04TCPCOPY {
 					Socket socketclient=socketServer.accept();
 					OutputStream aOutputStream=socketclient.getOutputStream();
 					InputStream aInputStream=socketclient.getInputStream();
-					//·ÀÖ¹ÎÄ¼şÍ¬Ãû
+					//é˜²æ­¢æ–‡ä»¶åŒå
 					String afileString="src/day25net/"+System.currentTimeMillis()+
 							new Random().nextInt(9999)+"1.txt";
 					OutputStream fileOutputStream=new FileOutputStream(new File(afileString));
@@ -72,7 +72,7 @@ public class Day04TCPCOPY {
 						System.out.println(new String(a,0,len));
 						fileOutputStream.write(new String(a,0,len).getBytes());
 					}
-					aOutputStream.write("ÉÏ´«³É¹¦ÁËÑ½".getBytes());
+					aOutputStream.write("ä¸Šä¼ æˆåŠŸäº†å‘€".getBytes());
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

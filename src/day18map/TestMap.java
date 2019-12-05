@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-/**A:°¸ÀıÑİÊ¾
-	* ĞèÇó£ºÍ³¼Æ×Ö·û´®ÖĞÃ¿¸ö×Ö·û³öÏÖµÄ´ÎÊı
+/**A:æ¡ˆä¾‹æ¼”ç¤º
+	* éœ€æ±‚ï¼šç»Ÿè®¡å­—ç¬¦ä¸²ä¸­æ¯ä¸ªå­—ç¬¦å‡ºç°çš„æ¬¡æ•°
 */
 public class TestMap {
 	public static void main(String[] args) {

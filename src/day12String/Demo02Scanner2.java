@@ -2,43 +2,43 @@ package day12String;
 
 import java.util.Scanner;
 
-/*ScannerµÄĞ¡ÎÊÌâ£º
- *ÎÊÌâ: µ±´´½¨Ò»¸öScannerÊ±,ÏÈÓÃnextInt()ÊäÈëÒ»¸öint,ÔÙÓÃnextline()ÊäÈëÒ»¸öString»á³ö´íÎó
- 	*Ô­Òò£º
- 		*ScannerÄ¬ÈÏÒÔ"\r\n"½áÊø£¬µ±ÊäÈëÒ»¸öÕûÊıÊ±£¬ÇÃÏÂenter¼üÊ±µÚ¶ş¸ö×Ö·û¾ÍÊÇ¿Õ×Ö·ûÁË
+/*Scannerçš„å°é—®é¢˜ï¼š
+ *é—®é¢˜: å½“åˆ›å»ºä¸€ä¸ªScanneræ—¶,å…ˆç”¨nextInt()è¾“å…¥ä¸€ä¸ªint,å†ç”¨nextline()è¾“å…¥ä¸€ä¸ªStringä¼šå‡ºé”™è¯¯
+ 	*åŸå› ï¼š
+ 		*Scanneré»˜è®¤ä»¥"\r\n"ç»“æŸï¼Œå½“è¾“å…¥ä¸€ä¸ªæ•´æ•°æ—¶ï¼Œæ•²ä¸‹enteré”®æ—¶ç¬¬äºŒä¸ªå­—ç¬¦å°±æ˜¯ç©ºå­—ç¬¦äº†
  	*
- 	*½â¾ö·½°¸:
- 		*1.½¨Á¢Á½¸öScanner
- 		*2ÏÈ¶¼ÓÃnextLine()·½·¨£¬ÕûÊıÔÙÓÃInteger.parseInt()×ª»¯(ÍÆ¼ö)
- *£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡£¡
- *×¢ÒâÊÂÏî£º
- *ScannerÀïÃæ´«²ÎÊıÎªsystem.inÊ±£¬²»Òª¹ØÁ÷£¬¹Ø±ÕÁ÷ÁËsystem.in¾Í¹Ø±ÕÁË£¬Ó¦ÎªÏµÍ³Ä¬ÈÏÒ»¸öSystem.inÁ÷
+ 	*è§£å†³æ–¹æ¡ˆ:
+ 		*1.å»ºç«‹ä¸¤ä¸ªScanner
+ 		*2å…ˆéƒ½ç”¨nextLine()æ–¹æ³•ï¼Œæ•´æ•°å†ç”¨Integer.parseInt()è½¬åŒ–(æ¨è)
+ *ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼ï¼
+ *æ³¨æ„äº‹é¡¹ï¼š
+ *Scanneré‡Œé¢ä¼ å‚æ•°ä¸ºsystem.inæ—¶ï¼Œä¸è¦å…³æµï¼Œå…³é—­æµäº†system.inå°±å…³é—­äº†ï¼Œåº”ä¸ºç³»ç»Ÿé»˜è®¤ä¸€ä¸ªSystem.inæµ
  * */
 public class Demo02Scanner2 {
 	public static void main(String[] args) {
 		Scanner sc =new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öÕûÊı:");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°:");
 		int a=sc.nextInt();
 		System.out.println(a);
-		System.out.println("ÇëÊäÈëÒ»¸ö×Ö·û´®:");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²:");
 		String str=sc.nextLine();
-		System.out.println(str.equals(""));//true Ô­Òò£º
-		//ScannerÄ¬ÈÏÒÔ"\r\n"½áÊø£¬µ±ÊäÈëÒ»¸öÕûÊıÊ±£¬ÇÃÏÂenter¼üÊ±µÚ¶ş¸ö×Ö·û¾ÍÊÇ¿Õ×Ö·ûÁË
-		//½â¾ö·½·¨Ò»(²»ÍÆ¼ö)Õ¼ÄÚ´æ
+		System.out.println(str.equals(""));//true åŸå› ï¼š
+		//Scanneré»˜è®¤ä»¥"\r\n"ç»“æŸï¼Œå½“è¾“å…¥ä¸€ä¸ªæ•´æ•°æ—¶ï¼Œæ•²ä¸‹enteré”®æ—¶ç¬¬äºŒä¸ªå­—ç¬¦å°±æ˜¯ç©ºå­—ç¬¦äº†
+		//è§£å†³æ–¹æ³•ä¸€(ä¸æ¨è)å å†…å­˜
 		
-		System.out.println("=============µÚÒ»ÖÖ·½·¨========================");
+		System.out.println("=============ç¬¬ä¸€ç§æ–¹æ³•========================");
 		Scanner sc1=new Scanner(System.in);
 		Scanner sc2=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öÕûÊı:");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°:");
 		int a1=sc1.nextInt();
 		System.out.println(a);
-		System.out.println("ÇëÊäÈëÒ»¸ö×Ö·û´®:");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªå­—ç¬¦ä¸²:");
 		String str1=sc2.nextLine();
 		System.out.println(a1+" "+str1);
 		
 		
-		//½â¾ö·½·¨¶ş(ÍÆ¼ö)
-		System.out.println("=============µÚ¶şÖÖ·½·¨========================");
+		//è§£å†³æ–¹æ³•äºŒ(æ¨è)
+		System.out.println("=============ç¬¬äºŒç§æ–¹æ³•========================");
 		Scanner sc3= new Scanner(System.in);
 		int a3=Integer.parseInt(sc3.nextLine());
 		String str3= sc3.nextLine();

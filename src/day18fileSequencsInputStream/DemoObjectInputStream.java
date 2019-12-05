@@ -9,43 +9,43 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-/*¶ÁÈ¡ÎÄ¼ş¶ÔÏó£¬¼´·´ĞòÁĞ»¯
+/*è¯»å–æ–‡ä»¶å¯¹è±¡ï¼Œå³ååºåˆ—åŒ–
  * */
 public class DemoObjectInputStream {
 	public static void main(String[] args) throws ClassNotFoundException, IOException {
-		//´æÈë¶à¸ö¶ÔÏó£¬²»·½±ã£¬Ó¦ÎªÄã²»ÖªµÀ´æÁË¶àÉÙ¸ö£¬¶ÁµÄ´ÎÊıµÄ¶àÁË»á±¨Òì³£
+		//å­˜å…¥å¤šä¸ªå¯¹è±¡ï¼Œä¸æ–¹ä¾¿ï¼Œåº”ä¸ºä½ ä¸çŸ¥é“å­˜äº†å¤šå°‘ä¸ªï¼Œè¯»çš„æ¬¡æ•°çš„å¤šäº†ä¼šæŠ¥å¼‚å¸¸
 		method1();
-		//ÓÅ»¯£¬´æ´¢Ò»¸ö¼¯ºÏ¶ÔÏó£¬¼¯ºÏÀïÃæ°üº¬¶à¸ö¶ÔÏó£¬¶Ô¶ÔÏó½øĞĞ±éÀú
+		//ä¼˜åŒ–ï¼Œå­˜å‚¨ä¸€ä¸ªé›†åˆå¯¹è±¡ï¼Œé›†åˆé‡Œé¢åŒ…å«å¤šä¸ªå¯¹è±¡ï¼Œå¯¹å¯¹è±¡è¿›è¡Œéå†
 		//method2YouHua();
 	}
 	private static void method2YouHua() throws IOException, FileNotFoundException, ClassNotFoundException {
-		//ÓÅ»¯£¬´æ´¢Ò»¸ö¼¯ºÏ¶ÔÏó£¬¼¯ºÏÀïÃæ°üº¬¶à¸ö¶ÔÏó£¬¶Ô¶ÔÏó½øĞĞ±éÀú
+		//ä¼˜åŒ–ï¼Œå­˜å‚¨ä¸€ä¸ªé›†åˆå¯¹è±¡ï¼Œé›†åˆé‡Œé¢åŒ…å«å¤šä¸ªå¯¹è±¡ï¼Œå¯¹å¯¹è±¡è¿›è¡Œéå†
 		ArrayList<Person> plist= new ArrayList<>();
 		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("e.txt"));
 		ObjectInputStream ois= new ObjectInputStream(new FileInputStream("e.txt"));
-		Person person= new Person(23,"ÕÅÈı");
-		Person person1= new Person(24,"ÀîËÄ");
-		Person person2= new Person(25,"ÍõÎå");
-		Person person3= new Person(26,"ÕÔÁù");
+		Person person= new Person(23,"å¼ ä¸‰");
+		Person person1= new Person(24,"æå››");
+		Person person2= new Person(25,"ç‹äº”");
+		Person person3= new Person(26,"èµµå…­");
 		plist.add(person);
 		plist.add(person1);
 		plist.add(person2);
 		plist.add(person3);
 		oos.writeObject(plist);
 		plist=null;
-		System.out.println("============°Ñ¼¯ºÏplistĞ´ÈëÎÄ¼ş²¢°Ñplist¸³ÖµÎªnull===============");
+		System.out.println("============æŠŠé›†åˆplistå†™å…¥æ–‡ä»¶å¹¶æŠŠplistèµ‹å€¼ä¸ºnull===============");
 		System.out.println(plist);
 		plist=(ArrayList<Person>) ois.readObject();
-		System.out.println("============¶Á³öÎÄ¼ş¶ÔÏó²¢¸³Öµ¸øplist=============");
+		System.out.println("============è¯»å‡ºæ–‡ä»¶å¯¹è±¡å¹¶èµ‹å€¼ç»™plist=============");
 		System.out.println(plist);
 	}
 //
 	private static void method1() throws IOException, FileNotFoundException, ClassNotFoundException {
 		ObjectInputStream ois= new ObjectInputStream(new FileInputStream("e.txt"));  
-		Person person=(Person)ois.readObject();//È¡³öobject¶ÔÏó£¬±ØĞëÇ¿×ª
-		Person person1=(Person)ois.readObject();//È¡³öobject¶ÔÏó£¬±ØĞëÇ¿×ª
-		//Èç¹û¶Áµ½ÎÄ¼şµÄÄ©Î²»Ø±¨Òì³£EOFException
-		//Person person2=(Person)ois.readObject();//È¡³öobject¶ÔÏó£¬±ØĞëÇ¿×ª
+		Person person=(Person)ois.readObject();//å–å‡ºobjectå¯¹è±¡ï¼Œå¿…é¡»å¼ºè½¬
+		Person person1=(Person)ois.readObject();//å–å‡ºobjectå¯¹è±¡ï¼Œå¿…é¡»å¼ºè½¬
+		//å¦‚æœè¯»åˆ°æ–‡ä»¶çš„æœ«å°¾å›æŠ¥å¼‚å¸¸EOFException
+		//Person person2=(Person)ois.readObject();//å–å‡ºobjectå¯¹è±¡ï¼Œå¿…é¡»å¼ºè½¬
 		System.out.println(person);
 		System.out.println(person);
 	}

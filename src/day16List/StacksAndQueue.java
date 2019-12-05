@@ -14,15 +14,15 @@ public class StacksAndQueue {
 		que.QueueIn("c");
 		que.QueueIn("d");
 		
-		System.out.print("原StacKs:");
+		System.out.print("鍘烻tacKs:");
 		sta.stacksToString();
 		sta.stacksOut();
-		System.out.print("现Stacks:");
+		System.out.print("鐜癝tacks:");
 		sta.stacksToString();
-		System.out.print("原queue:");
+		System.out.print("鍘焣ueue:");
 		que.queueToString();
 		que.QueueOut();
-		System.out.print("现queue:");
+		System.out.print("鐜皅ueue:");
 		que.queueToString();
 	}
 }

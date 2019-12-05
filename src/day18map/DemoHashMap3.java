@@ -3,17 +3,17 @@ package day18map;
 import java.util.HashMap;
 import java.util.Map;
 
-/*HashMap ´æ´¢×Ô¶¨Òå¶ÔÏó
- * ÔÚ¼ü³ö´¢´æ×Ô¶¨Òå¶ÔÏóÔõÃ´±£Ö¤×Ô¶¨Òå¶ÔÏó²»Î¨Ò»¡£
- * Í¨¹ıStudentÖĞÖØĞ´µÄhashcode()·½·¨ºÍequals±£Ö¤¼üµÄÎ¨Ò»ĞÔ
+/*HashMap å­˜å‚¨è‡ªå®šä¹‰å¯¹è±¡
+ * åœ¨é”®å‡ºå‚¨å­˜è‡ªå®šä¹‰å¯¹è±¡æ€ä¹ˆä¿è¯è‡ªå®šä¹‰å¯¹è±¡ä¸å”¯ä¸€ã€‚
+ * é€šè¿‡Studentä¸­é‡å†™çš„hashcode()æ–¹æ³•å’Œequalsä¿è¯é”®çš„å”¯ä¸€æ€§
  * */
 public class DemoHashMap3 {
 	public static void main(String[] args) {
 		Map<Student,String> a=new HashMap<>();
-		a.put(new Student(12,"liming"), "½­Î÷");
-		a.put(new Student(12,"liming"), "±±¾©");//È¥ÖØÍ¨¹ıStudentÖĞÖØĞ´µÄhashcode()·½·¨ºÍequals
-		a.put(new Student(14,"lishi"), "ÉÏº£");
-		a.put(new Student(13,"liwu"), "ÉîÛÚ");
+		a.put(new Student(12,"liming"), "æ±Ÿè¥¿");
+		a.put(new Student(12,"liming"), "åŒ—äº¬");//å»é‡é€šè¿‡Studentä¸­é‡å†™çš„hashcode()æ–¹æ³•å’Œequals
+		a.put(new Student(14,"lishi"), "ä¸Šæµ·");
+		a.put(new Student(13,"liwu"), "æ·±åœ³");
 		System.out.println(a);
 	}	
 }

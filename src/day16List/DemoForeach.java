@@ -16,7 +16,7 @@ public class DemoForeach {
 		c.add(4);
 		c.add(5);
 		for (Object i:c) {
-			System.out.println(i);//��̬
+			System.out.println(i);//¶àÌ¬
 		}
 	}
 }

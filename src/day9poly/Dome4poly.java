@@ -3,7 +3,7 @@ package day9poly;
 public class Dome4poly {
 	public static void main(String[] args) {
 		father4 a=new son4();
-		a.show2();//lajison 子类默认有一个同样的show()
+		a.show2();//lajison 瀛愮被榛樿鏈変竴涓悓鏍风殑show()
 	}
 }
 

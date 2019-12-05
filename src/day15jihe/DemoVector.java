@@ -3,10 +3,10 @@ package day15jihe;
 import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.Vector;
-/* vectorÔÚ±»ListÌæ´ú
- * Enumeration·½·¨£º
- * hasMoreElement();Ïàµ±ÓÚIteratorÖĞhasNext();
- * ºÍ nextElement();Ïàµ±ÓÚnext();
+/* vectoråœ¨è¢«Listæ›¿ä»£
+ * Enumerationæ–¹æ³•ï¼š
+ * hasMoreElement();ç›¸å½“äºIteratorä¸­hasNext();
+ * å’Œ nextElement();ç›¸å½“äºnext();
  * */
 public class DemoVector {
 	public static void main(String[] args) {

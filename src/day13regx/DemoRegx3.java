@@ -1,24 +1,24 @@
 package day13regx;
-//Greedy ÊıÁ¿´Ê 
-//X? X£¬Ò»´Î»òÒ»´ÎÒ²Ã»ÓĞ 
-//X* X£¬Áã´Î»ò¶à´Î 
-//X+ X£¬Ò»´Î»ò¶à´Î 
-//X{n} X£¬Ç¡ºÃ n ´Î 
-//X{n,} X£¬ÖÁÉÙ n ´Î 
-//X{n,m} X£¬ÖÁÉÙ n ´Î£¬µ«ÊÇ²»³¬¹ı m ´Î 
+//Greedy æ•°é‡è¯ 
+//X? Xï¼Œä¸€æ¬¡æˆ–ä¸€æ¬¡ä¹Ÿæ²¡æœ‰ 
+//X* Xï¼Œé›¶æ¬¡æˆ–å¤šæ¬¡ 
+//X+ Xï¼Œä¸€æ¬¡æˆ–å¤šæ¬¡ 
+//X{n} Xï¼Œæ°å¥½ n æ¬¡ 
+//X{n,} Xï¼Œè‡³å°‘ n æ¬¡ 
+//X{n,m} Xï¼Œè‡³å°‘ n æ¬¡ï¼Œä½†æ˜¯ä¸è¶…è¿‡ m æ¬¡ 
 //  
 public class DemoRegx3 {
 	public static void main(String[] args) {
-		System.out.println("a".matches("[abc]?"));//true abc³öÏÖÒ»´Î»òÕßÒ»´ÎÒ²Ã»ÓĞ
-		System.out.println("z".matches("[abc]?"));//false ³öÏÖÁËÆäËû×Ö·û
+		System.out.println("a".matches("[abc]?"));//true abcå‡ºç°ä¸€æ¬¡æˆ–è€…ä¸€æ¬¡ä¹Ÿæ²¡æœ‰
+		System.out.println("z".matches("[abc]?"));//false å‡ºç°äº†å…¶ä»–å­—ç¬¦
 		System.out.println("aaa".matches("[abc]*"));//true 
-		System.out.println("aea".matches("[abc]*"));//false ³öÏÖÁËÆäËû×Ö·û
+		System.out.println("aea".matches("[abc]*"));//false å‡ºç°äº†å…¶ä»–å­—ç¬¦
 		System.out.println("aba".matches("[abc]*"));//true
 		System.out.println("aaa".matches("[abc]+"));//true
-		System.out.println("aea".matches("[abc]+"));//false ³öÏÖÁËÆäËû×Ö·û
+		System.out.println("aea".matches("[abc]+"));//false å‡ºç°äº†å…¶ä»–å­—ç¬¦
 		System.out.println("".matches("[abc]+"));//false
-		System.out.println("aaaa".matches("[a]{2,}"));//true a³öÏÖÁ½´ÎÒÔÉÏ
-		System.out.println("aaaaa".matches("[a][4]"));//false a³öÏÖÕıºÃËÄ´Î
-		System.out.println("aaaa".matches("[a]{0,4}"));//true a³öÏÖ0µ½ËÄ´Î
+		System.out.println("aaaa".matches("[a]{2,}"));//true aå‡ºç°ä¸¤æ¬¡ä»¥ä¸Š
+		System.out.println("aaaaa".matches("[a][4]"));//false aå‡ºç°æ­£å¥½å››æ¬¡
+		System.out.println("aaaa".matches("[a]{0,4}"));//true aå‡ºç°0åˆ°å››æ¬¡
 	}
 }

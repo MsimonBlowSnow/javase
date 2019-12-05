@@ -7,11 +7,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /*
- * ÊÔÓÃÈí¼ş
- * 1.ÊÔÓÃ10´Î£¬µÚÊ®´ÎÒªÇó¹ºÂòÕı°æ
- 	*·ÖÎö£º 	
- 		*°ÑÊ¹ÊÔÓÃµÄ´ÎÊı±£´æÔÚÒ»¸öÎÄ¼şÏÂ 
- 		*Ã¿´ÎÊ¹ÓÃ´ÎÊı¼õÒ»²¢´æ»áÎÄ¼şÖĞ 
+ * è¯•ç”¨è½¯ä»¶
+ * 1.è¯•ç”¨10æ¬¡ï¼Œç¬¬åæ¬¡è¦æ±‚è´­ä¹°æ­£ç‰ˆ
+ 	*åˆ†æï¼š 	
+ 		*æŠŠä½¿è¯•ç”¨çš„æ¬¡æ•°ä¿å­˜åœ¨ä¸€ä¸ªæ–‡ä»¶ä¸‹ 
+ 		*æ¯æ¬¡ä½¿ç”¨æ¬¡æ•°å‡ä¸€å¹¶å­˜ä¼šæ–‡ä»¶ä¸­ 
  */
 public class DemoSoftTestUse {
 	public static void main(String[] args) throws IOException {
@@ -21,9 +21,9 @@ public class DemoSoftTestUse {
 		while((str=bfr.readLine())!=null) {
 			times= Integer.parseInt(str);
 			if(times!=0) {
-				System.out.println("Äã»¹ÓĞ"+--times+"´Î»ú»á");
+				System.out.println("ä½ è¿˜æœ‰"+--times+"æ¬¡æœºä¼š");
 			}else {
-				System.out.println("Çë¹ºÂòÕı°æ!");
+				System.out.println("è¯·è´­ä¹°æ­£ç‰ˆ!");
 			}
 		}
 		str=times+"";

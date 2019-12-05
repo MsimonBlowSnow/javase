@@ -6,15 +6,15 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Scanner;
 
-/*°´¸ñÊ½ÊäÈëÒ»¸öÄê·İ
- * Í¨¹ıCalendarÖĞµÄSet°Ñ±äÎª3ÔÂÒ»ÈÕ
- * Í¨¹ıCalendarÖĞµÄadd·½·¨¼õÒ»±äÎª¶şÔÂ·İµÄ×îºóÒ»Ìì
- * Êä³öday_of_MonthÀ´ÅĞ¶ÎÊÇÈòÄê»¹ÊÇÆ½Äê¡£
+/*æŒ‰æ ¼å¼è¾“å…¥ä¸€ä¸ªå¹´ä»½
+ * é€šè¿‡Calendarä¸­çš„SetæŠŠå˜ä¸º3æœˆä¸€æ—¥
+ * é€šè¿‡Calendarä¸­çš„addæ–¹æ³•å‡ä¸€å˜ä¸ºäºŒæœˆä»½çš„æœ€åä¸€å¤©
+ * è¾“å‡ºday_of_Monthæ¥åˆ¤æ®µæ˜¯é—°å¹´è¿˜æ˜¯å¹³å¹´ã€‚
  * */
 public class IsRuanNian {
 	public static void main(String[] args) throws ParseException {
 		Scanner a=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÄãµÄÄê·İ:¸ñÊ½Îª(YYYY)");
+		System.out.println("è¯·è¾“å…¥ä½ çš„å¹´ä»½:æ ¼å¼ä¸º(YYYY)");
 		String year=a.nextLine();
 		int year1=Integer.parseInt(year);
 		Calendar c=Calendar.getInstance();
@@ -24,9 +24,9 @@ public class IsRuanNian {
 		c.add(Calendar.DAY_OF_MONTH, -1);
 		int flag=c.get(Calendar.DAY_OF_MONTH);
 		if(flag==29) {
-			System.out.println(year+"ÄêÊÇÒ»¸öÈòÄê");
+			System.out.println(year+"å¹´æ˜¯ä¸€ä¸ªé—°å¹´");
 		}
 		else 
-			System.out.println("ÕâÊÇÒ»¸öÆ½Äê"+flag);
+			System.out.println("è¿™æ˜¯ä¸€ä¸ªå¹³å¹´"+flag);
 		}
 }

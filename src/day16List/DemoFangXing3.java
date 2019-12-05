@@ -3,12 +3,12 @@ package day16List;
 public class DemoFangXing3 {
 	public static void main(String[] args) {
 		A<Integer> a=new A<>(1);
-		//A<Integer> a=new A<>("f1");±àÒëÊ±±¨´í,¹¹Ôì·½·¨ÖĞÃ»ÓÃ²ÎÊıÊÇIntegerµÄ¶ÔÏó
+		//A<Integer> a=new A<>("f1");ç¼–è¯‘æ—¶æŠ¥é”™,æ„é€ æ–¹æ³•ä¸­æ²¡ç”¨å‚æ•°æ˜¯Integerçš„å¯¹è±¡
 	}
 }
 
 
-//Q´´½¨¶ÔÏóÊ¹ÓÃµÄ·¶ĞÍ
+//Qåˆ›å»ºå¯¹è±¡ä½¿ç”¨çš„èŒƒå‹
 class A<Q>{
 	private Q e;
 	A(){}
@@ -19,9 +19,9 @@ class A<Q>{
 		System.out.println(e);
 	}
 	public void print1(Q q) {};
-	//Q q ´ú±í´æ´«ÈëµÄ·ºĞÍ£¬¶øT t Ã»ÓÃ
-	public<T> void print2(T t) {}//·½·¨·ºĞÍ×îºÃÊÇºÍÀà·¶ĞÍÒ»ÖÂ,
-								//Èç¹û²»Ò»ÖÂ£¬ÔòÔÚpublic ¼ÓÒ»¸ö·ºĞÍ
-	public static<W> void print3(W w) {}//¾²Ì¬·½·¨±ØĞèÓĞ×Ô¼ºµÄ·ºĞÍ
-										//ËûÊÇÔÚÀàµÄÊµÀı´´½¨Ö®Ç°¾ÍÓĞµÄ
+	//Q q ä»£è¡¨å­˜ä¼ å…¥çš„æ³›å‹ï¼Œè€ŒT t æ²¡ç”¨
+	public<T> void print2(T t) {}//æ–¹æ³•æ³›å‹æœ€å¥½æ˜¯å’Œç±»èŒƒå‹ä¸€è‡´,
+								//å¦‚æœä¸ä¸€è‡´ï¼Œåˆ™åœ¨public åŠ ä¸€ä¸ªæ³›å‹
+	public static<W> void print3(W w) {}//é™æ€æ–¹æ³•å¿…éœ€æœ‰è‡ªå·±çš„æ³›å‹
+										//ä»–æ˜¯åœ¨ç±»çš„å®ä¾‹åˆ›å»ºä¹‹å‰å°±æœ‰çš„
 }

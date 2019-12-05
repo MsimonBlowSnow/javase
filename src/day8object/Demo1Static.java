@@ -7,12 +7,12 @@ public class Demo1Static {
 			System.out.println("2");
 		}
 		new Demo1static1();
-		Demo1static1 a;//²»»áÖ´ĞĞstatic
+		Demo1static1 a;//ä¸ä¼šæ‰§è¡Œstatic
 		//new Demo1static1();
 	}
 	
 	static{
-		System.out.println("1");//±ÈÖ÷º¯ÊıÏÈÖ´ĞĞ
+		System.out.println("1");//æ¯”ä¸»å‡½æ•°å…ˆæ‰§è¡Œ
 	}
 	
 	
@@ -22,12 +22,12 @@ class Demo1static1{
 	public Demo1static1(){
 		System.out.println("5");
 	}
-	//´´½İ¶ÔÏóÊ±»áÖ´ĞĞ
+	//åˆ›æ·å¯¹è±¡æ—¶ä¼šæ‰§è¡Œ
 			{
 				System.out.println("4");
 			}
 			
-	//Àà³öÏÖÁË¾Í»áÖ´ĞĞ£¬ÇÒÖ»Ö´ĞĞÒ»´Î¡£
+	//ç±»å‡ºç°äº†å°±ä¼šæ‰§è¡Œï¼Œä¸”åªæ‰§è¡Œä¸€æ¬¡ã€‚
 		static {
 			System.out.println("3");
 		}

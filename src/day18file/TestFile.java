@@ -4,30 +4,30 @@ import java.io.File;
 import java.io.FileFilter;
 import java.io.FilenameFilter;
 
-/*A:°¸ÀıÑİÊ¾
-	* ĞèÇó£ºÅĞ¶ÏEÅÌÄ¿Â¼ÏÂÊÇ·ñÓĞºó×ºÃûÎª.pngµÄÎÄ¼ş£¬Èç¹ûÓĞ£¬¾ÍÊä³ö¸ÃÎÄ¼şÃû³Æ 
-* B:ÎÄ¼şÃû³Æ¹ıÂËÆ÷µÄ¸ÅÊö
+/*A:æ¡ˆä¾‹æ¼”ç¤º
+	* éœ€æ±‚ï¼šåˆ¤æ–­Eç›˜ç›®å½•ä¸‹æ˜¯å¦æœ‰åç¼€åä¸º.pngçš„æ–‡ä»¶ï¼Œå¦‚æœæœ‰ï¼Œå°±è¾“å‡ºè¯¥æ–‡ä»¶åç§° 
+* B:æ–‡ä»¶åç§°è¿‡æ»¤å™¨çš„æ¦‚è¿°
 	* public String[] list(FilenameFilter filter)
 	* public File[] listFiles(FileFilter filter)
-* C:ÎÄ¼şÃû³Æ¹ıÂËÆ÷µÄÊ¹ÓÃ
-	* ĞèÇó£ºÅĞ¶ÏEÅÌÄ¿Â¼ÏÂÊÇ·ñÓĞºó×ºÃûÎª.jpgµÄÎÄ¼ş£¬Èç¹ûÓĞ£¬¾ÍÊä³ö¸ÃÎÄ¼şÃû³Æ
-* D:Ô´Âë·ÖÎö
-	* ´øÎÄ¼şÃû³Æ¹ıÂËÆ÷µÄlist()·½·¨µÄÔ´Âë
+* C:æ–‡ä»¶åç§°è¿‡æ»¤å™¨çš„ä½¿ç”¨
+	* éœ€æ±‚ï¼šåˆ¤æ–­Eç›˜ç›®å½•ä¸‹æ˜¯å¦æœ‰åç¼€åä¸º.jpgçš„æ–‡ä»¶ï¼Œå¦‚æœæœ‰ï¼Œå°±è¾“å‡ºè¯¥æ–‡ä»¶åç§°
+* D:æºç åˆ†æ
+	* å¸¦æ–‡ä»¶åç§°è¿‡æ»¤å™¨çš„list()æ–¹æ³•çš„æºç 
 
  */
 public class TestFile {
 	public static void main(String[] args) {
-		//×Ô¼ºÊµÏÖ
+		//è‡ªå·±å®ç°
 		methodmy();
-		//Í¨¹ılist(new listnameFilter())¹ıÂËÆ÷
+		//é€šè¿‡list(new listnameFilter())è¿‡æ»¤å™¨
 		methodList();
-		//Í¨¹ılistFiles(new FileFilter())¹ıÂËÆ÷
+		//é€šè¿‡listFiles(new FileFilter())è¿‡æ»¤å™¨
 		methodListFiles();
 	}
 
 	private static void methodListFiles() {
 		File file=new  File("src/day15jihe");
-		//»ñÈ¡Âú×ãÌõ¼şµÄÎÄ¼şÂ·¾¶
+		//è·å–æ»¡è¶³æ¡ä»¶çš„æ–‡ä»¶è·¯å¾„
 		File[] files =file.listFiles(new FileFilter() {
 			
 			@Override
@@ -43,7 +43,7 @@ public class TestFile {
 
 	private static void methodList() {
 		File file=new  File("src/day15jihe");
-		//»ñÈ¡Âú×ãÌõ¼şµÄÎÄ¼şÃû
+		//è·å–æ»¡è¶³æ¡ä»¶çš„æ–‡ä»¶å
 		String[] files=file.list(new FilenameFilter() {
 			
 			@Override

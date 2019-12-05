@@ -8,30 +8,30 @@ public class Demo2String {
 		String str3="a2";
 		String str4=" ";
 		String str5="";
-		System.out.println(str.charAt(3));//·Å»Ø¶ÔÓ¦Ë÷ÒıµÄ×Ö·û
+		System.out.println(str.charAt(3));//æ”¾å›å¯¹åº”ç´¢å¼•çš„å­—ç¬¦
 		
-		//±È½ÏÁ½¸ö×Ö·û´®µÄ´óĞ¡,ÏàµÈ·µ»Ø0,·ñÕß·Å»ØÒ»¸ö²»Îª0µÄÊı
+		//æ¯”è¾ƒä¸¤ä¸ªå­—ç¬¦ä¸²çš„å¤§å°,ç›¸ç­‰è¿”å›0,å¦è€…æ”¾å›ä¸€ä¸ªä¸ä¸º0çš„æ•°
 		System.out.println(str.compareTo(str1));
 		
-		//·µ»Ø¶ÔÓ¦Ë÷ÒıµÄacsllÂë
+		//è¿”å›å¯¹åº”ç´¢å¼•çš„acsllç 
 		System.out.println(str3.codePointAt(0));//97
 		
-		//ÅĞ¶ÏÊÇ·ñÒÔ¸Ã×Ö·û´®½áÎ²µÄ
+		//åˆ¤æ–­æ˜¯å¦ä»¥è¯¥å­—ç¬¦ä¸²ç»“å°¾çš„
 		System.out.println(str2.endsWith("34"));//false
 		System.out.println(str2.endsWith("345"));//true
 		
-		//ÅĞ¶ÏÊÇ·ñ°üÀ¨¸Ã×Ö·û
+		//åˆ¤æ–­æ˜¯å¦åŒ…æ‹¬è¯¥å­—ç¬¦
 		System.out.println(str1.contains("34"));//true
 		System.out.println(str1.contains("314"));//false
 	
-		/*ÖØĞ´ÁËobjectÖĞµÄequals()·½·¨£¬ÅĞ¶Ï×Ö·û´®ÊÇ·ñÏàµÈ
-		Óëcompareto()·½·¨ÀàËÆ£¬Ò»¸ö·Å»Øint,Ò»¸ö·Å»Øboolean*/
+		/*é‡å†™äº†objectä¸­çš„equals()æ–¹æ³•ï¼Œåˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ç›¸ç­‰
+		ä¸compareto()æ–¹æ³•ç±»ä¼¼ï¼Œä¸€ä¸ªæ”¾å›int,ä¸€ä¸ªæ”¾å›boolean*/
 		System.out.println(str1.equals("s"));//false
 		System.out.println(str1.equals("u123456"));//true
-		//ÅĞ¶Ï×Ö·û´®ÊÇ·ñÎª¿Õ£¬²»ÊÇnull£¬shi str=="";
+		//åˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦ä¸ºç©ºï¼Œä¸æ˜¯nullï¼Œshi str=="";
 		System.out.println(str4.isEmpty());//false
 		System.out.println(str5.isEmpty());//true
-		//Í¨¹ıÖĞ¼äµÄ·Ö¸îÎª¶à¸ö×Ö·û´®
+		//é€šè¿‡ä¸­é—´çš„åˆ†å‰²ä¸ºå¤šä¸ªå­—ç¬¦ä¸²
 		String a[]=str2.split("4");
 		System.out.println(str5);
 	}

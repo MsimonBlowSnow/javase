@@ -10,14 +10,14 @@ import java.util.Scanner;
 public class Day03SendAndReceiveThread {
 	public static void main(String[] args) {
 		new Thread() {
-			//²»ÄÜÅ×³öÒì³£Ö»ÄÜ×Ô¼º´¦Àí
+			//ä¸èƒ½æŠ›å‡ºå¼‚å¸¸åªèƒ½è‡ªå·±å¤„ç†
 			public void run() {
 				try {
 					this.sleep(3000);
 					DatagramSocket aDatagramSocket=new DatagramSocket();
 				Scanner sc=new Scanner(System.in);
 				while(true) {
-					System.out.println("ÇëÊäÈë´«ËÍµÄĞÅÏ¢(quitÍË³ö):");
+					System.out.println("è¯·è¾“å…¥ä¼ é€çš„ä¿¡æ¯(quité€€å‡º):");
 					String astring=sc.nextLine();
 					if("quit".equals(astring)) {
 						break;

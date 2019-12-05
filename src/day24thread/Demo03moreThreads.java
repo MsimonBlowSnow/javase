@@ -3,11 +3,11 @@ package day24thread;
 public class Demo03moreThreads {
 	public static void main(String[] args) {
 		for (int i = 0; i < 100000; i++) {
-			new Demo03();//´´½¨ÄäÃû¶ÔÏó
+			new Demo03();//åˆ›å»ºåŒ¿åå¯¹è±¡
 		}
 		
 		for (int i = 0; i <100000; i++) {
-			System.out.println("À¬»øÒ²¿ÉÒÔÂòÇ®ÄÅ!");
+			System.out.println("åžƒåœ¾ä¹Ÿå¯ä»¥ä¹°é’±å‘!");
 		}
 	}
 }
@@ -15,6 +15,6 @@ public class Demo03moreThreads {
 class Demo03{
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("ÊÕÀ¬»øÁË!");
+		System.out.println("æ”¶åžƒåœ¾äº†!");
 	}
 }

@@ -1,4 +1,4 @@
-package ¼òµ¥¹¤³¡Éè¼ÆÄ£Ê½;
+package ç®€å•å·¥åœºè®¾è®¡æ¨¡å¼;
 
 public abstract class Day01Aminal {
 	public  void eat(){};

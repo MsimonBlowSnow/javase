@@ -5,34 +5,34 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-/*ÄãÀ´µ½ÊÀ½ç¶àÉÙÌì
- * Í¨¹ıÊäÈëÄãµÄÉúÈÕÀ´¼ÆËãÄãÒ»¹²»îÁË¶àÉÙÌì
+/*ä½ æ¥åˆ°ä¸–ç•Œå¤šå°‘å¤©
+ * é€šè¿‡è¾“å…¥ä½ çš„ç”Ÿæ—¥æ¥è®¡ç®—ä½ ä¸€å…±æ´»äº†å¤šå°‘å¤©
  * 
  * */
 public class DemoBirthDayToDay {
 	public static void main(String[] args) throws ParseException {
 		Scanner a=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÄãµÄÉúÈÕ:¸ñÊ½Èç(yyyy/MM/dd/)");
+		System.out.println("è¯·è¾“å…¥ä½ çš„ç”Ÿæ—¥:æ ¼å¼å¦‚(yyyy/MM/dd/)");
 		String date12=a.nextLine();
 		a.close();
 		SimpleDateFormat c= new SimpleDateFormat("yyyy/MM/dd");
 		System.out.println(c.parse(date12));
-		System.out.println("ÄãµÄÉúÈÕÎª:"+c.format(c.parse(date12)));
+		System.out.println("ä½ çš„ç”Ÿæ—¥ä¸º:"+c.format(c.parse(date12)));
 		Date date1=new Date();
-		System.out.println("ÏÖÔÚÊ±¼äÎª:"+c.format(date1));
+		System.out.println("ç°åœ¨æ—¶é—´ä¸º:"+c.format(date1));
 		long day=((date1.getTime()-c.parse(date12).getTime())/1000/3600/24);
-		System.out.println("ÄãÒ»¹²»îÁË"+day+"Ìì");
-		/*String birthday = "1983Äê07ÔÂ08ÈÕ";
-		String today = "2088Äê6ÔÂ6ÈÕ";
-		//2,¶¨ÒåÈÕÆÚ¸ñÊ½»¯¶ÔÏó
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyyÄêMMÔÂddÈÕ");
-		//3,½«ÈÕÆÚ×Ö·û´®×ª»»³ÉÈÕÆÚ¶ÔÏó
+		System.out.println("ä½ ä¸€å…±æ´»äº†"+day+"å¤©");
+		/*String birthday = "1983å¹´07æœˆ08æ—¥";
+		String today = "2088å¹´6æœˆ6æ—¥";
+		//2,å®šä¹‰æ—¥æœŸæ ¼å¼åŒ–å¯¹è±¡
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyyå¹´MMæœˆddæ—¥");
+		//3,å°†æ—¥æœŸå­—ç¬¦ä¸²è½¬æ¢æˆæ—¥æœŸå¯¹è±¡
 		Date d1 = sdf.parse(birthday);
 		Date d2 = sdf.parse(today);
 		System.out.println(sdf.format(sdf.parse(birthday)));
-		//4,Í¨¹ıÈÕÆÚ¶ÔÏóºóÆÚÊ±¼äºÁÃëÖµ
+		//4,é€šè¿‡æ—¥æœŸå¯¹è±¡åæœŸæ—¶é—´æ¯«ç§’å€¼
 		long time = d2.getTime() - d1.getTime();
-		//5,½«Á½¸öÊ±¼äºÁÃëÖµÏà¼õ³ıÒÔ1000,ÔÙ³ıÒÔ60,ÔÙ³ıÒÔ60,ÔÙ³ıÒÔ24µÃµ½Ìì
+		//5,å°†ä¸¤ä¸ªæ—¶é—´æ¯«ç§’å€¼ç›¸å‡é™¤ä»¥1000,å†é™¤ä»¥60,å†é™¤ä»¥60,å†é™¤ä»¥24å¾—åˆ°å¤©
 		System.out.println(time / 1000 / 60 / 60 / 24 );*/
 	}
 }

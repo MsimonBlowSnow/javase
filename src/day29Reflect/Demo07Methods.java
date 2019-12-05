@@ -7,15 +7,15 @@ public class Demo07Methods {
 	public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Class class1=Class.forName("day29Reflect.Person2901");
 		Class class2=Person2901.class;
-		Person2901 aPerson2901=new Person2901("Ã÷",12,"ÄĞ");
+		Person2901 aPerson2901=new Person2901("æ˜",12,"ç”·");
 		Class class3 =aPerson2901.getClass();
 		
-		//»ñÈ¡ÎŞ²Î²ÎÊıeat()·½·¨
+		//è·å–æ— å‚å‚æ•°eat()æ–¹æ³•
 		Method aMethod=class1.getMethod("eat");
 		aMethod.invoke(aPerson2901);
 		
-		//»ñÈ¡ÓĞ²ÎÊıµÄeat(int num);
-		Method bMethod=class1.getMethod("eat",int.class); //»ñÈ¡ÓĞ²Î²ÎÊıµÄeat(int num)·½·¨
+		//è·å–æœ‰å‚æ•°çš„eat(int num);
+		Method bMethod=class1.getMethod("eat",int.class); //è·å–æœ‰å‚å‚æ•°çš„eat(int num)æ–¹æ³•
 		bMethod.invoke(aPerson2901,10);
 		
 	}

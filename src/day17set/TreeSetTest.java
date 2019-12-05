@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.TreeSet;
 
-/* ÔÚÒ»¸ö¼¯ºÏÖÐ´æ´¢ÁËÎÞÐò²¢ÇÒÖØ¸´µÄ×Ö·û´®,¶¨ÒåÒ»¸ö·½·¨,ÈÃÆäÓÐÐò(×ÖµäË³Ðò),¶øÇÒ»¹²»ÄÜÈ¥³ýÖØ
- *  ¶Ô¼¯ºÏÖÐµÄÔªËØÅÅÐò,²¢±£ÁôÖØ¸´
-*½â¾ö·½·¨£º
-	*1.´´½¨Ò»¸ö·½·¨£¬°ÑListµ±×÷ÒýÓÃ²ÎÊý´«µÝ¹ýÈ¥
-	*2.´´½¨Ò»¸öTreeSet¼¯ºÏ£¬²¢ÊµÏÖ±È½ÏÆ÷£¬
-	*3.±È½ÏÆ÷ÖÐÅÐ¶ÏÈç¹ûÁ½¸ö¶ÔÏóÏàµÈ£¬·Å»Ø-1£¬ ±£Ö¤²»»áÈ¥ÖØ
-	* Í¨¹ýStringÖÐµÄcompareto()·½·¨ÊµÏÖ×ÖµäÅÅÐò
+/* åœ¨ä¸€ä¸ªé›†åˆä¸­å­˜å‚¨äº†æ— åºå¹¶ä¸”é‡å¤çš„å­—ç¬¦ä¸²,å®šä¹‰ä¸€ä¸ªæ–¹æ³•,è®©å…¶æœ‰åº(å­—å…¸é¡ºåº),è€Œä¸”è¿˜ä¸èƒ½åŽ»é™¤é‡
+ *  å¯¹é›†åˆä¸­çš„å…ƒç´ æŽ’åº,å¹¶ä¿ç•™é‡å¤
+*è§£å†³æ–¹æ³•ï¼š
+	*1.åˆ›å»ºä¸€ä¸ªæ–¹æ³•ï¼ŒæŠŠListå½“ä½œå¼•ç”¨å‚æ•°ä¼ é€’è¿‡åŽ»
+	*2.åˆ›å»ºä¸€ä¸ªTreeSeté›†åˆï¼Œå¹¶å®žçŽ°æ¯”è¾ƒå™¨ï¼Œ
+	*3.æ¯”è¾ƒå™¨ä¸­åˆ¤æ–­å¦‚æžœä¸¤ä¸ªå¯¹è±¡ç›¸ç­‰ï¼Œæ”¾å›ž-1ï¼Œ ä¿è¯ä¸ä¼šåŽ»é‡
+	* é€šè¿‡Stringä¸­çš„compareto()æ–¹æ³•å®žçŽ°å­—å…¸æŽ’åº
 * */
 public class TreeSetTest {
 	public static void main(String[] args) {

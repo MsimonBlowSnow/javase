@@ -1,6 +1,6 @@
 package day10package;
 /**
- * ÒªÇóÊä³ö30£¬20£¬10
+ * è¦æ±‚è¾“å‡º30ï¼Œ20ï¼Œ10
  * */
 public class DemoInClass3 {
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class DemoInClass3 {
 	}
 }
 
-//ÄÚ²¿ÀàÄÜ»ñÈ¡Íâ²¿ÀàÖ÷ÒªÊÇÓ¦ÎªËû¿ÉÒÔ»ñÈ¡Íâ²¿ÀàµÄÒıÓÃ.this.Êı¾İ
+//å†…éƒ¨ç±»èƒ½è·å–å¤–éƒ¨ç±»ä¸»è¦æ˜¯åº”ä¸ºä»–å¯ä»¥è·å–å¤–éƒ¨ç±»çš„å¼•ç”¨.this.æ•°æ®
 class Outer31{
     public int num = 10;
     class Inner31{

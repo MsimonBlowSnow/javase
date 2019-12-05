@@ -2,7 +2,7 @@ package day4xuhuan;
 
 public class TestFor {
 	public static void main(String[] args) {
-		/*Çë´òÓ¦100-1000ÀïÃæµÄË®ÏÉ»¨
+		/*è¯·æ‰“åº”100-1000é‡Œé¢çš„æ°´ä»™èŠ±
 		 * 153=1*1*1+5*5*5+3*3*3
 		 * 
 		 * */
@@ -21,6 +21,6 @@ public class TestFor {
 				System.out.println(he);
 			}
 		}
-		System.out.println("Ò»¹²ÓĞ"+count+"¶ä»¨¡£");
+		System.out.println("ä¸€å…±æœ‰"+count+"æœµèŠ±ã€‚");
 	}
 }

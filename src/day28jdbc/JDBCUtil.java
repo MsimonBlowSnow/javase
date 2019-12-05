@@ -10,12 +10,12 @@ public class JDBCUtil {
 	private JDBCUtil() {}
 	private static  Connection con;
 	static {
-		//Ö»ÄÜÅ×³öÒì³£
+		//åªèƒ½æŠ›å‡ºå¼‚å¸¸
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydatabases","root","123456");
 		} catch (Exception e) {
-			System.out.println(e+"Êı¾İ¿âÁ¬½ÓÊ§°Ü!");
+			System.out.println(e+"æ•°æ®åº“è¿æ¥å¤±è´¥!");
 		}
 		
 	}

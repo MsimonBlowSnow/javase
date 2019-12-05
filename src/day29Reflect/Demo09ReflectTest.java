@@ -2,9 +2,9 @@ package day29Reflect;
 
 public class Demo09ReflectTest {
 	public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		Person2901 aPerson2901= new Person2901("Ã÷",12,"ÄĞ");
+		Person2901 aPerson2901= new Person2901("æ˜",12,"ç”·");
 		System.out.println(aPerson2901);
-		//µ÷ÓÃDemo09ReflectToolÀïÃæµÄ¾²Ì¬·½·¨
+		//è°ƒç”¨Demo09ReflectToolé‡Œé¢çš„é™æ€æ–¹æ³•
 		Demo09ReflectTool.setvalues(aPerson2901,"name", "ming");
 		System.out.println(aPerson2901);
 	}

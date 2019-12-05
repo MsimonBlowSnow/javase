@@ -30,12 +30,12 @@ public class Student17 implements Comparable<Student17>{
 		this.name = name;
 	}
 	
-	//±£Ö¤nameºÍage²»Í¬µÄ¶ÔÏó²úÉúÏàÍ¬hashcode
+	//ä¿è¯nameå’Œageä¸åŒçš„å¯¹è±¡äº§ç”Ÿç›¸åŒhashcode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		System.out.println("µ÷ÓÃhashcode·½·¨");
+		System.out.println("è°ƒç”¨hashcodeæ–¹æ³•");
 		result = prime * result + age;
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
@@ -44,7 +44,7 @@ public class Student17 implements Comparable<Student17>{
 	
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("µ÷ÓÃequals·½·¨");
+		System.out.println("è°ƒç”¨equalsæ–¹æ³•");
 		if (this == obj)
 			return true;
 		if (obj == null)
@@ -64,9 +64,9 @@ public class Student17 implements Comparable<Student17>{
 
 	@Override
 	public int compareTo(Student17 o) {
-		int length = this.name.length() - o.name.length();				//±È½Ï³¤¶ÈÎªÖ÷ÒªÌõ¼ş
-		int num = length == 0 ? this.name.compareTo(o.name) : length;	//±È½ÏÄÚÈİÎª´ÎÒªÌõ¼ş
-		return num == 0 ? this.age - o.age : num;						//±È½ÏÄêÁäÎª´ÎÒªÌõ¼ş
+		int length = this.name.length() - o.name.length();				//æ¯”è¾ƒé•¿åº¦ä¸ºä¸»è¦æ¡ä»¶
+		int num = length == 0 ? this.name.compareTo(o.name) : length;	//æ¯”è¾ƒå†…å®¹ä¸ºæ¬¡è¦æ¡ä»¶
+		return num == 0 ? this.age - o.age : num;						//æ¯”è¾ƒå¹´é¾„ä¸ºæ¬¡è¦æ¡ä»¶
 	}
 	
 	
@@ -96,7 +96,7 @@ class Student1 {
 		this.name1 = name;
 	}
 	
-	//±£Ö¤nameºÍage²»Í¬µÄ¶ÔÏó²úÉúÏàÍ¬hashcode
+	//ä¿è¯nameå’Œageä¸åŒçš„å¯¹è±¡äº§ç”Ÿç›¸åŒhashcode
 	
 	@Override
 	public boolean equals(Object obj) {

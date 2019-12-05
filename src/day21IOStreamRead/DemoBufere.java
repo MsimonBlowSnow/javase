@@ -9,13 +9,13 @@ import java.io.IOException;
 
 /*
  * @param args
- * ´ø»º³åÇøµÄÁ÷ÖĞµÄÌØÊâ·½·¨
- * readLine()£»bufferedRead¶øÀïÃæµÄ·½·¨ 
- * newLine();bufferedwriteÀïÃæµÄ·½·¨»»ĞĞ
+ * å¸¦ç¼“å†²åŒºçš„æµä¸­çš„ç‰¹æ®Šæ–¹æ³•
+ * readLine()ï¼›bufferedReadè€Œé‡Œé¢çš„æ–¹æ³• 
+ * newLine();bufferedwriteé‡Œé¢çš„æ–¹æ³•æ¢è¡Œ
  * 
- * newLine()Óë\r\nµÄÇø±ğ
- * newLine()ÊÇ¿çÆ½Ì¨µÄ·½·¨
- * \r\nÖ»Ö§³ÖµÄÊÇwindowsÏµÍ³
+ * newLine()ä¸\r\nçš„åŒºåˆ«
+ * newLine()æ˜¯è·¨å¹³å°çš„æ–¹æ³•
+ * \r\nåªæ”¯æŒçš„æ˜¯windowsç³»ç»Ÿ
  * @throws IOException 
  */
 public class DemoBufere {
@@ -23,9 +23,9 @@ public class DemoBufere {
 		BufferedReader bfr = new BufferedReader(new FileReader("c.txt"));
 		BufferedWriter bfw = new BufferedWriter(new FileWriter("ccopy.txt"));
 		String flag;
-		while((flag=bfr.readLine())!=null) { //¶ÁÈ¡Ò»ĞĞ²»°üÀ¨»»ĞĞ·û
+		while((flag=bfr.readLine())!=null) { //è¯»å–ä¸€è¡Œä¸åŒ…æ‹¬æ¢è¡Œç¬¦
 			bfw.write(flag);
-			bfw.newLine();  //¼ÓÈë»»ĞĞ·û
+			bfw.newLine();  //åŠ å…¥æ¢è¡Œç¬¦
 		}
 		bfr.close();
 		bfw.close();

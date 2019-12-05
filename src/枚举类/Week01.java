@@ -1,5 +1,5 @@
-package Ã¶¾ÙÀà;
-/*µÚÒ»ÖÖ·½·¨
+package æšä¸¾ç±»;
+/*ç¬¬ä¸€ç§æ–¹æ³•
  * */
 public class Week01 {
 	public static final Week01 MON=new Week01();

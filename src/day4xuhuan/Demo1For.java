@@ -1,21 +1,21 @@
 package day4xuhuan;
-/*Ñ­»·½á¹¹
- * forÑ­»·ÖÐÁ½¸ö
+/*å¾ªçŽ¯ç»“æž„
+ * forå¾ªçŽ¯ä¸­ä¸¤ä¸ª
  * for(i=0;i<10;i++) 
- * for(int i;a)aÊÇÒ»¸öint ÐÍÊý×é 
+ * for(int i;a)aæ˜¯ä¸€ä¸ªint åž‹æ•°ç»„ 
  * */
 public class Demo1For {
 	public static void main(String[] args) {
 		int i=0;
-		//forÑ­»·Óï¾ä
+		//forå¾ªçŽ¯è¯­å¥
 		for(i=0;i<10;i++) {
 			System.out.println(i);
 		}
-		//whileÑ­»·
+		//whileå¾ªçŽ¯
 		while(i!=0) {
 			System.out.println(i--);
 		}
-		//dowhileÑ­»·
+		//dowhileå¾ªçŽ¯
 		do {
 			System.out.println(i++);
 		}while(i!=10);

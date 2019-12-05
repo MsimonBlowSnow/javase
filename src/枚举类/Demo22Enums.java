@@ -1,22 +1,22 @@
-package Ã¶¾ÙÀà;
-/** A:Ã¶¾ÙÀàµÄ³£¼û·½·¨
-	* int ordinal(	//Ã¶¾ÙÀà¶¼ÊÇÓĞ±àºÅµÄ
-	* int compareTo(E o) //±È½Ï±àºÅ
+package æšä¸¾ç±»;
+/** A:æšä¸¾ç±»çš„å¸¸è§æ–¹æ³•
+	* int ordinal(	//æšä¸¾ç±»éƒ½æ˜¯æœ‰ç¼–å·çš„
+	* int compareTo(E o) //æ¯”è¾ƒç¼–å·
 	* String name()  
 	* String toString()
 	* <T> T valueOf(Class<T> type,String name)
 	* values() 
-	* ´Ë·½·¨ËäÈ»ÔÚJDKÎÄµµÖĞ²éÕÒ²»µ½£¬µ«Ã¿¸öÃ¶¾ÙÀà¶¼¾ßÓĞ¸Ã·½·¨£¬Ëü±éÀúÃ¶¾ÙÀàµÄËùÓĞÃ¶¾ÙÖµ·Ç³£·½±ã
-* B:°¸ÀıÑİÊ¾
-	* Ã¶¾ÙÀàµÄ³£¼û·½·¨
+	* æ­¤æ–¹æ³•è™½ç„¶åœ¨JDKæ–‡æ¡£ä¸­æŸ¥æ‰¾ä¸åˆ°ï¼Œä½†æ¯ä¸ªæšä¸¾ç±»éƒ½å…·æœ‰è¯¥æ–¹æ³•ï¼Œå®ƒéå†æšä¸¾ç±»çš„æ‰€æœ‰æšä¸¾å€¼éå¸¸æ–¹ä¾¿
+* B:æ¡ˆä¾‹æ¼”ç¤º
+	* æšä¸¾ç±»çš„å¸¸è§æ–¹æ³•
 */
 public class Demo22Enums {
 	public static void main(String[] args) {
 		method1();
-		//valueOf(Class<T> type,String name) Í¨¹ı×Ö½ÚÂëÎÄ¼ş»ñÈ¡Ã¶¾ÙÏî
+		//valueOf(Class<T> type,String name) é€šè¿‡å­—èŠ‚ç æ–‡ä»¶è·å–æšä¸¾é¡¹
 		Week13 aWeek13=Week13.valueOf(Week13.class,"MON");
 		System.out.println(aWeek13);
-		//values()·½±ã±éÀú,values()·½·¨·µ»ØÃ¶¾ÙÀàĞÍËùÓĞ¶ÔÏó
+		//values()æ–¹ä¾¿éå†,values()æ–¹æ³•è¿”å›æšä¸¾ç±»å‹æ‰€æœ‰å¯¹è±¡
 		Week13[] a=Week13.values();
 		for (Week13 week13 : a) {
 			System.out.println(week13);
@@ -28,22 +28,22 @@ public class Demo22Enums {
 		Week13 tuesWeek1= Week13.TUES;
 		Week13 wedWeek1= Week13.WED;
 		
-		//Ã¶¾ÙÀà¶¼ÊÇÓĞ±àºÅµÄ
+		//æšä¸¾ç±»éƒ½æ˜¯æœ‰ç¼–å·çš„
 		System.out.println(monWeek1.ordinal());
 		System.out.println(tuesWeek1.ordinal());
 		System.out.println(wedWeek1.ordinal());
 		
-		//±È½Ï±àºÅ
+		//æ¯”è¾ƒç¼–å·
 		System.out.println(monWeek1.compareTo(wedWeek1));
 		System.out.println(tuesWeek1.compareTo(monWeek1));
 		System.out.println(wedWeek1.compareTo(monWeek1));
 		
-		//»ñÈ¡Ãû×Ö
+		//è·å–åå­—
 		System.out.println(monWeek1.name());
 		System.out.println(tuesWeek1.name());
 		System.out.println(wedWeek1.name());
 		
-		//ÖØĞ´toString()·½·¨
+		//é‡å†™toString()æ–¹æ³•
 		System.out.println(monWeek1);
 		System.out.println(tuesWeek1);
 		System.out.println(wedWeek1);

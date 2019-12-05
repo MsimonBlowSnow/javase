@@ -1,14 +1,14 @@
 package day12String;
-/*String ³£ÓÃ·½·¨
- * int length();»ñÈ¡×Ö·û´®µÄ³¤¶È
- * char charAt(int index):»ñÈ¡Ö¸¶¨Ë÷ÒıÎ»ÖÃµÄ×Ö·û
- * int indexof(int ch):·µ»ØÖ¸¶¨×Ö·ûÔÚ´Ë×Ö·û´®ÖĞµÚÒ»´Î³öÏÖµÄË÷Òı
- * int indexof(String str)·µ»ØÖ¸¶¨×Ö·û´®ÔÚ´Ë×Ö·û´®ÖĞµÚÒ»´Î³öÏÖµÄË÷Òı
- * int indexOf(int ch,int fromIndex);·µ»ØÖ¸¶¨×Ö·ûÔÚ´Ë×Ö·û´®µÄÖ¸¶¨Î»ÖÃºóµÚÒ»´Î³öÏÖµÄË÷Òı
- *int indexOf(String str,int fromIndex):·Å»ØÖ¸¶¨×Ö·û´®ÖĞ´ÓÖ¸¶¨Î»ÖÃºóµÚÒ»´Î³öÏÖ´¦µÄË÷Òı
- *lastIndexOfºÍindexOfÀàËÆ
- *String substring(int start):´ÓÖ¸¶¨Î»ÖÃ¿ªÊ¼½ØÈ¡×Ö·û´®£¬Ä¬ÈÏµ½Ä©Î²¡£
- *String subString (int start,int end):´ÓÖ¸¶¨Î»ÖÃ¿ªÊ¼µ½Ö¸¶¨Î»ÖÃ½áÊø½ØÈ¡×Ö·û´®(²»°üÀ¨Ä©Î²Ò»¸öÊı)
+/*String å¸¸ç”¨æ–¹æ³•
+ * int length();è·å–å­—ç¬¦ä¸²çš„é•¿åº¦
+ * char charAt(int index):è·å–æŒ‡å®šç´¢å¼•ä½ç½®çš„å­—ç¬¦
+ * int indexof(int ch):è¿”å›æŒ‡å®šå­—ç¬¦åœ¨æ­¤å­—ç¬¦ä¸²ä¸­ç¬¬ä¸€æ¬¡å‡ºç°çš„ç´¢å¼•
+ * int indexof(String str)è¿”å›æŒ‡å®šå­—ç¬¦ä¸²åœ¨æ­¤å­—ç¬¦ä¸²ä¸­ç¬¬ä¸€æ¬¡å‡ºç°çš„ç´¢å¼•
+ * int indexOf(int ch,int fromIndex);è¿”å›æŒ‡å®šå­—ç¬¦åœ¨æ­¤å­—ç¬¦ä¸²çš„æŒ‡å®šä½ç½®åç¬¬ä¸€æ¬¡å‡ºç°çš„ç´¢å¼•
+ *int indexOf(String str,int fromIndex):æ”¾å›æŒ‡å®šå­—ç¬¦ä¸²ä¸­ä»æŒ‡å®šä½ç½®åç¬¬ä¸€æ¬¡å‡ºç°å¤„çš„ç´¢å¼•
+ *lastIndexOfå’ŒindexOfç±»ä¼¼
+ *String substring(int start):ä»æŒ‡å®šä½ç½®å¼€å§‹æˆªå–å­—ç¬¦ä¸²ï¼Œé»˜è®¤åˆ°æœ«å°¾ã€‚
+ *String subString (int start,int end):ä»æŒ‡å®šä½ç½®å¼€å§‹åˆ°æŒ‡å®šä½ç½®ç»“æŸæˆªå–å­—ç¬¦ä¸²(ä¸åŒ…æ‹¬æœ«å°¾ä¸€ä¸ªæ•°)
  * */
 public class Demo05String1 {
 	public static void main(String[] args) {

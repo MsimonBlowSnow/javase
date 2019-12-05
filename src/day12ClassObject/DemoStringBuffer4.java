@@ -1,13 +1,13 @@
 package day12ClassObject;
-/*Êı×é×ª»¯Îª×Ö·û´®
- * ·ÖÎö£º¿ÉÒÔÍ¨¹ıStringºÍStringBufferÁ½ÖÖ·½·¨
+/*æ•°ç»„è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
+ * åˆ†æï¼šå¯ä»¥é€šè¿‡Stringå’ŒStringBufferä¸¤ç§æ–¹æ³•
  * */
 public class DemoStringBuffer4 {
 	public static void main(String[] args) {
 		int[] a=new int[] {1,2,3,4};
-		//Í¨¹ıStringBufferÀ´×ª»¯£¬²»»áÖÆÔìÌ«¶àµÄÀ¬»ø
+		//é€šè¿‡StringBufferæ¥è½¬åŒ–ï¼Œä¸ä¼šåˆ¶é€ å¤ªå¤šçš„åƒåœ¾
 		System.out.println(array2String(a));
-		//Í¨¹ıStringÀ´×ª»¯ÓĞºÜ¶àÀ¬»øString²úÉú
+		//é€šè¿‡Stringæ¥è½¬åŒ–æœ‰å¾ˆå¤šåƒåœ¾Stringäº§ç”Ÿ
 		System.out.println(array2String2(a));
 	}
 
@@ -15,9 +15,9 @@ public class DemoStringBuffer4 {
 		String b="[";
 		for(int i:a) {
 			if(i==a.length) {
-				b=b+i+"]";//String´ÓĞÂ¸³Öµ,Ê¹Ô­À´µÄString³ÉÎªÀ¬»ø
+				b=b+i+"]";//Stringä»æ–°èµ‹å€¼,ä½¿åŸæ¥çš„Stringæˆä¸ºåƒåœ¾
 			}else {
-				b=b+i+",";//String´ÓĞÂ¸³Öµ,Ê¹Ô­À´µÄString³ÉÎªÀ¬»ø
+				b=b+i+",";//Stringä»æ–°èµ‹å€¼,ä½¿åŸæ¥çš„Stringæˆä¸ºåƒåœ¾
 			}
 		}
 		return b.substring(0,b.length());

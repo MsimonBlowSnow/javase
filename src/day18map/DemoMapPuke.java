@@ -9,27 +9,27 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
-/*Ä£Äâ¶·µØÖ÷µÄ·¢ÅÆ*/
+/*æ¨¡æ‹Ÿæ–—åœ°ä¸»çš„å‘ç‰Œ*/
 public class DemoMapPuke {
 	public static void main(String[] args) {
-		String[] huase= {"ºìÌÒ","·½¿é","Ã·»¨","ºÚÌÒ"};
+		String[] huase= {"çº¢æ¡ƒ","æ–¹å—","æ¢…èŠ±","é»‘æ¡ƒ"};
 		String[] pai= {"3","4","5","6","7","8","9","10","J","Q","K","A","2"};
 		TreeMap<String,Integer> pukeOrder=new TreeMap<>();
 		Collection<String> pukeAll= new ArrayList<String>();
 		for(int i=0;i<52;i++) {
 			int huase1=i%4;
 			int pai1=i/4;
-			String pai2=huase[huase1].concat(pai[pai1]);//concat(),Æ´½Ó×Ö·û´®
+			String pai2=huase[huase1].concat(pai[pai1]);//concat(),æ‹¼æ¥å­—ç¬¦ä¸²
 			pukeOrder.put(pai2,i);
 		}
-		pukeOrder.put("Ğ¡Íõ",52);
-		pukeOrder.put("´óÍõ",53);
+		pukeOrder.put("å°ç‹",52);
+		pukeOrder.put("å¤§ç‹",53);
 		pukeAll=pukeOrder.keySet();
-		//Ï´ÅÆ
+		//æ´—ç‰Œ
 		List<String> pukeList=new ArrayList<>();
 		pukeList.addAll(pukeAll);
 		Collections.shuffle(pukeList);
-		//·¢ÅÆÅÅĞò
+		//å‘ç‰Œæ’åº
 		Set<String> mingPuke=new TreeSet<>(new Comparator<String>() {
 
 			@Override
@@ -75,9 +75,9 @@ public class DemoMapPuke {
 				yumingPuke.add(pukeList.get(i));
 			}
 		}
-		System.out.println("ÖìÏàÃ÷:"+mingPuke);
-		System.out.println("Ğ¡Óñ:"+yumingPuke);
-		System.out.println("Ğ¡ç÷:"+cqPuke);
-		System.out.println("µ×ÅÆ:"+szPuke);
+		System.out.println("æœ±ç›¸æ˜:"+mingPuke);
+		System.out.println("å°ç‰:"+yumingPuke);
+		System.out.println("å°çª:"+cqPuke);
+		System.out.println("åº•ç‰Œ:"+szPuke);
 	}
 }

@@ -1,14 +1,14 @@
 package day24thread;
 
 /*
- *  ¶àÏß³ÌÍ¬²½µÄÊ±ºò, Èç¹ûÍ¬²½´úÂëÇ¶Ì×, Ê¹ÓÃÏàÍ¬Ëø, ¾ÍÓĞ¿ÉÄÜ³öÏÖËÀËø
-	* ¾¡Á¿²»ÒªÇ¶Ì×Ê¹ÓÃ
-		*ming»ñµÃÁËs1,µÈ´ı»ñÈ¡s2,²»¹ıs2¶ÔÏó±»anÕ¼ÓĞÁË
-		*an»ñÈ¡ÁËs2,µÈ´ıs1,²»¹ıs1¶ÔÏó±»s2Õ¼ÓĞÁË
-		*anºÍming¶¼²»ÈÃ³ö¶ÔÏó£¬ËùÒÔ¶¼²»ÄÜÖ´ĞĞÍê£¬½Ğ×öËÀËø
+ *  å¤šçº¿ç¨‹åŒæ­¥çš„æ—¶å€™, å¦‚æœåŒæ­¥ä»£ç åµŒå¥—, ä½¿ç”¨ç›¸åŒé”, å°±æœ‰å¯èƒ½å‡ºç°æ­»é”
+	* å°½é‡ä¸è¦åµŒå¥—ä½¿ç”¨
+		*mingè·å¾—äº†s1,ç­‰å¾…è·å–s2,ä¸è¿‡s2å¯¹è±¡è¢«anå æœ‰äº†
+		*anè·å–äº†s2,ç­‰å¾…s1,ä¸è¿‡s1å¯¹è±¡è¢«s2å æœ‰äº†
+		*anå’Œmingéƒ½ä¸è®©å‡ºå¯¹è±¡ï¼Œæ‰€ä»¥éƒ½ä¸èƒ½æ‰§è¡Œå®Œï¼Œå«åšæ­»é”
  * */
 public class Demo18SiSuoThread {
-	// main()·½·¨Îªstatic·½·¨£¬·ÃÎÊµÄ³ÉÔ±±äÁ¿±ØĞëÊÇstaticĞŞÊÎµÄ±äÁ¿
+	// main()æ–¹æ³•ä¸ºstaticæ–¹æ³•ï¼Œè®¿é—®çš„æˆå‘˜å˜é‡å¿…é¡»æ˜¯staticä¿®é¥°çš„å˜é‡
 	private static String s1 = new String("s1");
 	private static String s2 = new String("s2");
 
@@ -18,9 +18,9 @@ public class Demo18SiSuoThread {
 				this.setName("ming");
 				synchronized (s1) {
 					while (true) {
-						System.out.println(getName() + "»ñÈ¡s1,µÈ´ıs2");
+						System.out.println(getName() + "è·å–s1,ç­‰å¾…s2");
 						synchronized (s2) {
-							System.out.println(getName() + "»ñÈ¡s2,¿ª³Ô");
+							System.out.println(getName() + "è·å–s2,å¼€åƒ");
 						}
 					}
 				}
@@ -32,9 +32,9 @@ public class Demo18SiSuoThread {
 				this.setName("an");
 				synchronized (s2) {
 					while (true) {
-						System.out.println(getName() + "»ñÈ¡s2,µÈ´ıs1");
+						System.out.println(getName() + "è·å–s2,ç­‰å¾…s1");
 						synchronized (s1) {
-							System.out.println(getName() + "»ñÈ¡s1,¿ª³Ô");
+							System.out.println(getName() + "è·å–s1,å¼€åƒ");
 						}
 					}
 				}

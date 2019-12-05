@@ -1,21 +1,21 @@
 package day17Exceptioon;
-/* A:Òì³£µÄ¸ÅÊö
-* Òì³£¾ÍÊÇJava³ÌĞòÔÚÔËĞĞ¹ı³ÌÖĞ³öÏÖµÄ´íÎó¡£
-* B:Òì³£µÄ·ÖÀà
-* Í¨¹ıAPI²é¿´Throwable
+/* A:å¼‚å¸¸çš„æ¦‚è¿°
+* å¼‚å¸¸å°±æ˜¯Javaç¨‹åºåœ¨è¿è¡Œè¿‡ç¨‹ä¸­å‡ºç°çš„é”™è¯¯ã€‚
+* B:å¼‚å¸¸çš„åˆ†ç±»
+* é€šè¿‡APIæŸ¥çœ‹Throwable
 * Error
-	* ·şÎñÆ÷å´»ú,Êı¾İ¿â±ÀÀ£µÈ
+	* æœåŠ¡å™¨å®•æœº,æ•°æ®åº“å´©æºƒç­‰
 * Exception
-C:Òì³£µÄ¼Ì³ĞÌåÏµ
+C:å¼‚å¸¸çš„ç»§æ‰¿ä½“ç³»
 * Throwable
 	* Error	
 	* Exception
-		* RuntimeException ÔËĞĞÊ±Òì³£
+		* RuntimeException è¿è¡Œæ—¶å¼‚å¸¸
 
 */
 public class DemoExecption {
 	public static void main(String[] args) {
 		int[] a={1,2,3,4,5};
-		System.out.println(a[6]);//ArrayIndexOutOfBoundsExceptionÊı×éÔ½½çÒì³£
+		System.out.println(a[6]);//ArrayIndexOutOfBoundsExceptionæ•°ç»„è¶Šç•Œå¼‚å¸¸
 	}
 }

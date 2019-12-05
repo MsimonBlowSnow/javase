@@ -15,9 +15,9 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-/*Graphical User Interface(Í¼ĞÎÓÃ»§½Ó¿Ú)¡£
+/*Graphical User Interface(å›¾å½¢ç”¨æˆ·æ¥å£)ã€‚
 * 
-		Frame  f = new Frame(¡°my window¡±);
+		Frame  f = new Frame(â€œmy windowâ€);
 		
 		f.setSize(500,400);
 		f.setLocation(300,200);
@@ -25,37 +25,37 @@ import java.awt.event.WindowListener;
 		f.setVisible(true);
 */
 
-/* FlowLayout£¨Á÷Ê½²¼¾Ö¹ÜÀíÆ÷£©
-* ´Ó×óµ½ÓÒµÄË³ĞòÅÅÁĞ¡£
-* PanelÄ¬ÈÏµÄ²¼¾Ö¹ÜÀíÆ÷¡£
-* BorderLayout£¨±ß½ç²¼¾Ö¹ÜÀíÆ÷£©
-* ¶«£¬ÄÏ£¬Î÷£¬±±£¬ÖĞ
-* FrameÄ¬ÈÏµÄ²¼¾Ö¹ÜÀíÆ÷¡£
-* GridLayout£¨Íø¸ñ²¼¾Ö¹ÜÀíÆ÷£©
-* ¹æÔòµÄ¾ØÕó
-* CardLayout£¨¿¨Æ¬²¼¾Ö¹ÜÀíÆ÷£©
-* Ñ¡Ïî¿¨
-* GridBagLayout£¨Íø¸ñ°ü²¼¾Ö¹ÜÀíÆ÷£©
-* ·Ç¹æÔòµÄ¾ØÕó*/
+/* FlowLayoutï¼ˆæµå¼å¸ƒå±€ç®¡ç†å™¨ï¼‰
+* ä»å·¦åˆ°å³çš„é¡ºåºæ’åˆ—ã€‚
+* Panelé»˜è®¤çš„å¸ƒå±€ç®¡ç†å™¨ã€‚
+* BorderLayoutï¼ˆè¾¹ç•Œå¸ƒå±€ç®¡ç†å™¨ï¼‰
+* ä¸œï¼Œå—ï¼Œè¥¿ï¼ŒåŒ—ï¼Œä¸­
+* Frameé»˜è®¤çš„å¸ƒå±€ç®¡ç†å™¨ã€‚
+* GridLayoutï¼ˆç½‘æ ¼å¸ƒå±€ç®¡ç†å™¨ï¼‰
+* è§„åˆ™çš„çŸ©é˜µ
+* CardLayoutï¼ˆå¡ç‰‡å¸ƒå±€ç®¡ç†å™¨ï¼‰
+* é€‰é¡¹å¡
+* GridBagLayoutï¼ˆç½‘æ ¼åŒ…å¸ƒå±€ç®¡ç†å™¨ï¼‰
+* éè§„åˆ™çš„çŸ©é˜µ*/
 public class Day01 {
 	public static void main(String[] args) {
 		Frame frame = new Frame();
-		frame.setSize(500, 500);    //ÉèÖÃ´°Ìå´óĞ¡
-		frame.setLocation(200,200); //ÉèÖÃ´°Ìå³öÏÖÔÚÆÁÄ»µÄÎ»ÖÃ
-		Button butoButton=new Button("¿ªÊ¼ÓÎÏ·");
-		Button butoButton2=new Button("ÍË³ö");
+		frame.setSize(500, 500);    //è®¾ç½®çª—ä½“å¤§å°
+		frame.setLocation(200,200); //è®¾ç½®çª—ä½“å‡ºç°åœ¨å±å¹•çš„ä½ç½®
+		Button butoButton=new Button("å¼€å§‹æ¸¸æˆ");
+		Button butoButton2=new Button("é€€å‡º");
 		frame.add(butoButton);
 		frame.setIconImage(Toolkit.getDefaultToolkit().createImage("src/gui/qq.png"));
-		frame.setLayout(new FlowLayout());//ÉèÖÃ²¼¾Ö¹ÜÀíÆ÷
-		//Ìí¼Ó´°Ìå¼à¿ØÊÂ¼ş£¬windowAdapterÊÇÒ»¸öÊµÏÖÁËwindowLister½Ó¿ÚµÄ³éÏóÄÚ
-		//(³éÏóÀà²»ÄÜ´´½¨ÊµÀı¶ÔÏó)£¬Ê¹ÓÃ»§Ê¹ÓÃ¸ü¼Ó·½±ã
+		frame.setLayout(new FlowLayout());//è®¾ç½®å¸ƒå±€ç®¡ç†å™¨
+		//æ·»åŠ çª—ä½“ç›‘æ§äº‹ä»¶ï¼ŒwindowAdapteræ˜¯ä¸€ä¸ªå®ç°äº†windowListeræ¥å£çš„æŠ½è±¡å†…
+		//(æŠ½è±¡ç±»ä¸èƒ½åˆ›å»ºå®ä¾‹å¯¹è±¡)ï¼Œä½¿ç”¨æˆ·ä½¿ç”¨æ›´åŠ æ–¹ä¾¿
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				System.exit(0);
 			}
 		});
-		//Êó±ê¼àÌıÆ÷ºÍ´°Ìå¼àÌıÆ÷²î²»¶à£¬¶¼ÓĞÒ»¸öÊµÏÖ¼àÌıÆ÷½Ó¿ÚµÄAdapterÀà
+		//é¼ æ ‡ç›‘å¬å™¨å’Œçª—ä½“ç›‘å¬å™¨å·®ä¸å¤šï¼Œéƒ½æœ‰ä¸€ä¸ªå®ç°ç›‘å¬å™¨æ¥å£çš„Adapterç±»
 		butoButton.addMouseListener(new MouseAdapter() {
 			/*
 			 * @Override public void mouseClicked(MouseEvent e) { 
@@ -73,13 +73,13 @@ public class Day01 {
 			@Override
 			public void keyReleased(KeyEvent e) {
 				/*
-				 * if(e.getKeyCode()==32)//¿Õ¸ñ¼ü System.exit(0);
+				 * if(e.getKeyCode()==32)//ç©ºæ ¼é”® System.exit(0);
 				 */
 				if(e.getKeyCode()==KeyEvent.VK_SPACE)
 					System.exit(0);
 			}
 		});
-		//ActionListener½Ó¿Ú¾ÍÒ»¸ö·½·¨£¬²»ĞèÒªadapter
+		//ActionListeneræ¥å£å°±ä¸€ä¸ªæ–¹æ³•ï¼Œä¸éœ€è¦adapter
 		
 		butoButton2.addActionListener(new ActionListener() {
 			

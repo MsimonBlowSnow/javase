@@ -1,17 +1,17 @@
 package day2value;
 /*	String a="12456543"
  * String b="12456543";
-  *  ÊÇÔÚ³£Á¿ÖĞÕÒ²»»á´´½¨¶ÔÏó,ËùÒÔ
- * a==b(ÅĞ¶ÏµØÖ·Öµ)»òÕßa.equals(b)(String ÖØĞÂ¶¨Òåequals()·½·¨£¬ÅĞ¶ÏÄÚÈİÒ»ÖÂ);//Îªtrue
+  *  æ˜¯åœ¨å¸¸é‡ä¸­æ‰¾ä¸ä¼šåˆ›å»ºå¯¹è±¡,æ‰€ä»¥
+ * a==b(åˆ¤æ–­åœ°å€å€¼)æˆ–è€…a.equals(b)(String é‡æ–°å®šä¹‰equals()æ–¹æ³•ï¼Œåˆ¤æ–­å†…å®¹ä¸€è‡´);//ä¸ºtrue
  * 
  * 
- * String a=new string("avc");ÔÚ¶ÑÖĞ´´½¨ÁËÒ»¸ö¶ÔÏó
- * String b=new string("avc");ÓÖÔÚ¶ÑÖĞ´´½¨ÁËÒ»¸ö¶ÔÏó
- * a==b//false µØÖ·Öµ²»Ò»Ñù a.equals(b)//true
+ * String a=new string("avc");åœ¨å †ä¸­åˆ›å»ºäº†ä¸€ä¸ªå¯¹è±¡
+ * String b=new string("avc");åˆåœ¨å †ä¸­åˆ›å»ºäº†ä¸€ä¸ªå¯¹è±¡
+ * a==b//false åœ°å€å€¼ä¸ä¸€æ · a.equals(b)//true
  * 
  * String a="1"+"2";//12
  * int c=3;
- * String b="1+"c;ÖØĞÂnewÁËÒ»¸ö¶ÔÏó
+ * String b="1+"c;é‡æ–°newäº†ä¸€ä¸ªå¯¹è±¡
  * 
  */
 public class DemoString {

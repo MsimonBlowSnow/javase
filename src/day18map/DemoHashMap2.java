@@ -5,20 +5,20 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/*hashmap遍历
- 	* 通过keyset()方法获取map中的key集合
- 	* 通过get(key)方法获取value
+/*hashmap閬嶅巻
+ 	* 閫氳繃keyset()鏂规硶鑾峰彇map涓殑key闆嗗悎
+ 	* 閫氳繃get(key)鏂规硶鑾峰彇value
 */
 public class DemoHashMap2 {
 	public static void main(String[] args) {
 		Map<String,Integer> map=new HashMap<String,Integer>();
-		map.put("张三",23);
-		map.put("李四",24);
-		map.put("王五",25);
-		map.put("赵六",26);
-		//通过set的迭代器遍历
+		map.put("寮犱笁",23);
+		map.put("鏉庡洓",24);
+		map.put("鐜嬩簲",25);
+		map.put("璧靛叚",26);
+		//閫氳繃set鐨勮凯浠ｅ櫒閬嶅巻
 		//methodBianli1(map);
-		//通过for循环遍历
+		//閫氳繃for寰幆閬嶅巻
 		mapBianli(map);
 		//
 	}

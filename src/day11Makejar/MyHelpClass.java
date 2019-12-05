@@ -1,6 +1,6 @@
 package day11Makejar;
-/*制作.jar文件步骤
- * 点Export-Java-jar 
+/*鍒朵綔.jar鏂囦欢姝ラ
+ * 鐐笶xport-Java-jar 
  * 
  * */
 public class MyHelpClass {

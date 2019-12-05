@@ -11,7 +11,7 @@ public class DemoNoNameInClass2 {
 		method(new interNo3(){
 			@Override
 			public void print() {
-				System.out.println("Í¨¹ıÊµÏÖ´´½¨ÄäÃûÄÚ²¿Àà");
+				System.out.println("é€šè¿‡å®ç°åˆ›å»ºåŒ¿åå†…éƒ¨ç±»");
 			}
 		});
 	}
@@ -24,6 +24,6 @@ interface interNo3{
 class Inter31 implements interNo3{
 	@Override
 	public void print() {
-		System.out.println("Í¨¹ı×ÓÀàÊµÏÖ½Ó¿Ú");		
+		System.out.println("é€šè¿‡å­ç±»å®ç°æ¥å£");		
 	}
 }

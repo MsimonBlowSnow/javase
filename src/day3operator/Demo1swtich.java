@@ -1,34 +1,34 @@
 package day3operator;
 
 import java.util.Scanner;
-//switch 1.7°æ±¾Ö§³ÖString ,
-//1.5°æ±¾Ö§³ÖÃ¶¾Ù
-//1.7ÒÔÇ°Ö§³Öint,byte,short,char
+//switch 1.7ç‰ˆæœ¬æ”¯æŒString ,
+//1.5ç‰ˆæœ¬æ”¯æŒæšä¸¾
+//1.7ä»¥å‰æ”¯æŒint,byte,short,char
 
 public class Demo1swtich {
 	public static void main(String[] args) {
-		/*Ñ¡ÔñÓï¾ä
+		/*é€‰æ‹©è¯­å¥
 		 * switch
 		 * */
-		//switch Óï¾ä
+		//switch è¯­å¥
 		/*Scanner sc= new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öÔÂ:");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæœˆ:");
 		int a=sc.nextInt();
 		switch(a){
 			case 12:
 			case 1:
-			case 2:System.out.println("´º¼¾");break;
+			case 2:System.out.println("æ˜¥å­£");break;
 			case 3:
 			case 4:
-			case 5:System.out.println("ÏÄ¼¾");break;
+			case 5:System.out.println("å¤å­£");break;
 			case 6:
 			case 7:
-			case 8:System.out.println("Çï¼¾");break;
+			case 8:System.out.println("ç§‹å­£");break;
 			case 9:
 			case 10:
-			case 11:System.out.println("¶¬¼¾");break;
+			case 11:System.out.println("å†¬å­£");break;
 			default:
-					System.out.println("ÊäÈëµÄÔÂ·İ´íÎó");break;
+					System.out.println("è¾“å…¥çš„æœˆä»½é”™è¯¯");break;
 			
 		}*/
 		int x = 2;

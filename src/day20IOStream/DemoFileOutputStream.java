@@ -4,16 +4,16 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-/*A write()Ò»´ÎĞ´³öÒ»¸ö×Ö½Ú
-* Èç¹ûfile²»´æÔÚ,»á´´½¨³öÒ»¸ö
-* B	 ¶¨ÒåFileOutputStream(file);É¾³ıÄÚÈİÖØĞÂÅªĞ´,
-* 	 ¶¨ÒåFileOutputStream(file,true);ÔÚºóÃæ×·¼Ó,
+/*A write()ä¸€æ¬¡å†™å‡ºä¸€ä¸ªå­—èŠ‚
+* å¦‚æœfileä¸å­˜åœ¨,ä¼šåˆ›å»ºå‡ºä¸€ä¸ª
+* B	 å®šä¹‰FileOutputStream(file);åˆ é™¤å†…å®¹é‡æ–°å¼„å†™,
+* 	 å®šä¹‰FileOutputStream(file,true);åœ¨åé¢è¿½åŠ ,
 */
 public class DemoFileOutputStream {
 	
 	public static void main(String[] args) throws IOException {
 		FileOutputStream fos = new FileOutputStream("src/day20IOStream/b.txt");	
-		//fos.write(97);//ËäÈ»Ğ´³öµÄÊÇÒ»¸öintÊı,µ«ÊÇÔÚĞ´³öµÄÊ±ºò»á½«Ç°ÃæµÄ24¸ö0È¥µô,ËùÒÔĞ´³öµÄÒ»¸öbyte
+		//fos.write(97);//è™½ç„¶å†™å‡ºçš„æ˜¯ä¸€ä¸ªintæ•°,ä½†æ˜¯åœ¨å†™å‡ºçš„æ—¶å€™ä¼šå°†å‰é¢çš„24ä¸ª0å»æ‰,æ‰€ä»¥å†™å‡ºçš„ä¸€ä¸ªbyte
 		fos.write(98);
 		fos.write(98);
 		fos.close();

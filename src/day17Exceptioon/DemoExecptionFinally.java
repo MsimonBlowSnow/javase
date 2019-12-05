@@ -1,22 +1,22 @@
 package day17Exceptioon;
-/* A:finallyµÄÌØµã
-* ±»finally¿ØÖÆµÄÓï¾äÌåÒ»¶¨»áÖ´ĞĞ
-* ÌØÊâÇé¿ö£ºÔÚÖ´ĞĞµ½finallyÖ®Ç°jvmÍË³öÁË(±ÈÈçSystem.exit(0))
-* B:finallyµÄ×÷ÓÃ
-* ÓÃÓÚÊÍ·Å×ÊÔ´£¬ÔÚIOÁ÷²Ù×÷ºÍÊı¾İ¿â²Ù×÷ÖĞ»á¼ûµ½
-* C:°¸ÀıÑİÊ¾
-* finally¹Ø¼ü×ÖµÄÌØµã¼°×÷ÓÃ
-*¾ÍËãÃ»ÓĞcatch ÖĞÓĞreturn£¬ÔÚÖ´ĞĞreturnÇ°£¬»áÏÈÖ´ĞĞfinally
+/* A:finallyçš„ç‰¹ç‚¹
+* è¢«finallyæ§åˆ¶çš„è¯­å¥ä½“ä¸€å®šä¼šæ‰§è¡Œ
+* ç‰¹æ®Šæƒ…å†µï¼šåœ¨æ‰§è¡Œåˆ°finallyä¹‹å‰jvmé€€å‡ºäº†(æ¯”å¦‚System.exit(0))
+* B:finallyçš„ä½œç”¨
+* ç”¨äºé‡Šæ”¾èµ„æºï¼Œåœ¨IOæµæ“ä½œå’Œæ•°æ®åº“æ“ä½œä¸­ä¼šè§åˆ°
+* C:æ¡ˆä¾‹æ¼”ç¤º
+* finallyå…³é”®å­—çš„ç‰¹ç‚¹åŠä½œç”¨
+*å°±ç®—æ²¡æœ‰catch ä¸­æœ‰returnï¼Œåœ¨æ‰§è¡Œreturnå‰ï¼Œä¼šå…ˆæ‰§è¡Œfinally
 */
 public class DemoExecptionFinally {
 	public static void main(String[] args) {
 		try {
 			System.out.println(1/0);
 		}catch(Exception e) {
-			System.out.println("²»ÄÜ³ı0");
+			System.out.println("ä¸èƒ½é™¤0");
 			return ;
 		}finally {
-			System.out.println("³ıÄãÂëµÄ0");
+			System.out.println("é™¤ä½ ç çš„0");
 		}
 		
 	}

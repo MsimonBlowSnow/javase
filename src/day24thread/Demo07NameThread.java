@@ -2,17 +2,17 @@ package day24thread;
 
 
 /*
- * * 1.»ñÈ¡Ãû×Ö
-	* Í¨¹ıgetName()·½·¨»ñÈ¡Ïß³Ì¶ÔÏóµÄÃû×Ö
-* 2.ÉèÖÃÃû×Ö
-	* Í¨¹ı¹¹Ôìº¯Êı¿ÉÒÔ´«ÈëStringÀàĞÍµÄÃû×Ö
+ * * 1.è·å–åå­—
+	* é€šè¿‡getName()æ–¹æ³•è·å–çº¿ç¨‹å¯¹è±¡çš„åå­—
+* 2.è®¾ç½®åå­—
+	* é€šè¿‡æ„é€ å‡½æ•°å¯ä»¥ä¼ å…¥Stringç±»å‹çš„åå­—
 	* 
-*×¢Òâ:getNameºÍsetNameÊÇthreadµÄ·½·¨£¬runable²»ÄÜµ÷ÓÃ
-*Èç¹ûrunableÏëÓÃgetnameºÍsetName·½·¨£¬Çë¿´ÏÂ¸öÀàµÄ·½·¨.currentThread;
+*æ³¨æ„:getNameå’ŒsetNameæ˜¯threadçš„æ–¹æ³•ï¼Œrunableä¸èƒ½è°ƒç”¨
+*å¦‚æœrunableæƒ³ç”¨getnameå’ŒsetNameæ–¹æ³•ï¼Œè¯·çœ‹ä¸‹ä¸ªç±»çš„æ–¹æ³•.currentThread;
 */
 public class Demo07NameThread {
 	public static void main(String[] args) {
-		new Thread("ming"){//Í¨¹ı¹¹Ôì´«µİ
+		new Thread("ming"){//é€šè¿‡æ„é€ ä¼ é€’
 			@Override
 			public void run() {
 				for (int i = 0; i <10000; i++) {

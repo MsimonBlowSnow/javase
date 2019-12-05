@@ -1,26 +1,26 @@
 package day12String;
-/*String³£ÓÃµÄ·½·¨
- 	* byte[] getBytes():°Ñ×Ö·û´®×ª»¯Îª×Ö½ÚÊı×é¡£
- 	* char[] toCharArray():°Ñ×Ö·û´®×ª»¯Îª×Ö·ûÊı×é
- 	* static String valueOf(char[] chs):°Ñ×Ö·ûÊı×é×ª»¯Îª×Ö·û´®
- 	* static String valueOf(int i):°ÑintÀàĞÍ×ª»¯Îª×Ö·û´®
- 	* static String valueOf(Object obj):Ïàµ±ÓÚ¶ÔÏóµ÷ÓÃtoString·½·¨
- 		* StringÖĞµÄValueOf¿ÉÒÔ°ÑÈÎÒâÀàĞÍµÄÊı¾İ×ª»¯Îª×Ö·û´®¡£
- 	* String toLowerCase():°Ñ×Ö·û´®×ª»¯ÎªĞ¡Ğ´
- 	* String toUpperCase():°Ñ×Ö·û´®×ª»¯³É´óĞ´¡£
- 	* String concat(String str):°Ñ×Ö·û´®Æ´½Ó
+/*Stringå¸¸ç”¨çš„æ–¹æ³•
+ 	* byte[] getBytes():æŠŠå­—ç¬¦ä¸²è½¬åŒ–ä¸ºå­—èŠ‚æ•°ç»„ã€‚
+ 	* char[] toCharArray():æŠŠå­—ç¬¦ä¸²è½¬åŒ–ä¸ºå­—ç¬¦æ•°ç»„
+ 	* static String valueOf(char[] chs):æŠŠå­—ç¬¦æ•°ç»„è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
+ 	* static String valueOf(int i):æŠŠintç±»å‹è½¬åŒ–ä¸ºå­—ç¬¦ä¸²
+ 	* static String valueOf(Object obj):ç›¸å½“äºå¯¹è±¡è°ƒç”¨toStringæ–¹æ³•
+ 		* Stringä¸­çš„ValueOfå¯ä»¥æŠŠä»»æ„ç±»å‹çš„æ•°æ®è½¬åŒ–ä¸ºå­—ç¬¦ä¸²ã€‚
+ 	* String toLowerCase():æŠŠå­—ç¬¦ä¸²è½¬åŒ–ä¸ºå°å†™
+ 	* String toUpperCase():æŠŠå­—ç¬¦ä¸²è½¬åŒ–æˆå¤§å†™ã€‚
+ 	* String concat(String str):æŠŠå­—ç¬¦ä¸²æ‹¼æ¥
  * */
 public class Demo10String {
 	public static void main(String[] args) {
 		String str="abc";
-		String str1="ÄãºÃÄãºÃ";
+		String str1="ä½ å¥½ä½ å¥½";
 		byte[] arr1=str1.getBytes();
 		byte[] arr=str.getBytes();
 		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+" ");//±àÂë
+			System.out.print(arr[i]+" ");//ç¼–ç 
 		}
 		for (byte b : arr1) {
-			System.out.print(b+" ");//gbkÖĞÒ»¸öÖĞ¹úÎÄ´ú±íÁ½¸ö×Ö½Ú£¬ÇÒµÚÒ»¸ö×Ö½ÚÊÇ¸ºÊı
+			System.out.print(b+" ");//gbkä¸­ä¸€ä¸ªä¸­å›½æ–‡ä»£è¡¨ä¸¤ä¸ªå­—èŠ‚ï¼Œä¸”ç¬¬ä¸€ä¸ªå­—èŠ‚æ˜¯è´Ÿæ•°
 		}
 		System.out.println();
 		
@@ -32,7 +32,7 @@ public class Demo10String {
 		
 		//valueOf
 		String str2=String.valueOf(97);
-		System.out.println(str2);//97 ×Ö·û
+		System.out.println(str2);//97 å­—ç¬¦
 		str2=String.valueOf(arr2);//abc
 		System.out.println(str2);
 	}

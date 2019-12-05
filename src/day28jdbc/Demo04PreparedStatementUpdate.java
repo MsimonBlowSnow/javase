@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/*ÓÃprestatementÍê³Éupdate
+/*ç”¨prestatementå®Œæˆupdate
  * */
 public class Demo04PreparedStatementUpdate {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -14,13 +14,13 @@ public class Demo04PreparedStatementUpdate {
 		String sqlString="update ming set age=?,sex1=?,name1=? where ID=1;";
 		PreparedStatement aPreparedStatement=aConnection.prepareStatement(sqlString);
 		aPreparedStatement.setInt(1, 20);
-		aPreparedStatement.setString(2,"ÄĞ");
-		aPreparedStatement.setString(3, "Ã÷");
+		aPreparedStatement.setString(2,"ç”·");
+		aPreparedStatement.setString(3, "æ˜");
 		int a=aPreparedStatement.executeUpdate();
 		if(a==1)
-			System.out.println("³É¹¦");
+			System.out.println("æˆåŠŸ");
 		else {
-			System.out.println("Ê§°Ü");
+			System.out.println("å¤±è´¥");
 		}
 		aPreparedStatement.close();
 		aConnection.close();

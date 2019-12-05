@@ -2,9 +2,9 @@ package day12String;
 
 import java.util.Arrays;
 
-/*°ÑÒ»¸ö×Ö·û´®µÄÊ××ÖÄ¸±ä³É´óĞ´ÆäËûµÄ¶¼Ğ¡Ğ´*/
+/*æŠŠä¸€ä¸ªå­—ç¬¦ä¸²çš„é¦–å­—æ¯å˜æˆå¤§å†™å…¶ä»–çš„éƒ½å°å†™*/
 
-/*°ÑÊı×é×ª»¯Îª×Ö·û´®*/
+/*æŠŠæ•°ç»„è½¬åŒ–ä¸ºå­—ç¬¦ä¸²*/
 public class Demo11StringUpLow {
 	public static void main(String[] args) {
 		String str ="aaadsfffffqeirrFASDDDDDDDAkkkakvchbkdd";

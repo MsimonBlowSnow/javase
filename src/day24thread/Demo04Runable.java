@@ -1,16 +1,16 @@
 package day24thread;
-/*¶àÏß³ÌÊµÏÖµÄ·½·¨
- 	*1.ÊµÏÖrunable½Ó¿Ú	 
- 	* ÖØĞ´run()·½·¨£¬²¢²¢ÒªÖ´ĞĞ¶àÏß³ÌµÄ´úÂë·ÅÈë
- 	* ´´½¨¸ÃÀà¶ÔÏó£¬²¢°ÑËüµ±×ö²ÎÊı´«µİ¡£
- 	* ÓÃ¸ÃÏß³Ìµ÷ÓÃstart()
+/*å¤šçº¿ç¨‹å®ç°çš„æ–¹æ³•
+ 	*1.å®ç°runableæ¥å£	 
+ 	* é‡å†™run()æ–¹æ³•ï¼Œå¹¶å¹¶è¦æ‰§è¡Œå¤šçº¿ç¨‹çš„ä»£ç æ”¾å…¥
+ 	* åˆ›å»ºè¯¥ç±»å¯¹è±¡ï¼Œå¹¶æŠŠå®ƒå½“åšå‚æ•°ä¼ é€’ã€‚
+ 	* ç”¨è¯¥çº¿ç¨‹è°ƒç”¨start()
  * */
 public class Demo04Runable {
 	public static void main(String[] args) {
-		Thread thdThread= new Thread(new Demo04());//½«¶ÔÏóÒıÈë£¬¸³Öµ¸øtarget
-		thdThread.start();//»áµ÷ÓÃtarget.run£¨£©
+		Thread thdThread= new Thread(new Demo04());//å°†å¯¹è±¡å¼•å…¥ï¼Œèµ‹å€¼ç»™target
+		thdThread.start();//ä¼šè°ƒç”¨target.runï¼ˆï¼‰
 		for (int i = 0; i < 10000; i++) {
-			System.out.println(i+" "+"Ö÷Ïß³Ì");
+			System.out.println(i+" "+"ä¸»çº¿ç¨‹");
 		}
 	}
 }

@@ -3,16 +3,16 @@ package day12ClassObject;
 import java.util.Scanner;
 
 /*
- * ½«×Ö·û´®·´×ª
+ * å°†å­—ç¬¦ä¸²åè½¬
 
  * */
 public class DemostringBuffer5 {
 	public static void main(String[] args) {
 		String a=new String("ming");
-		//Í¨¹ı·½·¨°ÑString½øĞĞ·´×ª
+		//é€šè¿‡æ–¹æ³•æŠŠStringè¿›è¡Œåè½¬
 		StringArray(a);
 		Scanner b= new Scanner(System.in);
-		String c=b.nextLine();//»ñÈ¡Ò»ĞĞÊı¾İ
+		String c=b.nextLine();//è·å–ä¸€è¡Œæ•°æ®
 		StringArray(c);
 	}
 

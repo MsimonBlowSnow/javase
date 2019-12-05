@@ -7,17 +7,17 @@ import java.util.Scanner;
 
 
 
-/* A:BufferedReaderµÄreadLine·½·¨¡£
+/* A:BufferedReaderçš„readLineæ–¹æ³•ã€‚
 	* BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 * B:Scanner
 */
 public class Demo2Input {
 	public static void main(String[] args) throws IOException {
-		//new InputStreamReader(System.in)×Ö·û×ª»¯Á÷
+		//new InputStreamReader(System.in)å­—ç¬¦è½¬åŒ–æµ
 		BufferedReader bR=new BufferedReader(new InputStreamReader(System.in));
 		String a=bR.readLine();
 		System.out.println(a);
-		//Ö÷ÒªÊ¹ÓÃScanner,ÒòÎª¸ÃÀà¹¦ÄÜÇ¿´ó£¬¿ÉÒÔÊä³öint£¬floatµÈµÈ
+		//ä¸»è¦ä½¿ç”¨Scanner,å› ä¸ºè¯¥ç±»åŠŸèƒ½å¼ºå¤§ï¼Œå¯ä»¥è¾“å‡ºintï¼Œfloatç­‰ç­‰
 		Scanner  scanner=new Scanner(System.in);
 		String a1= scanner.nextLine();
 		System.out.println(a1);

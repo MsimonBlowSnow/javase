@@ -3,27 +3,27 @@ package day29Reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 /*Constructor
-	* ClassÀàµÄnewInstance()·½·¨ÊÇÊ¹ÓÃ¸ÃÀàÎŞ²ÎµÄ¹¹Ôìº¯Êı´´½¨¶ÔÏó, 
-	* Èç¹ûÒ»¸öÀàÃ»ÓĞÎŞ²ÎµÄ¹¹Ôìº¯Êı, ¾Í²»ÄÜÕâÑù´´½¨ÁË,
-	* ¿ÉÒÔµ÷ÓÃClassÀàµÄgetConstructor(String.class,int.class)·½·¨»ñÈ¡Ò»¸öÖ¸¶¨µÄ¹¹Ôìº¯Êı
-	* È»ºóÔÙµ÷ÓÃConstructorÀàµÄnewInstance("ÕÅÈı",20)·½·¨´´½¨¶ÔÏó
-*Í¨¹ı×Ö½ÚÂë¶ÔÏóÀ´µ÷ÓÃnewInstancce()¹¹Ôì
-	*¸Ã·½·¨Ö»ÓÃÓë¿Õ²ÎÊı¹¹Ôì£¬Èç¹û×Ö½ÚÂëµÄÀàÃ»ÓĞ¿Õ²ÎÊı¹¹Ôì¾Í»á±¨´í
+	* Classç±»çš„newInstance()æ–¹æ³•æ˜¯ä½¿ç”¨è¯¥ç±»æ— å‚çš„æ„é€ å‡½æ•°åˆ›å»ºå¯¹è±¡, 
+	* å¦‚æœä¸€ä¸ªç±»æ²¡æœ‰æ— å‚çš„æ„é€ å‡½æ•°, å°±ä¸èƒ½è¿™æ ·åˆ›å»ºäº†,
+	* å¯ä»¥è°ƒç”¨Classç±»çš„getConstructor(String.class,int.class)æ–¹æ³•è·å–ä¸€ä¸ªæŒ‡å®šçš„æ„é€ å‡½æ•°
+	* ç„¶åå†è°ƒç”¨Constructorç±»çš„newInstance("å¼ ä¸‰",20)æ–¹æ³•åˆ›å»ºå¯¹è±¡
+*é€šè¿‡å­—èŠ‚ç å¯¹è±¡æ¥è°ƒç”¨newInstancce()æ„é€ 
+	*è¯¥æ–¹æ³•åªç”¨ä¸ç©ºå‚æ•°æ„é€ ï¼Œå¦‚æœå­—èŠ‚ç çš„ç±»æ²¡æœ‰ç©ºå‚æ•°æ„é€ å°±ä¼šæŠ¥é”™
 */
 public class Demo05ReflectContructorHas {
 	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
-		Class class1=Person2901.class;	  //ÀàÃû.class »ñÈ¡class×Ö½ÚÂë
-		Class class0=Class.forName("day29Reflect.Person2901");  //Í¨¹ıClass.forName(ÀàÃû)»ñÈ¡×Ö½ÚÂë
-	 	Class class2= new Person2901().getClass(); //Í¨¹ı¶ÔÏó»ñÈ¡×Ö½ÚÂë
+		Class class1=Person2901.class;	  //ç±»å.class è·å–classå­—èŠ‚ç 
+		Class class0=Class.forName("day29Reflect.Person2901");  //é€šè¿‡Class.forName(ç±»å)è·å–å­—èŠ‚ç 
+	 	Class class2= new Person2901().getClass(); //é€šè¿‡å¯¹è±¡è·å–å­—èŠ‚ç 
 	 	
-	 	//newInstance()»ñÈ¡¿Õ²ÎÊı¹¹ÔìÊµÀı,Èç¹û¶ÔÏóÖĞÃ»ÓĞ¿Õ²Î¹¹Ôì·½·¨¾Í»á±¨´í
+	 	//newInstance()è·å–ç©ºå‚æ•°æ„é€ å®ä¾‹,å¦‚æœå¯¹è±¡ä¸­æ²¡æœ‰ç©ºå‚æ„é€ æ–¹æ³•å°±ä¼šæŠ¥é”™
 	 	Person2901 person1=(Person2901) class0.newInstance();
 	 	System.out.println(person1);
 	 	
-	 	//Í¨¹ı»ñÈ¡¹¹Ôì·½·¨À´¹¹Ôì¸Ã¶ÔÏó£¬
-	 	//²»ÖªµÀ¹¹ÔìµÄ²ÎÊı¾ÍÓÃgetConstructors();»ñÈ¡¹¹ÔìÊı¾İ½øĞĞ±éÀú
+	 	//é€šè¿‡è·å–æ„é€ æ–¹æ³•æ¥æ„é€ è¯¥å¯¹è±¡ï¼Œ
+	 	//ä¸çŸ¥é“æ„é€ çš„å‚æ•°å°±ç”¨getConstructors();è·å–æ„é€ æ•°æ®è¿›è¡Œéå†
 	 	  Constructor aConstructor=class1.getConstructor(String.class,int.class,String.class);
-	 	  person1 =(Person2901) aConstructor.newInstance("Ğ¡Ã÷",19,"ÄĞ");
+	 	  person1 =(Person2901) aConstructor.newInstance("å°æ˜",19,"ç”·");
 	 	  System.out.println(person1);
 	}
 }

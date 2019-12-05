@@ -7,14 +7,14 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-/*Ä£ÄâµÇÂ¼²éÑ¯£¬
- 	*²¢ÑİÊ¾sql×¢Èë 
- *sql×¢Èë
- 	*ÔÚ±¾ÊµÀıÖĞÓÃÀ´statementÀ´µÇÂ¼(ÓĞ¿ÉÄÜsql×¢Èë)
- 	*ÓÃ»§ÃûÈÎÒâ´ò
- 	*ÃÜÂëÇ°ÃæÓĞÒ»¸ö¡® ºóÃæ¼Ó or ¡¯a¡®=¡¯a ¼´¿É
+/*æ¨¡æ‹Ÿç™»å½•æŸ¥è¯¢ï¼Œ
+ 	*å¹¶æ¼”ç¤ºsqlæ³¨å…¥ 
+ *sqlæ³¨å…¥
+ 	*åœ¨æœ¬å®ä¾‹ä¸­ç”¨æ¥statementæ¥ç™»å½•(æœ‰å¯èƒ½sqlæ³¨å…¥)
+ 	*ç”¨æˆ·åä»»æ„æ‰“
+ 	*å¯†ç å‰é¢æœ‰ä¸€ä¸ªâ€˜ åé¢åŠ  or â€™aâ€˜=â€™a å³å¯
  *"select * from user where user='"
-					+XXX¡®+"'and password='"+afdafa' or 'a' ='a+"';"
+					+XXXâ€˜+"'and password='"+afdafa' or 'a' ='a+"';"
  * */
 public class Demo02LoginSql {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
@@ -23,27 +23,27 @@ public class Demo02LoginSql {
 		Scanner scanner= new Scanner(System.in);
 		String passordString=null;
 		String userString=null;
-		//¸Ã·½·¨²»ºÃÓĞ¿ÉÄÜsql×¢Èë
+		//è¯¥æ–¹æ³•ä¸å¥½æœ‰å¯èƒ½sqlæ³¨å…¥
 		Statement aStatement=aConnection.createStatement();
 		ResultSet aResultSet=null;
 		int times=3;
 		while(times!=0){
 			if(times!=3) {
-				System.out.println("Äã»¹ÓĞ"+times+"´Î»ú»á!");
+				System.out.println("ä½ è¿˜æœ‰"+times+"æ¬¡æœºä¼š!");
 			}
-			System.out.println("ÇëÊäÈëÄãµÄÕËºÅ:");
+			System.out.println("è¯·è¾“å…¥ä½ çš„è´¦å·:");
 			userString=scanner.nextLine();
-			System.out.println("ÇëÊäÈëÄãµÄÃÜÂë:");
+			System.out.println("è¯·è¾“å…¥ä½ çš„å¯†ç :");
 			passordString=scanner.nextLine();
 			aResultSet=aStatement.executeQuery("select * from user where user='"
 					+userString+"'and password='"+passordString+"';");
 			if(aResultSet.next()) {
-				System.out.println("µÇÂ¼³É¹¦");break;
+				System.out.println("ç™»å½•æˆåŠŸ");break;
 			}
 			times--;
 		}
 		if(times==0) {
-			System.out.println("µÇÂ¼Ê§°Ü!");
+			System.out.println("ç™»å½•å¤±è´¥!");
 		}
 		aResultSet.close();
 		aStatement.close();

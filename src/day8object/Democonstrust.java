@@ -3,10 +3,10 @@ package day8object;
 public class Democonstrust {
 	public static void main(String[] args) {
 		Son a=new Son();
-		System.out.println(a.a);//0 ¾Í½üÔ­Ôò
+		System.out.println(a.a);//0 å°±è¿‘åŸåˆ™
 	}
 }
-/*Ä¬ÈÏµ÷ÓÃfatherÀàµÄÎŞ²Î¹¹Ôì,*/
+/*é»˜è®¤è°ƒç”¨fatherç±»çš„æ— å‚æ„é€ ,*/
 class Father{
 	int a=1;
 	Father(){

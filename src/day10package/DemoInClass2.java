@@ -12,10 +12,10 @@ class Outer21{
 	private int num;
 	 static class Inter21{///
 		 public void method21() {
-			 System.out.println("ÎÒÊÇ¾²Ì¬ÄÚ²¿ÀàÒ»°ã·½·¨!");
+			 System.out.println("æˆ‘æ˜¯é™æ€å†…éƒ¨ç±»ä¸€èˆ¬æ–¹æ³•!");
 		 }
 		public static void inter22(){
-			System.out.println("ÎÒÊÇ¾²Ì¬Íâ²¿Àà¾²Ì¬·½·¨!");
+			System.out.println("æˆ‘æ˜¯é™æ€å¤–éƒ¨ç±»é™æ€æ–¹æ³•!");
 		}
 	 }
 }

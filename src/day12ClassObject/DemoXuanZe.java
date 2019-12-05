@@ -1,7 +1,7 @@
 package day12ClassObject;
-/*选择排序
- * a[0]和a[1]-a[6]比较选出最大的数和a[0]交换
- * a[1]和a[2]-a[6]比较选出最大的数和a[1]交换
+/*閫夋嫨鎺掑簭
+ * a[0]鍜宎[1]-a[6]姣旇緝閫夊嚭鏈�澶х殑鏁板拰a[0]浜ゆ崲
+ * a[1]鍜宎[2]-a[6]姣旇緝閫夊嚭鏈�澶х殑鏁板拰a[1]浜ゆ崲
  * a[2]
  * */
 public class DemoXuanZe {
@@ -13,7 +13,7 @@ public class DemoXuanZe {
 		}
 	}
 	
-	//private 只对该方法对本类使用
+	//private 鍙璇ユ柟娉曞鏈被浣跨敤
 	private static void xueze(int[] a) {
 		int temp;
 		for(int i=0;i<a.length-1;i++) {

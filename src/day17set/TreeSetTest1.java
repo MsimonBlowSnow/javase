@@ -4,8 +4,8 @@ import java.util.Comparator;
 import java.util.Scanner;
 import java.util.TreeSet;
 
-/* ´Ó¼üÅÌ½ÓÊÕÒ»¸ö×Ö·û´®, ³ÌĞò¶ÔÆäÖĞËùÓĞ×Ö·û½øĞĞÅÅĞò,ÀıÈç¼üÅÌÊäÈë:
- *  helloitcast³ÌĞò´òÓ¡:acehillostt 
+/* ä»é”®ç›˜æ¥æ”¶ä¸€ä¸ªå­—ç¬¦ä¸², ç¨‹åºå¯¹å…¶ä¸­æ‰€æœ‰å­—ç¬¦è¿›è¡Œæ’åº,ä¾‹å¦‚é”®ç›˜è¾“å…¥:
+ *  helloitcastç¨‹åºæ‰“å°:acehillostt 
  * */
 public class TreeSetTest1 {
 	public static void main(String[] args) {
