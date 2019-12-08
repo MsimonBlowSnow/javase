@@ -12,5 +12,6 @@ public class Demo2FastButton {
 	•I:给建议 ctrl+1,根据右边生成左边的数据类型,生成方法
 	•J:删除代码 ctrl + d
 	•K:抽取方法alt + shift + m 
-		•L:改名alt + shift + r */
+		•L:改名alt + shift + r 
+	*M:到指定行 ctrl+l*/
 }
